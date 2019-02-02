@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public class PostgresDriver:IDriverDB
+    public class PostgresDriver : IDriverDB
     {
         NpgsqlConnection Conn { get; set; }
 
@@ -22,7 +22,7 @@ namespace Project
         {
             string query = $"INSERT INTO \"User\" (\"Id\", \"Name\", \"Passport\", \"Login\", \"HashPassword\", \"ManagerAccess\", \"SaltString\") VALUES (DEFAULT, '{user.Name}', '{user.Passport}', '{user.Login}', '{user.HashPassword}', '{user.ManagerAccess}', '{user.SaltString}');";
             NpgsqlCommand command = new NpgsqlCommand(query, Conn);
-            int result=0;
+            int result = 0;
             try
             {
                 Conn.Open();
@@ -75,6 +75,44 @@ namespace Project
                 reader.Close();
                 throw new Exception("Пользователь с указанным логином не найден");
             }
+        }
+        public User[] ReadAllUsers()
+        {
+            string query = "SELECT COUNT(\"Id\") FROM \"User\";";
+            NpgsqlCommand command = new NpgsqlCommand(query, Conn);
+            Conn.Open();
+            int userNumber = 0;
+            userNumber = Convert.ToInt32(command.ExecuteScalar());
+            Conn.Close();
+            if (userNumber > 0)
+            {
+                User[] allUsers = new User[userNumber];
+                query = $"SELECT * FROM \"User\";";
+                command = new NpgsqlCommand(query, Conn);
+                Conn.Open();
+                NpgsqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    int i = 0;
+                    while (reader.Read())
+                    {
+                        int id = reader.GetInt32(0);
+                        string name = reader.GetString(1);
+                        string passport = reader.GetString(2);
+                        string login = reader.GetString(3);
+                        string hashPassword = reader.GetString(4);
+                        bool managerAccess = reader.GetBoolean(5);
+                        string saltString = reader.GetString(6);
+                        User user = new User(id, name, passport, login, hashPassword, managerAccess, saltString);
+                        allUsers[i++] = user;
+                    }
+                    Conn.Close();
+                    reader.Close();
+                    return allUsers;
+                }
+                else throw new Exception("Не удалось прочитать список пользователей");
+            }
+            else throw new Exception("Не удалось прочитать список пользователей");
         }
     }
 }

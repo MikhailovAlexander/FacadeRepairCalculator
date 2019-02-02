@@ -35,21 +35,14 @@ namespace Project
             passwordBytes.CopyTo(saltedPassword, saltBytes.Length);//Добавление пароля в массив
             var deriveBytes = new SHA256CryptoServiceProvider();
             byte[] hashBytes = deriveBytes.ComputeHash(saltedPassword);//Получение хэша соли с паролем
-            StringBuilder strB = new StringBuilder(hashBytes.Length * 2);//Создание переменной для преобразования хэша в строку
-            foreach (byte b in hashBytes)
-                strB.AppendFormat("{0:X2}", b);
-            return strB.ToString();
+            return Convert.ToBase64String(hashBytes);
         }
         public string GetSaltToString()
         {
-            StringBuilder strB = new StringBuilder(saltBytes.Length * 2);//Создание переменной для преобразования соли в строку
-            foreach (byte b in saltBytes)
-                strB.AppendFormat("{0:X2}", b);
-            return strB.ToString();
+            return Convert.ToBase64String(this.saltBytes);
         }
         public bool VeryfyHash(string correctHash, string saltString)
         {
-            MessageBox.Show(saltString + "  " + GetSaltToString());
             try
             {
                 ConvertSalt(saltString);
@@ -58,32 +51,18 @@ namespace Project
             {
                 MessageBox.Show(ex.Message);
             }
-            MessageBox.Show(saltString + "  " + GetSaltToString());
             string checkPasswordHash = GetHashToString();
             return String.Equals(checkPasswordHash, correctHash);
         }
         void ConvertSalt(string saltString)
         {
-            if (string.IsNullOrWhiteSpace(saltString) || saltString.Length / 2 != saltSise)
+            if (string.IsNullOrWhiteSpace(saltString))
                 throw new Exception("Ошибка преобразований при проверке пароля 'Salt==null'");
 
             byte[] salt=new byte[saltSise];
-            int n = 0;
             try
             {
-                for (int i = 0; i < saltString.Length; i++)
-                {
-                    if (i % 2 != 0)
-                    {
-                        char first = saltString[i - 1];
-                        char second = saltString[i];
-                        char[] arr = { first, second };
-                        string actualByteStr = new string(arr);
-                        int convInt = Convert. (actualByte);
-                        byte actualByte = Convert.ToByte(actualByteStr);
-                        salt[n++] = actualByte;
-                    }
-                }
+                salt = Convert.FromBase64String(saltString);
                 this.saltBytes = salt;
             }
             catch

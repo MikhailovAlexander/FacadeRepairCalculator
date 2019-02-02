@@ -52,7 +52,8 @@ namespace Project
                     MessageBox.Show(checkUser.Name, "Проверка пройдена", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MainForm mainForm = new MainForm(driver, checkUser);
                     mainForm.Show();
-                    this.Close();
+                    //this.Visible=false;
+                    //if (mainForm.IsDisposed) this.Close(); 
                 }
                 else MessageBox.Show("Проверка не пройдена", "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

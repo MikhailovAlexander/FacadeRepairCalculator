@@ -11,5 +11,6 @@ namespace Project
         void SaveUser(User user);
         void UpdateUser(User user);
         User ReadUser(string loginInput);
+        User[] ReadAllUsers();
     }
 }

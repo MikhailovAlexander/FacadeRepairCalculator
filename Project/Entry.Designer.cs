@@ -78,6 +78,7 @@
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(58, 140);
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(274, 20);
             this.textBoxPassword.TabIndex = 5;
             this.textBoxPassword.TextChanged += new System.EventHandler(this.TextBoxPassword_TextChanged);
@@ -114,6 +115,7 @@
             // 
             // Entry
             // 
+            this.AcceptButton = this.buttonEntry;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 233);
@@ -126,7 +128,7 @@
             this.Controls.Add(this.labelForInput);
             this.Controls.Add(this.labelWelcome);
             this.Name = "Entry";
-            this.Text = "Entry";
+            this.Text = "Вход в систему";
             this.ResumeLayout(false);
             this.PerformLayout();
 
