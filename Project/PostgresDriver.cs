@@ -16,12 +16,15 @@ namespace Project
         public PostgresDriver(NpgsqlConnection conn)
         {
             Conn = conn;
-            //Conn.Open();
+            Conn.Open();
         }
 
-        //В деструкторе закрыть соединение, в методах убрать открытие\закрытие
+        ~PostgresDriver()
+        {
+            Conn.Close();
+        }
 
-        public void SaveUser(User user)
+        public void CreateUser(User user)
         {
             //TODO: использовать связываемые переменные запроса в документации Npgsql
             string query = $"INSERT INTO \"User\" (\"Id\", \"Name\", \"Passport\", \"Login\", " +
@@ -31,19 +34,16 @@ namespace Project
             NpgsqlCommand command = new NpgsqlCommand(query, Conn);
             try
             {
-                Conn.Open();
                 command.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Данные пользователя {user.Name} не были сохранены. " + ex.Message, 
                     "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Conn.Close();
                 return;
             }
             MessageBox.Show($"Данные пользователя {user.Name} сохранены", "Сообщение", 
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Conn.Close();
             return;
         }
         public void UpdateUser(User user)
@@ -53,15 +53,12 @@ namespace Project
                 $"'{user.HashPassword}', \"ManagerAccess\" = '{user.ManagerAccess}', \"SaltString\" " +
                 $"= '{user.SaltString}' WHERE \"Id\" = '{user.Id}';";
             NpgsqlCommand command = new NpgsqlCommand(query, Conn);
-            Conn.Open();
             command.ExecuteNonQuery();
-            Conn.Close();
         }
         public User ReadUser(string loginInput)
         {
             string query = $"SELECT * FROM \"User\" WHERE \"Login\" = '{loginInput}';";
             NpgsqlCommand command = new NpgsqlCommand(query, Conn);
-            Conn.Open();
             NpgsqlDataReader reader = command.ExecuteReader();
             if (reader.HasRows)
             {
@@ -73,13 +70,11 @@ namespace Project
                 string hashPassword = reader.GetString(4);
                 bool managerAccess = reader.GetBoolean(5);
                 string saltString = reader.GetString(6);
-                Conn.Close();
                 reader.Close();
                 return new User(id, name, passport, login, hashPassword, managerAccess, saltString);
             }
             else
             {
-                Conn.Close();
                 reader.Close();
                 throw new Exception("Пользователь с указанным логином не найден");
             }
@@ -89,16 +84,13 @@ namespace Project
             //Получить список логинов, по котрым прочесть пользователей и собрать в массив, возможно пустой
             string query = "SELECT COUNT(\"Id\") FROM \"User\";";
             NpgsqlCommand command = new NpgsqlCommand(query, Conn);
-            Conn.Open();
             int userNumber = 0;
             userNumber = Convert.ToInt32(command.ExecuteScalar());
-            Conn.Close();
             if (userNumber > 0)
             {
                 User[] allUsers = new User[userNumber];
                 query = $"SELECT * FROM \"User\";";
                 command = new NpgsqlCommand(query, Conn);
-                Conn.Open();
                 NpgsqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
                 {
@@ -115,7 +107,6 @@ namespace Project
                         User user = new User(id, name, passport, login, hashPassword, managerAccess, saltString);
                         allUsers[i++] = user;
                     }
-                    Conn.Close();
                     reader.Close();
                     return allUsers;
                 }

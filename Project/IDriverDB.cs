@@ -8,7 +8,7 @@ namespace Project
 {
     public interface IDriverDB
     {
-        void SaveUser(User user);
+        void CreateUser(User user);
         void UpdateUser(User user);
         User ReadUser(string loginInput);
         User[] ReadAllUsers();

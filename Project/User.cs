@@ -78,7 +78,7 @@ namespace Project
         }
         public void SaveTo(IDriverDB driver)
         {
-            driver.SaveUser(this);
+            driver.CreateUser(this);
         }
         public void Update(IDriverDB driver)
         {

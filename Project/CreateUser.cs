@@ -51,7 +51,7 @@ namespace Project
                 var hashPass = new HashPasswordCreator(textBoxUserPasswordInput.Text);
                 string hashPassword = hashPass.GetHashToString();
                 string salt = hashPass.GetSaltToString();
-                driver.SaveUser(new User(name, passport, login, hashPassword, managerAccess, salt));
+                driver.CreateUser(new User(name, passport, login, hashPassword, managerAccess, salt));
                 usersForm.UsersForm_ReLoad();
                 this.Close();
             }
