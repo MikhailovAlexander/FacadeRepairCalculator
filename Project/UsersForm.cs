@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Сделать удаление
+//Доделать обновление 
+
 namespace Project
 {
     public partial class UsersForm : Form
@@ -15,6 +18,7 @@ namespace Project
         IDriverDB driver;
         public User actualUser;
         public User[] allUsers;
+        public User selectedUser;
 
         public UsersForm(IDriverDB driver, User actualUser)
         {
@@ -26,21 +30,19 @@ namespace Project
             InitializeComponent();
             this.driver = driver;
             this.actualUser = actualUser;
-            if (actualUser.ManagerAccess) this.buttonAddUser.Enabled = true;
-            //MessageBox.Show($"##Пользователь {actualUser.Name}. Вход в систему");//##
         }
 
         private void UsersForm_Load(object sender, EventArgs e)
         {
             try
             {
-                this.allUsers = driver.ReadAllUsers();
+                allUsers = driver.ReadAllUsers();
+                dataGridView1.Height = dataGridView1.ColumnHeadersHeight + dataGridView1.RowTemplate.Height * allUsers.Length+3;
+                //Счетчик инкрементирован для отображения пользователю 
+                int i = 1;
                 foreach (User user in allUsers)
                 {
-                    string managerAccess;
-                    if (user.ManagerAccess) managerAccess = "Да";
-                    else managerAccess = "Нет";
-                    dataGridView1.Rows.Add(user.Name, user.Passport, user.Login, managerAccess);
+                    dataGridView1.Rows.Add(i++, user.Name, user.Passport, user.Login, (user.ManagerAccess) ? "Да" : "Нет");
                 }
             }
             catch (Exception ex)
@@ -54,12 +56,13 @@ namespace Project
             try
             {
                 this.allUsers = driver.ReadAllUsers();
+                dataGridView1.Rows.Clear();
+                dataGridView1.Height = dataGridView1.ColumnHeadersHeight + dataGridView1.RowTemplate.Height * allUsers.Length + 3;
+                //Счетчик инкрементирован для отображения пользователю 
+                int i = 1;
                 foreach (User user in allUsers)
                 {
-                    string managerAccess;
-                    if (user.ManagerAccess) managerAccess = "Да";
-                    else managerAccess = "Нет";
-                    dataGridView1.Rows.Add(user.Name, user.Passport, user.Login, managerAccess);
+                    dataGridView1.Rows.Add(i++, user.Name, user.Passport, user.Login, (user.ManagerAccess) ? "Да" : "Нет");
                 }
             }
             catch (Exception ex)
@@ -73,6 +76,14 @@ namespace Project
         {
             CreateUser createUserForm = new CreateUser(actualUser, driver, this);
             createUserForm.Show();
+        }
+
+        private void buttonUpdateUser_Click(object sender, EventArgs e)
+        {
+            //Декрементация индекса для обращения к массиву
+            int userToUpdateIndex = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value) - 1;
+            UpdateUserForm updateUser = new UpdateUserForm(driver, actualUser, allUsers[userToUpdateIndex], this);
+            updateUser.Show();
         }
     }
 }

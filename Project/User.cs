@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+
+//Переписать с учетом регулярных выражений
 
 namespace Project
 {
@@ -12,6 +15,12 @@ namespace Project
     {
         readonly int id;
         string hashPassword;
+
+        public static Regex nameRegex = new Regex(@"^([А-Я][а-я]+ ){1,4}[А-Я][а-я]+$");
+        public static Regex passportRegex = new Regex(@"^(\d{4} \d{6} \d{1,2}\.\d{1,2}\.\d{4}( \w+\.*)+)$");
+        public static Regex loginRegex = new Regex(@"^(\w+@[A-z_]+?\.[A-z]{2,6})$");
+        public static Regex passwordRegex = new Regex(@"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d_]{8,15}$");
+
         public string Name { get; set; }
         public string Passport { get; set; }
         public string Login { get; set; }

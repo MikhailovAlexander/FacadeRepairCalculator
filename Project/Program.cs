@@ -21,7 +21,7 @@ namespace Project
             string connString = "Host=localhost;Username=Alexandr;Password=1828bd;Database=postgres";
             NpgsqlConnection conn = new NpgsqlConnection(connString);
             PostgresDriver driver = new PostgresDriver(conn);
-            Application.Run(new Entry(driver));
+            Application.Run(new MainForm(driver));
 
             //User actualUser = new User();
             //try

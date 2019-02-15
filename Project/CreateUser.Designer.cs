@@ -28,48 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxUserPassport = new System.Windows.Forms.TextBox();
+            this.textBoxUserPassportInput = new System.Windows.Forms.TextBox();
             this.labelUserPassport = new System.Windows.Forms.Label();
             this.textBoxUserNameInput = new System.Windows.Forms.TextBox();
             this.labelNameUser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxUserLogin = new System.Windows.Forms.TextBox();
+            this.textBoxUserLoginInput = new System.Windows.Forms.TextBox();
             this.labelUserLogin = new System.Windows.Forms.Label();
-            this.textBoxUserPassword = new System.Windows.Forms.TextBox();
+            this.textBoxUserPasswordInput = new System.Windows.Forms.TextBox();
             this.labelUserPassword = new System.Windows.Forms.Label();
-            this.textBoxPasswordRepeat = new System.Windows.Forms.TextBox();
+            this.textBoxPasswordRepeatInput = new System.Windows.Forms.TextBox();
             this.labelЗPasswordRepeat = new System.Windows.Forms.Label();
             this.labelManagerAccess = new System.Windows.Forms.Label();
             this.checkBoxManagerAccess = new System.Windows.Forms.CheckBox();
             this.buttonSaveUser = new System.Windows.Forms.Button();
             this.LabelPasswordsIsNotEuals = new System.Windows.Forms.Label();
-            this.labelPasswordLength = new System.Windows.Forms.Label();
-            this.pictureBoxCheckName = new System.Windows.Forms.PictureBox();
-            this.pictureBoxCheckPassport = new System.Windows.Forms.PictureBox();
-            this.pictureBoxCheckLogin = new System.Windows.Forms.PictureBox();
-            this.pictureBoxCheckPassword = new System.Windows.Forms.PictureBox();
-            this.pictureBoxRepeatPassword = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckPassport)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckLogin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckPassword)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRepeatPassword)).BeginInit();
+            this.labelPasswordCheck = new System.Windows.Forms.Label();
+            this.pictureBoxCheckMarkName = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCheckMarkPassport = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCheckMarkLogin = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCheckMarkPassword = new System.Windows.Forms.PictureBox();
+            this.pictureBoxRepeatMarkPassword = new System.Windows.Forms.PictureBox();
+            this.labelNameCheck = new System.Windows.Forms.Label();
+            this.labelPassportCheck = new System.Windows.Forms.Label();
+            this.labelLoginCheck = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckMarkName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckMarkPassport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckMarkLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckMarkPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRepeatMarkPassword)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBoxUserPassport
+            // textBoxUserPassportInput
             // 
-            this.textBoxUserPassport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBoxUserPassport.Location = new System.Drawing.Point(243, 104);
-            this.textBoxUserPassport.Name = "textBoxUserPassport";
-            this.textBoxUserPassport.Size = new System.Drawing.Size(369, 23);
-            this.textBoxUserPassport.TabIndex = 4;
-            this.textBoxUserPassport.TextChanged += new System.EventHandler(this.TextBoxUserPassport_TextChanged);
+            this.textBoxUserPassportInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBoxUserPassportInput.Location = new System.Drawing.Point(243, 119);
+            this.textBoxUserPassportInput.Name = "textBoxUserPassportInput";
+            this.textBoxUserPassportInput.Size = new System.Drawing.Size(369, 23);
+            this.textBoxUserPassportInput.TabIndex = 4;
+            this.textBoxUserPassportInput.TextChanged += new System.EventHandler(this.TextBoxUserPassport_TextChanged);
             // 
             // labelUserPassport
             // 
             this.labelUserPassport.AutoSize = true;
             this.labelUserPassport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelUserPassport.Location = new System.Drawing.Point(24, 104);
+            this.labelUserPassport.Location = new System.Drawing.Point(24, 119);
             this.labelUserPassport.Name = "labelUserPassport";
             this.labelUserPassport.Size = new System.Drawing.Size(144, 17);
             this.labelUserPassport.TabIndex = 3;
@@ -105,64 +108,64 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Введите данные нового пользователя";
             // 
-            // textBoxUserLogin
+            // textBoxUserLoginInput
             // 
-            this.textBoxUserLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBoxUserLogin.Location = new System.Drawing.Point(243, 137);
-            this.textBoxUserLogin.Name = "textBoxUserLogin";
-            this.textBoxUserLogin.Size = new System.Drawing.Size(369, 23);
-            this.textBoxUserLogin.TabIndex = 6;
-            this.textBoxUserLogin.TextChanged += new System.EventHandler(this.TextBoxUserLogin_TextChanged);
+            this.textBoxUserLoginInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBoxUserLoginInput.Location = new System.Drawing.Point(243, 164);
+            this.textBoxUserLoginInput.Name = "textBoxUserLoginInput";
+            this.textBoxUserLoginInput.Size = new System.Drawing.Size(369, 23);
+            this.textBoxUserLoginInput.TabIndex = 6;
+            this.textBoxUserLoginInput.TextChanged += new System.EventHandler(this.TextBoxUserLogin_TextChanged);
             // 
             // labelUserLogin
             // 
             this.labelUserLogin.AutoSize = true;
             this.labelUserLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelUserLogin.Location = new System.Drawing.Point(24, 137);
+            this.labelUserLogin.Location = new System.Drawing.Point(24, 164);
             this.labelUserLogin.Name = "labelUserLogin";
             this.labelUserLogin.Size = new System.Drawing.Size(47, 17);
             this.labelUserLogin.TabIndex = 5;
             this.labelUserLogin.Text = "Логин";
             // 
-            // textBoxUserPassword
+            // textBoxUserPasswordInput
             // 
-            this.textBoxUserPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBoxUserPassword.Location = new System.Drawing.Point(243, 195);
-            this.textBoxUserPassword.Name = "textBoxUserPassword";
-            this.textBoxUserPassword.PasswordChar = '*';
-            this.textBoxUserPassword.Size = new System.Drawing.Size(369, 23);
-            this.textBoxUserPassword.TabIndex = 8;
-            this.textBoxUserPassword.UseSystemPasswordChar = true;
-            this.textBoxUserPassword.TextChanged += new System.EventHandler(this.TextBoxUserPassword_TextChanged);
+            this.textBoxUserPasswordInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBoxUserPasswordInput.Location = new System.Drawing.Point(243, 235);
+            this.textBoxUserPasswordInput.Name = "textBoxUserPasswordInput";
+            this.textBoxUserPasswordInput.PasswordChar = '*';
+            this.textBoxUserPasswordInput.Size = new System.Drawing.Size(369, 23);
+            this.textBoxUserPasswordInput.TabIndex = 8;
+            this.textBoxUserPasswordInput.UseSystemPasswordChar = true;
+            this.textBoxUserPasswordInput.TextChanged += new System.EventHandler(this.TextBoxUserPassword_TextChanged);
             // 
             // labelUserPassword
             // 
             this.labelUserPassword.AutoSize = true;
             this.labelUserPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelUserPassword.Location = new System.Drawing.Point(24, 195);
+            this.labelUserPassword.Location = new System.Drawing.Point(24, 235);
             this.labelUserPassword.Name = "labelUserPassword";
             this.labelUserPassword.Size = new System.Drawing.Size(194, 17);
             this.labelUserPassword.TabIndex = 7;
             this.labelUserPassword.Text = "Пароль для входа в систему";
             // 
-            // textBoxPasswordRepeat
+            // textBoxPasswordRepeatInput
             // 
-            this.textBoxPasswordRepeat.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxPasswordRepeat.Enabled = false;
-            this.textBoxPasswordRepeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBoxPasswordRepeat.Location = new System.Drawing.Point(243, 250);
-            this.textBoxPasswordRepeat.Name = "textBoxPasswordRepeat";
-            this.textBoxPasswordRepeat.PasswordChar = '*';
-            this.textBoxPasswordRepeat.Size = new System.Drawing.Size(369, 23);
-            this.textBoxPasswordRepeat.TabIndex = 10;
-            this.textBoxPasswordRepeat.UseSystemPasswordChar = true;
-            this.textBoxPasswordRepeat.TextChanged += new System.EventHandler(this.TextBoxPasswordRepeat_TextChanged);
+            this.textBoxPasswordRepeatInput.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxPasswordRepeatInput.Enabled = false;
+            this.textBoxPasswordRepeatInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBoxPasswordRepeatInput.Location = new System.Drawing.Point(243, 290);
+            this.textBoxPasswordRepeatInput.Name = "textBoxPasswordRepeatInput";
+            this.textBoxPasswordRepeatInput.PasswordChar = '*';
+            this.textBoxPasswordRepeatInput.Size = new System.Drawing.Size(369, 23);
+            this.textBoxPasswordRepeatInput.TabIndex = 10;
+            this.textBoxPasswordRepeatInput.UseSystemPasswordChar = true;
+            this.textBoxPasswordRepeatInput.TextChanged += new System.EventHandler(this.TextBoxPasswordRepeat_TextChanged);
             // 
             // labelЗPasswordRepeat
             // 
             this.labelЗPasswordRepeat.AutoSize = true;
             this.labelЗPasswordRepeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelЗPasswordRepeat.Location = new System.Drawing.Point(24, 250);
+            this.labelЗPasswordRepeat.Location = new System.Drawing.Point(24, 290);
             this.labelЗPasswordRepeat.Name = "labelЗPasswordRepeat";
             this.labelЗPasswordRepeat.Size = new System.Drawing.Size(130, 17);
             this.labelЗPasswordRepeat.TabIndex = 9;
@@ -172,7 +175,7 @@
             // 
             this.labelManagerAccess.AutoSize = true;
             this.labelManagerAccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelManagerAccess.Location = new System.Drawing.Point(24, 168);
+            this.labelManagerAccess.Location = new System.Drawing.Point(24, 208);
             this.labelManagerAccess.Name = "labelManagerAccess";
             this.labelManagerAccess.Size = new System.Drawing.Size(184, 17);
             this.labelManagerAccess.TabIndex = 11;
@@ -182,7 +185,7 @@
             // 
             this.checkBoxManagerAccess.AutoSize = true;
             this.checkBoxManagerAccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.checkBoxManagerAccess.Location = new System.Drawing.Point(243, 168);
+            this.checkBoxManagerAccess.Location = new System.Drawing.Point(243, 208);
             this.checkBoxManagerAccess.Name = "checkBoxManagerAccess";
             this.checkBoxManagerAccess.Size = new System.Drawing.Size(169, 21);
             this.checkBoxManagerAccess.TabIndex = 12;
@@ -191,9 +194,8 @@
             // 
             // buttonSaveUser
             // 
-            this.buttonSaveUser.Enabled = false;
             this.buttonSaveUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonSaveUser.Location = new System.Drawing.Point(460, 297);
+            this.buttonSaveUser.Location = new System.Drawing.Point(460, 337);
             this.buttonSaveUser.Name = "buttonSaveUser";
             this.buttonSaveUser.Size = new System.Drawing.Size(152, 42);
             this.buttonSaveUser.TabIndex = 13;
@@ -205,135 +207,176 @@
             // 
             this.LabelPasswordsIsNotEuals.AutoSize = true;
             this.LabelPasswordsIsNotEuals.ForeColor = System.Drawing.Color.Red;
-            this.LabelPasswordsIsNotEuals.Location = new System.Drawing.Point(240, 288);
+            this.LabelPasswordsIsNotEuals.Location = new System.Drawing.Point(240, 321);
             this.LabelPasswordsIsNotEuals.Name = "LabelPasswordsIsNotEuals";
             this.LabelPasswordsIsNotEuals.Size = new System.Drawing.Size(176, 13);
             this.LabelPasswordsIsNotEuals.TabIndex = 14;
             this.LabelPasswordsIsNotEuals.Text = "Введенные пароли не совпадают";
             this.LabelPasswordsIsNotEuals.Visible = false;
             // 
-            // labelPasswordLength
+            // labelPasswordCheck
             // 
-            this.labelPasswordLength.AutoSize = true;
-            this.labelPasswordLength.ForeColor = System.Drawing.Color.Red;
-            this.labelPasswordLength.Location = new System.Drawing.Point(241, 227);
-            this.labelPasswordLength.Name = "labelPasswordLength";
-            this.labelPasswordLength.Size = new System.Drawing.Size(195, 13);
-            this.labelPasswordLength.TabIndex = 15;
-            this.labelPasswordLength.Text = "Введите пароль длиннее 8 символов";
-            this.labelPasswordLength.Visible = false;
+            this.labelPasswordCheck.AutoSize = true;
+            this.labelPasswordCheck.ForeColor = System.Drawing.Color.Red;
+            this.labelPasswordCheck.Location = new System.Drawing.Point(24, 263);
+            this.labelPasswordCheck.Name = "labelPasswordCheck";
+            this.labelPasswordCheck.Size = new System.Drawing.Size(631, 13);
+            this.labelPasswordCheck.TabIndex = 15;
+            this.labelPasswordCheck.Text = "Введите пароль от 8 до 16 символов, содержащий не меннее 1 цифры, одной заглавной" +
+    " и одной строчной латинских букв";
+            this.labelPasswordCheck.Visible = false;
             // 
-            // pictureBoxCheckName
+            // pictureBoxCheckMarkName
             // 
-            this.pictureBoxCheckName.Location = new System.Drawing.Point(619, 69);
-            this.pictureBoxCheckName.Name = "pictureBoxCheckName";
-            this.pictureBoxCheckName.Size = new System.Drawing.Size(27, 25);
-            this.pictureBoxCheckName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxCheckName.TabIndex = 16;
-            this.pictureBoxCheckName.TabStop = false;
-            this.pictureBoxCheckName.Visible = false;
+            this.pictureBoxCheckMarkName.Location = new System.Drawing.Point(619, 69);
+            this.pictureBoxCheckMarkName.Name = "pictureBoxCheckMarkName";
+            this.pictureBoxCheckMarkName.Size = new System.Drawing.Size(27, 25);
+            this.pictureBoxCheckMarkName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCheckMarkName.TabIndex = 16;
+            this.pictureBoxCheckMarkName.TabStop = false;
+            this.pictureBoxCheckMarkName.Visible = false;
             // 
-            // pictureBoxCheckPassport
+            // pictureBoxCheckMarkPassport
             // 
-            this.pictureBoxCheckPassport.Location = new System.Drawing.Point(619, 104);
-            this.pictureBoxCheckPassport.Name = "pictureBoxCheckPassport";
-            this.pictureBoxCheckPassport.Size = new System.Drawing.Size(27, 25);
-            this.pictureBoxCheckPassport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxCheckPassport.TabIndex = 17;
-            this.pictureBoxCheckPassport.TabStop = false;
-            this.pictureBoxCheckPassport.Visible = false;
+            this.pictureBoxCheckMarkPassport.Location = new System.Drawing.Point(619, 119);
+            this.pictureBoxCheckMarkPassport.Name = "pictureBoxCheckMarkPassport";
+            this.pictureBoxCheckMarkPassport.Size = new System.Drawing.Size(27, 25);
+            this.pictureBoxCheckMarkPassport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCheckMarkPassport.TabIndex = 17;
+            this.pictureBoxCheckMarkPassport.TabStop = false;
+            this.pictureBoxCheckMarkPassport.Visible = false;
             // 
-            // pictureBoxCheckLogin
+            // pictureBoxCheckMarkLogin
             // 
-            this.pictureBoxCheckLogin.Location = new System.Drawing.Point(619, 137);
-            this.pictureBoxCheckLogin.Name = "pictureBoxCheckLogin";
-            this.pictureBoxCheckLogin.Size = new System.Drawing.Size(27, 25);
-            this.pictureBoxCheckLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxCheckLogin.TabIndex = 18;
-            this.pictureBoxCheckLogin.TabStop = false;
-            this.pictureBoxCheckLogin.Visible = false;
+            this.pictureBoxCheckMarkLogin.Location = new System.Drawing.Point(619, 164);
+            this.pictureBoxCheckMarkLogin.Name = "pictureBoxCheckMarkLogin";
+            this.pictureBoxCheckMarkLogin.Size = new System.Drawing.Size(27, 25);
+            this.pictureBoxCheckMarkLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCheckMarkLogin.TabIndex = 18;
+            this.pictureBoxCheckMarkLogin.TabStop = false;
+            this.pictureBoxCheckMarkLogin.Visible = false;
             // 
-            // pictureBoxCheckPassword
+            // pictureBoxCheckMarkPassword
             // 
-            this.pictureBoxCheckPassword.Location = new System.Drawing.Point(619, 195);
-            this.pictureBoxCheckPassword.Name = "pictureBoxCheckPassword";
-            this.pictureBoxCheckPassword.Size = new System.Drawing.Size(27, 25);
-            this.pictureBoxCheckPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxCheckPassword.TabIndex = 19;
-            this.pictureBoxCheckPassword.TabStop = false;
-            this.pictureBoxCheckPassword.Visible = false;
+            this.pictureBoxCheckMarkPassword.Location = new System.Drawing.Point(619, 235);
+            this.pictureBoxCheckMarkPassword.Name = "pictureBoxCheckMarkPassword";
+            this.pictureBoxCheckMarkPassword.Size = new System.Drawing.Size(27, 25);
+            this.pictureBoxCheckMarkPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCheckMarkPassword.TabIndex = 19;
+            this.pictureBoxCheckMarkPassword.TabStop = false;
+            this.pictureBoxCheckMarkPassword.Visible = false;
             // 
-            // pictureBoxRepeatPassword
+            // pictureBoxRepeatMarkPassword
             // 
-            this.pictureBoxRepeatPassword.Location = new System.Drawing.Point(619, 250);
-            this.pictureBoxRepeatPassword.Name = "pictureBoxRepeatPassword";
-            this.pictureBoxRepeatPassword.Size = new System.Drawing.Size(27, 25);
-            this.pictureBoxRepeatPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxRepeatPassword.TabIndex = 20;
-            this.pictureBoxRepeatPassword.TabStop = false;
-            this.pictureBoxRepeatPassword.Visible = false;
+            this.pictureBoxRepeatMarkPassword.Location = new System.Drawing.Point(619, 290);
+            this.pictureBoxRepeatMarkPassword.Name = "pictureBoxRepeatMarkPassword";
+            this.pictureBoxRepeatMarkPassword.Size = new System.Drawing.Size(27, 25);
+            this.pictureBoxRepeatMarkPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxRepeatMarkPassword.TabIndex = 20;
+            this.pictureBoxRepeatMarkPassword.TabStop = false;
+            this.pictureBoxRepeatMarkPassword.Visible = false;
+            // 
+            // labelNameCheck
+            // 
+            this.labelNameCheck.AutoSize = true;
+            this.labelNameCheck.ForeColor = System.Drawing.Color.Red;
+            this.labelNameCheck.Location = new System.Drawing.Point(24, 98);
+            this.labelNameCheck.Name = "labelNameCheck";
+            this.labelNameCheck.Size = new System.Drawing.Size(299, 13);
+            this.labelNameCheck.TabIndex = 21;
+            this.labelNameCheck.Text = "Введите ФИО кирилицей с заглавных букв через пробел";
+            this.labelNameCheck.Visible = false;
+            // 
+            // labelPassportCheck
+            // 
+            this.labelPassportCheck.AutoSize = true;
+            this.labelPassportCheck.ForeColor = System.Drawing.Color.Red;
+            this.labelPassportCheck.Location = new System.Drawing.Point(24, 145);
+            this.labelPassportCheck.Name = "labelPassportCheck";
+            this.labelPassportCheck.Size = new System.Drawing.Size(517, 13);
+            this.labelPassportCheck.TabIndex = 22;
+            this.labelPassportCheck.Text = "Введите данные в формате: 0000 000000 01.01.2000 г название подразделения выдавше" +
+    "го паспорт";
+            this.labelPassportCheck.Visible = false;
+            // 
+            // labelLoginCheck
+            // 
+            this.labelLoginCheck.AutoSize = true;
+            this.labelLoginCheck.ForeColor = System.Drawing.Color.Red;
+            this.labelLoginCheck.Location = new System.Drawing.Point(24, 190);
+            this.labelLoginCheck.Name = "labelLoginCheck";
+            this.labelLoginCheck.Size = new System.Drawing.Size(315, 13);
+            this.labelLoginCheck.TabIndex = 23;
+            this.labelLoginCheck.Text = "Введите в качестве логина адрес Вашей электронной почты";
+            this.labelLoginCheck.Visible = false;
             // 
             // CreateUser
             // 
             this.AcceptButton = this.buttonSaveUser;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 354);
-            this.Controls.Add(this.pictureBoxRepeatPassword);
-            this.Controls.Add(this.pictureBoxCheckPassword);
-            this.Controls.Add(this.pictureBoxCheckLogin);
-            this.Controls.Add(this.pictureBoxCheckPassport);
-            this.Controls.Add(this.pictureBoxCheckName);
-            this.Controls.Add(this.labelPasswordLength);
+            this.ClientSize = new System.Drawing.Size(658, 384);
+            this.Controls.Add(this.labelLoginCheck);
+            this.Controls.Add(this.labelPassportCheck);
+            this.Controls.Add(this.labelNameCheck);
+            this.Controls.Add(this.pictureBoxRepeatMarkPassword);
+            this.Controls.Add(this.pictureBoxCheckMarkPassword);
+            this.Controls.Add(this.pictureBoxCheckMarkLogin);
+            this.Controls.Add(this.pictureBoxCheckMarkPassport);
+            this.Controls.Add(this.pictureBoxCheckMarkName);
+            this.Controls.Add(this.labelPasswordCheck);
             this.Controls.Add(this.LabelPasswordsIsNotEuals);
             this.Controls.Add(this.buttonSaveUser);
             this.Controls.Add(this.checkBoxManagerAccess);
             this.Controls.Add(this.labelManagerAccess);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxPasswordRepeat);
+            this.Controls.Add(this.textBoxPasswordRepeatInput);
             this.Controls.Add(this.labelNameUser);
             this.Controls.Add(this.labelЗPasswordRepeat);
             this.Controls.Add(this.textBoxUserNameInput);
-            this.Controls.Add(this.textBoxUserPassword);
+            this.Controls.Add(this.textBoxUserPasswordInput);
             this.Controls.Add(this.labelUserPassport);
             this.Controls.Add(this.labelUserPassword);
-            this.Controls.Add(this.textBoxUserPassport);
-            this.Controls.Add(this.textBoxUserLogin);
+            this.Controls.Add(this.textBoxUserPassportInput);
+            this.Controls.Add(this.textBoxUserLoginInput);
             this.Controls.Add(this.labelUserLogin);
             this.Name = "CreateUser";
             this.Text = "Создание нового пользователя";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckPassport)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckLogin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckPassword)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRepeatPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckMarkName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckMarkPassport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckMarkLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckMarkPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRepeatMarkPassword)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBoxUserPassport;
+        private System.Windows.Forms.TextBox textBoxUserPassportInput;
         private System.Windows.Forms.Label labelUserPassport;
         private System.Windows.Forms.TextBox textBoxUserNameInput;
         private System.Windows.Forms.Label labelNameUser;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxUserLogin;
+        private System.Windows.Forms.TextBox textBoxUserLoginInput;
         private System.Windows.Forms.Label labelUserLogin;
-        private System.Windows.Forms.TextBox textBoxPasswordRepeat;
+        private System.Windows.Forms.TextBox textBoxPasswordRepeatInput;
         private System.Windows.Forms.Label labelЗPasswordRepeat;
-        private System.Windows.Forms.TextBox textBoxUserPassword;
+        private System.Windows.Forms.TextBox textBoxUserPasswordInput;
         private System.Windows.Forms.Label labelUserPassword;
         private System.Windows.Forms.Label labelManagerAccess;
         private System.Windows.Forms.CheckBox checkBoxManagerAccess;
         private System.Windows.Forms.Button buttonSaveUser;
         private System.Windows.Forms.Label LabelPasswordsIsNotEuals;
-        private System.Windows.Forms.Label labelPasswordLength;
-        private System.Windows.Forms.PictureBox pictureBoxCheckName;
-        private System.Windows.Forms.PictureBox pictureBoxCheckPassport;
-        private System.Windows.Forms.PictureBox pictureBoxCheckLogin;
-        private System.Windows.Forms.PictureBox pictureBoxCheckPassword;
-        private System.Windows.Forms.PictureBox pictureBoxRepeatPassword;
+        private System.Windows.Forms.Label labelPasswordCheck;
+        private System.Windows.Forms.PictureBox pictureBoxCheckMarkName;
+        private System.Windows.Forms.PictureBox pictureBoxCheckMarkPassport;
+        private System.Windows.Forms.PictureBox pictureBoxCheckMarkLogin;
+        private System.Windows.Forms.PictureBox pictureBoxCheckMarkPassword;
+        private System.Windows.Forms.PictureBox pictureBoxRepeatMarkPassword;
+        private System.Windows.Forms.Label labelNameCheck;
+        private System.Windows.Forms.Label labelPassportCheck;
+        private System.Windows.Forms.Label labelLoginCheck;
     }
 }
 

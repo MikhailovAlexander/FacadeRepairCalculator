@@ -13,10 +13,11 @@ namespace Project
     public partial class Entry : Form
     {
         IDriverDB driver;
-        public Entry(IDriverDB driver)
+        public Entry(IDriverDB driver, MainForm mainForm)
         {
             InitializeComponent();
             this.driver = driver;
+            this.Owner = mainForm;
         }
 
         private void ButtonPasswordForget_Click(object sender, EventArgs e)
@@ -50,10 +51,11 @@ namespace Project
                 if (passCheck.VeryfyHash(checkUser.HashPassword, checkUser.SaltString))
                 {
                     MessageBox.Show(checkUser.Name, "Проверка пройдена", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    MainForm mainForm = new MainForm(driver, checkUser);
-                    mainForm.Show();
+                    //MainForm mainForm = new MainForm(driver, checkUser);
+                    //mainForm.Show();
+                    this.Owner.Tag = checkUser;
                     //this.Visible=false;
-                    //if (mainForm.IsDisposed) this.Close(); 
+                    this.Close(); 
                 }
                 else MessageBox.Show("Проверка не пройдена", "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

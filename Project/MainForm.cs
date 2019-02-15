@@ -8,20 +8,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-//Необходимо вынести работу с пользователями на отдельную форму, оставив на данной лишь кнопку для работы с данными пользователями
 namespace Project
 {
+    //Смена пароля добавить форму
     public partial class MainForm : Form
     {
         IDriverDB driver;
         public User actualUser;
-        public User[] allUsers;
 
-        public MainForm(IDriverDB driver, User actualUser)
+        public MainForm(IDriverDB driver)
         {
             InitializeComponent();
             this.driver = driver;
-            this.actualUser = actualUser;
+            Entry entryForm = new Entry(driver, this);
+            Application.Run(entryForm);
+            try
+            {
+                this.actualUser = (User)this.Tag;
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка! Вход в систему не возможен", "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+            }
             if (actualUser.ManagerAccess) this.menuStrip1.Enabled = true;
             MessageBox.Show($"##Пользователь {actualUser.Name}. Вход в систему");//##
         }
@@ -41,6 +50,11 @@ namespace Project
             UsersForm usersForm = new UsersForm(driver, actualUser);//Формирование фиктивной формы для вызова createUserForm
             CreateUser createUserForm = new CreateUser(actualUser, driver, usersForm);//
             createUserForm.Show();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
