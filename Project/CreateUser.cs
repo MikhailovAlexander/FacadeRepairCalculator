@@ -28,12 +28,13 @@ namespace Project
             this.driver = driver;
             this.usersForm = usersForm;
             InitializeComponent();
-            Image checkMark = Image.FromFile(@"C:\Users\vestr\source\repos\Project\Project\checkMark.png");
-            this.pictureBoxCheckMarkName.Image = checkMark;
-            this.pictureBoxCheckMarkPassport.Image = checkMark;
-            this.pictureBoxCheckMarkLogin.Image = checkMark;
-            this.pictureBoxCheckMarkPassword.Image = checkMark;
-            this.pictureBoxRepeatMarkPassword.Image = checkMark;
+            Image checkMark = Image.FromFile(
+                @"C:\Users\vestr\source\repos\Project\Project\checkMark.png");
+            pictureBoxCheckMarkName.Image = checkMark;
+            pictureBoxCheckMarkPassport.Image = checkMark;
+            pictureBoxCheckMarkLogin.Image = checkMark;
+            pictureBoxCheckMarkPassword.Image = checkMark;
+            pictureBoxRepeatMarkPassword.Image = checkMark;
         }
         
         private void ButtonSaveUser_Click(object sender, EventArgs e)
@@ -48,12 +49,23 @@ namespace Project
                 string passport = textBoxUserPassportInput.Text;
                 string login = textBoxUserLoginInput.Text;
                 bool managerAccess = checkBoxManagerAccess.Checked;
-                var hashPass = new HashPasswordCreator(textBoxUserPasswordInput.Text);
-                string hashPassword = hashPass.GetHashToString();
-                string salt = hashPass.GetSaltToString();
-                driver.CreateUser(new User(name, passport, login, hashPassword, managerAccess, salt));
-                usersForm.UsersForm_ReLoad();
-                this.Close();
+                var hashPassGen = new HashPasswordCreator(textBoxUserPasswordInput.Text);
+                string hashPassword = hashPassGen.GetHashToString();
+                string salt = hashPassGen.GetSaltToString();
+                try
+                {
+                    driver.CreateUser(new User(name, passport, login, hashPassword, managerAccess,
+                                               salt));
+                    MessageBox.Show($"Данные пользователя {name} сохранены", "Сообщение",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    usersForm.UsersForm_ReLoad();
+                    this.Close();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show($"Данные пользователя {name} не были сохранены. " + ex.Message,
+                    "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else MessageBox.Show("Сохранение данных невозможно, не все поля заполнены корректно", 
                 "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -61,10 +73,13 @@ namespace Project
 
         private void TextBoxUserPassword_TextChanged(object sender, EventArgs e)
         {
-            this.textBoxPasswordRepeatInput.Enabled = User.passwordRegex.IsMatch(textBoxUserPasswordInput.Text);
-            this.labelPasswordCheck.Visible=!User.passwordRegex.IsMatch(textBoxUserPasswordInput.Text);
-            this.pictureBoxCheckMarkPassword.Visible = User.passwordRegex.IsMatch(textBoxUserPasswordInput.Text);
-            this.LabelPasswordsIsNotEuals.Visible = this.textBoxPasswordRepeatInput.Enabled && 
+            textBoxPasswordRepeatInput.Enabled = 
+                User.passwordRegex.IsMatch(textBoxUserPasswordInput.Text);
+            labelPasswordCheck.Visible = 
+                !User.passwordRegex.IsMatch(textBoxUserPasswordInput.Text);
+            pictureBoxCheckMarkPassword.Visible = 
+                User.passwordRegex.IsMatch(textBoxUserPasswordInput.Text);
+            labelPasswordsIsNotEuals.Visible = textBoxPasswordRepeatInput.Enabled && 
                 !textBoxPasswordRepeatInput.Text.Equals(textBoxUserPasswordInput.Text);
             if (!User.passwordRegex.IsMatch(textBoxUserPasswordInput.Text))
                 textBoxPasswordRepeatInput.Text = "";
@@ -72,28 +87,31 @@ namespace Project
 
         private void TextBoxPasswordRepeat_TextChanged(object sender, EventArgs e)
         {
-            this.LabelPasswordsIsNotEuals.Visible = 
+            labelPasswordsIsNotEuals.Visible = 
                 !textBoxPasswordRepeatInput.Text.Equals(textBoxUserPasswordInput.Text);
-            this.pictureBoxRepeatMarkPassword.Visible = 
+            pictureBoxRepeatMarkPassword.Visible = 
                 textBoxPasswordRepeatInput.Text.Equals(textBoxUserPasswordInput.Text);
         }
 
         private void TextBoxUserNameInput_TextChanged(object sender, EventArgs e)
         {
-            this.pictureBoxCheckMarkName.Visible = User.nameRegex.IsMatch(textBoxUserNameInput.Text);
-            this.labelNameCheck.Visible=!User.nameRegex.IsMatch(textBoxUserNameInput.Text);
+            pictureBoxCheckMarkName.Visible = User.nameRegex.IsMatch(textBoxUserNameInput.Text);
+            labelNameCheck.Visible=!User.nameRegex.IsMatch(textBoxUserNameInput.Text);
         }
 
         private void TextBoxUserPassport_TextChanged(object sender, EventArgs e)
         {
-            this.pictureBoxCheckMarkPassport.Visible = User.passportRegex.IsMatch(textBoxUserPassportInput.Text);
-            this.labelPassportCheck.Visible = !User.passportRegex.IsMatch(textBoxUserPassportInput.Text);
+            pictureBoxCheckMarkPassport.Visible = 
+                User.passportRegex.IsMatch(textBoxUserPassportInput.Text);
+            labelPassportCheck.Visible = 
+                !User.passportRegex.IsMatch(textBoxUserPassportInput.Text);
         }
 
         private void TextBoxUserLogin_TextChanged(object sender, EventArgs e)
         {
-            this.pictureBoxCheckMarkLogin.Visible = User.loginRegex.IsMatch(textBoxUserLoginInput.Text);
-            this.labelLoginCheck.Visible = !User.loginRegex.IsMatch(textBoxUserLoginInput.Text);
+            pictureBoxCheckMarkLogin.Visible = User.loginRegex.IsMatch(textBoxUserLoginInput.Text);
+            labelLoginCheck.Visible = !User.loginRegex.IsMatch(textBoxUserLoginInput.Text);
         }
+
     }
 }

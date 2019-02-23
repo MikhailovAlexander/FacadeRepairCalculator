@@ -10,7 +10,6 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    //Смена пароля добавить форму
     public partial class MainForm : Form
     {
         IDriverDB driver;
@@ -20,41 +19,58 @@ namespace Project
         {
             InitializeComponent();
             this.driver = driver;
-            Entry entryForm = new Entry(driver, this);
+            actualUser = new User();
+            var entryForm = new Entry(driver, this);
             Application.Run(entryForm);
             try
             {
-                this.actualUser = (User)this.Tag;
+                actualUser = (User)this.Tag;
             }
             catch
             {
-                MessageBox.Show("Ошибка! Вход в систему не возможен", "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ошибка! Вход в систему не возможен", "Сообщение об ошибке", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
-            if (actualUser.ManagerAccess) this.menuStrip1.Enabled = true;
-            MessageBox.Show($"##Пользователь {actualUser.Name}. Вход в систему");//##
+            if (actualUser.ManagerAccess)
+            {
+                addNewUserToolStripMenuItem.Enabled = true;
+                allUsersToolStripMenuItem.Enabled = true;
+            }
+            //MessageBox.Show($"##Пользователь {actualUser.Name}. Вход в систему");
         }
 
         private void AllUsersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UsersForm usersForm = new UsersForm(driver, actualUser);
+            var usersForm = new UsersForm(driver, actualUser)
+            { Owner = this };
             try { usersForm.Show(); }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Error);
             }
         }
 
         private void AddNewUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UsersForm usersForm = new UsersForm(driver, actualUser);//Формирование фиктивной формы для вызова createUserForm
-            CreateUser createUserForm = new CreateUser(actualUser, driver, usersForm);//
+            //Формирование фиктивной формы для вызова createUserForm
+            var usersForm = new UsersForm(driver, actualUser);
+            var createUserForm = new CreateUser(actualUser, driver, usersForm)
+            { Owner = this };
             createUserForm.Show();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void ChangePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var changePasswordForm = new ChangePasswordForm(actualUser, driver)
+            { Owner = this };
+            changePasswordForm.Show();
         }
     }
 }

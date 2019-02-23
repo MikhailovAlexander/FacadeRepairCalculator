@@ -42,7 +42,7 @@
             this.labelManagerAccess = new System.Windows.Forms.Label();
             this.checkBoxManagerAccess = new System.Windows.Forms.CheckBox();
             this.buttonSaveUser = new System.Windows.Forms.Button();
-            this.LabelPasswordsIsNotEuals = new System.Windows.Forms.Label();
+            this.labelPasswordsIsNotEuals = new System.Windows.Forms.Label();
             this.labelPasswordCheck = new System.Windows.Forms.Label();
             this.pictureBoxCheckMarkName = new System.Windows.Forms.PictureBox();
             this.pictureBoxCheckMarkPassport = new System.Windows.Forms.PictureBox();
@@ -205,14 +205,14 @@
             // 
             // LabelPasswordsIsNotEuals
             // 
-            this.LabelPasswordsIsNotEuals.AutoSize = true;
-            this.LabelPasswordsIsNotEuals.ForeColor = System.Drawing.Color.Red;
-            this.LabelPasswordsIsNotEuals.Location = new System.Drawing.Point(240, 321);
-            this.LabelPasswordsIsNotEuals.Name = "LabelPasswordsIsNotEuals";
-            this.LabelPasswordsIsNotEuals.Size = new System.Drawing.Size(176, 13);
-            this.LabelPasswordsIsNotEuals.TabIndex = 14;
-            this.LabelPasswordsIsNotEuals.Text = "Введенные пароли не совпадают";
-            this.LabelPasswordsIsNotEuals.Visible = false;
+            this.labelPasswordsIsNotEuals.AutoSize = true;
+            this.labelPasswordsIsNotEuals.ForeColor = System.Drawing.Color.Red;
+            this.labelPasswordsIsNotEuals.Location = new System.Drawing.Point(240, 321);
+            this.labelPasswordsIsNotEuals.Name = "LabelPasswordsIsNotEuals";
+            this.labelPasswordsIsNotEuals.Size = new System.Drawing.Size(176, 13);
+            this.labelPasswordsIsNotEuals.TabIndex = 14;
+            this.labelPasswordsIsNotEuals.Text = "Введенные пароли не совпадают";
+            this.labelPasswordsIsNotEuals.Visible = false;
             // 
             // labelPasswordCheck
             // 
@@ -325,7 +325,7 @@
             this.Controls.Add(this.pictureBoxCheckMarkPassport);
             this.Controls.Add(this.pictureBoxCheckMarkName);
             this.Controls.Add(this.labelPasswordCheck);
-            this.Controls.Add(this.LabelPasswordsIsNotEuals);
+            this.Controls.Add(this.labelPasswordsIsNotEuals);
             this.Controls.Add(this.buttonSaveUser);
             this.Controls.Add(this.checkBoxManagerAccess);
             this.Controls.Add(this.labelManagerAccess);
@@ -367,7 +367,7 @@
         private System.Windows.Forms.Label labelManagerAccess;
         private System.Windows.Forms.CheckBox checkBoxManagerAccess;
         private System.Windows.Forms.Button buttonSaveUser;
-        private System.Windows.Forms.Label LabelPasswordsIsNotEuals;
+        private System.Windows.Forms.Label labelPasswordsIsNotEuals;
         private System.Windows.Forms.Label labelPasswordCheck;
         private System.Windows.Forms.PictureBox pictureBoxCheckMarkName;
         private System.Windows.Forms.PictureBox pictureBoxCheckMarkPassport;

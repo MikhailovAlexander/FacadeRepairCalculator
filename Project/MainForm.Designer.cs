@@ -30,15 +30,14 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ChangePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.allUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сменитьПарольУчетнойЗаписиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Enabled = false;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -50,15 +49,23 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.сменитьПарольУчетнойЗаписиToolStripMenuItem,
+            this.ChangePasswordToolStripMenuItem,
             this.allUsersToolStripMenuItem,
             this.addNewUserToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(100, 20);
             this.toolStripMenuItem1.Text = "Пользователи ";
             // 
+            // ChangePasswordToolStripMenuItem
+            // 
+            this.ChangePasswordToolStripMenuItem.Name = "ChangePasswordToolStripMenuItem";
+            this.ChangePasswordToolStripMenuItem.Size = new System.Drawing.Size(254, 22);
+            this.ChangePasswordToolStripMenuItem.Text = "Сменить пароль учетной записи";
+            this.ChangePasswordToolStripMenuItem.Click += new System.EventHandler(this.ChangePasswordToolStripMenuItem_Click);
+            // 
             // allUsersToolStripMenuItem
             // 
+            this.allUsersToolStripMenuItem.Enabled = false;
             this.allUsersToolStripMenuItem.Name = "allUsersToolStripMenuItem";
             this.allUsersToolStripMenuItem.Size = new System.Drawing.Size(254, 22);
             this.allUsersToolStripMenuItem.Text = "Все пользователи";
@@ -66,16 +73,11 @@
             // 
             // addNewUserToolStripMenuItem
             // 
+            this.addNewUserToolStripMenuItem.Enabled = false;
             this.addNewUserToolStripMenuItem.Name = "addNewUserToolStripMenuItem";
             this.addNewUserToolStripMenuItem.Size = new System.Drawing.Size(254, 22);
             this.addNewUserToolStripMenuItem.Text = "Добавить нового пользователя";
             this.addNewUserToolStripMenuItem.Click += new System.EventHandler(this.AddNewUserToolStripMenuItem_Click);
-            // 
-            // сменитьПарольУчетнойЗаписиToolStripMenuItem
-            // 
-            this.сменитьПарольУчетнойЗаписиToolStripMenuItem.Name = "сменитьПарольУчетнойЗаписиToolStripMenuItem";
-            this.сменитьПарольУчетнойЗаписиToolStripMenuItem.Size = new System.Drawing.Size(254, 22);
-            this.сменитьПарольУчетнойЗаписиToolStripMenuItem.Text = "Сменить пароль учетной записи";
             // 
             // MainForm
             // 
@@ -99,6 +101,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem allUsersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewUserToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem сменитьПарольУчетнойЗаписиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ChangePasswordToolStripMenuItem;
     }
 }

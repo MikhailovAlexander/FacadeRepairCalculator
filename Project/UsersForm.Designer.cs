@@ -99,6 +99,7 @@
             // 
             // buttonAddUser
             // 
+            this.buttonAddUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonAddUser.Location = new System.Drawing.Point(662, 378);
             this.buttonAddUser.Name = "buttonAddUser";
             this.buttonAddUser.Size = new System.Drawing.Size(110, 49);
@@ -109,31 +110,36 @@
             // 
             // buttonUpdateUser
             // 
+            this.buttonUpdateUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonUpdateUser.Location = new System.Drawing.Point(458, 378);
             this.buttonUpdateUser.Name = "buttonUpdateUser";
             this.buttonUpdateUser.Size = new System.Drawing.Size(110, 49);
             this.buttonUpdateUser.TabIndex = 3;
             this.buttonUpdateUser.Text = "Редактировать данные пользователя";
             this.buttonUpdateUser.UseVisualStyleBackColor = true;
-            this.buttonUpdateUser.Click += new System.EventHandler(this.buttonUpdateUser_Click);
+            this.buttonUpdateUser.Click += new System.EventHandler(this.ButtonUpdateUser_Click);
             // 
             // buttonDeleteUser
             // 
+            this.buttonDeleteUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonDeleteUser.Location = new System.Drawing.Point(42, 378);
             this.buttonDeleteUser.Name = "buttonDeleteUser";
             this.buttonDeleteUser.Size = new System.Drawing.Size(110, 49);
             this.buttonDeleteUser.TabIndex = 4;
             this.buttonDeleteUser.Text = "Удалить пользователя";
             this.buttonDeleteUser.UseVisualStyleBackColor = true;
+            this.buttonDeleteUser.Click += new System.EventHandler(this.ButtonDeleteUser_Click);
             // 
             // buttonChangeUserPassword
             // 
+            this.buttonChangeUserPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonChangeUserPassword.Location = new System.Drawing.Point(254, 378);
             this.buttonChangeUserPassword.Name = "buttonChangeUserPassword";
             this.buttonChangeUserPassword.Size = new System.Drawing.Size(110, 49);
             this.buttonChangeUserPassword.TabIndex = 5;
             this.buttonChangeUserPassword.Text = "Сменить пароль пользователя";
             this.buttonChangeUserPassword.UseVisualStyleBackColor = true;
+            this.buttonChangeUserPassword.Click += new System.EventHandler(this.ButtonChangeUserPassword_Click);
             // 
             // UsersForm
             // 
