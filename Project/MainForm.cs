@@ -72,5 +72,11 @@ namespace Project
             { Owner = this };
             changePasswordForm.Show();
         }
+
+        private void CreateProjectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var createProjectForm = new CreateProjectForm(driver, actualUser);
+            createProjectForm.Show();
+        }
     }
 }

@@ -38,6 +38,7 @@
             this.buttonUpdateUser = new System.Windows.Forms.Button();
             this.buttonDeleteUser = new System.Windows.Forms.Button();
             this.buttonChangeUserPassword = new System.Windows.Forms.Button();
+            this.buttonAddUserInProject = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,7 +101,7 @@
             // buttonAddUser
             // 
             this.buttonAddUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonAddUser.Location = new System.Drawing.Point(662, 378);
+            this.buttonAddUser.Location = new System.Drawing.Point(408, 378);
             this.buttonAddUser.Name = "buttonAddUser";
             this.buttonAddUser.Size = new System.Drawing.Size(110, 49);
             this.buttonAddUser.TabIndex = 1;
@@ -111,7 +112,7 @@
             // buttonUpdateUser
             // 
             this.buttonUpdateUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonUpdateUser.Location = new System.Drawing.Point(458, 378);
+            this.buttonUpdateUser.Location = new System.Drawing.Point(273, 378);
             this.buttonUpdateUser.Name = "buttonUpdateUser";
             this.buttonUpdateUser.Size = new System.Drawing.Size(110, 49);
             this.buttonUpdateUser.TabIndex = 3;
@@ -122,7 +123,7 @@
             // buttonDeleteUser
             // 
             this.buttonDeleteUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonDeleteUser.Location = new System.Drawing.Point(42, 378);
+            this.buttonDeleteUser.Location = new System.Drawing.Point(1, 378);
             this.buttonDeleteUser.Name = "buttonDeleteUser";
             this.buttonDeleteUser.Size = new System.Drawing.Size(110, 49);
             this.buttonDeleteUser.TabIndex = 4;
@@ -133,7 +134,7 @@
             // buttonChangeUserPassword
             // 
             this.buttonChangeUserPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonChangeUserPassword.Location = new System.Drawing.Point(254, 378);
+            this.buttonChangeUserPassword.Location = new System.Drawing.Point(137, 378);
             this.buttonChangeUserPassword.Name = "buttonChangeUserPassword";
             this.buttonChangeUserPassword.Size = new System.Drawing.Size(110, 49);
             this.buttonChangeUserPassword.TabIndex = 5;
@@ -141,11 +142,24 @@
             this.buttonChangeUserPassword.UseVisualStyleBackColor = true;
             this.buttonChangeUserPassword.Click += new System.EventHandler(this.ButtonChangeUserPassword_Click);
             // 
+            // buttonAddUserInProject
+            // 
+            this.buttonAddUserInProject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonAddUserInProject.Location = new System.Drawing.Point(708, 378);
+            this.buttonAddUserInProject.Name = "buttonAddUserInProject";
+            this.buttonAddUserInProject.Size = new System.Drawing.Size(110, 49);
+            this.buttonAddUserInProject.TabIndex = 6;
+            this.buttonAddUserInProject.Text = "Добавить пользователя в проект";
+            this.buttonAddUserInProject.UseVisualStyleBackColor = true;
+            this.buttonAddUserInProject.Visible = false;
+            this.buttonAddUserInProject.Click += new System.EventHandler(this.ButtonAddUserInProject_Click);
+            // 
             // UsersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(830, 450);
+            this.Controls.Add(this.buttonAddUserInProject);
             this.Controls.Add(this.buttonChangeUserPassword);
             this.Controls.Add(this.buttonDeleteUser);
             this.Controls.Add(this.buttonUpdateUser);
@@ -171,5 +185,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn userManagerAccessColumn;
         private System.Windows.Forms.Button buttonDeleteUser;
         private System.Windows.Forms.Button buttonChangeUserPassword;
+        private System.Windows.Forms.Button buttonAddUserInProject;
     }
 }

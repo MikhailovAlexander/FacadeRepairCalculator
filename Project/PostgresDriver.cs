@@ -200,9 +200,9 @@ namespace Project
         public string[] ReadAllClients()
         {
             //Получение количества строк для указания рамера массива
-            string query = "SELECT COUNT * FROM client;";
+            string query = "SELECT COUNT(*) FROM client;";
             var cmd = new NpgsqlCommand(query, Conn);
-            int numberOfRows = (int)cmd.ExecuteScalar();
+            int numberOfRows = Convert.ToInt32(cmd.ExecuteScalar());
             if(numberOfRows==0) return new string[0];
 
             cmd.CommandText = "SELECT name FROM client;";
@@ -220,10 +220,10 @@ namespace Project
 
         public void CreateProject(Project project)
         {
-            string query = $"INSERT INTO project (id, name, address, id_client, id_project_state,"+
+            string query = $"INSERT INTO project (id, name, address, id_client, id_project_state, "+
                 $"date_of_start, date_of_complete) VALUES (DEFAULT, @name, @address, " +
                 $"(SELECT id FROM client WHERE name = @client_name), " +
-                $"id_project_state, @date_of_start, @date_of_complete);";
+                $"@id_project_state, @date_of_start, @date_of_complete);";
             var cmd = new NpgsqlCommand(query, Conn);
             cmd.Parameters.Add(new NpgsqlParameter("@name", NpgsqlTypes.NpgsqlDbType.Varchar));
             cmd.Parameters.Add(new NpgsqlParameter("@address", NpgsqlTypes.NpgsqlDbType.Varchar));

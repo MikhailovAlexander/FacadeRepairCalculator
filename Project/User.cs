@@ -29,6 +29,7 @@ namespace Project
         public string SaltString { get; set; }
         public int Id { get { return id; } }
         public string HashPassword { get { return hashPassword; } }
+
         public User()
         {
             Name = "None";
@@ -36,6 +37,7 @@ namespace Project
             Login = "None";
             ManagerAccess = false;
         }
+
         public User(string name, string passport, string login, bool acces)
         {
             Name = name;
@@ -43,6 +45,7 @@ namespace Project
             Login = login;
             ManagerAccess = acces;
         }
+
         public User(int id, string name, string passport, string login, string hashPassword, 
             bool acces, string saltString)
         {
@@ -54,6 +57,7 @@ namespace Project
             ManagerAccess = acces;
             this.SaltString = saltString;
         }
+
         public User(string name, string passport, string login, string hashPassword, bool access, 
             string saltString)
         {
@@ -64,20 +68,25 @@ namespace Project
             ManagerAccess = access;
             this.SaltString = saltString;
         }
+
+
         public void ChangePassword(string newPassword)
         {
                 var creator = new HashPasswordCreator(newPassword);
                 hashPassword=creator.GetHashToString();
                 SaltString = creator.GetSaltToString();
         }
+
         public void Create(IDriverDB driver)
         {
             driver.CreateUser(this);
         }
+
         public void Update(IDriverDB driver)
         {
             driver.UpdateUser(this);
         }
+
         public static User ReadUser(string loginInput, IDriverDB driver)
         {
             return driver.ReadUser(loginInput);

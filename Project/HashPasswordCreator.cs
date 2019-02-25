@@ -21,6 +21,7 @@ namespace Project
             passwordBytes = Encoding.UTF8.GetBytes(passwordInput);
             saltBytes = GetSalt(saltSise);
         }
+
         static byte[] GetSalt(int length)
         {
             RNGCryptoServiceProvider rngCsp = new RNGCryptoServiceProvider();//Крипто-генератор случайных чисел
@@ -28,6 +29,7 @@ namespace Project
             rngCsp.GetBytes(salt);// Заполнение случайными значениями
             return salt;
         }
+
         public string GetHashToString()
         {
             byte[] saltedPassword = new byte[passwordBytes.Length + saltBytes.Length];//создание массива для соли с паролем
@@ -37,10 +39,12 @@ namespace Project
             byte[] hashBytes = deriveBytes.ComputeHash(saltedPassword);//Получение хэша соли с паролем
             return Convert.ToBase64String(hashBytes);
         }
+
         public string GetSaltToString()
         {
             return Convert.ToBase64String(this.saltBytes);
         }
+
         public bool VeryfyHash(string correctHash, string saltString)
         {
             try
@@ -54,6 +58,7 @@ namespace Project
             string checkPasswordHash = GetHashToString();
             return String.Equals(checkPasswordHash, correctHash);
         }
+
         void ConvertSalt(string saltString)
         {
             if (string.IsNullOrWhiteSpace(saltString))

@@ -17,6 +17,7 @@ namespace Project
         IDriverDB driver;
         public User actualUser;
         public User[] allUsers;
+        public Project actualProject;
 
         public UsersForm(IDriverDB driver, User actualUser)
         {
@@ -53,6 +54,7 @@ namespace Project
                     (user.ManagerAccess) ? "Да" : "Нет");
             }
         }
+
         public void UsersForm_ReLoad()
         {
             try
@@ -123,6 +125,35 @@ namespace Project
         {
             var ChangePasswordForm = new ChangePasswordForm(SelectedUser(), driver);
             ChangePasswordForm.Show();
+        }
+
+        public void AddUserInProjectForm(Project actualProject)
+        {
+            this.actualProject = actualProject;
+            buttonAddUser.Visible = false;
+            buttonChangeUserPassword.Visible = false;
+            buttonDeleteUser.Visible = false;
+            buttonUpdateUser.Visible = false;
+            buttonAddUserInProject.Visible = true;
+        }
+
+        private void ButtonAddUserInProject_Click(object sender, EventArgs e)
+        {
+            if(actualProject != null&&SelectedUser() != null)
+            {
+                try
+                {
+                    driver.AddUserToProject(SelectedUser().Id, actualProject.Id);
+                    MessageBox.Show($"Пользователь {SelectedUser().Name} добавлен в проект " +
+                        $"{actualProject.Name}", "Сообщение",MessageBoxButtons.OK, 
+                        MessageBoxIcon.Information);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

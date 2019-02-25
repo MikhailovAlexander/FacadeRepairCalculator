@@ -23,14 +23,15 @@ namespace Project
         public string Client { get; set; }
         public ProjectState State { get; set; }
         public DateTime DateOfStart { get; set; }
+        DateTime dateOfComplete;
         public DateTime DateOfComplete
         {
-            get { return DateOfComplete; }
+            get { return dateOfComplete; }
             set
             {
-                if (DateOfComplete < DateOfStart) throw new Exception(
+                if (value < DateOfStart) throw new Exception(
                     "Дата завершения проекта не может быть ранее даты начала");
-                DateOfComplete = value;
+                dateOfComplete = value;
             }
         }
 
@@ -43,6 +44,17 @@ namespace Project
             State = ProjectState.Planned;
             DateOfStart = DateTime.MinValue;
             DateOfComplete = DateTime.MinValue;
+        }
+
+        public Project(string name, string address, string client)
+        {
+            id = -1;
+            Name = name;
+            Address = address;
+            Client = client;
+            State = ProjectState.Planned;
+            DateOfStart = new DateTime(1970, 01, 01);
+            DateOfComplete = new DateTime(1970, 01, 01);
         }
 
         public Project(string name, string address, string client, ProjectState state, 
