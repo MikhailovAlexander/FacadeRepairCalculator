@@ -19,23 +19,11 @@ namespace Project
             Application.SetCompatibleTextRenderingDefault(false);
 
             string connString = "Host=localhost;Username=Alexandr;Password=1828bd;Database=postgres";
-            NpgsqlConnection conn = new NpgsqlConnection(connString);
-            PostgresDriver driver = new PostgresDriver(conn);
-            Application.Run(new MainForm(driver));
+            var conn = new NpgsqlConnection(connString);
+            var driver = new PostgresDriver(conn);
+            var hashPasswordCreator = new HashPasswordCreator();
 
-            //User actualUser = new User();
-            //try
-            //{
-            //    actualUser = driver.ReadUser("vestroy@gmail.com");
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            //if (actualUser.Name != "None") Application.Run(new CreateUser(actualUser, driver));
-
-
-
+            Application.Run(new MainForm(driver, hashPasswordCreator));
         }
     }
 }

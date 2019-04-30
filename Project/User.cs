@@ -3,54 +3,46 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Security.Cryptography;
-using System.Windows.Forms;
 using System.Text.RegularExpressions;
 
-//TODO HashPasswordMakerinterface
 namespace Project
 {
-    public class User
+    public class User: BaseWithName
     {
-        readonly int id;
         string hashPassword;
 
-        public static Regex nameRegex = new Regex(@"^([А-Я][а-я]+ ){1,4}[А-Я][а-я]+$");
-        public static Regex passportRegex = new Regex(
+        private static Regex userNameRegex = new Regex(@"^([А-Я][а-я]+ ){1,4}[А-Я][а-я]+$");
+        private static Regex passportRegex = new Regex(
             @"^(\d{4} \d{6} \d{1,2}\.\d{1,2}\.\d{4}( \w+\.*)+)$");
-        public static Regex loginRegex = new Regex(@"^(\w+@[A-z_]+?\.[A-z]{2,6})$");
-        public static Regex passwordRegex = new Regex(
+        private static Regex loginRegex = new Regex(@"^(\w+@[A-z_]+?\.[A-z]{2,6})$");
+        private static Regex passwordRegex = new Regex(
             @"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d_]{8,15}$");
 
-        public string Name { get; set; }
+        public const string nameTableInDB = "application_user";
+
         public string Passport { get; set; }
         public string Login { get; set; }
         public bool ManagerAccess { get; set; }
         public string SaltString { get; set; }
-        public int Id { get { return id; } }
         public string HashPassword { get { return hashPassword; } }
 
-        public User()
+        public User(): base()
         {
-            Name = "None";
-            Passport = "None";
-            Login = "None";
+            Passport = "Не установлено";
+            Login = "Не установлено";
             ManagerAccess = false;
         }
 
-        public User(string name, string passport, string login, bool acces)
+        public User(string name, string passport, string login, bool acces):base(name)
         {
-            Name = name;
             Passport = passport;
             Login = login;
             ManagerAccess = acces;
         }
 
         public User(int id, string name, string passport, string login, string hashPassword, 
-            bool acces, string saltString)
+            bool acces, string saltString):base(id, name)
         {
-            this.id = id;
-            Name = name;
             Passport = passport;
             Login = login;
             this.hashPassword = hashPassword;
@@ -59,43 +51,67 @@ namespace Project
         }
 
         public User(string name, string passport, string login, string hashPassword, bool access, 
-            string saltString)
+            string saltString) : base(name)
         {
-            Name = name;
             Passport = passport;
             Login = login;
             this.hashPassword = hashPassword;
             ManagerAccess = access;
-            this.SaltString = saltString;
+            SaltString = saltString;
         }
 
 
-        public void ChangePassword(string newPassword)
+        public void ChangePassword(string newPassword, IHashPasswordCreator hashPasswordCreator)
         {
-                var creator = new HashPasswordCreator(newPassword);
-                hashPassword=creator.GetHashToString();
-                SaltString = creator.GetSaltToString();
+            hashPasswordCreator.EncodePasswordAndGenerteSalt(newPassword);
+            hashPassword = hashPasswordCreator.GetHashToString();
+            SaltString = hashPasswordCreator.GetSaltToString();
         }
 
-        public void Create(IDriverDB driver)
+        public bool CheckPassword(string password2Check, IHashPasswordCreator hashPasswordCreator)
+        {
+            return hashPasswordCreator.VeryfyHash(password2Check, HashPassword, SaltString);
+        }
+
+        public override void Create(IDriverDB driver)
         {
             driver.CreateUser(this);
         }
 
-        public void Update(IDriverDB driver)
+        public override void Update(IDriverDB driver)
         {
             driver.UpdateUser(this);
         }
 
-        public static User ReadUser(string loginInput, IDriverDB driver)
+        public override void Delete(IDriverDB driver)
         {
-            return driver.ReadUser(loginInput);
+            driver.DeleteUser(id);
         }
 
         public override string ToString()
         {
             string output = $"[{Id}] {Name} {Passport} {Login} {ManagerAccess}";
             return output;
+        }
+
+        public new static bool NameIsMatch(string string2Check)
+        {
+            return userNameRegex.IsMatch(string2Check);
+        }
+
+        public static bool PassportIsMatch(string string2Check)
+        {
+            return passportRegex.IsMatch(string2Check);
+        }
+
+        public static bool LoginIsMatch(string string2Check)
+        {
+            return loginRegex.IsMatch(string2Check);
+        }
+
+        public static bool PasswordIsMatch(string string2Check)
+        {
+            return passwordRegex.IsMatch(string2Check);
         }
     }
 }

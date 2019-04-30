@@ -58,18 +58,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChangePasswordForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChangePasswordForm.Designer.cs">
-      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CreateProjectForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CreateProjectForm.Designer.cs">
-      <DependentUpon>CreateProjectForm.cs</DependentUpon>
-    </Compile>
+    <Compile Include="AcceptedWork.cs" />
+    <Compile Include="Base.cs" />
+    <Compile Include="BaseWithName.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="CompletedWork.cs" />
+    <Compile Include="Dimension.cs" />
+    <Compile Include="Element.cs" />
+    <Compile Include="ElementPicture.cs" />
     <Compile Include="Entry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,44 +74,39 @@
     </Compile>
     <Compile Include="HashPasswordCreator.cs" />
     <Compile Include="IDriverDB.cs" />
-    <Compile Include="CreateUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CreateUser.Designer.cs">
-      <DependentUpon>CreateUser.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainFormTabPageElementPicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormTabPageProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHashPasswordCreator.cs" />
+    <Compile Include="MainFormTabPageSectionOfBuilding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment.cs" />
     <Compile Include="PostgresDriver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Project.cs" />
+    <Compile Include="ProjectState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UpdateUserForm.cs">
+    <Compile Include="RejectedWork.cs" />
+    <Compile Include="SectionOfBuilding.cs" />
+    <Compile Include="MainFormTabPageTypeOfElement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateUserForm.Designer.cs">
-      <DependentUpon>UpdateUserForm.cs</DependentUpon>
-    </Compile>
+    <Compile Include="TypeOfElement.cs" />
+    <Compile Include="TypeOfWork.cs" />
     <Compile Include="User.cs" />
-    <Compile Include="UsersForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UsersForm.Designer.cs">
-      <DependentUpon>UsersForm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="ChangePasswordForm.resx">
-      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CreateProjectForm.resx">
-      <DependentUpon>CreateProjectForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CreateUser.resx">
-      <DependentUpon>CreateUser.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="WorkByElement.cs" />
+    <Compile Include="WorkInProject.cs" />
+    <Compile Include="WorkState.cs" />
     <EmbeddedResource Include="Entry.resx">
       <DependentUpon>Entry.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,12 +123,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UpdateUserForm.resx">
-      <DependentUpon>UpdateUserForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UsersForm.resx">
-      <DependentUpon>UsersForm.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\MainForm.datasource" />
     <None Include="Properties\Settings.settings">

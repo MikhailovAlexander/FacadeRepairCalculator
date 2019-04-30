@@ -12,29 +12,36 @@ namespace Project
 {
     public partial class Entry : Form
     {
-        IDriverDB driver;
-        public Entry(IDriverDB driver, MainForm mainForm)
+        private IDriverDB driver;
+        private IHashPasswordCreator hashPasswordCreator;
+        public User actualUser;
+
+        public Entry(IDriverDB driver, IHashPasswordCreator hashPasswordCreator)
         {
             InitializeComponent();
             this.driver = driver;
-            this.Owner = mainForm;
+            this.hashPasswordCreator = hashPasswordCreator;
+            actualUser = new User();
         }
 
         private void ButtonPasswordForget_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Обратитесь к менеджеру для получения нового пароля", "Очень жаль", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Обратитесь к менеджеру для получения нового пароля", "Очень жаль", 
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void TextBoxLogin_TextChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(textBoxLogin.Text) && !string.IsNullOrWhiteSpace(textBoxPassword.Text))
+            if (!string.IsNullOrWhiteSpace(textBoxLogin.Text) && 
+                !string.IsNullOrWhiteSpace(textBoxPassword.Text))
                 this.buttonEntry.Enabled = true;
             else this.buttonEntry.Enabled = false;
         }
 
         private void TextBoxPassword_TextChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(textBoxLogin.Text) && !string.IsNullOrWhiteSpace(textBoxPassword.Text))
+            if (!string.IsNullOrWhiteSpace(textBoxLogin.Text) && 
+                !string.IsNullOrWhiteSpace(textBoxPassword.Text))
                 this.buttonEntry.Enabled = true;
             else this.buttonEntry.Enabled = false;
         }
@@ -47,14 +54,10 @@ namespace Project
             try
             {
                 checkUser = driver.ReadUser(login);
-                var passCheck = new HashPasswordCreator(inputPassword);
-                if (passCheck.VeryfyHash(checkUser.HashPassword, checkUser.SaltString))
+                if (checkUser.CheckPassword(inputPassword, hashPasswordCreator))
                 {
                     MessageBox.Show(checkUser.Name, "Проверка пройдена", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //MainForm mainForm = new MainForm(driver, checkUser);
-                    //mainForm.Show();
-                    this.Owner.Tag = checkUser;
-                    //this.Visible=false;
+                    actualUser = checkUser;
                     this.Close(); 
                 }
                 else MessageBox.Show("Проверка не пройдена", "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
