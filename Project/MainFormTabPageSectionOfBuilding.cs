@@ -22,8 +22,13 @@ namespace Project
 
         private SectionOfBuilding[] ReadSectionsOfBuildingByActualProject()
         {
-            if (actualProject.Id == -1) return new SectionOfBuilding[0];
-            return ReadAllObjectsByParam<SectionOfBuilding>(actualProject.Id, 
+            return ReadSectionsOfBuildingByProject(actualProject);
+        }
+
+        private SectionOfBuilding[] ReadSectionsOfBuildingByProject(Project project)
+        {
+            if (project.Id == -1) return new SectionOfBuilding[0];
+            return ReadAllObjectsByParam<SectionOfBuilding>(project.Id,
                 driver.ReadAllSectionsOfBuildingByProject);
         }
 
@@ -140,22 +145,8 @@ namespace Project
         //ShowEntities
         private void ShowSectionsOfBuildingInActualPriject()
         {
-            lblSectionOfBuldingActualProjectNotSaved1.Visible = (actualProject.Id == -1);
-            var sectionsOfBuilding = ReadSectionsOfBuildingByActualProject();
-            ClearAndSetHeightDgv(dgvSectionsOfBuildingByActualProject, gbAllSectionsOfBuilding,
-                sectionsOfBuilding.Length);
-            foreach (var section in sectionsOfBuilding)
-            {
-                decimal square = GetSquareOfSectionOfBuilding(section);
-                string sectionSquare;
-                if (square == -1) sectionSquare = "не определена";
-                else
-                {
-                    sectionSquare = square.ToString();
-                }
-                dgvSectionsOfBuildingByActualProject.Rows.Add(section.Id, section.Name, 
-                    section.QuantityByHeight, section.QuantityByWidth, sectionSquare);
-            }
+            ShowSectionsOfBuilding(actualProject, lblSectionOfBuldingActualProjectNotSaved1,
+            dgvSectionsOfBuildingByActualProject, gbAllSectionsOfBuilding);
             ShowTotalSquareByActualProject();
             ShowTotalAmountByActualProject();
         }
@@ -194,6 +185,7 @@ namespace Project
             listView.LargeImageList = largeImageList;
         }
 
+        ///MODEL!!!
         private void DgvSectionOfBuildingModelSetImageColumns(SectionOfBuilding sectionOfBuilding)
         {
             dgvSectionOfBuildingModel.Columns.Clear();
@@ -336,16 +328,9 @@ namespace Project
 
         private void ShowAmountBySectionOfBuilding(SectionOfBuilding sectionOfBuilding)
         {
-            decimal amount = GetAmountByWorksFromSectionOfBuilding(sectionOfBuilding);
-            if (amount == -1) lblSectionOfBuildingWorksAmount.Text =
-                    "Общая стоимость работ по модели не определена";
-            else
-            {
-                lblSectionOfBuildingWorksAmount.Text =
-                    $"Общая стоимость работ по модели {amount.ToString()} руб.";
-            }
+            ShowWorksAmountBySectionOfBuilding(sectionOfBuilding, lblSectionOfBuildingWorksAmount);
         }
-
+                
         private void ShowTypesOfElementInSectionOfBuilding()
         {
             lblSectionOfBuldingActualProjectNotSaved2.Visible = (actualProject.Id == -1);
@@ -443,7 +428,7 @@ namespace Project
                     ChangeRowHeightInModel(rowIndex, GetModelSize(typeOfElement.Height));
             }
         }
-
+        //
         private int GetModelSize(decimal typeOfElementSize)
         {
             return (int)(typeOfElementSize * ModelSizeMultiplier);

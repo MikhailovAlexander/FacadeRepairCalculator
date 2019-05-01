@@ -149,7 +149,7 @@ namespace Project
             else
                 text = $"Общая стоимость работ проекта {totalAmount.ToString()} руб.";
             lblSectionOfBuildingActualProjectWorksAmount.Text = text;
-            lbllProjectWorksAmount.Text = text;
+            lblProjectWorksAmount.Text = text;
         }
 
         private void ShowAmountPaymentsByActualProject()

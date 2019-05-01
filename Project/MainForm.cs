@@ -20,6 +20,8 @@ namespace Project
         private Element[][] elementsOfModel;
         private int ModelSizeMultiplier = 30;
 
+        private ModelOfFacade workerModel;
+
         public MainForm(IDriverDB driver, IHashPasswordCreator hashPasswordCreator)
         {
             InitializeComponent();
@@ -27,6 +29,9 @@ namespace Project
             this.hashPasswordCreator = hashPasswordCreator;
             actualUser = new User();
             elementsOfModel = new Element[0][];
+
+            workerModel = new ModelOfFacade(dgvWorkerModel, this);
+
             var entryForm = new Entry(driver, hashPasswordCreator);
             Application.Run(entryForm);
             try
@@ -46,10 +51,9 @@ namespace Project
                 Close();
             }
             //TODO remove this
-            if (actualUser.ManagerAccess)
+            if (!actualUser.ManagerAccess)
             {
-                addNewUserToolStripMenuItem.Enabled = true;
-                allUsersToolStripMenuItem.Enabled = true;
+                //ShowWorkerProjects();
             }
             Image checkMark = Image.FromFile(
                 @"C:\Users\vestr\source\repos\Project\Project\checkMark.png");
@@ -60,6 +64,10 @@ namespace Project
             actualProject = new Project();
             ShowActualProject();
             ShowAllEntities();
+            //##
+            ShowWorkerProjects();
+
+            
         }
         private void SetPictures(Image checkMark)
         {
@@ -257,6 +265,39 @@ namespace Project
             dtp.Visible = false;
         }
 
+        private void ShowSectionsOfBuilding(Project project, Label lblProjectNotSaved, 
+            DataGridView dgvSectionsOfBuilding, GroupBox groupBox)
+        {
+            lblProjectNotSaved.Visible = (project.Id == -1);
+            var sectionsOfBuilding = ReadSectionsOfBuildingByProject(project);
+            ClearAndSetHeightDgv(dgvSectionsOfBuilding, groupBox,
+                sectionsOfBuilding.Length);
+            foreach (var section in sectionsOfBuilding)
+            {
+                decimal square = GetSquareOfSectionOfBuilding(section);
+                string sectionSquare;
+                if (square == -1) sectionSquare = "не определена";
+                else
+                {
+                    sectionSquare = square.ToString();
+                }
+                dgvSectionsOfBuilding.Rows.Add(section.Id, section.Name,
+                    section.QuantityByHeight, section.QuantityByWidth, sectionSquare);
+            }
+        }
+
+        private void ShowWorksAmountBySectionOfBuilding(SectionOfBuilding sectionOfBuilding,
+            Label lblWorksAmount)
+        {
+            decimal amount = GetAmountByWorksFromSectionOfBuilding(sectionOfBuilding);
+            if (amount == -1) lblWorksAmount.Text =
+                    "Общая стоимость работ по модели не определена";
+            else
+            {
+                lblWorksAmount.Text =
+                    $"Общая стоимость работ по модели {amount.ToString()} руб.";
+            }
+        }
 
         //
         //TabPageUser
@@ -1629,6 +1670,11 @@ namespace Project
                         MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+
         }
 
         

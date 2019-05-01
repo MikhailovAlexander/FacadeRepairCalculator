@@ -23,6 +23,11 @@ namespace Project
             return ReadObject<ElementPicture>(idForSearch, driver.ReadElementPicture);
         }
 
+        private ElementPicture ReadElementPictureByTypeOfElement(int idTypeOfElement)
+        {
+            return ReadObject<ElementPicture>(idTypeOfElement, driver.GetElementPictureByTypeOfElement);
+        }
+
         private ElementPicture SelectedElementPicture()
         {
             return SelectedObject<ElementPicture>(dgvAllElementPicture, driver.ReadElementPicture);

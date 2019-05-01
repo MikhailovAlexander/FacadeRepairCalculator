@@ -53,6 +53,11 @@ namespace Project
         {
             driver.DeleteElementPicture(this.Id);
         }
+
+        public Image ResizePicture(int width, int height)
+        {
+            return new Bitmap(Picture, new Size(width, height));
+        }
     }
 
 }

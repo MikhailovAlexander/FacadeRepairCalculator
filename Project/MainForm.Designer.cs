@@ -28,18 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Menu = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ChangePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.allUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addNewUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CreateProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ActualProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PlannedProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CompletedProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CancelledProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AllProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageProject = new System.Windows.Forms.TabPage();
             this.gblProjectPanel = new System.Windows.Forms.GroupBox();
@@ -84,7 +72,7 @@
             this.gbAllProjects = new System.Windows.Forms.GroupBox();
             this.lbllProjectAmountPayments = new System.Windows.Forms.Label();
             this.lblProjectTotalSquare = new System.Windows.Forms.Label();
-            this.lbllProjectWorksAmount = new System.Windows.Forms.Label();
+            this.lblProjectWorksAmount = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnProjectSwitchStart = new System.Windows.Forms.Button();
@@ -145,7 +133,6 @@
             this.ColumnManagerAccess = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonRemoveUser = new System.Windows.Forms.Button();
             this.gbAllUsers = new System.Windows.Forms.GroupBox();
-            this.checkBoxAllUsersVision = new System.Windows.Forms.CheckBox();
             this.buttonAddUserInProject = new System.Windows.Forms.Button();
             this.buttonSwitchChangePassword = new System.Windows.Forms.Button();
             this.buttonDeleteUser = new System.Windows.Forms.Button();
@@ -369,14 +356,9 @@
             this.dgvTbColumnPictureName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnElementPicturePicture = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageSectionOfBuilding = new System.Windows.Forms.TabPage();
+            this.btnSectionOfBuildingCancelWork = new System.Windows.Forms.Button();
             this.gbSectionOfBuildingPanel = new System.Windows.Forms.GroupBox();
             this.SectionOfBuildingModel = new System.Windows.Forms.GroupBox();
-            this.btnSectionOfBuildingCancelWork = new System.Windows.Forms.Button();
-            this.btnSectionOfBuildingSetWork = new System.Windows.Forms.Button();
-            this.btnSectionOfBuildingSwitchSetWork = new System.Windows.Forms.Button();
-            this.btnSectionOfBuildingSwitchModelCancel = new System.Windows.Forms.Button();
-            this.btnSectionOfBuildingModelUpdate = new System.Windows.Forms.Button();
-            this.btnSectionOfBuildingSwitchModelUpdate = new System.Windows.Forms.Button();
             this.dgvSectionOfBuildingModel = new System.Windows.Forms.DataGridView();
             this.btnSectionOfBuildingSwitchCancel = new System.Windows.Forms.Button();
             this.btnSectionOfBuildingCreate = new System.Windows.Forms.Button();
@@ -395,6 +377,7 @@
             this.pbCheckMarkSectionOfBuildingQuantityByHeight = new System.Windows.Forms.PictureBox();
             this.pbCheckMarkSectionOfBuildingName = new System.Windows.Forms.PictureBox();
             this.btnSectionOfBuildingUpdate = new System.Windows.Forms.Button();
+            this.btnSectionOfBuildingSetWork = new System.Windows.Forms.Button();
             this.gbTypeOfElementInProjectBySectionOfBuilding = new System.Windows.Forms.GroupBox();
             this.lblSectionOfBuildingWorksAmount = new System.Windows.Forms.Label();
             this.dgvSectionOfBuildingWorkInProject = new System.Windows.Forms.DataGridView();
@@ -407,6 +390,7 @@
             this.ColumnSectionCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lvSectionOfBuildingTypesOfElementInProject = new System.Windows.Forms.ListView();
             this.lblSectionOfBuldingActualProjectNotSaved2 = new System.Windows.Forms.Label();
+            this.btnSectionOfBuildingSwitchSetWork = new System.Windows.Forms.Button();
             this.gbAllSectionsOfBuilding = new System.Windows.Forms.GroupBox();
             this.lblSectionOfBuildingActualProjectWorksAmount = new System.Windows.Forms.Label();
             this.lblSectionOfBuildingActualProjectTotalSquare = new System.Windows.Forms.Label();
@@ -420,10 +404,80 @@
             this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSquareSectionOfBuilding = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSectionOfBuildingSwitchModelCancel = new System.Windows.Forms.Button();
+            this.btnSectionOfBuildingSwitchModelUpdate = new System.Windows.Forms.Button();
+            this.btnSectionOfBuildingModelUpdate = new System.Windows.Forms.Button();
+            this.tabPageWorker = new System.Windows.Forms.TabPage();
+            this.gbWorkerSectionsOfBuilding = new System.Windows.Forms.GroupBox();
+            this.lblWorkerProjectNotFound = new System.Windows.Forms.Label();
+            this.dgvWorkerSectionsOfBuilding = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabControlWorker = new System.Windows.Forms.TabControl();
+            this.tabPageWorkerWorks = new System.Windows.Forms.TabPage();
+            this.lblWorkerSectionOfBuildingWorkAmount = new System.Windows.Forms.Label();
+            this.btnWorkerCompleteWorkCancel = new System.Windows.Forms.Button();
+            this.btnWorkerCompleteWork = new System.Windows.Forms.Button();
+            this.btnWorkerSwitchCompleteWork = new System.Windows.Forms.Button();
+            this.btnWorkerSwitchCompleteWorkCancel = new System.Windows.Forms.Button();
+            this.dgvWorkerWorksInProject = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn51 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn52 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn55 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn56 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn57 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageWorkerPayments = new System.Windows.Forms.TabPage();
+            this.lblWorkerPaymentAmount = new System.Windows.Forms.Label();
+            this.dgvWorkerPayments = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn53 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn54 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageWorkerUserData = new System.Windows.Forms.TabPage();
+            this.btnWorkerSwitchChangePassword = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.gbWorkerChangePassword = new System.Windows.Forms.GroupBox();
+            this.btnWorkerSwitchChangePasswordCancel = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnWorkerChangePassword = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.gbWorkerProjects = new System.Windows.Forms.GroupBox();
+            this.lblWorkerProjectWorksAmount = new System.Windows.Forms.Label();
+            this.dgvWorkerProjects = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblWorkerProjectTotalSquare = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvWorkerModel = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.labelActualProjectName = new System.Windows.Forms.Label();
             this.labelActualUserName = new System.Windows.Forms.Label();
             this.ofdElementOpenImage = new System.Windows.Forms.OpenFileDialog();
-            this.Menu.SuspendLayout();
             this.tabControlMain.SuspendLayout();
             this.tabPageProject.SuspendLayout();
             this.gblProjectPanel.SuspendLayout();
@@ -525,102 +579,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvSectionOfBuildingWorkInProject)).BeginInit();
             this.gbAllSectionsOfBuilding.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSectionsOfBuildingByActualProject)).BeginInit();
+            this.tabPageWorker.SuspendLayout();
+            this.gbWorkerSectionsOfBuilding.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerSectionsOfBuilding)).BeginInit();
+            this.tabControlWorker.SuspendLayout();
+            this.tabPageWorkerWorks.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerWorksInProject)).BeginInit();
+            this.tabPageWorkerPayments.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerPayments)).BeginInit();
+            this.tabPageWorkerUserData.SuspendLayout();
+            this.gbWorkerChangePassword.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.gbWorkerProjects.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerProjects)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerModel)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Menu
-            // 
-            this.Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.ProjectToolStripMenuItem});
-            this.Menu.Location = new System.Drawing.Point(0, 0);
-            this.Menu.Name = "Menu";
-            this.Menu.Size = new System.Drawing.Size(1959, 24);
-            this.Menu.TabIndex = 1;
-            this.Menu.Text = "Операции";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ChangePasswordToolStripMenuItem,
-            this.allUsersToolStripMenuItem,
-            this.addNewUserToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(100, 20);
-            this.toolStripMenuItem1.Text = "Пользователи ";
-            // 
-            // ChangePasswordToolStripMenuItem
-            // 
-            this.ChangePasswordToolStripMenuItem.Name = "ChangePasswordToolStripMenuItem";
-            this.ChangePasswordToolStripMenuItem.Size = new System.Drawing.Size(254, 22);
-            this.ChangePasswordToolStripMenuItem.Text = "Сменить пароль учетной записи";
-            this.ChangePasswordToolStripMenuItem.Click += new System.EventHandler(this.ChangePasswordToolStripMenuItem_Click);
-            // 
-            // allUsersToolStripMenuItem
-            // 
-            this.allUsersToolStripMenuItem.Enabled = false;
-            this.allUsersToolStripMenuItem.Name = "allUsersToolStripMenuItem";
-            this.allUsersToolStripMenuItem.Size = new System.Drawing.Size(254, 22);
-            this.allUsersToolStripMenuItem.Text = "Все пользователи";
-            this.allUsersToolStripMenuItem.Click += new System.EventHandler(this.AllUsersToolStripMenuItem_Click);
-            // 
-            // addNewUserToolStripMenuItem
-            // 
-            this.addNewUserToolStripMenuItem.Enabled = false;
-            this.addNewUserToolStripMenuItem.Name = "addNewUserToolStripMenuItem";
-            this.addNewUserToolStripMenuItem.Size = new System.Drawing.Size(254, 22);
-            this.addNewUserToolStripMenuItem.Text = "Добавить нового пользователя";
-            this.addNewUserToolStripMenuItem.Click += new System.EventHandler(this.AddNewUserToolStripMenuItem_Click);
-            // 
-            // ProjectToolStripMenuItem
-            // 
-            this.ProjectToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CreateProjectToolStripMenuItem,
-            this.ActualProjectsToolStripMenuItem,
-            this.PlannedProjectsToolStripMenuItem,
-            this.CompletedProjectsToolStripMenuItem,
-            this.CancelledProjectsToolStripMenuItem,
-            this.AllProjectsToolStripMenuItem});
-            this.ProjectToolStripMenuItem.Name = "ProjectToolStripMenuItem";
-            this.ProjectToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.ProjectToolStripMenuItem.Text = "Проекты";
-            // 
-            // CreateProjectToolStripMenuItem
-            // 
-            this.CreateProjectToolStripMenuItem.Name = "CreateProjectToolStripMenuItem";
-            this.CreateProjectToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.CreateProjectToolStripMenuItem.Text = "Создать проект";
-            this.CreateProjectToolStripMenuItem.Click += new System.EventHandler(this.CreateProjectToolStripMenuItem_Click);
-            // 
-            // ActualProjectsToolStripMenuItem
-            // 
-            this.ActualProjectsToolStripMenuItem.Name = "ActualProjectsToolStripMenuItem";
-            this.ActualProjectsToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.ActualProjectsToolStripMenuItem.Text = "Актуальные";
-            // 
-            // PlannedProjectsToolStripMenuItem
-            // 
-            this.PlannedProjectsToolStripMenuItem.Name = "PlannedProjectsToolStripMenuItem";
-            this.PlannedProjectsToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.PlannedProjectsToolStripMenuItem.Text = "Планируемые";
-            // 
-            // CompletedProjectsToolStripMenuItem
-            // 
-            this.CompletedProjectsToolStripMenuItem.Name = "CompletedProjectsToolStripMenuItem";
-            this.CompletedProjectsToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.CompletedProjectsToolStripMenuItem.Text = "Завершенные";
-            // 
-            // CancelledProjectsToolStripMenuItem
-            // 
-            this.CancelledProjectsToolStripMenuItem.Name = "CancelledProjectsToolStripMenuItem";
-            this.CancelledProjectsToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.CancelledProjectsToolStripMenuItem.Text = "Отмененные";
-            // 
-            // AllProjectsToolStripMenuItem
-            // 
-            this.AllProjectsToolStripMenuItem.Name = "AllProjectsToolStripMenuItem";
-            this.AllProjectsToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.AllProjectsToolStripMenuItem.Text = "Все";
-            this.AllProjectsToolStripMenuItem.Click += new System.EventHandler(this.AllProjectsToolStripMenuItem_Click);
             // 
             // tabControlMain
             // 
@@ -632,7 +609,8 @@
             this.tabControlMain.Controls.Add(this.tabPageTypeOfElement);
             this.tabControlMain.Controls.Add(this.tabPageElementPicture);
             this.tabControlMain.Controls.Add(this.tabPageSectionOfBuilding);
-            this.tabControlMain.Location = new System.Drawing.Point(0, 48);
+            this.tabControlMain.Controls.Add(this.tabPageWorker);
+            this.tabControlMain.Location = new System.Drawing.Point(3, 19);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
             this.tabControlMain.Size = new System.Drawing.Size(1959, 972);
@@ -655,7 +633,7 @@
             this.gblProjectPanel.Controls.Add(this.gbProjectData);
             this.gblProjectPanel.Location = new System.Drawing.Point(1092, 6);
             this.gblProjectPanel.Name = "gblProjectPanel";
-            this.gblProjectPanel.Size = new System.Drawing.Size(831, 899);
+            this.gblProjectPanel.Size = new System.Drawing.Size(831, 937);
             this.gblProjectPanel.TabIndex = 1;
             this.gblProjectPanel.TabStop = false;
             this.gblProjectPanel.Text = "Текущий проект";
@@ -1095,7 +1073,7 @@
             // 
             this.gbAllProjects.Controls.Add(this.lbllProjectAmountPayments);
             this.gbAllProjects.Controls.Add(this.lblProjectTotalSquare);
-            this.gbAllProjects.Controls.Add(this.lbllProjectWorksAmount);
+            this.gbAllProjects.Controls.Add(this.lblProjectWorksAmount);
             this.gbAllProjects.Controls.Add(this.button2);
             this.gbAllProjects.Controls.Add(this.button1);
             this.gbAllProjects.Controls.Add(this.btnProjectSwitchStart);
@@ -1107,7 +1085,7 @@
             this.gbAllProjects.Controls.Add(this.buttonOpenProject);
             this.gbAllProjects.Location = new System.Drawing.Point(6, 6);
             this.gbAllProjects.Name = "gbAllProjects";
-            this.gbAllProjects.Size = new System.Drawing.Size(1080, 899);
+            this.gbAllProjects.Size = new System.Drawing.Size(1080, 937);
             this.gbAllProjects.TabIndex = 0;
             this.gbAllProjects.TabStop = false;
             this.gbAllProjects.Text = "Все проекты";
@@ -1132,15 +1110,15 @@
             this.lblProjectTotalSquare.TabIndex = 14;
             this.lblProjectTotalSquare.Text = "Общая площадь фасада";
             // 
-            // lbllProjectWorksAmount
+            // lblProjectWorksAmount
             // 
-            this.lbllProjectWorksAmount.AutoSize = true;
-            this.lbllProjectWorksAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbllProjectWorksAmount.Location = new System.Drawing.Point(425, 55);
-            this.lbllProjectWorksAmount.Name = "lbllProjectWorksAmount";
-            this.lbllProjectWorksAmount.Size = new System.Drawing.Size(198, 17);
-            this.lbllProjectWorksAmount.TabIndex = 13;
-            this.lbllProjectWorksAmount.Text = "Стоимость работ по проекту";
+            this.lblProjectWorksAmount.AutoSize = true;
+            this.lblProjectWorksAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblProjectWorksAmount.Location = new System.Drawing.Point(425, 55);
+            this.lblProjectWorksAmount.Name = "lblProjectWorksAmount";
+            this.lblProjectWorksAmount.Size = new System.Drawing.Size(198, 17);
+            this.lblProjectWorksAmount.TabIndex = 13;
+            this.lblProjectWorksAmount.Text = "Стоимость работ по проекту";
             // 
             // button2
             // 
@@ -1377,7 +1355,7 @@
             this.tabPageUser.Location = new System.Drawing.Point(4, 22);
             this.tabPageUser.Name = "tabPageUser";
             this.tabPageUser.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageUser.Size = new System.Drawing.Size(1900, 946);
+            this.tabPageUser.Size = new System.Drawing.Size(1951, 946);
             this.tabPageUser.TabIndex = 0;
             this.tabPageUser.Text = "Пользователи";
             this.tabPageUser.UseVisualStyleBackColor = true;
@@ -1389,9 +1367,9 @@
             this.groupBoxUserPanel.Controls.Add(this.gbUserData);
             this.groupBoxUserPanel.Controls.Add(this.gbPasswordPanel);
             this.groupBoxUserPanel.Controls.Add(this.btnUpdateUser);
-            this.groupBoxUserPanel.Location = new System.Drawing.Point(982, 6);
+            this.groupBoxUserPanel.Location = new System.Drawing.Point(1122, 6);
             this.groupBoxUserPanel.Name = "groupBoxUserPanel";
-            this.groupBoxUserPanel.Size = new System.Drawing.Size(752, 899);
+            this.groupBoxUserPanel.Size = new System.Drawing.Size(818, 934);
             this.groupBoxUserPanel.TabIndex = 2;
             this.groupBoxUserPanel.TabStop = false;
             this.groupBoxUserPanel.Text = "Данные пользователя";
@@ -1399,7 +1377,7 @@
             // buttonUserSwitchCancel
             // 
             this.buttonUserSwitchCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonUserSwitchCancel.Location = new System.Drawing.Point(9, 382);
+            this.buttonUserSwitchCancel.Location = new System.Drawing.Point(649, 120);
             this.buttonUserSwitchCancel.Name = "buttonUserSwitchCancel";
             this.buttonUserSwitchCancel.Size = new System.Drawing.Size(152, 42);
             this.buttonUserSwitchCancel.TabIndex = 50;
@@ -1410,7 +1388,7 @@
             // btnCreateUser
             // 
             this.btnCreateUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnCreateUser.Location = new System.Drawing.Point(485, 382);
+            this.btnCreateUser.Location = new System.Drawing.Point(649, 26);
             this.btnCreateUser.Name = "btnCreateUser";
             this.btnCreateUser.Size = new System.Drawing.Size(152, 42);
             this.btnCreateUser.TabIndex = 48;
@@ -1436,9 +1414,9 @@
             this.gbUserData.Controls.Add(this.pbCheckMarkUserName);
             this.gbUserData.Controls.Add(this.checkBoxManagerAccess);
             this.gbUserData.Enabled = false;
-            this.gbUserData.Location = new System.Drawing.Point(9, 19);
+            this.gbUserData.Location = new System.Drawing.Point(6, 19);
             this.gbUserData.Name = "gbUserData";
-            this.gbUserData.Size = new System.Drawing.Size(728, 190);
+            this.gbUserData.Size = new System.Drawing.Size(637, 190);
             this.gbUserData.TabIndex = 49;
             this.gbUserData.TabStop = false;
             // 
@@ -1595,9 +1573,9 @@
             this.gbPasswordPanel.Controls.Add(this.pbCheckMarkUserRepeatPassword);
             this.gbPasswordPanel.Controls.Add(this.lblCheckUserPassword);
             this.gbPasswordPanel.Controls.Add(this.pbCheckMarkUserPassword);
-            this.gbPasswordPanel.Location = new System.Drawing.Point(9, 215);
+            this.gbPasswordPanel.Location = new System.Drawing.Point(6, 209);
             this.gbPasswordPanel.Name = "gbPasswordPanel";
-            this.gbPasswordPanel.Size = new System.Drawing.Size(728, 161);
+            this.gbPasswordPanel.Size = new System.Drawing.Size(795, 130);
             this.gbPasswordPanel.TabIndex = 48;
             this.gbPasswordPanel.TabStop = false;
             this.gbPasswordPanel.Visible = false;
@@ -1616,7 +1594,7 @@
             // btnChangePassword
             // 
             this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnChangePassword.Location = new System.Drawing.Point(476, 111);
+            this.btnChangePassword.Location = new System.Drawing.Point(637, 19);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(152, 42);
             this.btnChangePassword.TabIndex = 47;
@@ -1704,7 +1682,7 @@
             // btnUpdateUser
             // 
             this.btnUpdateUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnUpdateUser.Location = new System.Drawing.Point(494, 225);
+            this.btnUpdateUser.Location = new System.Drawing.Point(649, 72);
             this.btnUpdateUser.Name = "btnUpdateUser";
             this.btnUpdateUser.Size = new System.Drawing.Size(152, 42);
             this.btnUpdateUser.TabIndex = 36;
@@ -1719,7 +1697,7 @@
             this.gbUsersInProject.Controls.Add(this.buttonRemoveUser);
             this.gbUsersInProject.Location = new System.Drawing.Point(6, 404);
             this.gbUsersInProject.Name = "gbUsersInProject";
-            this.gbUsersInProject.Size = new System.Drawing.Size(968, 501);
+            this.gbUsersInProject.Size = new System.Drawing.Size(1110, 536);
             this.gbUsersInProject.TabIndex = 1;
             this.gbUsersInProject.TabStop = false;
             this.gbUsersInProject.Text = "Участники текущего проекта";
@@ -1768,7 +1746,7 @@
             this.buttonRemoveUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.buttonRemoveUser.Location = new System.Drawing.Point(572, 19);
             this.buttonRemoveUser.Name = "buttonRemoveUser";
-            this.buttonRemoveUser.Size = new System.Drawing.Size(169, 26);
+            this.buttonRemoveUser.Size = new System.Drawing.Size(203, 40);
             this.buttonRemoveUser.TabIndex = 59;
             this.buttonRemoveUser.Text = "Удалить участника";
             this.buttonRemoveUser.UseVisualStyleBackColor = true;
@@ -1776,7 +1754,6 @@
             // 
             // gbAllUsers
             // 
-            this.gbAllUsers.Controls.Add(this.checkBoxAllUsersVision);
             this.gbAllUsers.Controls.Add(this.buttonAddUserInProject);
             this.gbAllUsers.Controls.Add(this.buttonSwitchChangePassword);
             this.gbAllUsers.Controls.Add(this.buttonDeleteUser);
@@ -1785,27 +1762,18 @@
             this.gbAllUsers.Controls.Add(this.dgvAllUsers);
             this.gbAllUsers.Location = new System.Drawing.Point(6, 6);
             this.gbAllUsers.Name = "gbAllUsers";
-            this.gbAllUsers.Size = new System.Drawing.Size(968, 392);
+            this.gbAllUsers.Size = new System.Drawing.Size(1110, 392);
             this.gbAllUsers.TabIndex = 0;
             this.gbAllUsers.TabStop = false;
             this.gbAllUsers.Text = "Все пользователи";
             // 
-            // checkBoxAllUsersVision
-            // 
-            this.checkBoxAllUsersVision.AutoSize = true;
-            this.checkBoxAllUsersVision.Location = new System.Drawing.Point(852, 19);
-            this.checkBoxAllUsersVision.Name = "checkBoxAllUsersVision";
-            this.checkBoxAllUsersVision.Size = new System.Drawing.Size(64, 17);
-            this.checkBoxAllUsersVision.TabIndex = 13;
-            this.checkBoxAllUsersVision.Text = "Скрыть";
-            this.checkBoxAllUsersVision.UseVisualStyleBackColor = true;
-            // 
             // buttonAddUserInProject
             // 
             this.buttonAddUserInProject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonAddUserInProject.Location = new System.Drawing.Point(852, 248);
+            this.buttonAddUserInProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buttonAddUserInProject.Location = new System.Drawing.Point(836, 203);
             this.buttonAddUserInProject.Name = "buttonAddUserInProject";
-            this.buttonAddUserInProject.Size = new System.Drawing.Size(110, 49);
+            this.buttonAddUserInProject.Size = new System.Drawing.Size(261, 40);
             this.buttonAddUserInProject.TabIndex = 12;
             this.buttonAddUserInProject.Text = "Добавить пользователя в проект";
             this.buttonAddUserInProject.UseVisualStyleBackColor = true;
@@ -1814,9 +1782,10 @@
             // buttonSwitchChangePassword
             // 
             this.buttonSwitchChangePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonSwitchChangePassword.Location = new System.Drawing.Point(852, 166);
+            this.buttonSwitchChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buttonSwitchChangePassword.Location = new System.Drawing.Point(836, 111);
             this.buttonSwitchChangePassword.Name = "buttonSwitchChangePassword";
-            this.buttonSwitchChangePassword.Size = new System.Drawing.Size(110, 35);
+            this.buttonSwitchChangePassword.Size = new System.Drawing.Size(261, 40);
             this.buttonSwitchChangePassword.TabIndex = 11;
             this.buttonSwitchChangePassword.Text = "Сменить пароль пользователя";
             this.buttonSwitchChangePassword.UseVisualStyleBackColor = true;
@@ -1825,9 +1794,10 @@
             // buttonDeleteUser
             // 
             this.buttonDeleteUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonDeleteUser.Location = new System.Drawing.Point(852, 207);
+            this.buttonDeleteUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buttonDeleteUser.Location = new System.Drawing.Point(836, 157);
             this.buttonDeleteUser.Name = "buttonDeleteUser";
-            this.buttonDeleteUser.Size = new System.Drawing.Size(110, 35);
+            this.buttonDeleteUser.Size = new System.Drawing.Size(261, 40);
             this.buttonDeleteUser.TabIndex = 10;
             this.buttonDeleteUser.Text = "Удалить пользователя";
             this.buttonDeleteUser.UseVisualStyleBackColor = true;
@@ -1836,9 +1806,10 @@
             // buttonSwitchUpdateUser
             // 
             this.buttonSwitchUpdateUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonSwitchUpdateUser.Location = new System.Drawing.Point(852, 111);
+            this.buttonSwitchUpdateUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buttonSwitchUpdateUser.Location = new System.Drawing.Point(836, 65);
             this.buttonSwitchUpdateUser.Name = "buttonSwitchUpdateUser";
-            this.buttonSwitchUpdateUser.Size = new System.Drawing.Size(110, 49);
+            this.buttonSwitchUpdateUser.Size = new System.Drawing.Size(261, 40);
             this.buttonSwitchUpdateUser.TabIndex = 9;
             this.buttonSwitchUpdateUser.Text = "Редактировать данные пользователя";
             this.buttonSwitchUpdateUser.UseVisualStyleBackColor = true;
@@ -1847,9 +1818,10 @@
             // buttonSwitchCreateUser
             // 
             this.buttonSwitchCreateUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonSwitchCreateUser.Location = new System.Drawing.Point(852, 56);
+            this.buttonSwitchCreateUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buttonSwitchCreateUser.Location = new System.Drawing.Point(836, 19);
             this.buttonSwitchCreateUser.Name = "buttonSwitchCreateUser";
-            this.buttonSwitchCreateUser.Size = new System.Drawing.Size(110, 49);
+            this.buttonSwitchCreateUser.Size = new System.Drawing.Size(261, 40);
             this.buttonSwitchCreateUser.TabIndex = 8;
             this.buttonSwitchCreateUser.Text = "Добавить нового пользователя";
             this.buttonSwitchCreateUser.UseVisualStyleBackColor = true;
@@ -1918,7 +1890,7 @@
             this.tabPageClient.Location = new System.Drawing.Point(4, 22);
             this.tabPageClient.Name = "tabPageClient";
             this.tabPageClient.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageClient.Size = new System.Drawing.Size(1900, 946);
+            this.tabPageClient.Size = new System.Drawing.Size(1951, 946);
             this.tabPageClient.TabIndex = 2;
             this.tabPageClient.Text = "Заказчики";
             this.tabPageClient.UseVisualStyleBackColor = true;
@@ -2241,7 +2213,7 @@
             this.tabPageWork.Controls.Add(this.gbAllTypesOfWork);
             this.tabPageWork.Location = new System.Drawing.Point(4, 22);
             this.tabPageWork.Name = "tabPageWork";
-            this.tabPageWork.Size = new System.Drawing.Size(1900, 946);
+            this.tabPageWork.Size = new System.Drawing.Size(1951, 946);
             this.tabPageWork.TabIndex = 3;
             this.tabPageWork.Text = "Работы";
             this.tabPageWork.UseVisualStyleBackColor = true;
@@ -2811,7 +2783,7 @@
             this.tabPagePayment.Controls.Add(this.gbAllPayments);
             this.tabPagePayment.Location = new System.Drawing.Point(4, 22);
             this.tabPagePayment.Name = "tabPagePayment";
-            this.tabPagePayment.Size = new System.Drawing.Size(1900, 946);
+            this.tabPagePayment.Size = new System.Drawing.Size(1951, 946);
             this.tabPagePayment.TabIndex = 4;
             this.tabPagePayment.Text = "Оплата";
             this.tabPagePayment.UseVisualStyleBackColor = true;
@@ -3368,7 +3340,7 @@
             this.tabPageTypeOfElement.Controls.Add(this.gbAllTypesOfElement);
             this.tabPageTypeOfElement.Location = new System.Drawing.Point(4, 22);
             this.tabPageTypeOfElement.Name = "tabPageTypeOfElement";
-            this.tabPageTypeOfElement.Size = new System.Drawing.Size(1900, 946);
+            this.tabPageTypeOfElement.Size = new System.Drawing.Size(1951, 946);
             this.tabPageTypeOfElement.TabIndex = 5;
             this.tabPageTypeOfElement.Text = "Элементы фасада";
             this.tabPageTypeOfElement.UseVisualStyleBackColor = true;
@@ -3969,7 +3941,7 @@
             this.tabPageElementPicture.Controls.Add(this.gbAllElementPicture);
             this.tabPageElementPicture.Location = new System.Drawing.Point(4, 22);
             this.tabPageElementPicture.Name = "tabPageElementPicture";
-            this.tabPageElementPicture.Size = new System.Drawing.Size(1900, 946);
+            this.tabPageElementPicture.Size = new System.Drawing.Size(1951, 946);
             this.tabPageElementPicture.TabIndex = 6;
             this.tabPageElementPicture.Text = "Изображения элементов";
             this.tabPageElementPicture.UseVisualStyleBackColor = true;
@@ -4226,30 +4198,6 @@
             this.tabPageSectionOfBuilding.Text = "Модель фасада";
             this.tabPageSectionOfBuilding.UseVisualStyleBackColor = true;
             // 
-            // gbSectionOfBuildingPanel
-            // 
-            this.gbSectionOfBuildingPanel.Controls.Add(this.SectionOfBuildingModel);
-            this.gbSectionOfBuildingPanel.Controls.Add(this.btnSectionOfBuildingSwitchCancel);
-            this.gbSectionOfBuildingPanel.Controls.Add(this.btnSectionOfBuildingCreate);
-            this.gbSectionOfBuildingPanel.Controls.Add(this.gbSectionOfBuildingData);
-            this.gbSectionOfBuildingPanel.Controls.Add(this.btnSectionOfBuildingUpdate);
-            this.gbSectionOfBuildingPanel.Location = new System.Drawing.Point(766, 3);
-            this.gbSectionOfBuildingPanel.Name = "gbSectionOfBuildingPanel";
-            this.gbSectionOfBuildingPanel.Size = new System.Drawing.Size(965, 916);
-            this.gbSectionOfBuildingPanel.TabIndex = 8;
-            this.gbSectionOfBuildingPanel.TabStop = false;
-            this.gbSectionOfBuildingPanel.Text = "Данные модели участка фасада";
-            // 
-            // SectionOfBuildingModel
-            // 
-            this.SectionOfBuildingModel.Controls.Add(this.dgvSectionOfBuildingModel);
-            this.SectionOfBuildingModel.Location = new System.Drawing.Point(4, 137);
-            this.SectionOfBuildingModel.Name = "SectionOfBuildingModel";
-            this.SectionOfBuildingModel.Size = new System.Drawing.Size(955, 773);
-            this.SectionOfBuildingModel.TabIndex = 51;
-            this.SectionOfBuildingModel.TabStop = false;
-            this.SectionOfBuildingModel.Text = "Модель фасада";
-            // 
             // btnSectionOfBuildingCancelWork
             // 
             this.btnSectionOfBuildingCancelWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -4262,67 +4210,29 @@
             this.btnSectionOfBuildingCancelWork.Visible = false;
             this.btnSectionOfBuildingCancelWork.Click += new System.EventHandler(this.BtnSectionOfBuildingCancelWork_Click);
             // 
-            // btnSectionOfBuildingSetWork
+            // gbSectionOfBuildingPanel
             // 
-            this.btnSectionOfBuildingSetWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSectionOfBuildingSetWork.Location = new System.Drawing.Point(1737, 208);
-            this.btnSectionOfBuildingSetWork.Name = "btnSectionOfBuildingSetWork";
-            this.btnSectionOfBuildingSetWork.Size = new System.Drawing.Size(171, 42);
-            this.btnSectionOfBuildingSetWork.TabIndex = 66;
-            this.btnSectionOfBuildingSetWork.Text = "Назначить работу";
-            this.btnSectionOfBuildingSetWork.UseVisualStyleBackColor = true;
-            this.btnSectionOfBuildingSetWork.Visible = false;
-            this.btnSectionOfBuildingSetWork.Click += new System.EventHandler(this.BtnSectionOfBuildingSetWork_Click);
+            this.gbSectionOfBuildingPanel.Controls.Add(this.SectionOfBuildingModel);
+            this.gbSectionOfBuildingPanel.Controls.Add(this.btnSectionOfBuildingSwitchCancel);
+            this.gbSectionOfBuildingPanel.Controls.Add(this.btnSectionOfBuildingCreate);
+            this.gbSectionOfBuildingPanel.Controls.Add(this.gbSectionOfBuildingData);
+            this.gbSectionOfBuildingPanel.Controls.Add(this.btnSectionOfBuildingUpdate);
+            this.gbSectionOfBuildingPanel.Location = new System.Drawing.Point(766, 3);
+            this.gbSectionOfBuildingPanel.Name = "gbSectionOfBuildingPanel";
+            this.gbSectionOfBuildingPanel.Size = new System.Drawing.Size(965, 940);
+            this.gbSectionOfBuildingPanel.TabIndex = 8;
+            this.gbSectionOfBuildingPanel.TabStop = false;
+            this.gbSectionOfBuildingPanel.Text = "Данные модели участка фасада";
             // 
-            // btnSectionOfBuildingSwitchSetWork
+            // SectionOfBuildingModel
             // 
-            this.btnSectionOfBuildingSwitchSetWork.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSectionOfBuildingSwitchSetWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSectionOfBuildingSwitchSetWork.Location = new System.Drawing.Point(1737, 159);
-            this.btnSectionOfBuildingSwitchSetWork.Name = "btnSectionOfBuildingSwitchSetWork";
-            this.btnSectionOfBuildingSwitchSetWork.Size = new System.Drawing.Size(171, 43);
-            this.btnSectionOfBuildingSwitchSetWork.TabIndex = 65;
-            this.btnSectionOfBuildingSwitchSetWork.Text = "Работы на фасаде";
-            this.btnSectionOfBuildingSwitchSetWork.UseVisualStyleBackColor = true;
-            this.btnSectionOfBuildingSwitchSetWork.Visible = false;
-            this.btnSectionOfBuildingSwitchSetWork.Click += new System.EventHandler(this.BtnSectionOfBuildingSwitchSetWork_Click);
-            // 
-            // btnSectionOfBuildingSwitchModelCancel
-            // 
-            this.btnSectionOfBuildingSwitchModelCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSectionOfBuildingSwitchModelCancel.Location = new System.Drawing.Point(1737, 111);
-            this.btnSectionOfBuildingSwitchModelCancel.Name = "btnSectionOfBuildingSwitchModelCancel";
-            this.btnSectionOfBuildingSwitchModelCancel.Size = new System.Drawing.Size(171, 42);
-            this.btnSectionOfBuildingSwitchModelCancel.TabIndex = 52;
-            this.btnSectionOfBuildingSwitchModelCancel.Text = "Назад";
-            this.btnSectionOfBuildingSwitchModelCancel.UseVisualStyleBackColor = true;
-            this.btnSectionOfBuildingSwitchModelCancel.Visible = false;
-            this.btnSectionOfBuildingSwitchModelCancel.Click += new System.EventHandler(this.BtnSectionOfBuildingSwitchModelCancel_Click);
-            // 
-            // btnSectionOfBuildingModelUpdate
-            // 
-            this.btnSectionOfBuildingModelUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSectionOfBuildingModelUpdate.Location = new System.Drawing.Point(1737, 61);
-            this.btnSectionOfBuildingModelUpdate.Name = "btnSectionOfBuildingModelUpdate";
-            this.btnSectionOfBuildingModelUpdate.Size = new System.Drawing.Size(171, 42);
-            this.btnSectionOfBuildingModelUpdate.TabIndex = 52;
-            this.btnSectionOfBuildingModelUpdate.Text = "Сохранить изменения";
-            this.btnSectionOfBuildingModelUpdate.UseVisualStyleBackColor = true;
-            this.btnSectionOfBuildingModelUpdate.Visible = false;
-            this.btnSectionOfBuildingModelUpdate.Click += new System.EventHandler(this.BtnSectionOfBuildingModelUpdate_Click);
-            // 
-            // btnSectionOfBuildingSwitchModelUpdate
-            // 
-            this.btnSectionOfBuildingSwitchModelUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSectionOfBuildingSwitchModelUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSectionOfBuildingSwitchModelUpdate.Location = new System.Drawing.Point(1737, 8);
-            this.btnSectionOfBuildingSwitchModelUpdate.Name = "btnSectionOfBuildingSwitchModelUpdate";
-            this.btnSectionOfBuildingSwitchModelUpdate.Size = new System.Drawing.Size(171, 42);
-            this.btnSectionOfBuildingSwitchModelUpdate.TabIndex = 64;
-            this.btnSectionOfBuildingSwitchModelUpdate.Text = "Редактировать модель ";
-            this.btnSectionOfBuildingSwitchModelUpdate.UseVisualStyleBackColor = true;
-            this.btnSectionOfBuildingSwitchModelUpdate.Visible = false;
-            this.btnSectionOfBuildingSwitchModelUpdate.Click += new System.EventHandler(this.BtnSectionOfBuildingSwitchModelUpdate_Click);
+            this.SectionOfBuildingModel.Controls.Add(this.dgvSectionOfBuildingModel);
+            this.SectionOfBuildingModel.Location = new System.Drawing.Point(4, 137);
+            this.SectionOfBuildingModel.Name = "SectionOfBuildingModel";
+            this.SectionOfBuildingModel.Size = new System.Drawing.Size(955, 797);
+            this.SectionOfBuildingModel.TabIndex = 51;
+            this.SectionOfBuildingModel.TabStop = false;
+            this.SectionOfBuildingModel.Text = "Модель фасада";
             // 
             // dgvSectionOfBuildingModel
             // 
@@ -4334,7 +4244,7 @@
             this.dgvSectionOfBuildingModel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSectionOfBuildingModel.Location = new System.Drawing.Point(6, 19);
             this.dgvSectionOfBuildingModel.Name = "dgvSectionOfBuildingModel";
-            this.dgvSectionOfBuildingModel.Size = new System.Drawing.Size(943, 748);
+            this.dgvSectionOfBuildingModel.Size = new System.Drawing.Size(943, 772);
             this.dgvSectionOfBuildingModel.TabIndex = 1;
             this.dgvSectionOfBuildingModel.DragDrop += new System.Windows.Forms.DragEventHandler(this.DgvSectionOfBuildingModel_DragDrop);
             this.dgvSectionOfBuildingModel.DragEnter += new System.Windows.Forms.DragEventHandler(this.DgvSectionOfBuildingModel_DragEnter);
@@ -4528,6 +4438,18 @@
             this.btnSectionOfBuildingUpdate.Visible = false;
             this.btnSectionOfBuildingUpdate.Click += new System.EventHandler(this.BtnSectionOfBuildingUpdate_Click);
             // 
+            // btnSectionOfBuildingSetWork
+            // 
+            this.btnSectionOfBuildingSetWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingSetWork.Location = new System.Drawing.Point(1737, 208);
+            this.btnSectionOfBuildingSetWork.Name = "btnSectionOfBuildingSetWork";
+            this.btnSectionOfBuildingSetWork.Size = new System.Drawing.Size(171, 42);
+            this.btnSectionOfBuildingSetWork.TabIndex = 66;
+            this.btnSectionOfBuildingSetWork.Text = "Назначить работу";
+            this.btnSectionOfBuildingSetWork.UseVisualStyleBackColor = true;
+            this.btnSectionOfBuildingSetWork.Visible = false;
+            this.btnSectionOfBuildingSetWork.Click += new System.EventHandler(this.BtnSectionOfBuildingSetWork_Click);
+            // 
             // gbTypeOfElementInProjectBySectionOfBuilding
             // 
             this.gbTypeOfElementInProjectBySectionOfBuilding.Controls.Add(this.lblSectionOfBuildingWorksAmount);
@@ -4536,7 +4458,7 @@
             this.gbTypeOfElementInProjectBySectionOfBuilding.Controls.Add(this.lblSectionOfBuldingActualProjectNotSaved2);
             this.gbTypeOfElementInProjectBySectionOfBuilding.Location = new System.Drawing.Point(3, 401);
             this.gbTypeOfElementInProjectBySectionOfBuilding.Name = "gbTypeOfElementInProjectBySectionOfBuilding";
-            this.gbTypeOfElementInProjectBySectionOfBuilding.Size = new System.Drawing.Size(761, 518);
+            this.gbTypeOfElementInProjectBySectionOfBuilding.Size = new System.Drawing.Size(761, 542);
             this.gbTypeOfElementInProjectBySectionOfBuilding.TabIndex = 7;
             this.gbTypeOfElementInProjectBySectionOfBuilding.TabStop = false;
             this.gbTypeOfElementInProjectBySectionOfBuilding.Text = "Элементы фасада текущего проекта";
@@ -4655,6 +4577,19 @@
             this.lblSectionOfBuldingActualProjectNotSaved2.TabIndex = 62;
             this.lblSectionOfBuldingActualProjectNotSaved2.Text = "Текущий проект не сохранен";
             this.lblSectionOfBuldingActualProjectNotSaved2.Visible = false;
+            // 
+            // btnSectionOfBuildingSwitchSetWork
+            // 
+            this.btnSectionOfBuildingSwitchSetWork.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSectionOfBuildingSwitchSetWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingSwitchSetWork.Location = new System.Drawing.Point(1737, 159);
+            this.btnSectionOfBuildingSwitchSetWork.Name = "btnSectionOfBuildingSwitchSetWork";
+            this.btnSectionOfBuildingSwitchSetWork.Size = new System.Drawing.Size(171, 43);
+            this.btnSectionOfBuildingSwitchSetWork.TabIndex = 65;
+            this.btnSectionOfBuildingSwitchSetWork.Text = "Работы на фасаде";
+            this.btnSectionOfBuildingSwitchSetWork.UseVisualStyleBackColor = true;
+            this.btnSectionOfBuildingSwitchSetWork.Visible = false;
+            this.btnSectionOfBuildingSwitchSetWork.Click += new System.EventHandler(this.BtnSectionOfBuildingSwitchSetWork_Click);
             // 
             // gbAllSectionsOfBuilding
             // 
@@ -4798,11 +4733,770 @@
             this.ColumnSquareSectionOfBuilding.Name = "ColumnSquareSectionOfBuilding";
             this.ColumnSquareSectionOfBuilding.ReadOnly = true;
             // 
+            // btnSectionOfBuildingSwitchModelCancel
+            // 
+            this.btnSectionOfBuildingSwitchModelCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingSwitchModelCancel.Location = new System.Drawing.Point(1737, 111);
+            this.btnSectionOfBuildingSwitchModelCancel.Name = "btnSectionOfBuildingSwitchModelCancel";
+            this.btnSectionOfBuildingSwitchModelCancel.Size = new System.Drawing.Size(171, 42);
+            this.btnSectionOfBuildingSwitchModelCancel.TabIndex = 52;
+            this.btnSectionOfBuildingSwitchModelCancel.Text = "Назад";
+            this.btnSectionOfBuildingSwitchModelCancel.UseVisualStyleBackColor = true;
+            this.btnSectionOfBuildingSwitchModelCancel.Visible = false;
+            this.btnSectionOfBuildingSwitchModelCancel.Click += new System.EventHandler(this.BtnSectionOfBuildingSwitchModelCancel_Click);
+            // 
+            // btnSectionOfBuildingSwitchModelUpdate
+            // 
+            this.btnSectionOfBuildingSwitchModelUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSectionOfBuildingSwitchModelUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingSwitchModelUpdate.Location = new System.Drawing.Point(1737, 8);
+            this.btnSectionOfBuildingSwitchModelUpdate.Name = "btnSectionOfBuildingSwitchModelUpdate";
+            this.btnSectionOfBuildingSwitchModelUpdate.Size = new System.Drawing.Size(171, 42);
+            this.btnSectionOfBuildingSwitchModelUpdate.TabIndex = 64;
+            this.btnSectionOfBuildingSwitchModelUpdate.Text = "Редактировать модель ";
+            this.btnSectionOfBuildingSwitchModelUpdate.UseVisualStyleBackColor = true;
+            this.btnSectionOfBuildingSwitchModelUpdate.Visible = false;
+            this.btnSectionOfBuildingSwitchModelUpdate.Click += new System.EventHandler(this.BtnSectionOfBuildingSwitchModelUpdate_Click);
+            // 
+            // btnSectionOfBuildingModelUpdate
+            // 
+            this.btnSectionOfBuildingModelUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingModelUpdate.Location = new System.Drawing.Point(1737, 61);
+            this.btnSectionOfBuildingModelUpdate.Name = "btnSectionOfBuildingModelUpdate";
+            this.btnSectionOfBuildingModelUpdate.Size = new System.Drawing.Size(171, 42);
+            this.btnSectionOfBuildingModelUpdate.TabIndex = 52;
+            this.btnSectionOfBuildingModelUpdate.Text = "Сохранить изменения";
+            this.btnSectionOfBuildingModelUpdate.UseVisualStyleBackColor = true;
+            this.btnSectionOfBuildingModelUpdate.Visible = false;
+            this.btnSectionOfBuildingModelUpdate.Click += new System.EventHandler(this.BtnSectionOfBuildingModelUpdate_Click);
+            // 
+            // tabPageWorker
+            // 
+            this.tabPageWorker.Controls.Add(this.gbWorkerSectionsOfBuilding);
+            this.tabPageWorker.Controls.Add(this.tabControlWorker);
+            this.tabPageWorker.Controls.Add(this.gbWorkerProjects);
+            this.tabPageWorker.Controls.Add(this.groupBox1);
+            this.tabPageWorker.Location = new System.Drawing.Point(4, 22);
+            this.tabPageWorker.Name = "tabPageWorker";
+            this.tabPageWorker.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageWorker.Size = new System.Drawing.Size(1951, 946);
+            this.tabPageWorker.TabIndex = 8;
+            this.tabPageWorker.Text = "Исполнитель";
+            this.tabPageWorker.UseVisualStyleBackColor = true;
+            // 
+            // gbWorkerSectionsOfBuilding
+            // 
+            this.gbWorkerSectionsOfBuilding.Controls.Add(this.lblWorkerProjectNotFound);
+            this.gbWorkerSectionsOfBuilding.Controls.Add(this.dgvWorkerSectionsOfBuilding);
+            this.gbWorkerSectionsOfBuilding.Location = new System.Drawing.Point(3, 245);
+            this.gbWorkerSectionsOfBuilding.Name = "gbWorkerSectionsOfBuilding";
+            this.gbWorkerSectionsOfBuilding.Size = new System.Drawing.Size(972, 219);
+            this.gbWorkerSectionsOfBuilding.TabIndex = 22;
+            this.gbWorkerSectionsOfBuilding.TabStop = false;
+            this.gbWorkerSectionsOfBuilding.Text = "Модели фасада";
+            // 
+            // lblWorkerProjectNotFound
+            // 
+            this.lblWorkerProjectNotFound.AutoSize = true;
+            this.lblWorkerProjectNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblWorkerProjectNotFound.ForeColor = System.Drawing.Color.Black;
+            this.lblWorkerProjectNotFound.Location = new System.Drawing.Point(654, 16);
+            this.lblWorkerProjectNotFound.Name = "lblWorkerProjectNotFound";
+            this.lblWorkerProjectNotFound.Size = new System.Drawing.Size(128, 17);
+            this.lblWorkerProjectNotFound.TabIndex = 68;
+            this.lblWorkerProjectNotFound.Text = "Проект не найден";
+            // 
+            // dgvWorkerSectionsOfBuilding
+            // 
+            this.dgvWorkerSectionsOfBuilding.AllowUserToAddRows = false;
+            this.dgvWorkerSectionsOfBuilding.AllowUserToDeleteRows = false;
+            this.dgvWorkerSectionsOfBuilding.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvWorkerSectionsOfBuilding.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn34,
+            this.dataGridViewTextBoxColumn46,
+            this.dataGridViewTextBoxColumn47,
+            this.dataGridViewTextBoxColumn48,
+            this.dataGridViewTextBoxColumn49});
+            this.dgvWorkerSectionsOfBuilding.Location = new System.Drawing.Point(3, 19);
+            this.dgvWorkerSectionsOfBuilding.Name = "dgvWorkerSectionsOfBuilding";
+            this.dgvWorkerSectionsOfBuilding.ReadOnly = true;
+            this.dgvWorkerSectionsOfBuilding.RowHeadersVisible = false;
+            this.dgvWorkerSectionsOfBuilding.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvWorkerSectionsOfBuilding.Size = new System.Drawing.Size(635, 27);
+            this.dgvWorkerSectionsOfBuilding.TabIndex = 8;
+            this.dgvWorkerSectionsOfBuilding.SelectionChanged += new System.EventHandler(this.DgvWorkerSectionsOfBuilding_SelectionChanged);
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.Frozen = true;
+            this.dataGridViewTextBoxColumn34.HeaderText = "№";
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            this.dataGridViewTextBoxColumn34.ReadOnly = true;
+            this.dataGridViewTextBoxColumn34.Width = 30;
+            // 
+            // dataGridViewTextBoxColumn46
+            // 
+            this.dataGridViewTextBoxColumn46.Frozen = true;
+            this.dataGridViewTextBoxColumn46.HeaderText = "Название участка фасада";
+            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
+            this.dataGridViewTextBoxColumn46.ReadOnly = true;
+            this.dataGridViewTextBoxColumn46.Width = 300;
+            // 
+            // dataGridViewTextBoxColumn47
+            // 
+            this.dataGridViewTextBoxColumn47.Frozen = true;
+            this.dataGridViewTextBoxColumn47.HeaderText = "Этажей";
+            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
+            this.dataGridViewTextBoxColumn47.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn48
+            // 
+            this.dataGridViewTextBoxColumn48.Frozen = true;
+            this.dataGridViewTextBoxColumn48.HeaderText = "Элементов";
+            this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
+            this.dataGridViewTextBoxColumn48.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn49
+            // 
+            this.dataGridViewTextBoxColumn49.Frozen = true;
+            this.dataGridViewTextBoxColumn49.HeaderText = "Площадь";
+            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
+            this.dataGridViewTextBoxColumn49.ReadOnly = true;
+            // 
+            // tabControlWorker
+            // 
+            this.tabControlWorker.Controls.Add(this.tabPageWorkerWorks);
+            this.tabControlWorker.Controls.Add(this.tabPageWorkerPayments);
+            this.tabControlWorker.Controls.Add(this.tabPageWorkerUserData);
+            this.tabControlWorker.Location = new System.Drawing.Point(3, 470);
+            this.tabControlWorker.Name = "tabControlWorker";
+            this.tabControlWorker.SelectedIndex = 0;
+            this.tabControlWorker.Size = new System.Drawing.Size(978, 470);
+            this.tabControlWorker.TabIndex = 21;
+            // 
+            // tabPageWorkerWorks
+            // 
+            this.tabPageWorkerWorks.Controls.Add(this.lblWorkerSectionOfBuildingWorkAmount);
+            this.tabPageWorkerWorks.Controls.Add(this.btnWorkerCompleteWorkCancel);
+            this.tabPageWorkerWorks.Controls.Add(this.btnWorkerCompleteWork);
+            this.tabPageWorkerWorks.Controls.Add(this.btnWorkerSwitchCompleteWork);
+            this.tabPageWorkerWorks.Controls.Add(this.btnWorkerSwitchCompleteWorkCancel);
+            this.tabPageWorkerWorks.Controls.Add(this.dgvWorkerWorksInProject);
+            this.tabPageWorkerWorks.Location = new System.Drawing.Point(4, 22);
+            this.tabPageWorkerWorks.Name = "tabPageWorkerWorks";
+            this.tabPageWorkerWorks.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageWorkerWorks.Size = new System.Drawing.Size(970, 444);
+            this.tabPageWorkerWorks.TabIndex = 1;
+            this.tabPageWorkerWorks.Text = "Работа";
+            this.tabPageWorkerWorks.UseVisualStyleBackColor = true;
+            // 
+            // lblWorkerSectionOfBuildingWorkAmount
+            // 
+            this.lblWorkerSectionOfBuildingWorkAmount.AutoSize = true;
+            this.lblWorkerSectionOfBuildingWorkAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblWorkerSectionOfBuildingWorkAmount.ForeColor = System.Drawing.Color.Black;
+            this.lblWorkerSectionOfBuildingWorkAmount.Location = new System.Drawing.Point(6, 6);
+            this.lblWorkerSectionOfBuildingWorkAmount.Name = "lblWorkerSectionOfBuildingWorkAmount";
+            this.lblWorkerSectionOfBuildingWorkAmount.Size = new System.Drawing.Size(222, 17);
+            this.lblWorkerSectionOfBuildingWorkAmount.TabIndex = 72;
+            this.lblWorkerSectionOfBuildingWorkAmount.Text = "Общая стоимость работ модели";
+            // 
+            // btnWorkerCompleteWorkCancel
+            // 
+            this.btnWorkerCompleteWorkCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnWorkerCompleteWorkCancel.Location = new System.Drawing.Point(778, 151);
+            this.btnWorkerCompleteWorkCancel.Name = "btnWorkerCompleteWorkCancel";
+            this.btnWorkerCompleteWorkCancel.Size = new System.Drawing.Size(171, 42);
+            this.btnWorkerCompleteWorkCancel.TabIndex = 71;
+            this.btnWorkerCompleteWorkCancel.Text = "Отменить выполнение";
+            this.btnWorkerCompleteWorkCancel.UseVisualStyleBackColor = true;
+            this.btnWorkerCompleteWorkCancel.Visible = false;
+            // 
+            // btnWorkerCompleteWork
+            // 
+            this.btnWorkerCompleteWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnWorkerCompleteWork.Location = new System.Drawing.Point(778, 103);
+            this.btnWorkerCompleteWork.Name = "btnWorkerCompleteWork";
+            this.btnWorkerCompleteWork.Size = new System.Drawing.Size(171, 42);
+            this.btnWorkerCompleteWork.TabIndex = 70;
+            this.btnWorkerCompleteWork.Text = "Выполненная работа";
+            this.btnWorkerCompleteWork.UseVisualStyleBackColor = true;
+            this.btnWorkerCompleteWork.Visible = false;
+            // 
+            // btnWorkerSwitchCompleteWork
+            // 
+            this.btnWorkerSwitchCompleteWork.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnWorkerSwitchCompleteWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnWorkerSwitchCompleteWork.Location = new System.Drawing.Point(778, 6);
+            this.btnWorkerSwitchCompleteWork.Name = "btnWorkerSwitchCompleteWork";
+            this.btnWorkerSwitchCompleteWork.Size = new System.Drawing.Size(171, 43);
+            this.btnWorkerSwitchCompleteWork.TabIndex = 69;
+            this.btnWorkerSwitchCompleteWork.Text = "Учет работ";
+            this.btnWorkerSwitchCompleteWork.UseVisualStyleBackColor = true;
+            this.btnWorkerSwitchCompleteWork.Visible = false;
+            // 
+            // btnWorkerSwitchCompleteWorkCancel
+            // 
+            this.btnWorkerSwitchCompleteWorkCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnWorkerSwitchCompleteWorkCancel.Location = new System.Drawing.Point(778, 55);
+            this.btnWorkerSwitchCompleteWorkCancel.Name = "btnWorkerSwitchCompleteWorkCancel";
+            this.btnWorkerSwitchCompleteWorkCancel.Size = new System.Drawing.Size(171, 42);
+            this.btnWorkerSwitchCompleteWorkCancel.TabIndex = 68;
+            this.btnWorkerSwitchCompleteWorkCancel.Text = "Назад";
+            this.btnWorkerSwitchCompleteWorkCancel.UseVisualStyleBackColor = true;
+            this.btnWorkerSwitchCompleteWorkCancel.Visible = false;
+            this.btnWorkerSwitchCompleteWorkCancel.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // dgvWorkerWorksInProject
+            // 
+            this.dgvWorkerWorksInProject.AllowUserToAddRows = false;
+            this.dgvWorkerWorksInProject.AllowUserToDeleteRows = false;
+            this.dgvWorkerWorksInProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvWorkerWorksInProject.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn51,
+            this.dataGridViewTextBoxColumn52,
+            this.dataGridViewTextBoxColumn55,
+            this.dataGridViewTextBoxColumn56,
+            this.dataGridViewTextBoxColumn57,
+            this.dataGridViewTextBoxColumn58,
+            this.dataGridViewTextBoxColumn59});
+            this.dgvWorkerWorksInProject.Location = new System.Drawing.Point(6, 30);
+            this.dgvWorkerWorksInProject.Name = "dgvWorkerWorksInProject";
+            this.dgvWorkerWorksInProject.ReadOnly = true;
+            this.dgvWorkerWorksInProject.RowHeadersVisible = false;
+            this.dgvWorkerWorksInProject.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvWorkerWorksInProject.Size = new System.Drawing.Size(749, 27);
+            this.dgvWorkerWorksInProject.TabIndex = 64;
+            this.dgvWorkerWorksInProject.SelectionChanged += new System.EventHandler(this.DgvWorkerWorksInProject_SelectionChanged);
+            // 
+            // dataGridViewTextBoxColumn51
+            // 
+            this.dataGridViewTextBoxColumn51.Frozen = true;
+            this.dataGridViewTextBoxColumn51.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn51.Name = "dataGridViewTextBoxColumn51";
+            this.dataGridViewTextBoxColumn51.ReadOnly = true;
+            this.dataGridViewTextBoxColumn51.Width = 30;
+            // 
+            // dataGridViewTextBoxColumn52
+            // 
+            this.dataGridViewTextBoxColumn52.Frozen = true;
+            this.dataGridViewTextBoxColumn52.HeaderText = "Название";
+            this.dataGridViewTextBoxColumn52.Name = "dataGridViewTextBoxColumn52";
+            this.dataGridViewTextBoxColumn52.ReadOnly = true;
+            this.dataGridViewTextBoxColumn52.Width = 330;
+            // 
+            // dataGridViewTextBoxColumn55
+            // 
+            this.dataGridViewTextBoxColumn55.Frozen = true;
+            this.dataGridViewTextBoxColumn55.HeaderText = "Ед. изм.";
+            this.dataGridViewTextBoxColumn55.Name = "dataGridViewTextBoxColumn55";
+            this.dataGridViewTextBoxColumn55.ReadOnly = true;
+            this.dataGridViewTextBoxColumn55.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn56
+            // 
+            this.dataGridViewTextBoxColumn56.Frozen = true;
+            this.dataGridViewTextBoxColumn56.HeaderText = "Цена";
+            this.dataGridViewTextBoxColumn56.Name = "dataGridViewTextBoxColumn56";
+            this.dataGridViewTextBoxColumn56.ReadOnly = true;
+            this.dataGridViewTextBoxColumn56.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn57
+            // 
+            this.dataGridViewTextBoxColumn57.Frozen = true;
+            this.dataGridViewTextBoxColumn57.HeaderText = "Коэф.";
+            this.dataGridViewTextBoxColumn57.Name = "dataGridViewTextBoxColumn57";
+            this.dataGridViewTextBoxColumn57.ReadOnly = true;
+            this.dataGridViewTextBoxColumn57.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn58
+            // 
+            this.dataGridViewTextBoxColumn58.Frozen = true;
+            this.dataGridViewTextBoxColumn58.HeaderText = "Объем";
+            this.dataGridViewTextBoxColumn58.Name = "dataGridViewTextBoxColumn58";
+            this.dataGridViewTextBoxColumn58.ReadOnly = true;
+            this.dataGridViewTextBoxColumn58.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn59
+            // 
+            this.dataGridViewTextBoxColumn59.Frozen = true;
+            this.dataGridViewTextBoxColumn59.HeaderText = "Стоимость";
+            this.dataGridViewTextBoxColumn59.Name = "dataGridViewTextBoxColumn59";
+            this.dataGridViewTextBoxColumn59.ReadOnly = true;
+            // 
+            // tabPageWorkerPayments
+            // 
+            this.tabPageWorkerPayments.Controls.Add(this.lblWorkerPaymentAmount);
+            this.tabPageWorkerPayments.Controls.Add(this.dgvWorkerPayments);
+            this.tabPageWorkerPayments.Location = new System.Drawing.Point(4, 22);
+            this.tabPageWorkerPayments.Name = "tabPageWorkerPayments";
+            this.tabPageWorkerPayments.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageWorkerPayments.Size = new System.Drawing.Size(970, 444);
+            this.tabPageWorkerPayments.TabIndex = 0;
+            this.tabPageWorkerPayments.Text = "Оплата";
+            this.tabPageWorkerPayments.UseVisualStyleBackColor = true;
+            // 
+            // lblWorkerPaymentAmount
+            // 
+            this.lblWorkerPaymentAmount.AutoSize = true;
+            this.lblWorkerPaymentAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblWorkerPaymentAmount.Location = new System.Drawing.Point(388, 15);
+            this.lblWorkerPaymentAmount.Name = "lblWorkerPaymentAmount";
+            this.lblWorkerPaymentAmount.Size = new System.Drawing.Size(179, 17);
+            this.lblWorkerPaymentAmount.TabIndex = 20;
+            this.lblWorkerPaymentAmount.Text = "Сумма выплат по проекту";
+            // 
+            // dgvWorkerPayments
+            // 
+            this.dgvWorkerPayments.AllowUserToAddRows = false;
+            this.dgvWorkerPayments.AllowUserToDeleteRows = false;
+            this.dgvWorkerPayments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvWorkerPayments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn50,
+            this.dataGridViewTextBoxColumn53,
+            this.dataGridViewTextBoxColumn54});
+            this.dgvWorkerPayments.Location = new System.Drawing.Point(10, 15);
+            this.dgvWorkerPayments.Name = "dgvWorkerPayments";
+            this.dgvWorkerPayments.ReadOnly = true;
+            this.dgvWorkerPayments.RowHeadersVisible = false;
+            this.dgvWorkerPayments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvWorkerPayments.Size = new System.Drawing.Size(336, 27);
+            this.dgvWorkerPayments.TabIndex = 8;
+            // 
+            // dataGridViewTextBoxColumn50
+            // 
+            this.dataGridViewTextBoxColumn50.Frozen = true;
+            this.dataGridViewTextBoxColumn50.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
+            this.dataGridViewTextBoxColumn50.ReadOnly = true;
+            this.dataGridViewTextBoxColumn50.Width = 30;
+            // 
+            // dataGridViewTextBoxColumn53
+            // 
+            this.dataGridViewTextBoxColumn53.HeaderText = "Дата";
+            this.dataGridViewTextBoxColumn53.Name = "dataGridViewTextBoxColumn53";
+            this.dataGridViewTextBoxColumn53.ReadOnly = true;
+            this.dataGridViewTextBoxColumn53.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn54
+            // 
+            this.dataGridViewTextBoxColumn54.HeaderText = "Сумма";
+            this.dataGridViewTextBoxColumn54.Name = "dataGridViewTextBoxColumn54";
+            this.dataGridViewTextBoxColumn54.ReadOnly = true;
+            this.dataGridViewTextBoxColumn54.Width = 150;
+            // 
+            // tabPageWorkerUserData
+            // 
+            this.tabPageWorkerUserData.Controls.Add(this.btnWorkerSwitchChangePassword);
+            this.tabPageWorkerUserData.Controls.Add(this.label8);
+            this.tabPageWorkerUserData.Controls.Add(this.label9);
+            this.tabPageWorkerUserData.Controls.Add(this.gbWorkerChangePassword);
+            this.tabPageWorkerUserData.Controls.Add(this.label10);
+            this.tabPageWorkerUserData.Location = new System.Drawing.Point(4, 22);
+            this.tabPageWorkerUserData.Name = "tabPageWorkerUserData";
+            this.tabPageWorkerUserData.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageWorkerUserData.Size = new System.Drawing.Size(970, 444);
+            this.tabPageWorkerUserData.TabIndex = 2;
+            this.tabPageWorkerUserData.Text = "Данные исполнителя";
+            this.tabPageWorkerUserData.UseVisualStyleBackColor = true;
+            // 
+            // btnWorkerSwitchChangePassword
+            // 
+            this.btnWorkerSwitchChangePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnWorkerSwitchChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnWorkerSwitchChangePassword.Location = new System.Drawing.Point(9, 95);
+            this.btnWorkerSwitchChangePassword.Name = "btnWorkerSwitchChangePassword";
+            this.btnWorkerSwitchChangePassword.Size = new System.Drawing.Size(137, 40);
+            this.btnWorkerSwitchChangePassword.TabIndex = 32;
+            this.btnWorkerSwitchChangePassword.Text = "Сменить пароль";
+            this.btnWorkerSwitchChangePassword.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label8.Location = new System.Drawing.Point(6, 12);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(168, 17);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "Фамилия Имя Отчество";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label9.Location = new System.Drawing.Point(6, 64);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 17);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "Логин";
+            // 
+            // gbWorkerChangePassword
+            // 
+            this.gbWorkerChangePassword.Controls.Add(this.btnWorkerSwitchChangePasswordCancel);
+            this.gbWorkerChangePassword.Controls.Add(this.label11);
+            this.gbWorkerChangePassword.Controls.Add(this.btnWorkerChangePassword);
+            this.gbWorkerChangePassword.Controls.Add(this.textBox1);
+            this.gbWorkerChangePassword.Controls.Add(this.label12);
+            this.gbWorkerChangePassword.Controls.Add(this.textBox2);
+            this.gbWorkerChangePassword.Controls.Add(this.label13);
+            this.gbWorkerChangePassword.Controls.Add(this.pictureBox1);
+            this.gbWorkerChangePassword.Controls.Add(this.label14);
+            this.gbWorkerChangePassword.Controls.Add(this.pictureBox2);
+            this.gbWorkerChangePassword.Location = new System.Drawing.Point(9, 141);
+            this.gbWorkerChangePassword.Name = "gbWorkerChangePassword";
+            this.gbWorkerChangePassword.Size = new System.Drawing.Size(651, 96);
+            this.gbWorkerChangePassword.TabIndex = 49;
+            this.gbWorkerChangePassword.TabStop = false;
+            this.gbWorkerChangePassword.Visible = false;
+            // 
+            // btnWorkerSwitchChangePasswordCancel
+            // 
+            this.btnWorkerSwitchChangePasswordCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnWorkerSwitchChangePasswordCancel.Location = new System.Drawing.Point(495, 7);
+            this.btnWorkerSwitchChangePasswordCancel.Name = "btnWorkerSwitchChangePasswordCancel";
+            this.btnWorkerSwitchChangePasswordCancel.Size = new System.Drawing.Size(152, 42);
+            this.btnWorkerSwitchChangePasswordCancel.TabIndex = 48;
+            this.btnWorkerSwitchChangePasswordCancel.Text = "Отменить";
+            this.btnWorkerSwitchChangePasswordCancel.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label11.Location = new System.Drawing.Point(6, 10);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(194, 17);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "Пароль для входа в систему";
+            // 
+            // btnWorkerChangePassword
+            // 
+            this.btnWorkerChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnWorkerChangePassword.Location = new System.Drawing.Point(495, 52);
+            this.btnWorkerChangePassword.Name = "btnWorkerChangePassword";
+            this.btnWorkerChangePassword.Size = new System.Drawing.Size(152, 42);
+            this.btnWorkerChangePassword.TabIndex = 47;
+            this.btnWorkerChangePassword.Text = "Сохранить новый пароль";
+            this.btnWorkerChangePassword.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox1.Location = new System.Drawing.Point(225, 10);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '*';
+            this.textBox1.Size = new System.Drawing.Size(215, 23);
+            this.textBox1.TabIndex = 31;
+            this.textBox1.UseSystemPasswordChar = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label12.Location = new System.Drawing.Point(6, 52);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(130, 17);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Повторите пароль";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox2.Enabled = false;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox2.Location = new System.Drawing.Point(225, 52);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
+            this.textBox2.Size = new System.Drawing.Size(215, 23);
+            this.textBox2.TabIndex = 33;
+            this.textBox2.UseSystemPasswordChar = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(222, 79);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(176, 13);
+            this.label13.TabIndex = 37;
+            this.label13.Text = "Введенные пароли не совпадают";
+            this.label13.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(452, 52);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(27, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 43;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(6, 36);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(430, 13);
+            this.label14.TabIndex = 38;
+            this.label14.Text = "Пароль от 8 до 16 символов, в т.ч.  цифра,  заглавная и строчная латинские буквы";
+            this.label14.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(452, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(27, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 42;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label10.Location = new System.Drawing.Point(6, 38);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(144, 17);
+            this.label10.TabIndex = 30;
+            this.label10.Text = "Паспортные данные";
+            // 
+            // gbWorkerProjects
+            // 
+            this.gbWorkerProjects.Controls.Add(this.lblWorkerProjectWorksAmount);
+            this.gbWorkerProjects.Controls.Add(this.dgvWorkerProjects);
+            this.gbWorkerProjects.Controls.Add(this.lblWorkerProjectTotalSquare);
+            this.gbWorkerProjects.Location = new System.Drawing.Point(5, 6);
+            this.gbWorkerProjects.Name = "gbWorkerProjects";
+            this.gbWorkerProjects.Size = new System.Drawing.Size(972, 233);
+            this.gbWorkerProjects.TabIndex = 20;
+            this.gbWorkerProjects.TabStop = false;
+            this.gbWorkerProjects.Text = "Проекты";
+            // 
+            // lblWorkerProjectWorksAmount
+            // 
+            this.lblWorkerProjectWorksAmount.AutoSize = true;
+            this.lblWorkerProjectWorksAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblWorkerProjectWorksAmount.Location = new System.Drawing.Point(6, 42);
+            this.lblWorkerProjectWorksAmount.Name = "lblWorkerProjectWorksAmount";
+            this.lblWorkerProjectWorksAmount.Size = new System.Drawing.Size(198, 17);
+            this.lblWorkerProjectWorksAmount.TabIndex = 17;
+            this.lblWorkerProjectWorksAmount.Text = "Стоимость работ по проекту";
+            // 
+            // dgvWorkerProjects
+            // 
+            this.dgvWorkerProjects.AllowUserToAddRows = false;
+            this.dgvWorkerProjects.AllowUserToDeleteRows = false;
+            this.dgvWorkerProjects.AllowUserToResizeRows = false;
+            this.dgvWorkerProjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvWorkerProjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn31,
+            this.dataGridViewTextBoxColumn32,
+            this.dataGridViewTextBoxColumn33,
+            this.dataGridViewTextBoxColumn35,
+            this.dataGridViewTextBoxColumn36,
+            this.dataGridViewTextBoxColumn37,
+            this.dataGridViewTextBoxColumn45});
+            this.dgvWorkerProjects.Location = new System.Drawing.Point(3, 73);
+            this.dgvWorkerProjects.MultiSelect = false;
+            this.dgvWorkerProjects.Name = "dgvWorkerProjects";
+            this.dgvWorkerProjects.ReadOnly = true;
+            this.dgvWorkerProjects.RowHeadersVisible = false;
+            this.dgvWorkerProjects.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvWorkerProjects.Size = new System.Drawing.Size(856, 154);
+            this.dgvWorkerProjects.TabIndex = 16;
+            this.dgvWorkerProjects.SelectionChanged += new System.EventHandler(this.DgvWorkerProjects_SelectionChanged);
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.HeaderText = "id";
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            this.dataGridViewTextBoxColumn31.ReadOnly = true;
+            this.dataGridViewTextBoxColumn31.Width = 40;
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.HeaderText = "Название";
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            this.dataGridViewTextBoxColumn32.ReadOnly = true;
+            this.dataGridViewTextBoxColumn32.Width = 270;
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this.dataGridViewTextBoxColumn33.HeaderText = "Адрес";
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            this.dataGridViewTextBoxColumn33.ReadOnly = true;
+            this.dataGridViewTextBoxColumn33.Width = 220;
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this.dataGridViewTextBoxColumn35.HeaderText = "Статус";
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            this.dataGridViewTextBoxColumn35.ReadOnly = true;
+            this.dataGridViewTextBoxColumn35.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this.dataGridViewTextBoxColumn36.HeaderText = "Начало";
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            this.dataGridViewTextBoxColumn36.ReadOnly = true;
+            this.dataGridViewTextBoxColumn36.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this.dataGridViewTextBoxColumn37.HeaderText = "Окончание";
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            this.dataGridViewTextBoxColumn37.ReadOnly = true;
+            this.dataGridViewTextBoxColumn37.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn45
+            // 
+            this.dataGridViewTextBoxColumn45.HeaderText = "План";
+            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
+            this.dataGridViewTextBoxColumn45.ReadOnly = true;
+            this.dataGridViewTextBoxColumn45.Width = 80;
+            // 
+            // lblWorkerProjectTotalSquare
+            // 
+            this.lblWorkerProjectTotalSquare.AutoSize = true;
+            this.lblWorkerProjectTotalSquare.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblWorkerProjectTotalSquare.Location = new System.Drawing.Point(6, 17);
+            this.lblWorkerProjectTotalSquare.Name = "lblWorkerProjectTotalSquare";
+            this.lblWorkerProjectTotalSquare.Size = new System.Drawing.Size(170, 17);
+            this.lblWorkerProjectTotalSquare.TabIndex = 18;
+            this.lblWorkerProjectTotalSquare.Text = "Общая площадь фасада";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Location = new System.Drawing.Point(983, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(965, 940);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Данные модели участка фасада";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgvWorkerModel);
+            this.groupBox2.Location = new System.Drawing.Point(4, 116);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(955, 818);
+            this.groupBox2.TabIndex = 51;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Модель фасада";
+            // 
+            // dgvWorkerModel
+            // 
+            this.dgvWorkerModel.AllowDrop = true;
+            this.dgvWorkerModel.AllowUserToAddRows = false;
+            this.dgvWorkerModel.AllowUserToDeleteRows = false;
+            this.dgvWorkerModel.AllowUserToResizeColumns = false;
+            this.dgvWorkerModel.AllowUserToResizeRows = false;
+            this.dgvWorkerModel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvWorkerModel.Location = new System.Drawing.Point(6, 19);
+            this.dgvWorkerModel.Name = "dgvWorkerModel";
+            this.dgvWorkerModel.Size = new System.Drawing.Size(943, 793);
+            this.dgvWorkerModel.TabIndex = 1;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button3.Location = new System.Drawing.Point(682, 41);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(152, 31);
+            this.button3.TabIndex = 50;
+            this.button3.Text = "Отменить";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button4.Location = new System.Drawing.Point(682, 12);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(152, 29);
+            this.button4.TabIndex = 48;
+            this.button4.Text = "Сохранить модель";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Visible = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Enabled = false;
+            this.groupBox3.Location = new System.Drawing.Point(4, 10);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(655, 100);
+            this.groupBox3.TabIndex = 49;
+            this.groupBox3.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.Location = new System.Drawing.Point(6, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 17);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "Общая площадь ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label3.Location = new System.Drawing.Point(6, 53);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(235, 17);
+            this.label3.TabIndex = 46;
+            this.label3.Text = "Количество элементов по ширине";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label4.Location = new System.Drawing.Point(6, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(182, 17);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Название участка фасада";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label7.Location = new System.Drawing.Point(6, 31);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(137, 17);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Количество этажей";
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button5.Location = new System.Drawing.Point(682, 73);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(201, 30);
+            this.button5.TabIndex = 36;
+            this.button5.Text = "Сохранить изменения";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Visible = false;
+            // 
             // labelActualProjectName
             // 
             this.labelActualProjectName.AutoSize = true;
             this.labelActualProjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelActualProjectName.Location = new System.Drawing.Point(16, 28);
+            this.labelActualProjectName.Location = new System.Drawing.Point(0, -1);
             this.labelActualProjectName.Name = "labelActualProjectName";
             this.labelActualProjectName.Size = new System.Drawing.Size(124, 17);
             this.labelActualProjectName.TabIndex = 3;
@@ -4812,7 +5506,7 @@
             // 
             this.labelActualUserName.AutoSize = true;
             this.labelActualUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelActualUserName.Location = new System.Drawing.Point(942, 28);
+            this.labelActualUserName.Location = new System.Drawing.Point(941, -1);
             this.labelActualUserName.Name = "labelActualUserName";
             this.labelActualUserName.Size = new System.Drawing.Size(169, 17);
             this.labelActualUserName.TabIndex = 4;
@@ -4826,14 +5520,10 @@
             this.Controls.Add(this.labelActualUserName);
             this.Controls.Add(this.labelActualProjectName);
             this.Controls.Add(this.tabControlMain);
-            this.Controls.Add(this.Menu);
-            this.MainMenuStrip = this.Menu;
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.Menu.ResumeLayout(false);
-            this.Menu.PerformLayout();
             this.tabControlMain.ResumeLayout(false);
             this.tabPageProject.ResumeLayout(false);
             this.gblProjectPanel.ResumeLayout(false);
@@ -4870,7 +5560,6 @@
             this.gbUsersInProject.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserInProject)).EndInit();
             this.gbAllUsers.ResumeLayout(false);
-            this.gbAllUsers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllUsers)).EndInit();
             this.tabPageClient.ResumeLayout(false);
             this.gbAllClients.ResumeLayout(false);
@@ -4960,24 +5649,37 @@
             this.gbAllSectionsOfBuilding.ResumeLayout(false);
             this.gbAllSectionsOfBuilding.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSectionsOfBuildingByActualProject)).EndInit();
+            this.tabPageWorker.ResumeLayout(false);
+            this.gbWorkerSectionsOfBuilding.ResumeLayout(false);
+            this.gbWorkerSectionsOfBuilding.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerSectionsOfBuilding)).EndInit();
+            this.tabControlWorker.ResumeLayout(false);
+            this.tabPageWorkerWorks.ResumeLayout(false);
+            this.tabPageWorkerWorks.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerWorksInProject)).EndInit();
+            this.tabPageWorkerPayments.ResumeLayout(false);
+            this.tabPageWorkerPayments.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerPayments)).EndInit();
+            this.tabPageWorkerUserData.ResumeLayout(false);
+            this.tabPageWorkerUserData.PerformLayout();
+            this.gbWorkerChangePassword.ResumeLayout(false);
+            this.gbWorkerChangePassword.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.gbWorkerProjects.ResumeLayout(false);
+            this.gbWorkerProjects.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerProjects)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerModel)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.MenuStrip Menu;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem allUsersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addNewUserToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ChangePasswordToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ProjectToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem CreateProjectToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ActualProjectsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem PlannedProjectsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem CompletedProjectsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem CancelledProjectsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem AllProjectsToolStripMenuItem;
         private System.Windows.Forms.TabControl tabControlMain;
         private System.Windows.Forms.TabPage tabPageUser;
         private System.Windows.Forms.TabPage tabPageProject;
@@ -4995,7 +5697,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn userLoginColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userManagerAccessColumn;
         private System.Windows.Forms.GroupBox gbUsersInProject;
-        private System.Windows.Forms.CheckBox checkBoxAllUsersVision;
         private System.Windows.Forms.DataGridView dgvUserInProject;
         private System.Windows.Forms.Button buttonRemoveUser;
         private System.Windows.Forms.GroupBox groupBoxUserPanel;
@@ -5358,8 +6059,76 @@
         private System.Windows.Forms.DateTimePicker dtpProjectDateOfComplete;
         private System.Windows.Forms.Label lblCheckProjectDateOfComplete;
         private System.Windows.Forms.PictureBox pbChekMarkProjectDateOfComplete;
-        private System.Windows.Forms.Label lbllProjectWorksAmount;
+        private System.Windows.Forms.Label lblProjectWorksAmount;
         private System.Windows.Forms.Label lblProjectTotalSquare;
         private System.Windows.Forms.Label lbllProjectAmountPayments;
+        private System.Windows.Forms.TabPage tabPageWorker;
+        private System.Windows.Forms.GroupBox gbWorkerSectionsOfBuilding;
+        private System.Windows.Forms.DataGridView dgvWorkerSectionsOfBuilding;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn48;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn49;
+        private System.Windows.Forms.TabControl tabControlWorker;
+        private System.Windows.Forms.TabPage tabPageWorkerUserData;
+        private System.Windows.Forms.Button btnWorkerSwitchChangePassword;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.GroupBox gbWorkerChangePassword;
+        private System.Windows.Forms.Button btnWorkerSwitchChangePasswordCancel;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnWorkerChangePassword;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TabPage tabPageWorkerPayments;
+        private System.Windows.Forms.TabPage tabPageWorkerWorks;
+        private System.Windows.Forms.GroupBox gbWorkerProjects;
+        private System.Windows.Forms.Label lblWorkerProjectWorksAmount;
+        private System.Windows.Forms.DataGridView dgvWorkerProjects;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
+        private System.Windows.Forms.Label lblWorkerProjectTotalSquare;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dgvWorkerModel;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label lblWorkerPaymentAmount;
+        private System.Windows.Forms.DataGridView dgvWorkerPayments;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn50;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn53;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn54;
+        private System.Windows.Forms.Button btnWorkerCompleteWorkCancel;
+        private System.Windows.Forms.Button btnWorkerCompleteWork;
+        private System.Windows.Forms.Button btnWorkerSwitchCompleteWork;
+        private System.Windows.Forms.Button btnWorkerSwitchCompleteWorkCancel;
+        private System.Windows.Forms.DataGridView dgvWorkerWorksInProject;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn51;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn52;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn55;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn56;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn57;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn58;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn59;
+        private System.Windows.Forms.Label lblWorkerSectionOfBuildingWorkAmount;
+        private System.Windows.Forms.Label lblWorkerProjectNotFound;
     }
 }

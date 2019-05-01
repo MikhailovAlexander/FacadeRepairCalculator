@@ -113,5 +113,15 @@ namespace Project
         {
             return passwordRegex.IsMatch(string2Check);
         }
+
+        public Project[] GetProjects(IDriverDB driver)
+        {
+            return driver.ReadAllProjectByUser(id);
+        }
+
+        public Payment[] GetPaymentsByProject(int idProject, IDriverDB driver)
+        {
+            return driver.ReadPaymentsByUserAndProject(id, idProject);
+        }
     }
 }

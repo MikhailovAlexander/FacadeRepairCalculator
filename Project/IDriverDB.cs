@@ -33,6 +33,7 @@ namespace Project
         Project ReadProject(int idForSearch);
         Project[] ReadAllProject();
         Project[] ReadAllProjectByState(ProjectState stateToSearch);
+        Project[] ReadAllProjectByUser(int idUser);
         void DeleteProject(int idProject);
         decimal GetTotalSquare(int idProject);
         decimal GetAmountByWorksFromProject(int idProject);
@@ -57,6 +58,7 @@ namespace Project
         Payment[] ReadAllPayments();
         Payment[] ReadPaymentsByProject(int idProject);
         Payment[] ReadPaymentsByUser(int idProject);
+        Payment[] ReadPaymentsByUserAndProject(int idUser, int idProject);
 
         void CreateTypeOfElement(TypeOfElement typeOfElement);
         TypeOfElement ReadTypeOfElement(int idForSearch);
@@ -81,6 +83,7 @@ namespace Project
         void UpdateElementPicture(ElementPicture elementPicture);
         void DeleteElementPicture(int idElement);
         ElementPicture[] ReadAllElementPictures();
+        ElementPicture GetElementPictureByTypeOfElement(int idTypeOfElement);
 
         int CreateSectionOfBuilding(SectionOfBuilding sectionOfBuilding);
         void CreateSectionOfBuildingWithElements(SectionOfBuilding sectionOfBuilding);

@@ -109,13 +109,13 @@ namespace Project
                 objects[i] = ReadObject(idList[i]);
             return objects;
         }
-
+        
         private T[] ReadAllTObjectsFromTables<T>(string nameTable1, string nameColumn1,
             string nameTable2, string nameColumn2, int idParametr, Func<int, T> ReadObject)
         {
             string query = $"SELECT {nameTable1}.id FROM {nameTable1}, {nameTable2} " +
                 $"WHERE {nameTable1}.{nameColumn1} = {nameTable2}.id AND {nameTable2}.{nameColumn2} = @{nameColumn2};";
-            // select Payment.id from Payment, user_in_project where Payment.id_user_in_project = user_in_project.id and user_in_project.id_project = @id.project
+            // select project.id from project, user_in_project where user_in_project.id_project = project.id and user_in_project.id_user = @id.user;
             var cmd = new NpgsqlCommand(query, Conn);
             cmd.Parameters.Add(new NpgsqlParameter($"@{nameColumn2}", NpgsqlTypes.NpgsqlDbType.Integer));
             cmd.Prepare();
@@ -496,6 +496,33 @@ namespace Project
             return ReadAllTObjects<Project>(Project.nameTableInDB, "id_project_state", (int)stateToSearch, ReadProject);
         }
 
+        public Project[] ReadAllProjectByUser(int idUser)
+        {
+            string query = $"SELECT {Project.nameTableInDB}.id " +
+                $"FROM {Project.nameTableInDB}, {Project.nameTableInDBUserInProject} " +
+                $"WHERE {Project.nameTableInDB}.id = " +
+                $"{Project.nameTableInDBUserInProject}.id_project AND " +
+                $"{Project.nameTableInDBUserInProject}.id_user = @id_user;";
+            // select project.id from project, user_in_project where user_in_project.id_project = project.id and user_in_project.id_user = @id.user;
+            var cmd = new NpgsqlCommand(query, Conn);
+            cmd.Parameters.Add(new NpgsqlParameter($"@id_user", NpgsqlTypes.NpgsqlDbType.Integer));
+            cmd.Prepare();
+            cmd.Parameters[0].Value = idUser;
+            var reader = cmd.ExecuteReader();
+            if (!reader.HasRows)
+            {
+                reader.Close();
+                return new Project[0];
+            }
+            List<int> idList = new List<int>();
+            while (reader.Read()) idList.Add(reader.GetInt32(0));
+            reader.Close();
+            Project[] projects = new Project[idList.Count];
+            for (int i = 0; i < idList.Count; i++)
+                projects[i] = ReadProject(idList[i]);
+            return projects;
+        }
+
         public void DeleteProject(int idProject)
         {
             DeleteFromTable(Project.nameTableInDB, idProject);
@@ -834,7 +861,33 @@ namespace Project
         {
             return ReadAllTObjects<Payment>(Payment.nameTableInDB, "id_user", idUser, ReadPayment);
         }
-                       
+
+        public Payment[] ReadPaymentsByUserAndProject(int idUser, int idProject)
+        {
+            string query = $"SELECT {Payment.nameTableInDB}.id " +
+                $"FROM {Payment.nameTableInDB} WHERE id_user = @id_user AND " +
+                $"id_project = @id_project;";
+            var cmd = new NpgsqlCommand(query, Conn);
+            cmd.Parameters.Add(new NpgsqlParameter($"@id_user", NpgsqlTypes.NpgsqlDbType.Integer));
+            cmd.Parameters.Add(new NpgsqlParameter($"@id_project", NpgsqlTypes.NpgsqlDbType.Integer));
+            cmd.Prepare();
+            cmd.Parameters[0].Value = idUser;
+            cmd.Parameters[1].Value = idProject;
+            var reader = cmd.ExecuteReader();
+            if (!reader.HasRows)
+            {
+                reader.Close();
+                return new Payment[0];
+            }
+            List<int> idList = new List<int>();
+            while (reader.Read()) idList.Add(reader.GetInt32(0));
+            reader.Close();
+            Payment[] payments = new Payment[idList.Count];
+            for (int i = 0; i < idList.Count; i++)
+                payments[i] = ReadPayment(idList[i]);
+            return payments;
+        }
+
         public void CreateTypeOfElement(TypeOfElement typeOfElement)
         {
             string query =
@@ -1195,6 +1248,13 @@ namespace Project
         public ElementPicture[] ReadAllElementPictures()
         {
             return ReadAllTObjects(ElementPicture.nameTableInDB, ReadElementPicture);
+        }
+
+        public ElementPicture GetElementPictureByTypeOfElement(int idTypeOfElement)
+        {
+            int idPictureElement = (int)ReadValueFromTable("id", "id_element_picture",
+                TypeOfElement.nameTableInDB, idTypeOfElement);
+            return ReadElementPicture(idPictureElement);
         }
 
 
