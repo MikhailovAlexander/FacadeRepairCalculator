@@ -28,6 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageProject = new System.Windows.Forms.TabPage();
             this.gblProjectPanel = new System.Windows.Forms.GroupBox();
@@ -70,6 +78,9 @@
             this.btnProjectUpdate = new System.Windows.Forms.Button();
             this.btnProjectCreate = new System.Windows.Forms.Button();
             this.gbAllProjects = new System.Windows.Forms.GroupBox();
+            this.lblProjectRejectedWork = new System.Windows.Forms.Label();
+            this.lblProjectAcceptedWork = new System.Windows.Forms.Label();
+            this.lblProjectCompletedWork = new System.Windows.Forms.Label();
             this.lbllProjectAmountPayments = new System.Windows.Forms.Label();
             this.lblProjectTotalSquare = new System.Windows.Forms.Label();
             this.lblProjectWorksAmount = new System.Windows.Forms.Label();
@@ -356,15 +367,40 @@
             this.dgvTbColumnPictureName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnElementPicturePicture = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageSectionOfBuilding = new System.Windows.Forms.TabPage();
+            this.gbManagerModelSetWork = new System.Windows.Forms.GroupBox();
+            this.dtpManagerModelLogDate = new System.Windows.Forms.DateTimePicker();
+            this.btnSectionOfBuildingRejectWorkCancel = new System.Windows.Forms.Button();
+            this.btnSectionOfBuildingSetWork = new System.Windows.Forms.Button();
+            this.btnSectionOfBuildingRejectWork = new System.Windows.Forms.Button();
             this.btnSectionOfBuildingCancelWork = new System.Windows.Forms.Button();
+            this.btnSectionOfBuildingAcceptWorkCancel = new System.Windows.Forms.Button();
+            this.btnSectionOfBuildingAcceptWork = new System.Windows.Forms.Button();
+            this.gbManagerModelButtons = new System.Windows.Forms.GroupBox();
+            this.btnSectionOfBuildingSwitchModelUpdate = new System.Windows.Forms.Button();
+            this.btnSectionOfBuildingModelUpdate = new System.Windows.Forms.Button();
+            this.btnSectionOfBuildingSwitchModelCancel = new System.Windows.Forms.Button();
+            this.btnSectionOfBuildingSwitchSetWork = new System.Windows.Forms.Button();
             this.gbSectionOfBuildingPanel = new System.Windows.Forms.GroupBox();
             this.SectionOfBuildingModel = new System.Windows.Forms.GroupBox();
-            this.dgvSectionOfBuildingModel = new System.Windows.Forms.DataGridView();
-            this.btnSectionOfBuildingSwitchCancel = new System.Windows.Forms.Button();
-            this.btnSectionOfBuildingCreate = new System.Windows.Forms.Button();
+            this.btnSectionOfBuildingChangeMultiplicity = new System.Windows.Forms.Button();
+            this.lblManagerModelAmount = new System.Windows.Forms.Label();
+            this.lblManagerModelMultiplicity = new System.Windows.Forms.Label();
+            this.lblManagerModelSquare = new System.Windows.Forms.Label();
+            this.lblManagerModelLength = new System.Windows.Forms.Label();
+            this.lblManagerModeHeight = new System.Windows.Forms.Label();
+            this.dgvManagerWorkLog = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn60 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn61 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn63 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvManagerModel = new System.Windows.Forms.DataGridView();
             this.gbSectionOfBuildingData = new System.Windows.Forms.GroupBox();
             this.lblSectuinOfBuildingSquare = new System.Windows.Forms.Label();
+            this.btnSectionOfBuildingSwitchCancel = new System.Windows.Forms.Button();
             this.lblCheckSectionOfBuildingQuantityByWidth = new System.Windows.Forms.Label();
+            this.btnSectionOfBuildingCreate = new System.Windows.Forms.Button();
+            this.btnSectionOfBuildingUpdate = new System.Windows.Forms.Button();
             this.tbSectionOfBuildingQuantityByWidth = new System.Windows.Forms.TextBox();
             this.lblSectionOfBuildingQuantityByWidth = new System.Windows.Forms.Label();
             this.pbCheckMarkSectionOfBuildingQuantityByWidth = new System.Windows.Forms.PictureBox();
@@ -376,8 +412,6 @@
             this.tbSectionOfBuildingName = new System.Windows.Forms.TextBox();
             this.pbCheckMarkSectionOfBuildingQuantityByHeight = new System.Windows.Forms.PictureBox();
             this.pbCheckMarkSectionOfBuildingName = new System.Windows.Forms.PictureBox();
-            this.btnSectionOfBuildingUpdate = new System.Windows.Forms.Button();
-            this.btnSectionOfBuildingSetWork = new System.Windows.Forms.Button();
             this.gbTypeOfElementInProjectBySectionOfBuilding = new System.Windows.Forms.GroupBox();
             this.lblSectionOfBuildingWorksAmount = new System.Windows.Forms.Label();
             this.dgvSectionOfBuildingWorkInProject = new System.Windows.Forms.DataGridView();
@@ -388,9 +422,14 @@
             this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSectionValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSectionCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSectionCompleteValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSectionCompleteCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSectionAcceptValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSectionAcceptCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSectionRejectValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSectionRejectCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lvSectionOfBuildingTypesOfElementInProject = new System.Windows.Forms.ListView();
             this.lblSectionOfBuldingActualProjectNotSaved2 = new System.Windows.Forms.Label();
-            this.btnSectionOfBuildingSwitchSetWork = new System.Windows.Forms.Button();
             this.gbAllSectionsOfBuilding = new System.Windows.Forms.GroupBox();
             this.lblSectionOfBuildingActualProjectWorksAmount = new System.Windows.Forms.Label();
             this.lblSectionOfBuildingActualProjectTotalSquare = new System.Windows.Forms.Label();
@@ -404,9 +443,6 @@
             this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSquareSectionOfBuilding = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSectionOfBuildingSwitchModelCancel = new System.Windows.Forms.Button();
-            this.btnSectionOfBuildingSwitchModelUpdate = new System.Windows.Forms.Button();
-            this.btnSectionOfBuildingModelUpdate = new System.Windows.Forms.Button();
             this.tabPageWorker = new System.Windows.Forms.TabPage();
             this.gbWorkerSectionsOfBuilding = new System.Windows.Forms.GroupBox();
             this.lblWorkerProjectNotFound = new System.Windows.Forms.Label();
@@ -418,11 +454,14 @@
             this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControlWorker = new System.Windows.Forms.TabControl();
             this.tabPageWorkerWorks = new System.Windows.Forms.TabPage();
-            this.lblWorkerSectionOfBuildingWorkAmount = new System.Windows.Forms.Label();
-            this.btnWorkerCompleteWorkCancel = new System.Windows.Forms.Button();
-            this.btnWorkerCompleteWork = new System.Windows.Forms.Button();
-            this.btnWorkerSwitchCompleteWork = new System.Windows.Forms.Button();
+            this.gbWorkerCompletePanel = new System.Windows.Forms.GroupBox();
+            this.lblWorkerDateOfComplete = new System.Windows.Forms.Label();
+            this.dtpWorkerDateOfComplete = new System.Windows.Forms.DateTimePicker();
             this.btnWorkerSwitchCompleteWorkCancel = new System.Windows.Forms.Button();
+            this.btnWorkerCompleteWork = new System.Windows.Forms.Button();
+            this.btnWorkerCompleteWorkCancel = new System.Windows.Forms.Button();
+            this.lblWorkerSectionOfBuildingWorkAmount = new System.Windows.Forms.Label();
+            this.btnWorkerSwitchCompleteWork = new System.Windows.Forms.Button();
             this.dgvWorkerWorksInProject = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn51 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn52 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -431,6 +470,7 @@
             this.dataGridViewTextBoxColumn57 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageWorkerCompletedWorks = new System.Windows.Forms.TabPage();
             this.tabPageWorkerPayments = new System.Windows.Forms.TabPage();
             this.lblWorkerPaymentAmount = new System.Windows.Forms.Label();
             this.dgvWorkerPayments = new System.Windows.Forms.DataGridView();
@@ -465,16 +505,18 @@
             this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblWorkerProjectTotalSquare = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblWorkerWorkByElementAmount = new System.Windows.Forms.Label();
+            this.lblWorkerWorkByElementMultiplicity = new System.Windows.Forms.Label();
+            this.lblWorkerElementSquare = new System.Windows.Forms.Label();
+            this.lblWorkerElementLenght = new System.Windows.Forms.Label();
+            this.lblWorkerElementHeight = new System.Windows.Forms.Label();
+            this.dgvWorkerWorkLog = new System.Windows.Forms.DataGridView();
+            this.WorkerWorkLogColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WorkerWorkLogColumnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WorkerWorkLogColumnType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WorkerWorkLogColumnUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WorkerWorkLogColumnComment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvWorkerModel = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.labelActualProjectName = new System.Windows.Forms.Label();
             this.labelActualUserName = new System.Windows.Forms.Label();
             this.ofdElementOpenImage = new System.Windows.Forms.OpenFileDialog();
@@ -568,9 +610,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbElementPictureSelectedDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllElementPicture)).BeginInit();
             this.tabPageSectionOfBuilding.SuspendLayout();
+            this.gbManagerModelSetWork.SuspendLayout();
+            this.gbManagerModelButtons.SuspendLayout();
             this.gbSectionOfBuildingPanel.SuspendLayout();
             this.SectionOfBuildingModel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSectionOfBuildingModel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvManagerWorkLog)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvManagerModel)).BeginInit();
             this.gbSectionOfBuildingData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkSectionOfBuildingQuantityByWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkSectionOfBuildingQuantityByHeight)).BeginInit();
@@ -584,6 +629,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerSectionsOfBuilding)).BeginInit();
             this.tabControlWorker.SuspendLayout();
             this.tabPageWorkerWorks.SuspendLayout();
+            this.gbWorkerCompletePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerWorksInProject)).BeginInit();
             this.tabPageWorkerPayments.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerPayments)).BeginInit();
@@ -594,9 +640,8 @@
             this.gbWorkerProjects.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerProjects)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerWorkLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerModel)).BeginInit();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlMain
@@ -1071,6 +1116,9 @@
             // 
             // gbAllProjects
             // 
+            this.gbAllProjects.Controls.Add(this.lblProjectRejectedWork);
+            this.gbAllProjects.Controls.Add(this.lblProjectAcceptedWork);
+            this.gbAllProjects.Controls.Add(this.lblProjectCompletedWork);
             this.gbAllProjects.Controls.Add(this.lbllProjectAmountPayments);
             this.gbAllProjects.Controls.Add(this.lblProjectTotalSquare);
             this.gbAllProjects.Controls.Add(this.lblProjectWorksAmount);
@@ -1090,11 +1138,44 @@
             this.gbAllProjects.TabStop = false;
             this.gbAllProjects.Text = "Все проекты";
             // 
+            // lblProjectRejectedWork
+            // 
+            this.lblProjectRejectedWork.AutoSize = true;
+            this.lblProjectRejectedWork.BackColor = System.Drawing.Color.Red;
+            this.lblProjectRejectedWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblProjectRejectedWork.Location = new System.Drawing.Point(425, 116);
+            this.lblProjectRejectedWork.Name = "lblProjectRejectedWork";
+            this.lblProjectRejectedWork.Size = new System.Drawing.Size(211, 17);
+            this.lblProjectRejectedWork.TabIndex = 18;
+            this.lblProjectRejectedWork.Text = "Стоимость отклоненных работ";
+            // 
+            // lblProjectAcceptedWork
+            // 
+            this.lblProjectAcceptedWork.AutoSize = true;
+            this.lblProjectAcceptedWork.BackColor = System.Drawing.Color.Green;
+            this.lblProjectAcceptedWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblProjectAcceptedWork.Location = new System.Drawing.Point(425, 90);
+            this.lblProjectAcceptedWork.Name = "lblProjectAcceptedWork";
+            this.lblProjectAcceptedWork.Size = new System.Drawing.Size(188, 17);
+            this.lblProjectAcceptedWork.TabIndex = 17;
+            this.lblProjectAcceptedWork.Text = "Стоимость принятых работ";
+            // 
+            // lblProjectCompletedWork
+            // 
+            this.lblProjectCompletedWork.AutoSize = true;
+            this.lblProjectCompletedWork.BackColor = System.Drawing.Color.Yellow;
+            this.lblProjectCompletedWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblProjectCompletedWork.Location = new System.Drawing.Point(425, 64);
+            this.lblProjectCompletedWork.Name = "lblProjectCompletedWork";
+            this.lblProjectCompletedWork.Size = new System.Drawing.Size(214, 17);
+            this.lblProjectCompletedWork.TabIndex = 16;
+            this.lblProjectCompletedWork.Text = "Стоимость выполненных работ";
+            // 
             // lbllProjectAmountPayments
             // 
             this.lbllProjectAmountPayments.AutoSize = true;
             this.lbllProjectAmountPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbllProjectAmountPayments.Location = new System.Drawing.Point(425, 80);
+            this.lbllProjectAmountPayments.Location = new System.Drawing.Point(425, 137);
             this.lbllProjectAmountPayments.Name = "lbllProjectAmountPayments";
             this.lbllProjectAmountPayments.Size = new System.Drawing.Size(179, 17);
             this.lbllProjectAmountPayments.TabIndex = 15;
@@ -1104,7 +1185,7 @@
             // 
             this.lblProjectTotalSquare.AutoSize = true;
             this.lblProjectTotalSquare.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblProjectTotalSquare.Location = new System.Drawing.Point(425, 30);
+            this.lblProjectTotalSquare.Location = new System.Drawing.Point(425, 14);
             this.lblProjectTotalSquare.Name = "lblProjectTotalSquare";
             this.lblProjectTotalSquare.Size = new System.Drawing.Size(170, 17);
             this.lblProjectTotalSquare.TabIndex = 14;
@@ -1113,8 +1194,9 @@
             // lblProjectWorksAmount
             // 
             this.lblProjectWorksAmount.AutoSize = true;
+            this.lblProjectWorksAmount.BackColor = System.Drawing.Color.DimGray;
             this.lblProjectWorksAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblProjectWorksAmount.Location = new System.Drawing.Point(425, 55);
+            this.lblProjectWorksAmount.Location = new System.Drawing.Point(425, 38);
             this.lblProjectWorksAmount.Name = "lblProjectWorksAmount";
             this.lblProjectWorksAmount.Size = new System.Drawing.Size(198, 17);
             this.lblProjectWorksAmount.TabIndex = 13;
@@ -2651,9 +2733,10 @@
             // btnWorkInProjectSwitchUpdate
             // 
             this.btnWorkInProjectSwitchUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnWorkInProjectSwitchUpdate.Location = new System.Drawing.Point(626, 19);
+            this.btnWorkInProjectSwitchUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnWorkInProjectSwitchUpdate.Location = new System.Drawing.Point(609, 19);
             this.btnWorkInProjectSwitchUpdate.Name = "btnWorkInProjectSwitchUpdate";
-            this.btnWorkInProjectSwitchUpdate.Size = new System.Drawing.Size(132, 25);
+            this.btnWorkInProjectSwitchUpdate.Size = new System.Drawing.Size(173, 25);
             this.btnWorkInProjectSwitchUpdate.TabIndex = 11;
             this.btnWorkInProjectSwitchUpdate.Text = "Редактировать работу";
             this.btnWorkInProjectSwitchUpdate.UseVisualStyleBackColor = true;
@@ -2687,9 +2770,9 @@
             // btnWorkInProjectSwitchCreate
             // 
             this.btnWorkInProjectSwitchCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnWorkInProjectSwitchCreate.Location = new System.Drawing.Point(852, 218);
+            this.btnWorkInProjectSwitchCreate.Location = new System.Drawing.Point(852, 194);
             this.btnWorkInProjectSwitchCreate.Name = "btnWorkInProjectSwitchCreate";
-            this.btnWorkInProjectSwitchCreate.Size = new System.Drawing.Size(110, 49);
+            this.btnWorkInProjectSwitchCreate.Size = new System.Drawing.Size(110, 40);
             this.btnWorkInProjectSwitchCreate.TabIndex = 12;
             this.btnWorkInProjectSwitchCreate.Text = "Добавить работу в проект";
             this.btnWorkInProjectSwitchCreate.UseVisualStyleBackColor = true;
@@ -2698,9 +2781,9 @@
             // btnTypeOfWorkDelete
             // 
             this.btnTypeOfWorkDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnTypeOfWorkDelete.Location = new System.Drawing.Point(851, 169);
+            this.btnTypeOfWorkDelete.Location = new System.Drawing.Point(852, 148);
             this.btnTypeOfWorkDelete.Name = "btnTypeOfWorkDelete";
-            this.btnTypeOfWorkDelete.Size = new System.Drawing.Size(110, 35);
+            this.btnTypeOfWorkDelete.Size = new System.Drawing.Size(110, 40);
             this.btnTypeOfWorkDelete.TabIndex = 10;
             this.btnTypeOfWorkDelete.Text = "Удалить вид работ";
             this.btnTypeOfWorkDelete.UseVisualStyleBackColor = true;
@@ -2709,9 +2792,9 @@
             // btnTypeOfWorkSwitchUpdate
             // 
             this.btnTypeOfWorkSwitchUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnTypeOfWorkSwitchUpdate.Location = new System.Drawing.Point(852, 111);
+            this.btnTypeOfWorkSwitchUpdate.Location = new System.Drawing.Point(852, 102);
             this.btnTypeOfWorkSwitchUpdate.Name = "btnTypeOfWorkSwitchUpdate";
-            this.btnTypeOfWorkSwitchUpdate.Size = new System.Drawing.Size(110, 49);
+            this.btnTypeOfWorkSwitchUpdate.Size = new System.Drawing.Size(110, 40);
             this.btnTypeOfWorkSwitchUpdate.TabIndex = 9;
             this.btnTypeOfWorkSwitchUpdate.Text = "Редактировать вид работ";
             this.btnTypeOfWorkSwitchUpdate.UseVisualStyleBackColor = true;
@@ -2722,7 +2805,7 @@
             this.btnTypeOfWorkSwitchCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnTypeOfWorkSwitchCreate.Location = new System.Drawing.Point(852, 56);
             this.btnTypeOfWorkSwitchCreate.Name = "btnTypeOfWorkSwitchCreate";
-            this.btnTypeOfWorkSwitchCreate.Size = new System.Drawing.Size(110, 49);
+            this.btnTypeOfWorkSwitchCreate.Size = new System.Drawing.Size(110, 40);
             this.btnTypeOfWorkSwitchCreate.TabIndex = 8;
             this.btnTypeOfWorkSwitchCreate.Text = "Добавить новый вид работ";
             this.btnTypeOfWorkSwitchCreate.UseVisualStyleBackColor = true;
@@ -4182,15 +4265,11 @@
             // 
             // tabPageSectionOfBuilding
             // 
-            this.tabPageSectionOfBuilding.Controls.Add(this.btnSectionOfBuildingCancelWork);
+            this.tabPageSectionOfBuilding.Controls.Add(this.gbManagerModelSetWork);
+            this.tabPageSectionOfBuilding.Controls.Add(this.gbManagerModelButtons);
             this.tabPageSectionOfBuilding.Controls.Add(this.gbSectionOfBuildingPanel);
-            this.tabPageSectionOfBuilding.Controls.Add(this.btnSectionOfBuildingSetWork);
             this.tabPageSectionOfBuilding.Controls.Add(this.gbTypeOfElementInProjectBySectionOfBuilding);
-            this.tabPageSectionOfBuilding.Controls.Add(this.btnSectionOfBuildingSwitchSetWork);
             this.tabPageSectionOfBuilding.Controls.Add(this.gbAllSectionsOfBuilding);
-            this.tabPageSectionOfBuilding.Controls.Add(this.btnSectionOfBuildingSwitchModelCancel);
-            this.tabPageSectionOfBuilding.Controls.Add(this.btnSectionOfBuildingSwitchModelUpdate);
-            this.tabPageSectionOfBuilding.Controls.Add(this.btnSectionOfBuildingModelUpdate);
             this.tabPageSectionOfBuilding.Location = new System.Drawing.Point(4, 22);
             this.tabPageSectionOfBuilding.Name = "tabPageSectionOfBuilding";
             this.tabPageSectionOfBuilding.Size = new System.Drawing.Size(1951, 946);
@@ -4198,26 +4277,170 @@
             this.tabPageSectionOfBuilding.Text = "Модель фасада";
             this.tabPageSectionOfBuilding.UseVisualStyleBackColor = true;
             // 
+            // gbManagerModelSetWork
+            // 
+            this.gbManagerModelSetWork.Controls.Add(this.dtpManagerModelLogDate);
+            this.gbManagerModelSetWork.Controls.Add(this.btnSectionOfBuildingRejectWorkCancel);
+            this.gbManagerModelSetWork.Controls.Add(this.btnSectionOfBuildingSetWork);
+            this.gbManagerModelSetWork.Controls.Add(this.btnSectionOfBuildingRejectWork);
+            this.gbManagerModelSetWork.Controls.Add(this.btnSectionOfBuildingCancelWork);
+            this.gbManagerModelSetWork.Controls.Add(this.btnSectionOfBuildingAcceptWorkCancel);
+            this.gbManagerModelSetWork.Controls.Add(this.btnSectionOfBuildingAcceptWork);
+            this.gbManagerModelSetWork.Location = new System.Drawing.Point(765, 146);
+            this.gbManagerModelSetWork.Name = "gbManagerModelSetWork";
+            this.gbManagerModelSetWork.Size = new System.Drawing.Size(184, 255);
+            this.gbManagerModelSetWork.TabIndex = 10;
+            this.gbManagerModelSetWork.TabStop = false;
+            this.gbManagerModelSetWork.Text = "Дата записи";
+            this.gbManagerModelSetWork.Visible = false;
+            // 
+            // dtpManagerModelLogDate
+            // 
+            this.dtpManagerModelLogDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.dtpManagerModelLogDate.Location = new System.Drawing.Point(8, 19);
+            this.dtpManagerModelLogDate.Name = "dtpManagerModelLogDate";
+            this.dtpManagerModelLogDate.Size = new System.Drawing.Size(170, 23);
+            this.dtpManagerModelLogDate.TabIndex = 73;
+            // 
+            // btnSectionOfBuildingRejectWorkCancel
+            // 
+            this.btnSectionOfBuildingRejectWorkCancel.BackColor = System.Drawing.Color.Red;
+            this.btnSectionOfBuildingRejectWorkCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingRejectWorkCancel.Location = new System.Drawing.Point(7, 216);
+            this.btnSectionOfBuildingRejectWorkCancel.Name = "btnSectionOfBuildingRejectWorkCancel";
+            this.btnSectionOfBuildingRejectWorkCancel.Size = new System.Drawing.Size(171, 35);
+            this.btnSectionOfBuildingRejectWorkCancel.TabIndex = 71;
+            this.btnSectionOfBuildingRejectWorkCancel.Text = "Отменить отклонение";
+            this.btnSectionOfBuildingRejectWorkCancel.UseVisualStyleBackColor = false;
+            // 
+            // btnSectionOfBuildingSetWork
+            // 
+            this.btnSectionOfBuildingSetWork.BackColor = System.Drawing.Color.DimGray;
+            this.btnSectionOfBuildingSetWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingSetWork.Location = new System.Drawing.Point(7, 44);
+            this.btnSectionOfBuildingSetWork.Name = "btnSectionOfBuildingSetWork";
+            this.btnSectionOfBuildingSetWork.Size = new System.Drawing.Size(171, 35);
+            this.btnSectionOfBuildingSetWork.TabIndex = 66;
+            this.btnSectionOfBuildingSetWork.Text = "Назначить работу";
+            this.btnSectionOfBuildingSetWork.UseVisualStyleBackColor = false;
+            this.btnSectionOfBuildingSetWork.Click += new System.EventHandler(this.BtnSectionOfBuildingSetWork_Click);
+            // 
+            // btnSectionOfBuildingRejectWork
+            // 
+            this.btnSectionOfBuildingRejectWork.BackColor = System.Drawing.Color.Red;
+            this.btnSectionOfBuildingRejectWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingRejectWork.Location = new System.Drawing.Point(7, 182);
+            this.btnSectionOfBuildingRejectWork.Name = "btnSectionOfBuildingRejectWork";
+            this.btnSectionOfBuildingRejectWork.Size = new System.Drawing.Size(171, 35);
+            this.btnSectionOfBuildingRejectWork.TabIndex = 70;
+            this.btnSectionOfBuildingRejectWork.Text = "Отклонить работу";
+            this.btnSectionOfBuildingRejectWork.UseVisualStyleBackColor = false;
+            // 
             // btnSectionOfBuildingCancelWork
             // 
+            this.btnSectionOfBuildingCancelWork.BackColor = System.Drawing.Color.DimGray;
             this.btnSectionOfBuildingCancelWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSectionOfBuildingCancelWork.Location = new System.Drawing.Point(1737, 256);
+            this.btnSectionOfBuildingCancelWork.Location = new System.Drawing.Point(7, 78);
             this.btnSectionOfBuildingCancelWork.Name = "btnSectionOfBuildingCancelWork";
-            this.btnSectionOfBuildingCancelWork.Size = new System.Drawing.Size(171, 42);
+            this.btnSectionOfBuildingCancelWork.Size = new System.Drawing.Size(171, 35);
             this.btnSectionOfBuildingCancelWork.TabIndex = 67;
             this.btnSectionOfBuildingCancelWork.Text = "Отменить назначение";
-            this.btnSectionOfBuildingCancelWork.UseVisualStyleBackColor = true;
-            this.btnSectionOfBuildingCancelWork.Visible = false;
+            this.btnSectionOfBuildingCancelWork.UseVisualStyleBackColor = false;
             this.btnSectionOfBuildingCancelWork.Click += new System.EventHandler(this.BtnSectionOfBuildingCancelWork_Click);
+            // 
+            // btnSectionOfBuildingAcceptWorkCancel
+            // 
+            this.btnSectionOfBuildingAcceptWorkCancel.BackColor = System.Drawing.Color.Green;
+            this.btnSectionOfBuildingAcceptWorkCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingAcceptWorkCancel.Location = new System.Drawing.Point(7, 147);
+            this.btnSectionOfBuildingAcceptWorkCancel.Name = "btnSectionOfBuildingAcceptWorkCancel";
+            this.btnSectionOfBuildingAcceptWorkCancel.Size = new System.Drawing.Size(171, 35);
+            this.btnSectionOfBuildingAcceptWorkCancel.TabIndex = 69;
+            this.btnSectionOfBuildingAcceptWorkCancel.Text = "Отменить принятие";
+            this.btnSectionOfBuildingAcceptWorkCancel.UseVisualStyleBackColor = false;
+            this.btnSectionOfBuildingAcceptWorkCancel.Click += new System.EventHandler(this.BtnSectionOfBuildingAcceptWorkCancel_Click);
+            // 
+            // btnSectionOfBuildingAcceptWork
+            // 
+            this.btnSectionOfBuildingAcceptWork.BackColor = System.Drawing.Color.Green;
+            this.btnSectionOfBuildingAcceptWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingAcceptWork.Location = new System.Drawing.Point(7, 112);
+            this.btnSectionOfBuildingAcceptWork.Name = "btnSectionOfBuildingAcceptWork";
+            this.btnSectionOfBuildingAcceptWork.Size = new System.Drawing.Size(171, 35);
+            this.btnSectionOfBuildingAcceptWork.TabIndex = 68;
+            this.btnSectionOfBuildingAcceptWork.Text = "Принять работу";
+            this.btnSectionOfBuildingAcceptWork.UseVisualStyleBackColor = false;
+            this.btnSectionOfBuildingAcceptWork.Click += new System.EventHandler(this.BtnSectionOfBuildingAcceptWork_Click);
+            // 
+            // gbManagerModelButtons
+            // 
+            this.gbManagerModelButtons.Controls.Add(this.btnSectionOfBuildingSwitchModelUpdate);
+            this.gbManagerModelButtons.Controls.Add(this.btnSectionOfBuildingModelUpdate);
+            this.gbManagerModelButtons.Controls.Add(this.btnSectionOfBuildingSwitchModelCancel);
+            this.gbManagerModelButtons.Controls.Add(this.btnSectionOfBuildingSwitchSetWork);
+            this.gbManagerModelButtons.Location = new System.Drawing.Point(765, 3);
+            this.gbManagerModelButtons.Name = "gbManagerModelButtons";
+            this.gbManagerModelButtons.Size = new System.Drawing.Size(184, 143);
+            this.gbManagerModelButtons.TabIndex = 9;
+            this.gbManagerModelButtons.TabStop = false;
+            // 
+            // btnSectionOfBuildingSwitchModelUpdate
+            // 
+            this.btnSectionOfBuildingSwitchModelUpdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSectionOfBuildingSwitchModelUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingSwitchModelUpdate.Location = new System.Drawing.Point(8, 9);
+            this.btnSectionOfBuildingSwitchModelUpdate.Name = "btnSectionOfBuildingSwitchModelUpdate";
+            this.btnSectionOfBuildingSwitchModelUpdate.Size = new System.Drawing.Size(171, 30);
+            this.btnSectionOfBuildingSwitchModelUpdate.TabIndex = 64;
+            this.btnSectionOfBuildingSwitchModelUpdate.Text = "Редактировать модель ";
+            this.btnSectionOfBuildingSwitchModelUpdate.UseVisualStyleBackColor = true;
+            this.btnSectionOfBuildingSwitchModelUpdate.Visible = false;
+            this.btnSectionOfBuildingSwitchModelUpdate.Click += new System.EventHandler(this.BtnSectionOfBuildingSwitchModelUpdate_Click);
+            // 
+            // btnSectionOfBuildingModelUpdate
+            // 
+            this.btnSectionOfBuildingModelUpdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSectionOfBuildingModelUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingModelUpdate.Location = new System.Drawing.Point(8, 41);
+            this.btnSectionOfBuildingModelUpdate.Name = "btnSectionOfBuildingModelUpdate";
+            this.btnSectionOfBuildingModelUpdate.Size = new System.Drawing.Size(171, 30);
+            this.btnSectionOfBuildingModelUpdate.TabIndex = 52;
+            this.btnSectionOfBuildingModelUpdate.Text = "Сохранить изменения";
+            this.btnSectionOfBuildingModelUpdate.UseVisualStyleBackColor = true;
+            this.btnSectionOfBuildingModelUpdate.Visible = false;
+            this.btnSectionOfBuildingModelUpdate.Click += new System.EventHandler(this.BtnSectionOfBuildingModelUpdate_Click);
+            // 
+            // btnSectionOfBuildingSwitchModelCancel
+            // 
+            this.btnSectionOfBuildingSwitchModelCancel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSectionOfBuildingSwitchModelCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingSwitchModelCancel.Location = new System.Drawing.Point(8, 74);
+            this.btnSectionOfBuildingSwitchModelCancel.Name = "btnSectionOfBuildingSwitchModelCancel";
+            this.btnSectionOfBuildingSwitchModelCancel.Size = new System.Drawing.Size(171, 30);
+            this.btnSectionOfBuildingSwitchModelCancel.TabIndex = 52;
+            this.btnSectionOfBuildingSwitchModelCancel.Text = "Назад";
+            this.btnSectionOfBuildingSwitchModelCancel.UseVisualStyleBackColor = true;
+            this.btnSectionOfBuildingSwitchModelCancel.Visible = false;
+            this.btnSectionOfBuildingSwitchModelCancel.Click += new System.EventHandler(this.BtnSectionOfBuildingSwitchModelCancel_Click);
+            // 
+            // btnSectionOfBuildingSwitchSetWork
+            // 
+            this.btnSectionOfBuildingSwitchSetWork.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSectionOfBuildingSwitchSetWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingSwitchSetWork.Location = new System.Drawing.Point(8, 107);
+            this.btnSectionOfBuildingSwitchSetWork.Name = "btnSectionOfBuildingSwitchSetWork";
+            this.btnSectionOfBuildingSwitchSetWork.Size = new System.Drawing.Size(171, 30);
+            this.btnSectionOfBuildingSwitchSetWork.TabIndex = 65;
+            this.btnSectionOfBuildingSwitchSetWork.Text = "Работы на фасаде";
+            this.btnSectionOfBuildingSwitchSetWork.UseVisualStyleBackColor = true;
+            this.btnSectionOfBuildingSwitchSetWork.Visible = false;
+            this.btnSectionOfBuildingSwitchSetWork.Click += new System.EventHandler(this.BtnSectionOfBuildingSwitchSetWork_Click);
             // 
             // gbSectionOfBuildingPanel
             // 
             this.gbSectionOfBuildingPanel.Controls.Add(this.SectionOfBuildingModel);
-            this.gbSectionOfBuildingPanel.Controls.Add(this.btnSectionOfBuildingSwitchCancel);
-            this.gbSectionOfBuildingPanel.Controls.Add(this.btnSectionOfBuildingCreate);
             this.gbSectionOfBuildingPanel.Controls.Add(this.gbSectionOfBuildingData);
-            this.gbSectionOfBuildingPanel.Controls.Add(this.btnSectionOfBuildingUpdate);
-            this.gbSectionOfBuildingPanel.Location = new System.Drawing.Point(766, 3);
+            this.gbSectionOfBuildingPanel.Location = new System.Drawing.Point(955, 3);
             this.gbSectionOfBuildingPanel.Name = "gbSectionOfBuildingPanel";
             this.gbSectionOfBuildingPanel.Size = new System.Drawing.Size(965, 940);
             this.gbSectionOfBuildingPanel.TabIndex = 8;
@@ -4226,57 +4449,152 @@
             // 
             // SectionOfBuildingModel
             // 
-            this.SectionOfBuildingModel.Controls.Add(this.dgvSectionOfBuildingModel);
-            this.SectionOfBuildingModel.Location = new System.Drawing.Point(4, 137);
+            this.SectionOfBuildingModel.Controls.Add(this.btnSectionOfBuildingChangeMultiplicity);
+            this.SectionOfBuildingModel.Controls.Add(this.lblManagerModelAmount);
+            this.SectionOfBuildingModel.Controls.Add(this.lblManagerModelMultiplicity);
+            this.SectionOfBuildingModel.Controls.Add(this.lblManagerModelSquare);
+            this.SectionOfBuildingModel.Controls.Add(this.lblManagerModelLength);
+            this.SectionOfBuildingModel.Controls.Add(this.lblManagerModeHeight);
+            this.SectionOfBuildingModel.Controls.Add(this.dgvManagerWorkLog);
+            this.SectionOfBuildingModel.Controls.Add(this.dgvManagerModel);
+            this.SectionOfBuildingModel.Location = new System.Drawing.Point(7, 14);
             this.SectionOfBuildingModel.Name = "SectionOfBuildingModel";
-            this.SectionOfBuildingModel.Size = new System.Drawing.Size(955, 797);
+            this.SectionOfBuildingModel.Size = new System.Drawing.Size(955, 920);
             this.SectionOfBuildingModel.TabIndex = 51;
             this.SectionOfBuildingModel.TabStop = false;
             this.SectionOfBuildingModel.Text = "Модель фасада";
             // 
-            // dgvSectionOfBuildingModel
+            // btnSectionOfBuildingChangeMultiplicity
             // 
-            this.dgvSectionOfBuildingModel.AllowDrop = true;
-            this.dgvSectionOfBuildingModel.AllowUserToAddRows = false;
-            this.dgvSectionOfBuildingModel.AllowUserToDeleteRows = false;
-            this.dgvSectionOfBuildingModel.AllowUserToResizeColumns = false;
-            this.dgvSectionOfBuildingModel.AllowUserToResizeRows = false;
-            this.dgvSectionOfBuildingModel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSectionOfBuildingModel.Location = new System.Drawing.Point(6, 19);
-            this.dgvSectionOfBuildingModel.Name = "dgvSectionOfBuildingModel";
-            this.dgvSectionOfBuildingModel.Size = new System.Drawing.Size(943, 772);
-            this.dgvSectionOfBuildingModel.TabIndex = 1;
-            this.dgvSectionOfBuildingModel.DragDrop += new System.Windows.Forms.DragEventHandler(this.DgvSectionOfBuildingModel_DragDrop);
-            this.dgvSectionOfBuildingModel.DragEnter += new System.Windows.Forms.DragEventHandler(this.DgvSectionOfBuildingModel_DragEnter);
+            this.btnSectionOfBuildingChangeMultiplicity.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSectionOfBuildingChangeMultiplicity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingChangeMultiplicity.Location = new System.Drawing.Point(8, 890);
+            this.btnSectionOfBuildingChangeMultiplicity.Name = "btnSectionOfBuildingChangeMultiplicity";
+            this.btnSectionOfBuildingChangeMultiplicity.Size = new System.Drawing.Size(176, 30);
+            this.btnSectionOfBuildingChangeMultiplicity.TabIndex = 66;
+            this.btnSectionOfBuildingChangeMultiplicity.Text = "Изменить коэффициент";
+            this.btnSectionOfBuildingChangeMultiplicity.UseVisualStyleBackColor = true;
+            this.btnSectionOfBuildingChangeMultiplicity.Click += new System.EventHandler(this.BtnSectionOfBuildingChangeMultiplicity_Click);
             // 
-            // btnSectionOfBuildingSwitchCancel
+            // lblManagerModelAmount
             // 
-            this.btnSectionOfBuildingSwitchCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSectionOfBuildingSwitchCancel.Location = new System.Drawing.Point(682, 47);
-            this.btnSectionOfBuildingSwitchCancel.Name = "btnSectionOfBuildingSwitchCancel";
-            this.btnSectionOfBuildingSwitchCancel.Size = new System.Drawing.Size(152, 31);
-            this.btnSectionOfBuildingSwitchCancel.TabIndex = 50;
-            this.btnSectionOfBuildingSwitchCancel.Text = "Отменить";
-            this.btnSectionOfBuildingSwitchCancel.UseVisualStyleBackColor = true;
-            this.btnSectionOfBuildingSwitchCancel.Visible = false;
-            this.btnSectionOfBuildingSwitchCancel.Click += new System.EventHandler(this.BtnSectionOfBuildingSwitchCancel_Click);
+            this.lblManagerModelAmount.AutoSize = true;
+            this.lblManagerModelAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblManagerModelAmount.Location = new System.Drawing.Point(9, 873);
+            this.lblManagerModelAmount.Name = "lblManagerModelAmount";
+            this.lblManagerModelAmount.Size = new System.Drawing.Size(131, 17);
+            this.lblManagerModelAmount.TabIndex = 12;
+            this.lblManagerModelAmount.Text = "Стоимость работы";
             // 
-            // btnSectionOfBuildingCreate
+            // lblManagerModelMultiplicity
             // 
-            this.btnSectionOfBuildingCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSectionOfBuildingCreate.Location = new System.Drawing.Point(682, 12);
-            this.btnSectionOfBuildingCreate.Name = "btnSectionOfBuildingCreate";
-            this.btnSectionOfBuildingCreate.Size = new System.Drawing.Size(152, 29);
-            this.btnSectionOfBuildingCreate.TabIndex = 48;
-            this.btnSectionOfBuildingCreate.Text = "Сохранить модель";
-            this.btnSectionOfBuildingCreate.UseVisualStyleBackColor = true;
-            this.btnSectionOfBuildingCreate.Visible = false;
-            this.btnSectionOfBuildingCreate.Click += new System.EventHandler(this.BtnSectionOfBuildingCreate_Click);
+            this.lblManagerModelMultiplicity.AutoSize = true;
+            this.lblManagerModelMultiplicity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblManagerModelMultiplicity.Location = new System.Drawing.Point(9, 856);
+            this.lblManagerModelMultiplicity.Name = "lblManagerModelMultiplicity";
+            this.lblManagerModelMultiplicity.Size = new System.Drawing.Size(168, 17);
+            this.lblManagerModelMultiplicity.TabIndex = 11;
+            this.lblManagerModelMultiplicity.Text = "Коэффициент элемента";
+            // 
+            // lblManagerModelSquare
+            // 
+            this.lblManagerModelSquare.AutoSize = true;
+            this.lblManagerModelSquare.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblManagerModelSquare.Location = new System.Drawing.Point(9, 840);
+            this.lblManagerModelSquare.Name = "lblManagerModelSquare";
+            this.lblManagerModelSquare.Size = new System.Drawing.Size(68, 17);
+            this.lblManagerModelSquare.TabIndex = 10;
+            this.lblManagerModelSquare.Text = "Площадь";
+            // 
+            // lblManagerModelLength
+            // 
+            this.lblManagerModelLength.AutoSize = true;
+            this.lblManagerModelLength.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblManagerModelLength.Location = new System.Drawing.Point(9, 825);
+            this.lblManagerModelLength.Name = "lblManagerModelLength";
+            this.lblManagerModelLength.Size = new System.Drawing.Size(59, 17);
+            this.lblManagerModelLength.TabIndex = 9;
+            this.lblManagerModelLength.Text = "Ширина";
+            // 
+            // lblManagerModeHeight
+            // 
+            this.lblManagerModeHeight.AutoSize = true;
+            this.lblManagerModeHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblManagerModeHeight.Location = new System.Drawing.Point(9, 809);
+            this.lblManagerModeHeight.Name = "lblManagerModeHeight";
+            this.lblManagerModeHeight.Size = new System.Drawing.Size(57, 17);
+            this.lblManagerModeHeight.TabIndex = 8;
+            this.lblManagerModeHeight.Text = "Высота";
+            // 
+            // dgvManagerWorkLog
+            // 
+            this.dgvManagerWorkLog.AllowUserToAddRows = false;
+            this.dgvManagerWorkLog.AllowUserToDeleteRows = false;
+            this.dgvManagerWorkLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvManagerWorkLog.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn60,
+            this.dataGridViewTextBoxColumn61,
+            this.dataGridViewTextBoxColumn62,
+            this.dataGridViewTextBoxColumn63,
+            this.dataGridViewTextBoxColumn64});
+            this.dgvManagerWorkLog.Location = new System.Drawing.Point(285, 812);
+            this.dgvManagerWorkLog.Name = "dgvManagerWorkLog";
+            this.dgvManagerWorkLog.RowHeadersVisible = false;
+            this.dgvManagerWorkLog.Size = new System.Drawing.Size(664, 105);
+            this.dgvManagerWorkLog.TabIndex = 7;
+            // 
+            // dataGridViewTextBoxColumn60
+            // 
+            this.dataGridViewTextBoxColumn60.HeaderText = "id";
+            this.dataGridViewTextBoxColumn60.Name = "dataGridViewTextBoxColumn60";
+            this.dataGridViewTextBoxColumn60.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn61
+            // 
+            this.dataGridViewTextBoxColumn61.HeaderText = "Дата";
+            this.dataGridViewTextBoxColumn61.Name = "dataGridViewTextBoxColumn61";
+            // 
+            // dataGridViewTextBoxColumn62
+            // 
+            this.dataGridViewTextBoxColumn62.HeaderText = "Тип";
+            this.dataGridViewTextBoxColumn62.Name = "dataGridViewTextBoxColumn62";
+            this.dataGridViewTextBoxColumn62.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn63
+            // 
+            this.dataGridViewTextBoxColumn63.HeaderText = "Автор";
+            this.dataGridViewTextBoxColumn63.Name = "dataGridViewTextBoxColumn63";
+            this.dataGridViewTextBoxColumn63.Width = 180;
+            // 
+            // dataGridViewTextBoxColumn64
+            // 
+            this.dataGridViewTextBoxColumn64.HeaderText = "Комментарий";
+            this.dataGridViewTextBoxColumn64.Name = "dataGridViewTextBoxColumn64";
+            this.dataGridViewTextBoxColumn64.Width = 250;
+            // 
+            // dgvManagerModel
+            // 
+            this.dgvManagerModel.AllowDrop = true;
+            this.dgvManagerModel.AllowUserToAddRows = false;
+            this.dgvManagerModel.AllowUserToDeleteRows = false;
+            this.dgvManagerModel.AllowUserToResizeColumns = false;
+            this.dgvManagerModel.AllowUserToResizeRows = false;
+            this.dgvManagerModel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvManagerModel.Location = new System.Drawing.Point(6, 19);
+            this.dgvManagerModel.Name = "dgvManagerModel";
+            this.dgvManagerModel.Size = new System.Drawing.Size(943, 787);
+            this.dgvManagerModel.TabIndex = 1;
+            this.dgvManagerModel.SelectionChanged += new System.EventHandler(this.DgvManagerModel_SelectionChanged);
+            this.dgvManagerModel.DragDrop += new System.Windows.Forms.DragEventHandler(this.DgvManagerModel_DragDrop);
+            this.dgvManagerModel.DragEnter += new System.Windows.Forms.DragEventHandler(this.DgvManagerModel_DragEnter);
             // 
             // gbSectionOfBuildingData
             // 
             this.gbSectionOfBuildingData.Controls.Add(this.lblSectuinOfBuildingSquare);
+            this.gbSectionOfBuildingData.Controls.Add(this.btnSectionOfBuildingSwitchCancel);
             this.gbSectionOfBuildingData.Controls.Add(this.lblCheckSectionOfBuildingQuantityByWidth);
+            this.gbSectionOfBuildingData.Controls.Add(this.btnSectionOfBuildingCreate);
+            this.gbSectionOfBuildingData.Controls.Add(this.btnSectionOfBuildingUpdate);
             this.gbSectionOfBuildingData.Controls.Add(this.tbSectionOfBuildingQuantityByWidth);
             this.gbSectionOfBuildingData.Controls.Add(this.lblSectionOfBuildingQuantityByWidth);
             this.gbSectionOfBuildingData.Controls.Add(this.pbCheckMarkSectionOfBuildingQuantityByWidth);
@@ -4289,11 +4607,12 @@
             this.gbSectionOfBuildingData.Controls.Add(this.pbCheckMarkSectionOfBuildingQuantityByHeight);
             this.gbSectionOfBuildingData.Controls.Add(this.pbCheckMarkSectionOfBuildingName);
             this.gbSectionOfBuildingData.Enabled = false;
-            this.gbSectionOfBuildingData.Location = new System.Drawing.Point(4, 10);
+            this.gbSectionOfBuildingData.Location = new System.Drawing.Point(13, 14);
             this.gbSectionOfBuildingData.Name = "gbSectionOfBuildingData";
-            this.gbSectionOfBuildingData.Size = new System.Drawing.Size(655, 121);
+            this.gbSectionOfBuildingData.Size = new System.Drawing.Size(791, 121);
             this.gbSectionOfBuildingData.TabIndex = 49;
             this.gbSectionOfBuildingData.TabStop = false;
+            this.gbSectionOfBuildingData.Visible = false;
             // 
             // lblSectuinOfBuildingSquare
             // 
@@ -4305,6 +4624,18 @@
             this.lblSectuinOfBuildingSquare.TabIndex = 50;
             this.lblSectuinOfBuildingSquare.Text = "Общая площадь ";
             // 
+            // btnSectionOfBuildingSwitchCancel
+            // 
+            this.btnSectionOfBuildingSwitchCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingSwitchCancel.Location = new System.Drawing.Point(620, 46);
+            this.btnSectionOfBuildingSwitchCancel.Name = "btnSectionOfBuildingSwitchCancel";
+            this.btnSectionOfBuildingSwitchCancel.Size = new System.Drawing.Size(163, 31);
+            this.btnSectionOfBuildingSwitchCancel.TabIndex = 50;
+            this.btnSectionOfBuildingSwitchCancel.Text = "Отменить";
+            this.btnSectionOfBuildingSwitchCancel.UseVisualStyleBackColor = true;
+            this.btnSectionOfBuildingSwitchCancel.Visible = false;
+            this.btnSectionOfBuildingSwitchCancel.Click += new System.EventHandler(this.BtnSectionOfBuildingSwitchCancel_Click);
+            // 
             // lblCheckSectionOfBuildingQuantityByWidth
             // 
             this.lblCheckSectionOfBuildingQuantityByWidth.AutoSize = true;
@@ -4315,6 +4646,30 @@
             this.lblCheckSectionOfBuildingQuantityByWidth.TabIndex = 49;
             this.lblCheckSectionOfBuildingQuantityByWidth.Text = "Введите целое неотрицательное число";
             this.lblCheckSectionOfBuildingQuantityByWidth.Visible = false;
+            // 
+            // btnSectionOfBuildingCreate
+            // 
+            this.btnSectionOfBuildingCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingCreate.Location = new System.Drawing.Point(620, 11);
+            this.btnSectionOfBuildingCreate.Name = "btnSectionOfBuildingCreate";
+            this.btnSectionOfBuildingCreate.Size = new System.Drawing.Size(163, 29);
+            this.btnSectionOfBuildingCreate.TabIndex = 48;
+            this.btnSectionOfBuildingCreate.Text = "Сохранить модель";
+            this.btnSectionOfBuildingCreate.UseVisualStyleBackColor = true;
+            this.btnSectionOfBuildingCreate.Visible = false;
+            this.btnSectionOfBuildingCreate.Click += new System.EventHandler(this.BtnSectionOfBuildingCreate_Click);
+            // 
+            // btnSectionOfBuildingUpdate
+            // 
+            this.btnSectionOfBuildingUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingUpdate.Location = new System.Drawing.Point(620, 83);
+            this.btnSectionOfBuildingUpdate.Name = "btnSectionOfBuildingUpdate";
+            this.btnSectionOfBuildingUpdate.Size = new System.Drawing.Size(163, 32);
+            this.btnSectionOfBuildingUpdate.TabIndex = 36;
+            this.btnSectionOfBuildingUpdate.Text = "Сохранить изменения";
+            this.btnSectionOfBuildingUpdate.UseVisualStyleBackColor = true;
+            this.btnSectionOfBuildingUpdate.Visible = false;
+            this.btnSectionOfBuildingUpdate.Click += new System.EventHandler(this.BtnSectionOfBuildingUpdate_Click);
             // 
             // tbSectionOfBuildingQuantityByWidth
             // 
@@ -4426,30 +4781,6 @@
             this.pbCheckMarkSectionOfBuildingName.TabStop = false;
             this.pbCheckMarkSectionOfBuildingName.Visible = false;
             // 
-            // btnSectionOfBuildingUpdate
-            // 
-            this.btnSectionOfBuildingUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSectionOfBuildingUpdate.Location = new System.Drawing.Point(682, 84);
-            this.btnSectionOfBuildingUpdate.Name = "btnSectionOfBuildingUpdate";
-            this.btnSectionOfBuildingUpdate.Size = new System.Drawing.Size(152, 42);
-            this.btnSectionOfBuildingUpdate.TabIndex = 36;
-            this.btnSectionOfBuildingUpdate.Text = "Сохранить изменения";
-            this.btnSectionOfBuildingUpdate.UseVisualStyleBackColor = true;
-            this.btnSectionOfBuildingUpdate.Visible = false;
-            this.btnSectionOfBuildingUpdate.Click += new System.EventHandler(this.BtnSectionOfBuildingUpdate_Click);
-            // 
-            // btnSectionOfBuildingSetWork
-            // 
-            this.btnSectionOfBuildingSetWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSectionOfBuildingSetWork.Location = new System.Drawing.Point(1737, 208);
-            this.btnSectionOfBuildingSetWork.Name = "btnSectionOfBuildingSetWork";
-            this.btnSectionOfBuildingSetWork.Size = new System.Drawing.Size(171, 42);
-            this.btnSectionOfBuildingSetWork.TabIndex = 66;
-            this.btnSectionOfBuildingSetWork.Text = "Назначить работу";
-            this.btnSectionOfBuildingSetWork.UseVisualStyleBackColor = true;
-            this.btnSectionOfBuildingSetWork.Visible = false;
-            this.btnSectionOfBuildingSetWork.Click += new System.EventHandler(this.BtnSectionOfBuildingSetWork_Click);
-            // 
             // gbTypeOfElementInProjectBySectionOfBuilding
             // 
             this.gbTypeOfElementInProjectBySectionOfBuilding.Controls.Add(this.lblSectionOfBuildingWorksAmount);
@@ -4458,7 +4789,7 @@
             this.gbTypeOfElementInProjectBySectionOfBuilding.Controls.Add(this.lblSectionOfBuldingActualProjectNotSaved2);
             this.gbTypeOfElementInProjectBySectionOfBuilding.Location = new System.Drawing.Point(3, 401);
             this.gbTypeOfElementInProjectBySectionOfBuilding.Name = "gbTypeOfElementInProjectBySectionOfBuilding";
-            this.gbTypeOfElementInProjectBySectionOfBuilding.Size = new System.Drawing.Size(761, 542);
+            this.gbTypeOfElementInProjectBySectionOfBuilding.Size = new System.Drawing.Size(946, 542);
             this.gbTypeOfElementInProjectBySectionOfBuilding.TabIndex = 7;
             this.gbTypeOfElementInProjectBySectionOfBuilding.TabStop = false;
             this.gbTypeOfElementInProjectBySectionOfBuilding.Text = "Элементы фасада текущего проекта";
@@ -4473,6 +4804,7 @@
             this.lblSectionOfBuildingWorksAmount.Size = new System.Drawing.Size(222, 17);
             this.lblSectionOfBuildingWorksAmount.TabIndex = 66;
             this.lblSectionOfBuildingWorksAmount.Text = "Общая стоимость работ модели";
+            this.lblSectionOfBuildingWorksAmount.Visible = false;
             // 
             // dgvSectionOfBuildingWorkInProject
             // 
@@ -4486,13 +4818,19 @@
             this.dataGridViewTextBoxColumn43,
             this.dataGridViewTextBoxColumn44,
             this.ColumnSectionValue,
-            this.ColumnSectionCost});
+            this.ColumnSectionCost,
+            this.ColumnSectionCompleteValue,
+            this.ColumnSectionCompleteCost,
+            this.ColumnSectionAcceptValue,
+            this.ColumnSectionAcceptCost,
+            this.ColumnSectionRejectValue,
+            this.ColumnSectionRejectCost});
             this.dgvSectionOfBuildingWorkInProject.Location = new System.Drawing.Point(0, 36);
             this.dgvSectionOfBuildingWorkInProject.Name = "dgvSectionOfBuildingWorkInProject";
             this.dgvSectionOfBuildingWorkInProject.ReadOnly = true;
             this.dgvSectionOfBuildingWorkInProject.RowHeadersVisible = false;
             this.dgvSectionOfBuildingWorkInProject.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSectionOfBuildingWorkInProject.Size = new System.Drawing.Size(755, 27);
+            this.dgvSectionOfBuildingWorkInProject.Size = new System.Drawing.Size(940, 27);
             this.dgvSectionOfBuildingWorkInProject.TabIndex = 63;
             this.dgvSectionOfBuildingWorkInProject.Visible = false;
             this.dgvSectionOfBuildingWorkInProject.SelectionChanged += new System.EventHandler(this.DgvSectionOfBuildingWorkInProject_SelectionChanged);
@@ -4511,15 +4849,15 @@
             this.dataGridViewTextBoxColumn30.HeaderText = "Название";
             this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
             this.dataGridViewTextBoxColumn30.ReadOnly = true;
-            this.dataGridViewTextBoxColumn30.Width = 330;
+            this.dataGridViewTextBoxColumn30.Width = 290;
             // 
             // dataGridViewTextBoxColumn42
             // 
             this.dataGridViewTextBoxColumn42.Frozen = true;
-            this.dataGridViewTextBoxColumn42.HeaderText = "Ед. изм.";
+            this.dataGridViewTextBoxColumn42.HeaderText = "Ед.";
             this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
             this.dataGridViewTextBoxColumn42.ReadOnly = true;
-            this.dataGridViewTextBoxColumn42.Width = 80;
+            this.dataGridViewTextBoxColumn42.Width = 30;
             // 
             // dataGridViewTextBoxColumn43
             // 
@@ -4527,7 +4865,7 @@
             this.dataGridViewTextBoxColumn43.HeaderText = "Цена";
             this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
             this.dataGridViewTextBoxColumn43.ReadOnly = true;
-            this.dataGridViewTextBoxColumn43.Width = 60;
+            this.dataGridViewTextBoxColumn43.Width = 50;
             // 
             // dataGridViewTextBoxColumn44
             // 
@@ -4535,22 +4873,82 @@
             this.dataGridViewTextBoxColumn44.HeaderText = "Коэф.";
             this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
             this.dataGridViewTextBoxColumn44.ReadOnly = true;
-            this.dataGridViewTextBoxColumn44.Width = 70;
+            this.dataGridViewTextBoxColumn44.Width = 50;
             // 
             // ColumnSectionValue
             // 
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.DimGray;
+            this.ColumnSectionValue.DefaultCellStyle = dataGridViewCellStyle9;
             this.ColumnSectionValue.Frozen = true;
             this.ColumnSectionValue.HeaderText = "Объем";
             this.ColumnSectionValue.Name = "ColumnSectionValue";
             this.ColumnSectionValue.ReadOnly = true;
-            this.ColumnSectionValue.Width = 70;
+            this.ColumnSectionValue.Width = 50;
             // 
             // ColumnSectionCost
             // 
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.DimGray;
+            this.ColumnSectionCost.DefaultCellStyle = dataGridViewCellStyle10;
             this.ColumnSectionCost.Frozen = true;
             this.ColumnSectionCost.HeaderText = "Стоимость";
             this.ColumnSectionCost.Name = "ColumnSectionCost";
             this.ColumnSectionCost.ReadOnly = true;
+            this.ColumnSectionCost.Width = 70;
+            // 
+            // ColumnSectionCompleteValue
+            // 
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Yellow;
+            this.ColumnSectionCompleteValue.DefaultCellStyle = dataGridViewCellStyle11;
+            this.ColumnSectionCompleteValue.Frozen = true;
+            this.ColumnSectionCompleteValue.HeaderText = "Объем";
+            this.ColumnSectionCompleteValue.Name = "ColumnSectionCompleteValue";
+            this.ColumnSectionCompleteValue.ReadOnly = true;
+            this.ColumnSectionCompleteValue.Width = 50;
+            // 
+            // ColumnSectionCompleteCost
+            // 
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Yellow;
+            this.ColumnSectionCompleteCost.DefaultCellStyle = dataGridViewCellStyle12;
+            this.ColumnSectionCompleteCost.HeaderText = "Стоимость";
+            this.ColumnSectionCompleteCost.Name = "ColumnSectionCompleteCost";
+            this.ColumnSectionCompleteCost.ReadOnly = true;
+            this.ColumnSectionCompleteCost.Width = 70;
+            // 
+            // ColumnSectionAcceptValue
+            // 
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Green;
+            this.ColumnSectionAcceptValue.DefaultCellStyle = dataGridViewCellStyle13;
+            this.ColumnSectionAcceptValue.HeaderText = "Объем";
+            this.ColumnSectionAcceptValue.Name = "ColumnSectionAcceptValue";
+            this.ColumnSectionAcceptValue.ReadOnly = true;
+            this.ColumnSectionAcceptValue.Width = 50;
+            // 
+            // ColumnSectionAcceptCost
+            // 
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Green;
+            this.ColumnSectionAcceptCost.DefaultCellStyle = dataGridViewCellStyle14;
+            this.ColumnSectionAcceptCost.HeaderText = "Стоимость";
+            this.ColumnSectionAcceptCost.Name = "ColumnSectionAcceptCost";
+            this.ColumnSectionAcceptCost.ReadOnly = true;
+            this.ColumnSectionAcceptCost.Width = 70;
+            // 
+            // ColumnSectionRejectValue
+            // 
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Red;
+            this.ColumnSectionRejectValue.DefaultCellStyle = dataGridViewCellStyle15;
+            this.ColumnSectionRejectValue.HeaderText = "Объем";
+            this.ColumnSectionRejectValue.Name = "ColumnSectionRejectValue";
+            this.ColumnSectionRejectValue.ReadOnly = true;
+            this.ColumnSectionRejectValue.Width = 50;
+            // 
+            // ColumnSectionRejectCost
+            // 
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Red;
+            this.ColumnSectionRejectCost.DefaultCellStyle = dataGridViewCellStyle16;
+            this.ColumnSectionRejectCost.HeaderText = "Стоимость";
+            this.ColumnSectionRejectCost.Name = "ColumnSectionRejectCost";
+            this.ColumnSectionRejectCost.ReadOnly = true;
+            this.ColumnSectionRejectCost.Width = 70;
             // 
             // lvSectionOfBuildingTypesOfElementInProject
             // 
@@ -4571,25 +4969,12 @@
             this.lblSectionOfBuldingActualProjectNotSaved2.AutoSize = true;
             this.lblSectionOfBuldingActualProjectNotSaved2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblSectionOfBuldingActualProjectNotSaved2.ForeColor = System.Drawing.Color.Red;
-            this.lblSectionOfBuldingActualProjectNotSaved2.Location = new System.Drawing.Point(554, 16);
+            this.lblSectionOfBuldingActualProjectNotSaved2.Location = new System.Drawing.Point(740, 16);
             this.lblSectionOfBuldingActualProjectNotSaved2.Name = "lblSectionOfBuldingActualProjectNotSaved2";
             this.lblSectionOfBuldingActualProjectNotSaved2.Size = new System.Drawing.Size(201, 17);
             this.lblSectionOfBuldingActualProjectNotSaved2.TabIndex = 62;
             this.lblSectionOfBuldingActualProjectNotSaved2.Text = "Текущий проект не сохранен";
             this.lblSectionOfBuldingActualProjectNotSaved2.Visible = false;
-            // 
-            // btnSectionOfBuildingSwitchSetWork
-            // 
-            this.btnSectionOfBuildingSwitchSetWork.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSectionOfBuildingSwitchSetWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSectionOfBuildingSwitchSetWork.Location = new System.Drawing.Point(1737, 159);
-            this.btnSectionOfBuildingSwitchSetWork.Name = "btnSectionOfBuildingSwitchSetWork";
-            this.btnSectionOfBuildingSwitchSetWork.Size = new System.Drawing.Size(171, 43);
-            this.btnSectionOfBuildingSwitchSetWork.TabIndex = 65;
-            this.btnSectionOfBuildingSwitchSetWork.Text = "Работы на фасаде";
-            this.btnSectionOfBuildingSwitchSetWork.UseVisualStyleBackColor = true;
-            this.btnSectionOfBuildingSwitchSetWork.Visible = false;
-            this.btnSectionOfBuildingSwitchSetWork.Click += new System.EventHandler(this.BtnSectionOfBuildingSwitchSetWork_Click);
             // 
             // gbAllSectionsOfBuilding
             // 
@@ -4602,7 +4987,7 @@
             this.gbAllSectionsOfBuilding.Controls.Add(this.dgvSectionsOfBuildingByActualProject);
             this.gbAllSectionsOfBuilding.Location = new System.Drawing.Point(3, 3);
             this.gbAllSectionsOfBuilding.Name = "gbAllSectionsOfBuilding";
-            this.gbAllSectionsOfBuilding.Size = new System.Drawing.Size(761, 392);
+            this.gbAllSectionsOfBuilding.Size = new System.Drawing.Size(761, 398);
             this.gbAllSectionsOfBuilding.TabIndex = 6;
             this.gbAllSectionsOfBuilding.TabStop = false;
             this.gbAllSectionsOfBuilding.Text = "Все модели текущего проекта";
@@ -4645,9 +5030,10 @@
             // 
             this.btnSectionOfBuildingDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSectionOfBuildingDelete.Enabled = false;
-            this.btnSectionOfBuildingDelete.Location = new System.Drawing.Point(645, 136);
+            this.btnSectionOfBuildingDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingDelete.Location = new System.Drawing.Point(612, 134);
             this.btnSectionOfBuildingDelete.Name = "btnSectionOfBuildingDelete";
-            this.btnSectionOfBuildingDelete.Size = new System.Drawing.Size(110, 35);
+            this.btnSectionOfBuildingDelete.Size = new System.Drawing.Size(143, 35);
             this.btnSectionOfBuildingDelete.TabIndex = 10;
             this.btnSectionOfBuildingDelete.Text = "Удалить модель фасада";
             this.btnSectionOfBuildingDelete.UseVisualStyleBackColor = true;
@@ -4657,9 +5043,10 @@
             // 
             this.btnSectionOfBuildingSwitchUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSectionOfBuildingSwitchUpdate.Enabled = false;
-            this.btnSectionOfBuildingSwitchUpdate.Location = new System.Drawing.Point(647, 95);
+            this.btnSectionOfBuildingSwitchUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingSwitchUpdate.Location = new System.Drawing.Point(612, 93);
             this.btnSectionOfBuildingSwitchUpdate.Name = "btnSectionOfBuildingSwitchUpdate";
-            this.btnSectionOfBuildingSwitchUpdate.Size = new System.Drawing.Size(110, 35);
+            this.btnSectionOfBuildingSwitchUpdate.Size = new System.Drawing.Size(145, 35);
             this.btnSectionOfBuildingSwitchUpdate.TabIndex = 9;
             this.btnSectionOfBuildingSwitchUpdate.Text = "Редактировать  название";
             this.btnSectionOfBuildingSwitchUpdate.UseVisualStyleBackColor = true;
@@ -4668,9 +5055,10 @@
             // btnSectionOfBuildingSwitchCreate
             // 
             this.btnSectionOfBuildingSwitchCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSectionOfBuildingSwitchCreate.Location = new System.Drawing.Point(647, 56);
+            this.btnSectionOfBuildingSwitchCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSectionOfBuildingSwitchCreate.Location = new System.Drawing.Point(612, 54);
             this.btnSectionOfBuildingSwitchCreate.Name = "btnSectionOfBuildingSwitchCreate";
-            this.btnSectionOfBuildingSwitchCreate.Size = new System.Drawing.Size(110, 35);
+            this.btnSectionOfBuildingSwitchCreate.Size = new System.Drawing.Size(145, 35);
             this.btnSectionOfBuildingSwitchCreate.TabIndex = 8;
             this.btnSectionOfBuildingSwitchCreate.Text = "Добавить модель фасада";
             this.btnSectionOfBuildingSwitchCreate.UseVisualStyleBackColor = true;
@@ -4692,14 +5080,14 @@
             this.dgvSectionsOfBuildingByActualProject.ReadOnly = true;
             this.dgvSectionsOfBuildingByActualProject.RowHeadersVisible = false;
             this.dgvSectionsOfBuildingByActualProject.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSectionsOfBuildingByActualProject.Size = new System.Drawing.Size(635, 27);
+            this.dgvSectionsOfBuildingByActualProject.Size = new System.Drawing.Size(545, 27);
             this.dgvSectionsOfBuildingByActualProject.TabIndex = 7;
             this.dgvSectionsOfBuildingByActualProject.SelectionChanged += new System.EventHandler(this.DgvSectionsOfBuildingByActualProject_SelectionChanged);
             // 
             // dataGridViewTextBoxColumn38
             // 
             this.dataGridViewTextBoxColumn38.Frozen = true;
-            this.dataGridViewTextBoxColumn38.HeaderText = "№";
+            this.dataGridViewTextBoxColumn38.HeaderText = "id";
             this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
             this.dataGridViewTextBoxColumn38.ReadOnly = true;
             this.dataGridViewTextBoxColumn38.Width = 30;
@@ -4718,6 +5106,7 @@
             this.dataGridViewTextBoxColumn40.HeaderText = "Этажей";
             this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
             this.dataGridViewTextBoxColumn40.ReadOnly = true;
+            this.dataGridViewTextBoxColumn40.Width = 70;
             // 
             // dataGridViewTextBoxColumn41
             // 
@@ -4725,6 +5114,7 @@
             this.dataGridViewTextBoxColumn41.HeaderText = "Элементов";
             this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
             this.dataGridViewTextBoxColumn41.ReadOnly = true;
+            this.dataGridViewTextBoxColumn41.Width = 70;
             // 
             // ColumnSquareSectionOfBuilding
             // 
@@ -4732,43 +5122,7 @@
             this.ColumnSquareSectionOfBuilding.HeaderText = "Площадь";
             this.ColumnSquareSectionOfBuilding.Name = "ColumnSquareSectionOfBuilding";
             this.ColumnSquareSectionOfBuilding.ReadOnly = true;
-            // 
-            // btnSectionOfBuildingSwitchModelCancel
-            // 
-            this.btnSectionOfBuildingSwitchModelCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSectionOfBuildingSwitchModelCancel.Location = new System.Drawing.Point(1737, 111);
-            this.btnSectionOfBuildingSwitchModelCancel.Name = "btnSectionOfBuildingSwitchModelCancel";
-            this.btnSectionOfBuildingSwitchModelCancel.Size = new System.Drawing.Size(171, 42);
-            this.btnSectionOfBuildingSwitchModelCancel.TabIndex = 52;
-            this.btnSectionOfBuildingSwitchModelCancel.Text = "Назад";
-            this.btnSectionOfBuildingSwitchModelCancel.UseVisualStyleBackColor = true;
-            this.btnSectionOfBuildingSwitchModelCancel.Visible = false;
-            this.btnSectionOfBuildingSwitchModelCancel.Click += new System.EventHandler(this.BtnSectionOfBuildingSwitchModelCancel_Click);
-            // 
-            // btnSectionOfBuildingSwitchModelUpdate
-            // 
-            this.btnSectionOfBuildingSwitchModelUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSectionOfBuildingSwitchModelUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSectionOfBuildingSwitchModelUpdate.Location = new System.Drawing.Point(1737, 8);
-            this.btnSectionOfBuildingSwitchModelUpdate.Name = "btnSectionOfBuildingSwitchModelUpdate";
-            this.btnSectionOfBuildingSwitchModelUpdate.Size = new System.Drawing.Size(171, 42);
-            this.btnSectionOfBuildingSwitchModelUpdate.TabIndex = 64;
-            this.btnSectionOfBuildingSwitchModelUpdate.Text = "Редактировать модель ";
-            this.btnSectionOfBuildingSwitchModelUpdate.UseVisualStyleBackColor = true;
-            this.btnSectionOfBuildingSwitchModelUpdate.Visible = false;
-            this.btnSectionOfBuildingSwitchModelUpdate.Click += new System.EventHandler(this.BtnSectionOfBuildingSwitchModelUpdate_Click);
-            // 
-            // btnSectionOfBuildingModelUpdate
-            // 
-            this.btnSectionOfBuildingModelUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSectionOfBuildingModelUpdate.Location = new System.Drawing.Point(1737, 61);
-            this.btnSectionOfBuildingModelUpdate.Name = "btnSectionOfBuildingModelUpdate";
-            this.btnSectionOfBuildingModelUpdate.Size = new System.Drawing.Size(171, 42);
-            this.btnSectionOfBuildingModelUpdate.TabIndex = 52;
-            this.btnSectionOfBuildingModelUpdate.Text = "Сохранить изменения";
-            this.btnSectionOfBuildingModelUpdate.UseVisualStyleBackColor = true;
-            this.btnSectionOfBuildingModelUpdate.Visible = false;
-            this.btnSectionOfBuildingModelUpdate.Click += new System.EventHandler(this.BtnSectionOfBuildingModelUpdate_Click);
+            this.ColumnSquareSectionOfBuilding.Width = 70;
             // 
             // tabPageWorker
             // 
@@ -4866,6 +5220,7 @@
             // tabControlWorker
             // 
             this.tabControlWorker.Controls.Add(this.tabPageWorkerWorks);
+            this.tabControlWorker.Controls.Add(this.tabPageWorkerCompletedWorks);
             this.tabControlWorker.Controls.Add(this.tabPageWorkerPayments);
             this.tabControlWorker.Controls.Add(this.tabPageWorkerUserData);
             this.tabControlWorker.Location = new System.Drawing.Point(3, 470);
@@ -4876,19 +5231,84 @@
             // 
             // tabPageWorkerWorks
             // 
+            this.tabPageWorkerWorks.Controls.Add(this.gbWorkerCompletePanel);
             this.tabPageWorkerWorks.Controls.Add(this.lblWorkerSectionOfBuildingWorkAmount);
-            this.tabPageWorkerWorks.Controls.Add(this.btnWorkerCompleteWorkCancel);
-            this.tabPageWorkerWorks.Controls.Add(this.btnWorkerCompleteWork);
             this.tabPageWorkerWorks.Controls.Add(this.btnWorkerSwitchCompleteWork);
-            this.tabPageWorkerWorks.Controls.Add(this.btnWorkerSwitchCompleteWorkCancel);
             this.tabPageWorkerWorks.Controls.Add(this.dgvWorkerWorksInProject);
             this.tabPageWorkerWorks.Location = new System.Drawing.Point(4, 22);
             this.tabPageWorkerWorks.Name = "tabPageWorkerWorks";
             this.tabPageWorkerWorks.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageWorkerWorks.Size = new System.Drawing.Size(970, 444);
             this.tabPageWorkerWorks.TabIndex = 1;
-            this.tabPageWorkerWorks.Text = "Работа";
+            this.tabPageWorkerWorks.Text = "Работа назначенная";
             this.tabPageWorkerWorks.UseVisualStyleBackColor = true;
+            // 
+            // gbWorkerCompletePanel
+            // 
+            this.gbWorkerCompletePanel.Controls.Add(this.lblWorkerDateOfComplete);
+            this.gbWorkerCompletePanel.Controls.Add(this.dtpWorkerDateOfComplete);
+            this.gbWorkerCompletePanel.Controls.Add(this.btnWorkerSwitchCompleteWorkCancel);
+            this.gbWorkerCompletePanel.Controls.Add(this.btnWorkerCompleteWork);
+            this.gbWorkerCompletePanel.Controls.Add(this.btnWorkerCompleteWorkCancel);
+            this.gbWorkerCompletePanel.Location = new System.Drawing.Point(764, 55);
+            this.gbWorkerCompletePanel.Name = "gbWorkerCompletePanel";
+            this.gbWorkerCompletePanel.Size = new System.Drawing.Size(200, 222);
+            this.gbWorkerCompletePanel.TabIndex = 73;
+            this.gbWorkerCompletePanel.TabStop = false;
+            this.gbWorkerCompletePanel.Visible = false;
+            // 
+            // lblWorkerDateOfComplete
+            // 
+            this.lblWorkerDateOfComplete.AutoSize = true;
+            this.lblWorkerDateOfComplete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblWorkerDateOfComplete.Location = new System.Drawing.Point(16, 16);
+            this.lblWorkerDateOfComplete.Name = "lblWorkerDateOfComplete";
+            this.lblWorkerDateOfComplete.Size = new System.Drawing.Size(170, 17);
+            this.lblWorkerDateOfComplete.TabIndex = 73;
+            this.lblWorkerDateOfComplete.Text = "Дата выполнения работ";
+            // 
+            // dtpWorkerDateOfComplete
+            // 
+            this.dtpWorkerDateOfComplete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.dtpWorkerDateOfComplete.Location = new System.Drawing.Point(14, 40);
+            this.dtpWorkerDateOfComplete.Name = "dtpWorkerDateOfComplete";
+            this.dtpWorkerDateOfComplete.Size = new System.Drawing.Size(131, 23);
+            this.dtpWorkerDateOfComplete.TabIndex = 72;
+            // 
+            // btnWorkerSwitchCompleteWorkCancel
+            // 
+            this.btnWorkerSwitchCompleteWorkCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnWorkerSwitchCompleteWorkCancel.Location = new System.Drawing.Point(14, 74);
+            this.btnWorkerSwitchCompleteWorkCancel.Name = "btnWorkerSwitchCompleteWorkCancel";
+            this.btnWorkerSwitchCompleteWorkCancel.Size = new System.Drawing.Size(171, 42);
+            this.btnWorkerSwitchCompleteWorkCancel.TabIndex = 68;
+            this.btnWorkerSwitchCompleteWorkCancel.Text = "Назад";
+            this.btnWorkerSwitchCompleteWorkCancel.UseVisualStyleBackColor = true;
+            this.btnWorkerSwitchCompleteWorkCancel.Click += new System.EventHandler(this.BtnWorkerSwitchCompleteWorkCancel_Click);
+            // 
+            // btnWorkerCompleteWork
+            // 
+            this.btnWorkerCompleteWork.BackColor = System.Drawing.Color.Yellow;
+            this.btnWorkerCompleteWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnWorkerCompleteWork.Location = new System.Drawing.Point(14, 123);
+            this.btnWorkerCompleteWork.Name = "btnWorkerCompleteWork";
+            this.btnWorkerCompleteWork.Size = new System.Drawing.Size(171, 42);
+            this.btnWorkerCompleteWork.TabIndex = 70;
+            this.btnWorkerCompleteWork.Text = "Выполненная работа";
+            this.btnWorkerCompleteWork.UseVisualStyleBackColor = false;
+            this.btnWorkerCompleteWork.Click += new System.EventHandler(this.BtnWorkerCompleteWork_Click);
+            // 
+            // btnWorkerCompleteWorkCancel
+            // 
+            this.btnWorkerCompleteWorkCancel.BackColor = System.Drawing.Color.Yellow;
+            this.btnWorkerCompleteWorkCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnWorkerCompleteWorkCancel.Location = new System.Drawing.Point(14, 172);
+            this.btnWorkerCompleteWorkCancel.Name = "btnWorkerCompleteWorkCancel";
+            this.btnWorkerCompleteWorkCancel.Size = new System.Drawing.Size(171, 42);
+            this.btnWorkerCompleteWorkCancel.TabIndex = 71;
+            this.btnWorkerCompleteWorkCancel.Text = "Отменить выполнение";
+            this.btnWorkerCompleteWorkCancel.UseVisualStyleBackColor = false;
+            this.btnWorkerCompleteWorkCancel.Click += new System.EventHandler(this.BtnWorkerCompleteWorkCancel_Click);
             // 
             // lblWorkerSectionOfBuildingWorkAmount
             // 
@@ -4900,52 +5320,20 @@
             this.lblWorkerSectionOfBuildingWorkAmount.Size = new System.Drawing.Size(222, 17);
             this.lblWorkerSectionOfBuildingWorkAmount.TabIndex = 72;
             this.lblWorkerSectionOfBuildingWorkAmount.Text = "Общая стоимость работ модели";
-            // 
-            // btnWorkerCompleteWorkCancel
-            // 
-            this.btnWorkerCompleteWorkCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnWorkerCompleteWorkCancel.Location = new System.Drawing.Point(778, 151);
-            this.btnWorkerCompleteWorkCancel.Name = "btnWorkerCompleteWorkCancel";
-            this.btnWorkerCompleteWorkCancel.Size = new System.Drawing.Size(171, 42);
-            this.btnWorkerCompleteWorkCancel.TabIndex = 71;
-            this.btnWorkerCompleteWorkCancel.Text = "Отменить выполнение";
-            this.btnWorkerCompleteWorkCancel.UseVisualStyleBackColor = true;
-            this.btnWorkerCompleteWorkCancel.Visible = false;
-            // 
-            // btnWorkerCompleteWork
-            // 
-            this.btnWorkerCompleteWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnWorkerCompleteWork.Location = new System.Drawing.Point(778, 103);
-            this.btnWorkerCompleteWork.Name = "btnWorkerCompleteWork";
-            this.btnWorkerCompleteWork.Size = new System.Drawing.Size(171, 42);
-            this.btnWorkerCompleteWork.TabIndex = 70;
-            this.btnWorkerCompleteWork.Text = "Выполненная работа";
-            this.btnWorkerCompleteWork.UseVisualStyleBackColor = true;
-            this.btnWorkerCompleteWork.Visible = false;
+            this.lblWorkerSectionOfBuildingWorkAmount.Visible = false;
             // 
             // btnWorkerSwitchCompleteWork
             // 
             this.btnWorkerSwitchCompleteWork.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnWorkerSwitchCompleteWork.BackColor = System.Drawing.Color.DimGray;
             this.btnWorkerSwitchCompleteWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnWorkerSwitchCompleteWork.Location = new System.Drawing.Point(778, 6);
             this.btnWorkerSwitchCompleteWork.Name = "btnWorkerSwitchCompleteWork";
             this.btnWorkerSwitchCompleteWork.Size = new System.Drawing.Size(171, 43);
             this.btnWorkerSwitchCompleteWork.TabIndex = 69;
             this.btnWorkerSwitchCompleteWork.Text = "Учет работ";
-            this.btnWorkerSwitchCompleteWork.UseVisualStyleBackColor = true;
-            this.btnWorkerSwitchCompleteWork.Visible = false;
-            // 
-            // btnWorkerSwitchCompleteWorkCancel
-            // 
-            this.btnWorkerSwitchCompleteWorkCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnWorkerSwitchCompleteWorkCancel.Location = new System.Drawing.Point(778, 55);
-            this.btnWorkerSwitchCompleteWorkCancel.Name = "btnWorkerSwitchCompleteWorkCancel";
-            this.btnWorkerSwitchCompleteWorkCancel.Size = new System.Drawing.Size(171, 42);
-            this.btnWorkerSwitchCompleteWorkCancel.TabIndex = 68;
-            this.btnWorkerSwitchCompleteWorkCancel.Text = "Назад";
-            this.btnWorkerSwitchCompleteWorkCancel.UseVisualStyleBackColor = true;
-            this.btnWorkerSwitchCompleteWorkCancel.Visible = false;
-            this.btnWorkerSwitchCompleteWorkCancel.Click += new System.EventHandler(this.button12_Click);
+            this.btnWorkerSwitchCompleteWork.UseVisualStyleBackColor = false;
+            this.btnWorkerSwitchCompleteWork.Click += new System.EventHandler(this.BtnWorkerSwitchCompleteWork_Click);
             // 
             // dgvWorkerWorksInProject
             // 
@@ -5023,6 +5411,16 @@
             this.dataGridViewTextBoxColumn59.HeaderText = "Стоимость";
             this.dataGridViewTextBoxColumn59.Name = "dataGridViewTextBoxColumn59";
             this.dataGridViewTextBoxColumn59.ReadOnly = true;
+            // 
+            // tabPageWorkerCompletedWorks
+            // 
+            this.tabPageWorkerCompletedWorks.Location = new System.Drawing.Point(4, 22);
+            this.tabPageWorkerCompletedWorks.Name = "tabPageWorkerCompletedWorks";
+            this.tabPageWorkerCompletedWorks.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageWorkerCompletedWorks.Size = new System.Drawing.Size(970, 444);
+            this.tabPageWorkerCompletedWorks.TabIndex = 3;
+            this.tabPageWorkerCompletedWorks.Text = "Работа выполненная";
+            this.tabPageWorkerCompletedWorks.UseVisualStyleBackColor = true;
             // 
             // tabPageWorkerPayments
             // 
@@ -5371,27 +5769,116 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.lblWorkerWorkByElementAmount);
+            this.groupBox1.Controls.Add(this.lblWorkerWorkByElementMultiplicity);
+            this.groupBox1.Controls.Add(this.lblWorkerElementSquare);
+            this.groupBox1.Controls.Add(this.lblWorkerElementLenght);
+            this.groupBox1.Controls.Add(this.lblWorkerElementHeight);
+            this.groupBox1.Controls.Add(this.dgvWorkerWorkLog);
+            this.groupBox1.Controls.Add(this.dgvWorkerModel);
             this.groupBox1.Location = new System.Drawing.Point(983, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(965, 940);
+            this.groupBox1.Size = new System.Drawing.Size(929, 940);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Данные модели участка фасада";
             // 
-            // groupBox2
+            // lblWorkerWorkByElementAmount
             // 
-            this.groupBox2.Controls.Add(this.dgvWorkerModel);
-            this.groupBox2.Location = new System.Drawing.Point(4, 116);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(955, 818);
-            this.groupBox2.TabIndex = 51;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Модель фасада";
+            this.lblWorkerWorkByElementAmount.AutoSize = true;
+            this.lblWorkerWorkByElementAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblWorkerWorkByElementAmount.Location = new System.Drawing.Point(6, 904);
+            this.lblWorkerWorkByElementAmount.Name = "lblWorkerWorkByElementAmount";
+            this.lblWorkerWorkByElementAmount.Size = new System.Drawing.Size(131, 17);
+            this.lblWorkerWorkByElementAmount.TabIndex = 6;
+            this.lblWorkerWorkByElementAmount.Text = "Стоимость работы";
+            // 
+            // lblWorkerWorkByElementMultiplicity
+            // 
+            this.lblWorkerWorkByElementMultiplicity.AutoSize = true;
+            this.lblWorkerWorkByElementMultiplicity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblWorkerWorkByElementMultiplicity.Location = new System.Drawing.Point(6, 887);
+            this.lblWorkerWorkByElementMultiplicity.Name = "lblWorkerWorkByElementMultiplicity";
+            this.lblWorkerWorkByElementMultiplicity.Size = new System.Drawing.Size(168, 17);
+            this.lblWorkerWorkByElementMultiplicity.TabIndex = 5;
+            this.lblWorkerWorkByElementMultiplicity.Text = "Коэффициент элемента";
+            // 
+            // lblWorkerElementSquare
+            // 
+            this.lblWorkerElementSquare.AutoSize = true;
+            this.lblWorkerElementSquare.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblWorkerElementSquare.Location = new System.Drawing.Point(6, 870);
+            this.lblWorkerElementSquare.Name = "lblWorkerElementSquare";
+            this.lblWorkerElementSquare.Size = new System.Drawing.Size(68, 17);
+            this.lblWorkerElementSquare.TabIndex = 4;
+            this.lblWorkerElementSquare.Text = "Площадь";
+            // 
+            // lblWorkerElementLenght
+            // 
+            this.lblWorkerElementLenght.AutoSize = true;
+            this.lblWorkerElementLenght.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblWorkerElementLenght.Location = new System.Drawing.Point(6, 853);
+            this.lblWorkerElementLenght.Name = "lblWorkerElementLenght";
+            this.lblWorkerElementLenght.Size = new System.Drawing.Size(59, 17);
+            this.lblWorkerElementLenght.TabIndex = 3;
+            this.lblWorkerElementLenght.Text = "Ширина";
+            // 
+            // lblWorkerElementHeight
+            // 
+            this.lblWorkerElementHeight.AutoSize = true;
+            this.lblWorkerElementHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblWorkerElementHeight.Location = new System.Drawing.Point(6, 836);
+            this.lblWorkerElementHeight.Name = "lblWorkerElementHeight";
+            this.lblWorkerElementHeight.Size = new System.Drawing.Size(57, 17);
+            this.lblWorkerElementHeight.TabIndex = 2;
+            this.lblWorkerElementHeight.Text = "Высота";
+            // 
+            // dgvWorkerWorkLog
+            // 
+            this.dgvWorkerWorkLog.AllowUserToAddRows = false;
+            this.dgvWorkerWorkLog.AllowUserToDeleteRows = false;
+            this.dgvWorkerWorkLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvWorkerWorkLog.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.WorkerWorkLogColumnId,
+            this.WorkerWorkLogColumnDate,
+            this.WorkerWorkLogColumnType,
+            this.WorkerWorkLogColumnUser,
+            this.WorkerWorkLogColumnComment});
+            this.dgvWorkerWorkLog.Location = new System.Drawing.Point(260, 836);
+            this.dgvWorkerWorkLog.Name = "dgvWorkerWorkLog";
+            this.dgvWorkerWorkLog.RowHeadersVisible = false;
+            this.dgvWorkerWorkLog.Size = new System.Drawing.Size(664, 98);
+            this.dgvWorkerWorkLog.TabIndex = 0;
+            this.dgvWorkerWorkLog.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // WorkerWorkLogColumnId
+            // 
+            this.WorkerWorkLogColumnId.HeaderText = "id";
+            this.WorkerWorkLogColumnId.Name = "WorkerWorkLogColumnId";
+            this.WorkerWorkLogColumnId.Width = 50;
+            // 
+            // WorkerWorkLogColumnDate
+            // 
+            this.WorkerWorkLogColumnDate.HeaderText = "Дата";
+            this.WorkerWorkLogColumnDate.Name = "WorkerWorkLogColumnDate";
+            // 
+            // WorkerWorkLogColumnType
+            // 
+            this.WorkerWorkLogColumnType.HeaderText = "Тип";
+            this.WorkerWorkLogColumnType.Name = "WorkerWorkLogColumnType";
+            this.WorkerWorkLogColumnType.Width = 80;
+            // 
+            // WorkerWorkLogColumnUser
+            // 
+            this.WorkerWorkLogColumnUser.HeaderText = "Автор";
+            this.WorkerWorkLogColumnUser.Name = "WorkerWorkLogColumnUser";
+            this.WorkerWorkLogColumnUser.Width = 180;
+            // 
+            // WorkerWorkLogColumnComment
+            // 
+            this.WorkerWorkLogColumnComment.HeaderText = "Комментарий";
+            this.WorkerWorkLogColumnComment.Name = "WorkerWorkLogColumnComment";
+            this.WorkerWorkLogColumnComment.Width = 250;
             // 
             // dgvWorkerModel
             // 
@@ -5401,96 +5888,11 @@
             this.dgvWorkerModel.AllowUserToResizeColumns = false;
             this.dgvWorkerModel.AllowUserToResizeRows = false;
             this.dgvWorkerModel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvWorkerModel.Location = new System.Drawing.Point(6, 19);
+            this.dgvWorkerModel.Location = new System.Drawing.Point(6, 17);
             this.dgvWorkerModel.Name = "dgvWorkerModel";
-            this.dgvWorkerModel.Size = new System.Drawing.Size(943, 793);
+            this.dgvWorkerModel.Size = new System.Drawing.Size(919, 813);
             this.dgvWorkerModel.TabIndex = 1;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button3.Location = new System.Drawing.Point(682, 41);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(152, 31);
-            this.button3.TabIndex = 50;
-            this.button3.Text = "Отменить";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Visible = false;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button4.Location = new System.Drawing.Point(682, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(152, 29);
-            this.button4.TabIndex = 48;
-            this.button4.Text = "Сохранить модель";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Visible = false;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Enabled = false;
-            this.groupBox3.Location = new System.Drawing.Point(4, 10);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(655, 100);
-            this.groupBox3.TabIndex = 49;
-            this.groupBox3.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(6, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 17);
-            this.label1.TabIndex = 50;
-            this.label1.Text = "Общая площадь ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(6, 53);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(235, 17);
-            this.label3.TabIndex = 46;
-            this.label3.Text = "Количество элементов по ширине";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(6, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 17);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Название участка фасада";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.Location = new System.Drawing.Point(6, 31);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(137, 17);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Количество этажей";
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button5.Location = new System.Drawing.Point(682, 73);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(201, 30);
-            this.button5.TabIndex = 36;
-            this.button5.Text = "Сохранить изменения";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Visible = false;
+            this.dgvWorkerModel.SelectionChanged += new System.EventHandler(this.DgvWorkerModel_SelectionChanged);
             // 
             // labelActualProjectName
             // 
@@ -5523,7 +5925,6 @@
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabControlMain.ResumeLayout(false);
             this.tabPageProject.ResumeLayout(false);
             this.gblProjectPanel.ResumeLayout(false);
@@ -5635,9 +6036,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbElementPictureSelectedDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllElementPicture)).EndInit();
             this.tabPageSectionOfBuilding.ResumeLayout(false);
+            this.gbManagerModelSetWork.ResumeLayout(false);
+            this.gbManagerModelButtons.ResumeLayout(false);
             this.gbSectionOfBuildingPanel.ResumeLayout(false);
             this.SectionOfBuildingModel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSectionOfBuildingModel)).EndInit();
+            this.SectionOfBuildingModel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvManagerWorkLog)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvManagerModel)).EndInit();
             this.gbSectionOfBuildingData.ResumeLayout(false);
             this.gbSectionOfBuildingData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkSectionOfBuildingQuantityByWidth)).EndInit();
@@ -5656,6 +6061,8 @@
             this.tabControlWorker.ResumeLayout(false);
             this.tabPageWorkerWorks.ResumeLayout(false);
             this.tabPageWorkerWorks.PerformLayout();
+            this.gbWorkerCompletePanel.ResumeLayout(false);
+            this.gbWorkerCompletePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerWorksInProject)).EndInit();
             this.tabPageWorkerPayments.ResumeLayout(false);
             this.tabPageWorkerPayments.PerformLayout();
@@ -5670,10 +6077,9 @@
             this.gbWorkerProjects.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerProjects)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerWorkLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerModel)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -6019,16 +6425,11 @@
         private System.Windows.Forms.DataGridView dgvSectionsOfBuildingByActualProject;
         private System.Windows.Forms.GroupBox SectionOfBuildingModel;
         private System.Windows.Forms.ListView lvSectionOfBuildingTypesOfElementInProject;
-        private System.Windows.Forms.DataGridView dgvSectionOfBuildingModel;
+        private System.Windows.Forms.DataGridView dgvManagerModel;
         private System.Windows.Forms.Button btnSectionOfBuildingSwitchModelCancel;
         private System.Windows.Forms.Button btnSectionOfBuildingModelUpdate;
         private System.Windows.Forms.Button btnSectionOfBuildingSwitchModelUpdate;
         private System.Windows.Forms.Label lblSectuinOfBuildingSquare;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSquareSectionOfBuilding;
         private System.Windows.Forms.Label lblSectionOfBuildingActualProjectTotalSquare;
         private System.Windows.Forms.Button btnSectionOfBuildingSwitchSetWork;
         private System.Windows.Forms.DataGridView dgvSectionOfBuildingWorkInProject;
@@ -6042,13 +6443,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDateOfStart;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDateOfComplete;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPlannedDateOfComplete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSectionValue;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSectionCost;
         private System.Windows.Forms.Label lblSectionOfBuildingActualProjectWorksAmount;
         private System.Windows.Forms.Label lblSectionOfBuildingWorksAmount;
         private System.Windows.Forms.Button button2;
@@ -6101,16 +6495,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
         private System.Windows.Forms.Label lblWorkerProjectTotalSquare;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvWorkerModel;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label lblWorkerPaymentAmount;
         private System.Windows.Forms.DataGridView dgvWorkerPayments;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn50;
@@ -6130,5 +6515,60 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn59;
         private System.Windows.Forms.Label lblWorkerSectionOfBuildingWorkAmount;
         private System.Windows.Forms.Label lblWorkerProjectNotFound;
+        private System.Windows.Forms.DataGridView dgvWorkerWorkLog;
+        private System.Windows.Forms.GroupBox gbWorkerCompletePanel;
+        private System.Windows.Forms.Label lblWorkerDateOfComplete;
+        private System.Windows.Forms.DateTimePicker dtpWorkerDateOfComplete;
+        private System.Windows.Forms.Label lblWorkerWorkByElementAmount;
+        private System.Windows.Forms.Label lblWorkerWorkByElementMultiplicity;
+        private System.Windows.Forms.Label lblWorkerElementSquare;
+        private System.Windows.Forms.Label lblWorkerElementLenght;
+        private System.Windows.Forms.Label lblWorkerElementHeight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WorkerWorkLogColumnId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WorkerWorkLogColumnDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WorkerWorkLogColumnType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WorkerWorkLogColumnUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WorkerWorkLogColumnComment;
+        private System.Windows.Forms.TabPage tabPageWorkerCompletedWorks;
+        private System.Windows.Forms.Label lblManagerModelAmount;
+        private System.Windows.Forms.Label lblManagerModelMultiplicity;
+        private System.Windows.Forms.Label lblManagerModelSquare;
+        private System.Windows.Forms.Label lblManagerModelLength;
+        private System.Windows.Forms.Label lblManagerModeHeight;
+        private System.Windows.Forms.DataGridView dgvManagerWorkLog;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn60;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn61;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn62;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn63;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn64;
+        private System.Windows.Forms.GroupBox gbManagerModelButtons;
+        private System.Windows.Forms.Button btnSectionOfBuildingRejectWorkCancel;
+        private System.Windows.Forms.Button btnSectionOfBuildingRejectWork;
+        private System.Windows.Forms.Button btnSectionOfBuildingAcceptWorkCancel;
+        private System.Windows.Forms.Button btnSectionOfBuildingAcceptWork;
+        private System.Windows.Forms.GroupBox gbManagerModelSetWork;
+        private System.Windows.Forms.Label lblProjectRejectedWork;
+        private System.Windows.Forms.Label lblProjectAcceptedWork;
+        private System.Windows.Forms.Label lblProjectCompletedWork;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSquareSectionOfBuilding;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSectionValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSectionCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSectionCompleteValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSectionCompleteCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSectionAcceptValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSectionAcceptCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSectionRejectValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSectionRejectCost;
+        private System.Windows.Forms.DateTimePicker dtpManagerModelLogDate;
+        private System.Windows.Forms.Button btnSectionOfBuildingChangeMultiplicity;
     }
 }

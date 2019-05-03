@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 
+
 namespace Project
 {
     public partial class MainForm : Form
@@ -111,6 +112,21 @@ namespace Project
             return ReadObject<WorkByElement>(idForSearch, driver.ReadWorkByElement);
         }
 
+        private WorkByElement GetWorkByElement(int idElement, int idWorkInProject)
+        {
+            var workByElement = new WorkByElement();
+            try
+            {
+                workByElement = driver.GetWorkByElement(idElement, idWorkInProject);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            return workByElement;
+        }
+
         private bool ElementHasWork(int idElement, int idWorkInProject)
         {
             var element = ReadElement(idElement);
@@ -155,8 +171,8 @@ namespace Project
         {
             if (dgvSectionsOfBuildingByActualProject.SelectedRows.Count == 0)
             {
-                dgvSectionOfBuildingModel.Rows.Clear();
-                dgvSectionOfBuildingModel.Columns.Clear();
+                dgvManagerModel.Rows.Clear();
+                dgvManagerModel.Columns.Clear();
                 btnSectionOfBuildingSwitchModelUpdate.Visible = false;
                 btnSectionOfBuildingSwitchSetWork.Visible = false;
                 btnSectionOfBuildingSwitchUpdate.Enabled = false;
@@ -165,7 +181,7 @@ namespace Project
             else
             {
                 ShowSelectedSectionOfBuilding();
-                ShowModel();
+                managerModel.ShowModel(SelectedSectionOfBuilding());
                 btnSectionOfBuildingSwitchModelUpdate.Visible = true;
                 btnSectionOfBuildingSwitchSetWork.Visible = true;
                 btnSectionOfBuildingSwitchUpdate.Enabled = true;
@@ -183,115 +199,6 @@ namespace Project
                 largeImageList.Images.Add(picture.Id.ToString(), picture.Picture);
             }
             listView.LargeImageList = largeImageList;
-        }
-
-        ///MODEL!!!
-        private void DgvSectionOfBuildingModelSetImageColumns(SectionOfBuilding sectionOfBuilding)
-        {
-            dgvSectionOfBuildingModel.Columns.Clear();
-            for (int i = 0; i < sectionOfBuilding.QuantityByWidth; i++)
-            {
-                var imageColumn = new DataGridViewImageColumn()
-                {
-                    Name = i.ToString(),
-                    HeaderText = $"Элемент №{i}",
-                    Width = GetModelSize(2)
-            };
-                if (elementsOfModel[0][i].IdTypeOfElement != -1)
-                {
-                    var typeOfElement = ReadTypeOfElement(elementsOfModel[0][i].IdTypeOfElement);
-                    imageColumn.Width = GetModelSize(typeOfElement.Length);
-                }
-                dgvSectionOfBuildingModel.Columns.Add(imageColumn);
-            }
-        }
-
-        private void DgvSectionOfBuildingModelSetRows(SectionOfBuilding sectionOfBuilding)
-        {
-            dgvSectionOfBuildingModel.Rows.Clear();
-            for (int i = 0; i < sectionOfBuilding.QuantityByHeight; i++)
-            {
-                dgvSectionOfBuildingModel.Rows.Add();
-            }
-            for (int i = 0; i < sectionOfBuilding.QuantityByHeight; i++)
-            {
-                int rowNumber = (sectionOfBuilding.QuantityByHeight - 1) - i;
-                if (elementsOfModel[i][0].IdTypeOfElement == -1)
-                {
-                    dgvSectionOfBuildingModel.Rows[rowNumber].Height =
-                    GetModelSize(2);
-                }
-                else
-                {
-                    var typeOfElement = ReadTypeOfElement(elementsOfModel[i][0].IdTypeOfElement);
-                    dgvSectionOfBuildingModel.Rows[rowNumber].Height =
-                        GetModelSize(typeOfElement.Height);
-                }
-                dgvSectionOfBuildingModel.Rows[rowNumber].HeaderCell.ValueType = typeof(string);
-                dgvSectionOfBuildingModel.Rows[rowNumber].HeaderCell.Value = $"{i} этаж";
-                for (int j = 0; j < sectionOfBuilding.QuantityByWidth; j++)
-                {
-                    if (elementsOfModel[i][j].IdTypeOfElement == -1)
-                    {
-                        dgvSectionOfBuildingModel.Rows[rowNumber].Cells[j].Tag =
-                        elementsOfModel[i][j].Id;
-                    }
-                    else
-                    {
-                        var typeOfElement = 
-                            ReadTypeOfElement(elementsOfModel[i][j].IdTypeOfElement);
-                        Image img = new Bitmap(
-                            ReadElementPicture(typeOfElement.IdElementPicture).Picture,
-                            new Size(dgvSectionOfBuildingModel.Columns[j].Width,
-                            dgvSectionOfBuildingModel.Rows[rowNumber].Height));
-                        dgvSectionOfBuildingModel.Rows[rowNumber].Cells[j].Value = img;
-                        dgvSectionOfBuildingModel.Rows[rowNumber].Cells[j].Tag =
-                            elementsOfModel[i][j].Id;
-                    }
-                }
-            }
-        }
-
-        private void ShowModel()
-        {
-            var selectedSectionOfBuilding = SelectedSectionOfBuilding();
-            if (selectedSectionOfBuilding.Id == -1)
-            {
-                elementsOfModel = new Element[0][];
-                return;
-            }
-            elementsOfModel = ReadFloorsSectionOfBuilding(selectedSectionOfBuilding);
-            if(elementsOfModel.Count() == 0)
-            {
-                dgvSectionOfBuildingModel.Rows.Clear();
-                dgvSectionOfBuildingModel.Columns.Clear();
-                return;
-            }
-            if (!selectedSectionOfBuilding.IsChecked(elementsOfModel))
-            {
-                MessageBox.Show("Набор элементов не соответсвует модели", "Сообщение об ошибке",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            };
-            DgvSectionOfBuildingModelSetImageColumns(selectedSectionOfBuilding);
-            DgvSectionOfBuildingModelSetRows(selectedSectionOfBuilding);
-        }
-
-        private void ShowWorkInModel()
-        {
-            var workInProject = SelectedWorkInProjectInSectionOfBuilding();
-            for(int i = 0; i < dgvSectionOfBuildingModel.RowCount; i++)
-            {
-                for(int j = 0; j < dgvSectionOfBuildingModel.ColumnCount; j++)
-                {
-                    int idElement = (int)dgvSectionOfBuildingModel.Rows[i].Cells[j].Tag;
-                    if (ElementHasWork(idElement, workInProject.Id))
-                    {
-                        dgvSectionOfBuildingModel.Rows[i].Cells[j].Style.BackColor = Color.DimGray;
-                    }
-                    else dgvSectionOfBuildingModel.Rows[i].Cells[j].Style.BackColor = Color.Empty;
-                }
-            }
         }
 
         private void ShowWorksInProjectInSectionOfBuilding()
@@ -358,102 +265,51 @@ namespace Project
             listView.DoDragDrop(listView.SelectedItems[0].Tag, DragDropEffects.Copy);
         }
 
-        private void DgvSectionOfBuildingModel_DragEnter(object sender, DragEventArgs e)
+        private void DgvManagerModel_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(typeof(int)))
                 e.Effect = DragDropEffects.Copy;
         }
 
-        private void DgvSectionOfBuildingModel_DragDrop(object sender, DragEventArgs e)
+        private void DgvManagerModel_DragDrop(object sender, DragEventArgs e)
         {
-            Point cursorLocation = dgvSectionOfBuildingModel.PointToClient(new Point(e.X, e.Y));
-            var hitTestInfo = dgvSectionOfBuildingModel.HitTest(cursorLocation.X, cursorLocation.Y);
+            Point cursorLocation = dgvManagerModel.PointToClient(new Point(e.X, e.Y));
+            var hitTestInfo = dgvManagerModel.HitTest(cursorLocation.X, cursorLocation.Y);
             if(hitTestInfo.ColumnIndex != -1 && hitTestInfo.RowIndex != -1)
             {
                 int row = hitTestInfo.RowIndex;
-                int numberByHeight = (dgvSectionOfBuildingModel.Rows.Count - 1) - row;
+                int numberByHeight = (dgvManagerModel.Rows.Count - 1) - row;
                 int column = hitTestInfo.ColumnIndex;
                 int numberByWidth = column;
                 int idTypeOfElement = (int)e.Data.GetData(typeof(int));
-                int idElement = (int)dgvSectionOfBuildingModel.Rows[row].Cells[column].Tag;
-                if (elementsOfModel[numberByHeight][numberByWidth].Id != idElement)
+                int idElement = (int)dgvManagerModel.Rows[row].Cells[column].Tag;
+                if (managerModel.elementsOfModel[numberByHeight][numberByWidth].Id != idElement)
                 {
-                    var element = ReadObject<Element>(elementsOfModel[numberByHeight][numberByWidth].Id,
-                        driver.ReadElement);
                     MessageBox.Show("Элемент в модели не найден!", "Сообщение об ошибке", 
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                Image picture = GetPictureFromTypeOfElement(idTypeOfElement);
-                if (picture == null)
+                var elementPicture = ReadElementPictureByTypeOfElement(idTypeOfElement);
+                if (elementPicture.Picture == null)
                 {
                     MessageBox.Show("Изображение не найдено!", "Сообщение об ошибке",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                picture = 
-                    new Bitmap(picture, new Size(dgvSectionOfBuildingModel.Columns[column].Width,
-                    dgvSectionOfBuildingModel.Rows[row].Height));
-                elementsOfModel[numberByHeight][numberByWidth].IdTypeOfElement =
+                Image picture = elementPicture.ResizePicture(
+                    dgvManagerModel.Columns[column].Width, 
+                    dgvManagerModel.Rows[row].Height);
+                managerModel.elementsOfModel[numberByHeight][numberByWidth].IdTypeOfElement =
                  idTypeOfElement;
-                dgvSectionOfBuildingModel.Rows[row].Cells[column].Value = picture;
+                dgvManagerModel.Rows[row].Cells[column].Value = picture;
             }
-            else ChangeSizeCellsInModel(hitTestInfo.RowIndex, hitTestInfo.ColumnIndex,
+            else managerModel.ChangeSizeCellsInModel(hitTestInfo.RowIndex, hitTestInfo.ColumnIndex,
                 (int)e.Data.GetData(typeof(int)));
         }
 
-        private void ChangeSizeCellsInModel(int rowIndex, int columnIndex, int idTypeOfElement)
+        private void DgvManagerModel_SelectionChanged(object sender, EventArgs e)
         {
-            if (rowIndex == -1 && columnIndex == -1) return;
-            var typeOfElement = ReadTypeOfElement(idTypeOfElement);
-            if (typeOfElement.Id == -1)
-            {
-                MessageBox.Show("Тип элемента не найден", "Сообщение об ошибке",
-                       MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (rowIndex == -1)
-            {
-                DialogResult result = 
-                    MessageBox.Show ($"Вы действительно хотите изменить ширину столбца?", 
-                    "Изменение размера", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if(result == DialogResult.OK)
-                    ChangeColumnWidthInModel(columnIndex, GetModelSize(typeOfElement.Length));
-            }
-            else
-            {
-                DialogResult result = MessageBox.Show($"Вы действительно хотите изменить высоту строки?",
-                    "Изменение размера", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if (result == DialogResult.OK)
-                    ChangeRowHeightInModel(rowIndex, GetModelSize(typeOfElement.Height));
-            }
-        }
-        //
-        private int GetModelSize(decimal typeOfElementSize)
-        {
-            return (int)(typeOfElementSize * ModelSizeMultiplier);
-        }
-
-        private void ChangeRowHeightInModel(int rowIndex, int height)
-        {
-            dgvSectionOfBuildingModel.Rows[rowIndex].Height = height;
-            for(int i = 0; i < dgvSectionOfBuildingModel.Columns.Count; i++)
-            {
-                Image image = (Image)dgvSectionOfBuildingModel.Rows[rowIndex].Cells[i].Value;
-                dgvSectionOfBuildingModel.Rows[rowIndex].Cells[i].Value = new Bitmap(image, 
-                    new Size(dgvSectionOfBuildingModel.Columns[i].Width, height));
-            }
-        }
-
-        private void ChangeColumnWidthInModel(int columnIndex, int width)
-        {
-            dgvSectionOfBuildingModel.Columns[columnIndex].Width = width;
-            for (int i = 0; i < dgvSectionOfBuildingModel.Rows.Count; i++)
-            {
-                Image image = (Image)dgvSectionOfBuildingModel.Rows[i].Cells[columnIndex].Value;
-                dgvSectionOfBuildingModel.Rows[i].Cells[columnIndex].Value = new Bitmap(image,
-                    new Size(width, dgvSectionOfBuildingModel.Rows[i].Height));
-            }
+            managerWorkLog.ShowWorkByElementInfo();
         }
 
         //ShowVoidEntity
@@ -530,6 +386,8 @@ namespace Project
                 return;
             }
             ShowVoidSectionOfBuilding();
+            gbSectionOfBuildingData.Visible = true;
+            SectionOfBuildingModel.Visible = false;
             gbSectionOfBuildingData.Enabled = true;
             btnSectionOfBuildingCreate.Visible = true;
             btnSectionOfBuildingSwitchCancel.Visible = true;
@@ -540,6 +398,8 @@ namespace Project
         {
             ShowSelectedSectionOfBuilding();
             gbSectionOfBuildingData.Enabled = false;
+            gbSectionOfBuildingData.Visible = false;
+            SectionOfBuildingModel.Visible = true;
             gbAllSectionsOfBuilding.Enabled = true;
             btnSectionOfBuildingCreate.Visible = false;
             btnSectionOfBuildingUpdate.Visible = false;
@@ -565,8 +425,10 @@ namespace Project
                     sectionOfBuilding.CreateWithElements(driver);
                     ShowSectionsOfBuildingInActualPriject();
                     ShowVoidSectionOfBuilding();
-                    ShowModel();
+                    managerModel.ShowModel(SelectedSectionOfBuilding());
                     gbSectionOfBuildingData.Enabled = false;
+                    gbSectionOfBuildingData.Visible = false;
+                    SectionOfBuildingModel.Visible = true;
                     btnSectionOfBuildingCreate.Visible = false;
                     btnSectionOfBuildingSwitchCancel.Visible = false;
                 }
@@ -586,6 +448,8 @@ namespace Project
             if (SelectedSectionOfBuilding().Id == -1) return;
             gbAllSectionsOfBuilding.Enabled = false;
             gbSectionOfBuildingData.Enabled = true;
+            gbSectionOfBuildingData.Visible = true;
+            SectionOfBuildingModel.Visible = false;
             tbSectionOfBuildingQuantityByHeight.Enabled = false;
             tbSectionOfBuildingQuantityByWidth.Enabled = false;
             btnSectionOfBuildingSwitchCancel.Visible = true;
@@ -609,8 +473,10 @@ namespace Project
                     sectionOfBuilding.Update(driver);
                     ShowSectionsOfBuildingInActualPriject();
                     ShowSelectedSectionOfBuilding();
-                    ShowModel();
+                    managerModel.ShowModel(SelectedSectionOfBuilding());
                     gbSectionOfBuildingData.Enabled = false;
+                    gbSectionOfBuildingData.Visible = false;
+                    SectionOfBuildingModel.Visible = true;
                     gbAllSectionsOfBuilding.Enabled = true;
                     tbSectionOfBuildingQuantityByHeight.Enabled = true;
                     tbSectionOfBuildingQuantityByWidth.Enabled = true;
@@ -667,7 +533,7 @@ namespace Project
             try
             {
                 SelectedSectionOfBuilding().UpdateAllElementsSetTypeOfElement(
-                    elementsOfModel, driver);
+                    managerModel.elementsOfModel, driver);
                 btnSectionOfBuildingModelUpdate.Visible = false;
                 btnSectionOfBuildingSwitchModelCancel.Visible = false;
                 lvSectionOfBuildingTypesOfElementInProject.Enabled = false;
@@ -675,6 +541,7 @@ namespace Project
                 ShowSelectedSectionOfBuilding();
                 gbAllSectionsOfBuilding.Enabled = true;
                 btnSectionOfBuildingSwitchSetWork.Visible = true;
+                ShowTotalSquareByActualProject();
             }
             catch (Exception ex)
             {
@@ -685,38 +552,38 @@ namespace Project
 
         private void BtnSectionOfBuildingSwitchModelCancel_Click(object sender, EventArgs e)
         {
+            lblSectionOfBuildingWorksAmount.Visible = false;
             btnSectionOfBuildingModelUpdate.Visible = false;
             btnSectionOfBuildingSwitchModelCancel.Visible = false;
             btnSectionOfBuildingSwitchSetWork.Enabled = true;
             btnSectionOfBuildingSwitchSetWork.Visible = true;
-            btnSectionOfBuildingSetWork.Visible = false;
-            btnSectionOfBuildingCancelWork.Visible = false;
+            gbManagerModelSetWork.Visible = false;
             btnSectionOfBuildingSwitchModelUpdate.Visible = true;
             lvSectionOfBuildingTypesOfElementInProject.Enabled = false;
             lvSectionOfBuildingTypesOfElementInProject.Visible = true;
             dgvSectionOfBuildingWorkInProject.Visible = false;
-            ShowModel();
+            managerModel.ShowModel(SelectedSectionOfBuilding());
             gbAllSectionsOfBuilding.Enabled = true;
         }
 
         private void BtnSectionOfBuildingSwitchSetWork_Click(object sender, EventArgs e)
         {
+            lblSectionOfBuildingWorksAmount.Visible = true;
             gbAllSectionsOfBuilding.Enabled = false;
             btnSectionOfBuildingSwitchSetWork.Enabled = false;
-            btnSectionOfBuildingSetWork.Visible = true;
-            btnSectionOfBuildingCancelWork.Visible = true;
+            gbManagerModelSetWork.Visible = true;
             btnSectionOfBuildingSwitchModelCancel.Visible = true;
             btnSectionOfBuildingSwitchModelUpdate.Visible = false;
             dgvSectionOfBuildingWorkInProject.Visible = true;
             lvSectionOfBuildingTypesOfElementInProject.Visible = false;
             ShowWorksInProjectInSectionOfBuilding();
-            ShowWorkInModel();
+            managerModel.ShowWorkInModel(SelectedWorkInProjectInSectionOfBuilding());
         }
 
         private void BtnSectionOfBuildingSetWork_Click(object sender, EventArgs e)
         {
             int idWorkInProject = SelectedWorkInProjectInSectionOfBuilding().Id;
-            var selectedCells = dgvSectionOfBuildingModel.SelectedCells;
+            var selectedCells = dgvManagerModel.SelectedCells;
             List<WorkByElement> workByElements = new List<WorkByElement>();
             foreach (DataGridViewCell cell in selectedCells)
             {
@@ -727,9 +594,10 @@ namespace Project
             try
             {
                 WorkByElement.CreateWorkByElements(workByElements, driver);
-                ShowWorkInModel();
+                managerModel.ShowWorkInModel(SelectedWorkInProjectInSectionOfBuilding());
                 ShowWorksInProjectInSectionOfBuilding();
-                MessageBox.Show($"Работа назначена для {workByElements} элементов",
+                ShowTotalAmountByActualProject();
+                MessageBox.Show($"Работа назначена для {workByElements.Count} элементов",
                         "Назначение работы", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -742,7 +610,7 @@ namespace Project
         private void BtnSectionOfBuildingCancelWork_Click(object sender, EventArgs e)
         {
             int idWorkInProject = SelectedWorkInProjectInSectionOfBuilding().Id;
-            var selectedCells = dgvSectionOfBuildingModel.SelectedCells;
+            var selectedCells = dgvManagerModel.SelectedCells;
             List<WorkByElement> workByElements2Delete = new List<WorkByElement>();
             foreach (DataGridViewCell cell in selectedCells)
             {
@@ -753,10 +621,12 @@ namespace Project
             try
             {
                 WorkByElement.DeleteWorkByElements(workByElements2Delete, driver);
-                ShowWorkInModel();
+                managerModel.ShowWorkInModel(SelectedWorkInProjectInSectionOfBuilding());
                 ShowWorksInProjectInSectionOfBuilding();
-                MessageBox.Show($"Назначение работы отменено для {workByElements2Delete} элементов",
-                        "Назначение работы", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ShowTotalAmountByActualProject();
+                MessageBox.Show(
+                    $"Назначение работы отменено для {workByElements2Delete.Count} элементов",
+                    "Назначение работы", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -765,18 +635,110 @@ namespace Project
             }
         }
 
+        private void BtnSectionOfBuildingChangeMultiplicity_Click(object sender, EventArgs e)
+        {
+            if (dgvManagerModel.SelectedCells.Count != 1) return;
+            int idElement = (int)dgvManagerModel.SelectedCells[0].Tag;
+            int idWorkInProject = SelectedWorkInProjectInSectionOfBuilding().Id;
+            if (!ElementHasWork(idElement, idWorkInProject)) return;
+            //TODO
+           //
+           //
+        }
+
+
         private void DgvSectionOfBuildingWorkInProject_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvSectionOfBuildingWorkInProject.SelectedRows.Count == 0)
             {
-                ShowModel();
+                managerModel.ShowModel(SelectedSectionOfBuilding());
             }
             else
             {
-                ShowWorkInModel();
+                managerModel.ShowWorkInModel(SelectedWorkInProjectInSectionOfBuilding());
+            }
+            managerWorkLog.ShowWorkByElementInfo();
+        }
+
+        private void BtnSectionOfBuildingAcceptWork_Click(object sender, EventArgs e)
+        {
+            DateTime dateOfAccept = dtpManagerModelLogDate.Value;
+            int idWorkInProject = SelectedWorkInProjectInSectionOfBuilding().Id;
+            var selectedCells = dgvManagerModel.SelectedCells;
+            List<WorkByElement> workByElements = new List<WorkByElement>();
+            foreach (DataGridViewCell cell in selectedCells)
+            {
+                int idElement = (int)cell.Tag;
+                if (ElementHasWork(idElement, idWorkInProject))
+                {
+                    var workByElement = GetWorkByElement(idElement, idWorkInProject);
+                    if (workByElement.AcceptCheck(dateOfAccept, driver))
+                        workByElements.Add(workByElement);
+                }
+            }
+            if (workByElements.Count == 0)
+            {
+                MessageBox.Show($"Нет элементов для приемки работ",
+                    "Приемка работ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            try
+            {
+                WorkByElement.CreateWorkLogsAccept(workByElements, actualUser.Id, dateOfAccept, 
+                    driver);
+                managerModel.ShowWorkInModel(SelectedWorkInProjectInSectionOfBuilding());
+                ShowWorksInProjectInSectionOfBuilding();
+                ShowTotalAmountCompletedWorkByActualProject();
+                ShowTotalAmountAcceptedWorkByActualProject();
+                MessageBox.Show($"Работа принята для {workByElements.Count} элементов",
+                        "Приемка работ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
 
+        private void BtnSectionOfBuildingAcceptWorkCancel_Click(object sender, EventArgs e)
+        {
+            int idWorkInProject = SelectedWorkInProjectInSectionOfBuilding().Id;
+            var selectedCells = dgvManagerModel.SelectedCells;
+            List<WorkLog> acceptWorkLogs = new List<WorkLog>();
+            try
+            {
+                foreach (DataGridViewCell cell in selectedCells)
+                {
+                    int idElement = (int)cell.Tag;
+                    if (ElementHasWork(idElement, idWorkInProject))
+                    {
+                        var workByElement = GetWorkByElement(idElement, idWorkInProject);
+                        WorkLog workLog =
+                            workByElement.GetAcceptLog2Delete(actualUser.Id, driver);
+                        if (workLog.Id != -1)
+                            acceptWorkLogs.Add(workLog);
+                    }
+                }
+                if (acceptWorkLogs.Count == 0)
+                {
+                    MessageBox.Show($"Нет элементов для отмены приемки",
+                       "Отмена приемки", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                WorkByElement.DeleteWorkLogsAccept(acceptWorkLogs, driver);
+                managerModel.ShowWorkInModel(SelectedWorkInProjectInSectionOfBuilding());
+                ShowWorksInProjectInSectionOfBuilding();
+                ShowTotalAmountCompletedWorkByActualProject();
+                ShowTotalAmountAcceptedWorkByActualProject();
+                MessageBox.Show($"Отменa приемки работы для {acceptWorkLogs.Count} элементов",
+                        "Отмена приемки", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
     }
 
 }

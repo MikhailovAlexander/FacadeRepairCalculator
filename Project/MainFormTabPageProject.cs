@@ -23,13 +23,13 @@ namespace Project
             return ReadObject<Project>(idProject, driver.ReadProject);
         }
 
-        private decimal GetTotalAmount(Project project)
+        private decimal GetTotalValue(Project project, Func<IDriverDB, decimal> GetValue)
         {
-            decimal totalSquare = -1;
-            if (project.Id == -1) return totalSquare;
+            decimal totalValue = -1;
+            if (project.Id == -1) return totalValue;
             try
             {
-                totalSquare = project.GetTotalAmount(driver);
+                totalValue = GetValue(driver);
             }
             catch (Exception ex)
             {
@@ -37,41 +37,37 @@ namespace Project
                     MessageBoxIcon.Error);
                 return -1;
             }
-            return totalSquare;
+            return totalValue;
+        }
+
+        private decimal GetTotalAmount(Project project)
+        {
+            return GetTotalValue(project, project.GetTotalAmount);
         }
 
         private decimal GetTotalSquare(Project project)
         {
-            decimal totalSquare = -1;
-            if (project.Id == -1) return totalSquare;
-            try
-            {
-                totalSquare = project.GetTotalSquare(driver);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-                return -1;
-            }
-            return totalSquare;
+            return GetTotalValue(project, project.GetTotalSquare);
         }
 
         private decimal GetAmountPayments(Project project)
         {
-            decimal amount = -1;
-            if (project.Id == -1) return amount;
-            try
-            {
-                amount = project.GetAmountPayments(driver);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-                return -1;
-            }
-            return amount;
+            return GetTotalValue(project, project.GetAmountPayments);
+        }
+
+        private decimal GetTotalAmountCompletedWork(Project project)
+        {
+            return GetTotalValue(project, project.GetTotalAmountCompletedWork);
+        }
+
+        private decimal GetTotalAmountAcceptedWork(Project project)
+        {
+            return GetTotalValue(project, project.GetTotalAmountAcceptedWork);
+        }
+
+        private decimal GetTotalAmountRejectedWork(Project project)
+        {
+            return GetTotalValue(project, project.GetTotalAmountRejectedWork);
         }
 
         //SelectedEntity
@@ -161,6 +157,36 @@ namespace Project
             else
                 text = $"Сумма выплат по проекту {amount.ToString()} руб.";
             lbllProjectAmountPayments.Text = text;
+        }
+
+        private void ShowTotalAmountCompletedWorkByActualProject()
+        {
+            decimal totalAmount = GetTotalAmountCompletedWork(actualProject);
+            string text = "";
+            text = totalAmount == -1? "Общая стоимость выполненных работ не определена":
+                $"Общая стоимость выполненных работ {totalAmount.ToString()} руб.";
+            lblProjectCompletedWork.Text = text;
+            //lblProjectWorksAmount.Text = text;
+        }
+
+        private void ShowTotalAmountAcceptedWorkByActualProject()
+        {
+            decimal totalAmount = GetTotalAmountAcceptedWork(actualProject);
+            string text = "";
+            text = totalAmount == -1 ? "Общая стоимость принятых работ не определена" :
+                $"Общая стоимость принятых работ {totalAmount.ToString()} руб.";
+            lblProjectAcceptedWork.Text = text;
+            //lblProjectWorksAmount.Text = text;
+        }
+
+        private void ShowTotalAmountRejectedWorkByActualProject()
+        {
+            decimal totalAmount = GetTotalAmountRejectedWork(actualProject);
+            string text = "";
+            text = totalAmount == -1 ? "Общая стоимость отклоненных работ не определена" :
+                $"Общая стоимость отклоненных работ {totalAmount.ToString()} руб.";
+            lblProjectRejectedWork.Text = text;
+            //lblProjectWorksAmount.Text = text;
         }
 
         //ShowVoidEntity 

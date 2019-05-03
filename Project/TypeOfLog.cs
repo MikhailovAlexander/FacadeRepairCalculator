@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Project
 {
-    public enum ProjectState
+    public enum TypeOfLog
     {
-        Planned = 1,
-        Actual,
-        Completed,
-        Canceled
+        Complete,
+        Accept,
+        Reject
     }
 }

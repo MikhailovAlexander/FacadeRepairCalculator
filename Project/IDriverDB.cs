@@ -38,6 +38,10 @@ namespace Project
         decimal GetTotalSquare(int idProject);
         decimal GetAmountByWorksFromProject(int idProject);
         decimal GetAmountPaymentsByProject(int idProject);
+        decimal GetAmountPlannedWorkByProject(int idProject);
+        decimal GetAmountCompletedWorkByProject(int idProject);
+        decimal GetAmountAcceptedWorkByProject(int idProject);
+        decimal GetAmountRejectedWorkByProject(int idProject);
 
         void CreateTypeOfWork(TypeOfWork typeOfWork);
         TypeOfWork ReadTypeOfWork(int idForSearch);
@@ -62,6 +66,7 @@ namespace Project
 
         void CreateTypeOfElement(TypeOfElement typeOfElement);
         TypeOfElement ReadTypeOfElement(int idForSearch);
+        TypeOfElement GetTypeOfElement(int idElement);
         void UpdateTypeOfElement(TypeOfElement typeOfElement);
         void DeleteTypeOfElement(int idTypeOfElement);
         TypeOfElement[] ReadAllTypesOfElement();
@@ -96,10 +101,12 @@ namespace Project
         decimal GetSquareOfSectionOfBuilding(int idSectionOfBuilding);
         decimal GetValueByWorkFromSectionOfBuilding(WorkInProject workInProject,
             int idSecionOfBuilding);
+        decimal GetValueWorkByElement(WorkByElement workByElement);
         decimal GetAmountByWorksFromSectionOfBuilding(SectionOfBuilding sectionOfBuilding);
 
         void CreateWorkByElement(WorkByElement workByElement);
         void CreateWorkByElements(List<WorkByElement> workByElements);
+        WorkByElement GetWorkByElement(int idElement, int idWorkInProject);
         WorkByElement ReadWorkByElement(int idForSearch);
         void UpdateWorkByElement(WorkByElement workByElement);
         void DeleteWorkByElement(int idWork);
@@ -108,19 +115,21 @@ namespace Project
             NpgsqlTransaction transaction);
         bool HasWorkByElement(int idWork, int IdElement);
 
-        void CreateCompletedWork(CompletedWork completedWork);
-        CompletedWork ReadCompletedWork(int idForSearch);
-        void UpdateCompletedWork(CompletedWork completedWork);
-        void DeleteCompletedWork(int idCompletedWork);
-
-        void CreateAcceptedWork(AcceptedWork acceptedWork);
-        AcceptedWork ReadAcceptedWork(int idForSearch);
-        void UpdateAcceptedWork(AcceptedWork acceptedWork);
-        void DeleteAcceptedWork(int idAcceptedWork);
-
-        void CreateRejectedWork(RejectedWork rejectedWork);
-        RejectedWork ReadRejectedWork(int idForSearch);
-        void UpdateRejectedWork(RejectedWork rejectedWork);
-        void DeleteRejectedWork(int idRejectedWork);
+        void CreateWorkLog(WorkLog workLog);
+        void CreateWorkLogsComplete(List<WorkByElement> workByElements, int idUser, DateTime date);
+        void CreateWorkLogsAccept(List<WorkByElement> workByElements, int idUser,
+            DateTime dateOfAccept);
+        WorkLog ReadWorkLog(int idForSearch);
+        void UpdateWorkLog(WorkLog workLog);
+        void DeleteWorkLog(int idWorkLog);
+        void DeleteWorkLogsComplete(List<WorkLog> completeWorkLogs);
+        void DeleteWorkLogsAccept(List<WorkLog> acceptWorkLogs);
+        bool HasWorkLogs(int idWorkByElement);
+        bool CheckDateOfComplete(DateTime dateOfComplete, int idWorkByElement);
+        bool CheckDateOfAccept(DateTime dateOfAccept, int idWorkByElement);
+        WorkLog[] ReadWorkLogs(int idWorkByElement);
+        WorkLog GetLastCompleteLog(int idWorkByElement);
+        WorkLog GetAcceptLog(int idWorkByElement);
+        int GetCountRejectWorkLogs(int idWorkByElement);
     }
 }

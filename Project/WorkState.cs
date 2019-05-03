@@ -11,6 +11,6 @@ namespace Project
         Planned,
         Completed,
         Accepted,
-        Cancelled
+        Rejected
     }
 }

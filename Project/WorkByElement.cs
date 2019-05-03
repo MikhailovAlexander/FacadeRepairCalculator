@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,15 @@ namespace Project
                 else multiplicity = value;
             }
         }
+
+        private static Dictionary<WorkState, Color> WorkStateColorDictionary =
+            new Dictionary<WorkState, Color>
+            {
+                { WorkState.Planned, Color.DimGray },
+                { WorkState.Completed, Color.Yellow },
+                { WorkState.Accepted, Color.Green },
+                { WorkState.Rejected, Color.Red }
+        };
 
         public WorkByElement():base()
         {
@@ -87,25 +97,82 @@ namespace Project
             driver.DeleteWorkByElement(id);
         }
 
-        public static void DeleteWorkByElements(List<WorkByElement> workByElements2Delete, IDriverDB driver)
+        public static void DeleteWorkByElements(List<WorkByElement> workByElements2Delete, 
+            IDriverDB driver)
         {
             driver.DeleteWorkByElements(workByElements2Delete);
         }
 
-        public void Complete(int idWorker, DateTime dateOfComplete, IDriverDB driver)
+        public Color GetColorByState()
         {
-            if (State == WorkState.Completed) throw new Exception("Работа уже выполнена");
-            if (State == WorkState.Accepted) throw new Exception("Работа уже принята");
-            var completedWork = new CompletedWork(id, idWorker, dateOfComplete, false);
-            completedWork.Create(driver);
-            State = WorkState.Completed;
-
-            
+            return WorkStateColorDictionary[State];
         }
 
-        public void Accept(IDriverDB driver)
+        public decimal GetValue(IDriverDB driver)
         {
+            return driver.GetValueWorkByElement(this);
+        }
 
+        public bool CompleteCheck(DateTime dateOfComplete, IDriverDB driver)
+        {
+            if(State != WorkState.Planned && State != WorkState.Rejected) return false;
+            return driver.CheckDateOfComplete(dateOfComplete, id);
+        }
+
+        public bool AcceptCheck(DateTime dateOfAccept, IDriverDB driver)
+        {
+            if (State != WorkState.Completed) return false;
+            return driver.CheckDateOfAccept(dateOfAccept, id);
+        }
+
+        public WorkLog GetCompleteLog2Delete(int idActualUser, IDriverDB driver)
+        {
+            if (State != WorkState.Completed) return new WorkLog();
+            WorkLog lastCompleteLog = driver.GetLastCompleteLog(id);
+            if (idActualUser == lastCompleteLog.IdUser) return lastCompleteLog;
+            return new WorkLog();
+        }
+
+        public WorkLog GetAcceptLog2Delete(int idActualUser, IDriverDB driver)
+        {
+            if (State != WorkState.Accepted) return new WorkLog();
+            WorkLog acceptLog2Delete = driver.GetAcceptLog(id);
+            if (idActualUser == acceptLog2Delete.IdUser) return acceptLog2Delete;
+            return new WorkLog();
+        }
+
+        public WorkState GetPalannedOrCompleteState(IDriverDB driver)
+        {
+            if (driver.GetCountRejectWorkLogs(id) > 0) return WorkState.Rejected;
+            return WorkState.Planned;
+        }
+
+        public static WorkState GetPalannedOrCompleteState(int idWorkByElement, IDriverDB driver)
+        {
+            if (driver.GetCountRejectWorkLogs(idWorkByElement) > 0) return WorkState.Rejected;
+            return WorkState.Planned;
+        }
+
+        public static void CreateWorkLogsComplete(List<WorkByElement> workByElements, int idUser,
+            DateTime date, IDriverDB driver)
+        {
+            driver.CreateWorkLogsComplete(workByElements, idUser, date);
+        }
+
+        public static void DeleteWorkLogsComplete(List<WorkLog> completeWorkLogs, IDriverDB driver)
+        {
+            driver.DeleteWorkLogsComplete(completeWorkLogs);
+        }
+
+        public static void DeleteWorkLogsAccept(List<WorkLog> acceptWorkLogs, IDriverDB driver)
+        {
+            driver.DeleteWorkLogsAccept(acceptWorkLogs);
+        }
+
+        public static void CreateWorkLogsAccept(List<WorkByElement> workByElements, int idUser,
+            DateTime dateOfAccept, IDriverDB driver)
+        {
+            driver.CreateWorkLogsAccept(workByElements, idUser, dateOfAccept);
         }
 
         public void Reject(IDriverDB driver)

@@ -17,10 +17,11 @@ namespace Project
         private IHashPasswordCreator hashPasswordCreator;
         private User actualUser;
         private Project actualProject;
-        private Element[][] elementsOfModel;
-        private int ModelSizeMultiplier = 30;
 
         private ModelOfFacade workerModel;
+        private WorkLogGroup workerWorkLog;
+        private ModelOfFacade managerModel;
+        private WorkLogGroup managerWorkLog;
 
         public MainForm(IDriverDB driver, IHashPasswordCreator hashPasswordCreator)
         {
@@ -28,9 +29,15 @@ namespace Project
             this.driver = driver;
             this.hashPasswordCreator = hashPasswordCreator;
             actualUser = new User();
-            elementsOfModel = new Element[0][];
-
             workerModel = new ModelOfFacade(dgvWorkerModel, this);
+            workerWorkLog = new WorkLogGroup(this, workerModel, dgvWorkerWorkLog,
+                dgvWorkerWorksInProject, lblWorkerElementHeight, lblWorkerElementLenght,
+                lblWorkerElementSquare, lblWorkerWorkByElementMultiplicity,
+                lblWorkerWorkByElementAmount);
+            managerModel = new ModelOfFacade(dgvManagerModel, this);
+            managerWorkLog = new WorkLogGroup(this, managerModel, dgvManagerWorkLog,
+                dgvSectionOfBuildingWorkInProject, lblManagerModeHeight, lblManagerModelLength, 
+                lblManagerModelSquare, lblManagerModelMultiplicity, lblManagerModelAmount);
 
             var entryForm = new Entry(driver, hashPasswordCreator);
             Application.Run(entryForm);
@@ -50,7 +57,7 @@ namespace Project
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Close();
             }
-            //TODO remove this
+            //TODO refact this
             if (!actualUser.ManagerAccess)
             {
                 //ShowWorkerProjects();
@@ -117,10 +124,13 @@ namespace Project
             ShowTypesOfElementInProject();
             ShowSectionsOfBuildingInActualPriject();
             ShowTypesOfElementInSectionOfBuilding();
-
+            //Lables
             ShowTotalSquareByActualProject();
             ShowTotalAmountByActualProject();
             ShowAmountPaymentsByActualProject();
+            ShowTotalAmountCompletedWorkByActualProject();
+            ShowTotalAmountAcceptedWorkByActualProject();
+            ShowTotalAmountRejectedWorkByActualProject();
         }
 
         private void ShowlabelActualUserName()
@@ -254,6 +264,32 @@ namespace Project
         private User GetUserFromUserInProject(int idUserInProject)
         {
             return ReadObject<User>(idUserInProject, driver.GetUserFromUserInProject);
+        }
+         
+        private User ReadUser(int idUser)
+        {
+            return ReadObject<User>(idUser, driver.ReadUser);
+        }
+
+        private TypeOfElement GetTypeOfElement(int idElement)
+        {
+            return ReadObject<TypeOfElement>(idElement, driver.GetTypeOfElement);
+        }
+
+        private decimal GetValueWorkByElement(WorkByElement workByElement)
+        {
+            decimal valueByWork = -1;
+            if (workByElement.Id == -1) return valueByWork;
+            try
+            {
+                valueByWork = workByElement.GetValue(driver);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            return valueByWork;
         }
 
         private void ShowDateInTb(TextBox tb, DateTimePicker dtp)
@@ -639,37 +675,6 @@ namespace Project
             else MessageBox.Show("Пользователь не выбран", "Сообщение об ошибке", MessageBoxButtons.OK,
                             MessageBoxIcon.Error);
         }
-
-
-        //
-        //TODO refact
-        //
-        private void AllUsersToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void AddNewUserToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //Формирование фиктивной формы для вызова createUserForm
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void ChangePasswordToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void CreateProjectToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void AllProjectsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
 
         //
         //TabPageClient
@@ -1672,11 +1677,11 @@ namespace Project
             }
         }
 
-        private void button12_Click(object sender, EventArgs e)
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        
     }
 }

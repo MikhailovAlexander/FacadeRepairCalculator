@@ -14,7 +14,7 @@ namespace Project
         {
             private MainForm mainForm;
             private DataGridView dgvModel;
-            private Element[][] elementsOfModel;
+            public Element[][] elementsOfModel;
             private static int modelSizeMultiplier = 30;
             public int ModelSizeMultiplier
             {
@@ -24,6 +24,11 @@ namespace Project
                     if (value < 1) throw new Exception("Размер должен быть целым положительным");
                     else modelSizeMultiplier = value;
                 }
+            }
+
+            public DataGridView DgvModel
+            {
+                get { return dgvModel; }
             }
 
             public ModelOfFacade(DataGridView dgvModel, MainForm mainForm)
@@ -42,11 +47,21 @@ namespace Project
                         int idElement = (int)dgvModel.Rows[i].Cells[j].Tag;
                         if (mainForm.ElementHasWork(idElement, workInProject.Id))
                         {
-                            dgvModel.Rows[i].Cells[j].Style.BackColor = Color.DimGray;
+                            var workByElement = 
+                                mainForm.GetWorkByElement(idElement, workInProject.Id);
+                            dgvModel.Rows[i].Cells[j].Style.BackColor = 
+                                workByElement.GetColorByState();
                         }
                         else dgvModel.Rows[i].Cells[j].Style.BackColor = Color.Empty;
                     }
                 }
+            }
+
+            public void Clear()
+            {
+                elementsOfModel = new Element[0][];
+                dgvModel.Rows.Clear();
+                dgvModel.Columns.Clear();
             }
 
             public void ShowModel(SectionOfBuilding sectionOfBuilding)
@@ -138,6 +153,57 @@ namespace Project
             private int GetModelSize(decimal typeOfElementSize)
             {
                 return (int)(typeOfElementSize * ModelSizeMultiplier);
+            }
+
+            public void ChangeSizeCellsInModel(int rowIndex, int columnIndex, int idTypeOfElement)
+            {
+                if (rowIndex == -1 && columnIndex == -1) return;
+                var typeOfElement = mainForm.ReadTypeOfElement(idTypeOfElement);
+                if (typeOfElement.Id == -1)
+                {
+                    MessageBox.Show("Тип элемента не найден", "Сообщение об ошибке",
+                           MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (rowIndex == -1)
+                {
+                    DialogResult result =
+                        MessageBox.Show($"Вы действительно хотите изменить ширину столбца?",
+                        "Изменение размера", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (result == DialogResult.OK)
+                        ChangeColumnWidthInModel(columnIndex, GetModelSize(typeOfElement.Length));
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show($"Вы действительно хотите изменить высоту строки?",
+                        "Изменение размера", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (result == DialogResult.OK)
+                        ChangeRowHeightInModel(rowIndex, GetModelSize(typeOfElement.Height));
+                }
+            }
+
+            private void ChangeRowHeightInModel(int rowIndex, int height)
+            {
+                dgvModel.Rows[rowIndex].Height = height;
+                for (int i = 0; i < dgvModel.Columns.Count; i++)
+                {
+                    if (dgvModel.Rows[rowIndex].Cells[i].Value == null) continue;
+                    Image image = (Image)dgvModel.Rows[rowIndex].Cells[i].Value;
+                    dgvModel.Rows[rowIndex].Cells[i].Value = new Bitmap(image,
+                        new Size(dgvModel.Columns[i].Width, height));
+                }
+            }
+
+            private void ChangeColumnWidthInModel(int columnIndex, int width)
+            {
+                dgvModel.Columns[columnIndex].Width = width;
+                for (int i = 0; i < dgvModel.Rows.Count; i++)
+                {
+                    if (dgvModel.Rows[i].Cells[columnIndex].Value == null) continue;
+                    Image image = (Image)dgvModel.Rows[i].Cells[columnIndex].Value;
+                    dgvModel.Rows[i].Cells[columnIndex].Value = new Bitmap(image,
+                        new Size(width, dgvModel.Rows[i].Height));
+                }
             }
         }
     }

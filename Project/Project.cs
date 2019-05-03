@@ -15,7 +15,7 @@ namespace Project
                 { ProjectState.Planned, "Планируемый" },
                 { ProjectState.Actual, "Текущий" },
                 { ProjectState.Completed, "Завершенный" },
-                { ProjectState.Cancelled, "Отмененный" }
+                { ProjectState.Canceled, "Отмененный" }
         };
 
         public static Regex clientRegex = new Regex(@"^(Id\[)(\d+)\],.+");
@@ -193,6 +193,26 @@ namespace Project
         public decimal GetAmountPayments(IDriverDB driver)
         {
             return driver.GetAmountPaymentsByProject(id);
+        }
+
+        public decimal GetTotalAmountPlannedWork(IDriverDB driver)
+        {
+            return driver.GetAmountPlannedWorkByProject(id);
+        }
+
+        public decimal GetTotalAmountCompletedWork(IDriverDB driver)
+        {
+            return driver.GetAmountCompletedWorkByProject(id);
+        }
+
+        public decimal GetTotalAmountAcceptedWork(IDriverDB driver)
+        {
+            return driver.GetAmountAcceptedWorkByProject(id);
+        }
+
+        public decimal GetTotalAmountRejectedWork(IDriverDB driver)
+        {
+            return driver.GetAmountRejectedWorkByProject(id);
         }
     }
 }

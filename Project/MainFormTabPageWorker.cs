@@ -40,7 +40,12 @@ namespace Project
             return payments;
         }
 
-    //SelectedEntity
+        private WorkLog[] ReadWorkLogs(int idWorkByElement)
+        {
+            return ReadAllObjectsByParam<WorkLog>(idWorkByElement, driver.ReadWorkLogs);
+        }
+
+        //SelectedEntity
         private Project SelectedWorkerProject()
         {
             return SelectedObject<Project>(dgvWorkerProjects, driver.ReadProject);
@@ -127,6 +132,7 @@ namespace Project
                 dgvWorkerSectionsOfBuilding.SelectedRows.Count == 0)
             {
                 lblWorkerSectionOfBuildingWorkAmount.Text = "Модель не выбрана";
+                workerModel.Clear();
             }
             else
             {
@@ -177,6 +183,7 @@ namespace Project
                 var workInProject = SelectedWorkerWorkInProject();
                 workerModel.ShowWorkInModel(workInProject);
             }
+            workerWorkLog.ShowWorkByElementInfo();
         }
 
         private void ShowWorkerPayments()
@@ -203,6 +210,11 @@ namespace Project
             lblWorkerPaymentAmount.Text = $"Cумма выплат по проетку {amountByProject} руб.";
         }
 
+        private void DgvWorkerModel_SelectionChanged(object sender, EventArgs e)
+        {
+            workerWorkLog.ShowWorkByElementInfo();
+        }
+
         //ShowVoidEntity
 
         //ShowSelectedEntity
@@ -214,10 +226,104 @@ namespace Project
         //Tb_TextChanged
 
         //BtnSwitchCreate_Click
+        private void BtnWorkerSwitchCompleteWork_Click(object sender, EventArgs e)
+        {
+            if (dgvWorkerProjects.SelectedRows.Count == 0 || 
+                dgvWorkerSectionsOfBuilding.SelectedRows.Count == 0 ||
+                dgvWorkerWorksInProject.SelectedRows.Count == 0) return;
+            if (SelectedWorkerProject().State != ProjectState.Actual) return;
+            gbWorkerCompletePanel.Visible = true;
+            dtpWorkerDateOfComplete.Value = DateTime.Now;
+        }
 
         //BtnSwitchCancel_Click
+        private void BtnWorkerSwitchCompleteWorkCancel_Click(object sender, EventArgs e)
+        {
+            gbWorkerCompletePanel.Visible = false;
+        }
 
         //BtnCreate_Click
+        private void BtnWorkerCompleteWork_Click(object sender, EventArgs e)
+        {
+            DateTime date = dtpWorkerDateOfComplete.Value;
+            int idWorkInProject = SelectedWorkerWorkInProject().Id;
+            var selectedCells = dgvWorkerModel.SelectedCells;
+            List<WorkByElement> workByElements = new List<WorkByElement>();
+            try
+            {
+                foreach (DataGridViewCell cell in selectedCells)
+                {
+                    int idElement = (int)cell.Tag;
+                    if (ElementHasWork(idElement, idWorkInProject))
+                    {
+                        var workByElement = GetWorkByElement(idElement, idWorkInProject);
+                        if (workByElement.CompleteCheck(date, driver))
+                            workByElements.Add(workByElement);
+                    }
+                }
+                if(workByElements.Count == 0)
+                {
+                    MessageBox.Show($"Нет элементов для выполнения работы",
+                        "Выполнение работы", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                WorkByElement.CreateWorkLogsComplete(
+                    workByElements, actualUser.Id, date, driver);
+                workerModel.ShowModel(SelectedWorkerSectionOfBuilding());
+                workerModel.ShowWorkInModel(SelectedWorkerWorkInProject());
+                ShowWorkerWorksInProject();
+                ShowTotalAmountCompletedWorkByActualProject();
+                ShowTotalAmountRejectedWorkByActualProject();
+                MessageBox.Show($"Выполнение работы для {workByElements.Count} элементов",
+                        "Выполнение работы", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnWorkerCompleteWorkCancel_Click(object sender, EventArgs e)
+        {
+            int idWorkInProject = SelectedWorkerWorkInProject().Id;
+            var selectedCells = dgvWorkerModel.SelectedCells;
+            List<WorkLog> completeWorkLogs = new List<WorkLog>();
+            try
+            {
+                foreach (DataGridViewCell cell in selectedCells)
+                {
+                    int idElement = (int)cell.Tag;
+                    if (ElementHasWork(idElement, idWorkInProject))
+                    {
+                        var workByElement = GetWorkByElement(idElement, idWorkInProject);
+                        WorkLog workLog = 
+                            workByElement.GetCompleteLog2Delete(actualUser.Id, driver);
+                        if (workLog.Id != -1)
+                            completeWorkLogs.Add(workLog);
+                    }
+                }
+                if(completeWorkLogs.Count == 0)
+                {
+                    MessageBox.Show($"Нет элементов для отмены выполнения",
+                       "Отмена выполнения", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                WorkByElement.DeleteWorkLogsComplete(completeWorkLogs, driver);
+                workerModel.ShowModel(SelectedWorkerSectionOfBuilding());
+                workerModel.ShowWorkInModel(SelectedWorkerWorkInProject());
+                ShowWorkerWorksInProject();
+                ShowTotalAmountCompletedWorkByActualProject();
+                ShowTotalAmountRejectedWorkByActualProject();
+                MessageBox.Show($"Отменв выполнения работы для {completeWorkLogs.Count} элементов",
+                        "Отмена выполнения", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
 
         //BtnSwitchUpdate_Click
 
