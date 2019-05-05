@@ -50,12 +50,14 @@ namespace Project
                 MessageBox.Show("Ошибка! Вход в систему не возможен", "Сообщение об ошибке", 
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Close();
+                return;
             }
             if(actualUser.Id == -1)
             {
                 MessageBox.Show("Ошибка! Вход в систему не возможен", "Сообщение об ошибке",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Close();
+                return;
             }
             //TODO refact this
             if (!actualUser.ManagerAccess)
@@ -301,6 +303,41 @@ namespace Project
             dtp.Visible = false;
         }
 
+        private string GetStringFromDecimalValue(decimal value)
+        {
+            if (value == -1) return "нет";
+            else return value.ToString();
+        }
+
+        private string GetStringFromDate(DateTime date)
+        {
+            if (date == new DateTime(1970, 01, 01)) return "Нет";
+            return date.ToShortDateString();
+        }
+
+        private void ShowProjectsInDgv(Project[] projects, DataGridView dgvProjects, int dgvHeight)
+        {
+            ClearAndSetHeightDgv(dgvProjects, dgvHeight, projects.Length);
+            foreach (Project project in projects)
+            {
+                decimal square = GetTotalSquare(project);
+                decimal payments = GetAmountPayments(project);
+                decimal amount = GetTotalAmount(project);
+                decimal complete = GetTotalAmountCompletedWork(project);
+                decimal accept = GetTotalAmountAcceptedWork(project);
+                decimal reject = GetTotalAmountRejectedWork(project);
+                string client = ReadClient(project.IdClient).ToString();
+                dgvProjects.Rows.Add
+                    (project.Id, project.Name, project.Address, client, project.StateString,
+                    GetStringFromDate(project.DateOfStart),
+                    GetStringFromDate(project.DateOfComplete),
+                    GetStringFromDate(project.PlannedDateOfComplete),
+                    GetStringFromDecimalValue(square), GetStringFromDecimalValue(payments),
+                    GetStringFromDecimalValue(amount), GetStringFromDecimalValue(complete),
+                    GetStringFromDecimalValue(accept), GetStringFromDecimalValue(reject));
+            }
+        }
+
         private void ShowSectionsOfBuilding(Project project, Label lblProjectNotSaved, 
             DataGridView dgvSectionsOfBuilding, GroupBox groupBox)
         {
@@ -311,14 +348,47 @@ namespace Project
             foreach (var section in sectionsOfBuilding)
             {
                 decimal square = GetSquareOfSectionOfBuilding(section);
-                string sectionSquare;
-                if (square == -1) sectionSquare = "не определена";
-                else
-                {
-                    sectionSquare = square.ToString();
-                }
+                decimal work = GetAmountByWorksFromSectionOfBuilding(section);
+                decimal completeWork = GetAmountCompletedWorksFromSectionOfBuilding(section);
+                decimal acceptWork = GetAmountAcceptedWorksFromSectionOfBuilding(section);
+                decimal rejectWork = GetAmountRejectedWorksFromSectionOfBuilding(section);
                 dgvSectionsOfBuilding.Rows.Add(section.Id, section.Name,
-                    section.QuantityByHeight, section.QuantityByWidth, sectionSquare);
+                    section.QuantityByHeight, section.QuantityByWidth,
+                    GetStringFromDecimalValue(square), GetStringFromDecimalValue(work),
+                    GetStringFromDecimalValue(completeWork), GetStringFromDecimalValue(acceptWork),
+                    GetStringFromDecimalValue(rejectWork));
+            }
+        }
+
+        private void ShowWorksInProject(int idProject, SectionOfBuilding sectionOfBuilding, 
+            DataGridView dgvWorksInProject, int height)
+        {
+            var worksInProject = ReadAllWorksInProject(idProject);
+            ClearAndSetHeightDgv(dgvWorksInProject, height, worksInProject.Length);
+            foreach (WorkInProject work in worksInProject)
+            {
+                var typeOfWork = ReadTypeOfWork(work.IdTypeOfWork);
+                decimal valueWork = GetValueWorkBySectionOfBuilding(work, sectionOfBuilding);
+                string valueWorkStr = valueWork == -1 ? "нет" : valueWork.ToString();
+                string workCost = valueWork == -1 ?
+                    "нет" : (valueWork * (decimal)work.Price).ToString();
+                valueWork = GetValueCompletedWorkBySectionOfBuilding(work, sectionOfBuilding);
+                string completWork = valueWork == -1 ? "нет" : valueWork.ToString();
+                string completWorkCost = valueWork == -1 ?
+                    "нет" : (valueWork * (decimal)work.Price).ToString();
+                valueWork = GetValueAcceptedWorkBySectionOfBuilding(work, sectionOfBuilding);
+                string acceptWork = valueWork == -1 ? "нет" : valueWork.ToString();
+                string acceptWorkCost = valueWork == -1 ?
+                    "нет" : (valueWork * (decimal)work.Price).ToString();
+                valueWork = GetValueRejectedWorkBySectionOfBuilding(work, sectionOfBuilding);
+                string rejectWork = valueWork == -1 ? "нет" : valueWork.ToString();
+                string rejectWorkCost = valueWork == -1 ?
+                    "нет" : (valueWork * (decimal)work.Price).ToString();
+
+                dgvWorksInProject.Rows.Add(
+                        work.Id, typeOfWork.Name, typeOfWork.MeasureUnit, work.Price,
+                        work.Multiplicity, valueWorkStr, workCost, completWork, completWorkCost,
+                        acceptWork, acceptWorkCost, rejectWork, rejectWorkCost);
             }
         }
 
@@ -1677,11 +1747,6 @@ namespace Project
             }
         }
 
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        
     }
 }

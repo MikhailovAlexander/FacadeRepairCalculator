@@ -68,39 +68,7 @@ namespace Project
         private void ShowWorkerProjects()
         {
             var workerProjects = ReadProjectsByActualUser();
-            ClearAndSetHeightDgv(dgvWorkerProjects, 154, workerProjects.Length);
-            foreach(Project project in workerProjects)
-                dgvWorkerProjects.Rows.Add
-                    (project.Id, project.Name, project.Address,
-                    Project.ProjectStateDictionary[project.State],
-                    //Замена минимального значения даты на "Не установлена" 
-                    //для отображения пользователю
-                    (project.DateOfStart == new DateTime(1970, 01, 01)) ?
-                    "Не установлена" : project.DateOfStart.Date.ToString(),
-                    (project.DateOfComplete == new DateTime(1970, 01, 01)) ?
-                    "Не установлена" : project.DateOfComplete.Date.ToString(),
-                    (project.PlannedDateOfComplete == new DateTime(1970, 01, 01)) ?
-                   "Не установлена" : project.PlannedDateOfComplete.Date.ToString());
-        }
-
-        private void ShowWorkerTotalSquareByProject(Project project)
-        {
-            decimal totalSquare = GetTotalSquare(project);
-            string text = "";
-            if (totalSquare == -1) text = "Общая площадь проекта не определена";
-            else text = $"Общая площадь проекта {totalSquare.ToString()} кв.м.";
-            lblWorkerProjectTotalSquare.Text = text;
-        }
-
-        private void ShowWorkerTotalAmountByProject(Project project)
-        {
-            decimal totalAmount = GetTotalAmount(project);
-            string text = "";
-            if (totalAmount == -1)
-                text = "Общая стоимость работ проекта не определена";
-            else
-                text = $"Общая стоимость работ проекта {totalAmount.ToString()} руб.";
-            lblWorkerProjectWorksAmount.Text = text;
+            ShowProjectsInDgv(workerProjects, dgvWorkerProjects, gbWorkerProjects.Height);
         }
 
         private void DgvWorkerProjects_SelectionChanged(object sender, EventArgs e)
@@ -114,8 +82,6 @@ namespace Project
             {
                 var selectedProject = SelectedWorkerProject();
                 ShowWorkerSectionsOfBuilding(selectedProject);
-                ShowWorkerTotalSquareByProject(selectedProject);
-                ShowWorkerTotalAmountByProject(selectedProject);
                 ShowWorkerPayments();
             }
         }
@@ -157,21 +123,8 @@ namespace Project
                 dgvWorkerWorksInProject.Rows.Clear();
                 return;
             }
-            var worksInProject = ReadAllWorksInProject(sectionOfBuilding.IdProject);
-            ClearAndSetHeightDgv(dgvWorkerWorksInProject, 380, worksInProject.Length);
-            foreach (WorkInProject work in worksInProject)
-            {
-                var typeOfWork = ReadTypeOfWork(work.IdTypeOfWork);
-                decimal valueByWork = GetValueByWorkFromSectionOfBuilding(work, sectionOfBuilding);
-                if (valueByWork == -1)
-                    dgvWorkerWorksInProject.Rows.Add(
-                        work.Id, typeOfWork.Name, typeOfWork.MeasureUnit, work.Price,
-                        work.Multiplicity, "не определено", "не определено");
-                else dgvWorkerWorksInProject.Rows.Add(
-                        work.Id, typeOfWork.Name, typeOfWork.MeasureUnit, work.Price,
-                        work.Multiplicity, valueByWork,
-                        valueByWork * (decimal)work.Price);
-            }
+            ShowWorksInProject(sectionOfBuilding.IdProject, sectionOfBuilding, 
+                dgvWorkerWorksInProject, 380);
         }
 
         private void DgvWorkerWorksInProject_SelectionChanged(object sender, EventArgs e)
@@ -234,12 +187,14 @@ namespace Project
             if (SelectedWorkerProject().State != ProjectState.Actual) return;
             gbWorkerCompletePanel.Visible = true;
             dtpWorkerDateOfComplete.Value = DateTime.Now;
+            dgvWorkerWorksInProject.Width = 749;
         }
 
         //BtnSwitchCancel_Click
         private void BtnWorkerSwitchCompleteWorkCancel_Click(object sender, EventArgs e)
         {
             gbWorkerCompletePanel.Visible = false;
+            dgvWorkerWorksInProject.Width = 944;
         }
 
         //BtnCreate_Click

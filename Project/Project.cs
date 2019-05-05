@@ -27,6 +27,10 @@ namespace Project
         public string Address { get; set; }
         public int IdClient { get; set; }
         public ProjectState State { get; set; }
+        public string StateString
+        {
+            get { return ProjectStateDictionary[State]; }
+        }
         public DateTime DateOfStart { get; set; }
         DateTime dateOfComplete;
         public DateTime DateOfComplete

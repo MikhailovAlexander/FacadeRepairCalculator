@@ -22,8 +22,15 @@ namespace Project
             var conn = new NpgsqlConnection(connString);
             var driver = new PostgresDriver(conn);
             var hashPasswordCreator = new HashPasswordCreator();
-
-            Application.Run(new MainForm(driver, hashPasswordCreator));
+            try
+            {
+                Application.Run(new MainForm(driver, hashPasswordCreator));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
     }
 }

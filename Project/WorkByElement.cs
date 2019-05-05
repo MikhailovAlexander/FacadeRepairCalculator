@@ -125,6 +125,12 @@ namespace Project
             return driver.CheckDateOfAccept(dateOfAccept, id);
         }
 
+        public bool RejectCheck(DateTime dateOfReject, IDriverDB driver)
+        {
+            if (State != WorkState.Completed) return false;
+            return driver.CheckDateOfReject(dateOfReject, id);
+        }
+
         public WorkLog GetCompleteLog2Delete(int idActualUser, IDriverDB driver)
         {
             if (State != WorkState.Completed) return new WorkLog();
@@ -138,6 +144,14 @@ namespace Project
             if (State != WorkState.Accepted) return new WorkLog();
             WorkLog acceptLog2Delete = driver.GetAcceptLog(id);
             if (idActualUser == acceptLog2Delete.IdUser) return acceptLog2Delete;
+            return new WorkLog();
+        }
+
+        public WorkLog GetRejectLog2Delete(int idActualUser, IDriverDB driver)
+        {
+            if (State != WorkState.Rejected) return new WorkLog();
+            WorkLog rejectLog2Delete = driver.GetLastRejectLog(id);
+            if (idActualUser == rejectLog2Delete.IdUser) return rejectLog2Delete;
             return new WorkLog();
         }
 
@@ -164,20 +178,26 @@ namespace Project
             driver.DeleteWorkLogsComplete(completeWorkLogs);
         }
 
-        public static void DeleteWorkLogsAccept(List<WorkLog> acceptWorkLogs, IDriverDB driver)
-        {
-            driver.DeleteWorkLogsAccept(acceptWorkLogs);
-        }
-
         public static void CreateWorkLogsAccept(List<WorkByElement> workByElements, int idUser,
             DateTime dateOfAccept, IDriverDB driver)
         {
             driver.CreateWorkLogsAccept(workByElements, idUser, dateOfAccept);
         }
 
-        public void Reject(IDriverDB driver)
+        public static void DeleteWorkLogsAccept(List<WorkLog> acceptWorkLogs, IDriverDB driver)
         {
+            driver.DeleteWorkLogsAccept(acceptWorkLogs);
+        }
 
+        public static void CreateWorkLogsReject(List<WorkByElement> workByElements, int idUser,
+            DateTime dateOfReject, string comment, IDriverDB driver)
+        {
+            driver.CreateWorkLogsReject(workByElements, idUser, dateOfReject, comment);
+        }
+
+        public static void DeleteWorkLogsReject(List<WorkLog> rejectWorkLogs, IDriverDB driver)
+        {
+            driver.DeleteWorkLogsReject(rejectWorkLogs);
         }
     }
 }

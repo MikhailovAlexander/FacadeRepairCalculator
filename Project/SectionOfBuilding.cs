@@ -151,9 +151,42 @@ namespace Project
             return driver.GetValueByWorkFromSectionOfBuilding(workInProject, id);
         }
 
+        public decimal GetValueByCompletedWork(WorkInProject workInProject, IDriverDB driver)
+        {
+            return driver.GetValueByStateWorkFromSectionOfBuilding(workInProject, id, 
+                WorkState.Completed);
+        }
+
+        public decimal GetValueByAcceptedWork(WorkInProject workInProject, IDriverDB driver)
+        {
+            return driver.GetValueByStateWorkFromSectionOfBuilding(workInProject, id,
+                WorkState.Accepted);
+        }
+
+        public decimal GetValueByRejectedWork(WorkInProject workInProject, IDriverDB driver)
+        {
+            return driver.GetValueByStateWorkFromSectionOfBuilding(workInProject, id,
+                WorkState.Rejected);
+        }
+
         public decimal GetAmountByWorks(IDriverDB driver)
         {
             return driver.GetAmountByWorksFromSectionOfBuilding(this);
+        }
+
+        public decimal GetAmountByCompletedWork(IDriverDB driver)
+        {
+            return driver.GetAmountWorksByStateFromSectionOfBuilding(this, WorkState.Completed);
+        }
+
+        public decimal GetAmountByAcceptedWork(IDriverDB driver)
+        {
+            return driver.GetAmountWorksByStateFromSectionOfBuilding(this, WorkState.Accepted);
+        }
+
+        public decimal GetAmountByRejectedWork(IDriverDB driver)
+        {
+            return driver.GetAmountWorksByStateFromSectionOfBuilding(this, WorkState.Rejected);
         }
     }
 }

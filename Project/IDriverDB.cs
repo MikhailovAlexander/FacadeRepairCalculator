@@ -101,8 +101,12 @@ namespace Project
         decimal GetSquareOfSectionOfBuilding(int idSectionOfBuilding);
         decimal GetValueByWorkFromSectionOfBuilding(WorkInProject workInProject,
             int idSecionOfBuilding);
+        decimal GetValueByStateWorkFromSectionOfBuilding(WorkInProject workInProject,
+           int idSecionOfBuilding, WorkState state);
         decimal GetValueWorkByElement(WorkByElement workByElement);
         decimal GetAmountByWorksFromSectionOfBuilding(SectionOfBuilding sectionOfBuilding);
+        decimal GetAmountWorksByStateFromSectionOfBuilding(SectionOfBuilding sectionOfBuilding,
+            WorkState state);
 
         void CreateWorkByElement(WorkByElement workByElement);
         void CreateWorkByElements(List<WorkByElement> workByElements);
@@ -119,17 +123,22 @@ namespace Project
         void CreateWorkLogsComplete(List<WorkByElement> workByElements, int idUser, DateTime date);
         void CreateWorkLogsAccept(List<WorkByElement> workByElements, int idUser,
             DateTime dateOfAccept);
+        void CreateWorkLogsReject(List<WorkByElement> workByElements, int idUser,
+            DateTime dateOfReject, string comment);
         WorkLog ReadWorkLog(int idForSearch);
         void UpdateWorkLog(WorkLog workLog);
         void DeleteWorkLog(int idWorkLog);
         void DeleteWorkLogsComplete(List<WorkLog> completeWorkLogs);
         void DeleteWorkLogsAccept(List<WorkLog> acceptWorkLogs);
+        void DeleteWorkLogsReject(List<WorkLog> rejectWorkLogs);
         bool HasWorkLogs(int idWorkByElement);
         bool CheckDateOfComplete(DateTime dateOfComplete, int idWorkByElement);
         bool CheckDateOfAccept(DateTime dateOfAccept, int idWorkByElement);
+        bool CheckDateOfReject(DateTime dateOfReject, int idWorkByElement);
         WorkLog[] ReadWorkLogs(int idWorkByElement);
         WorkLog GetLastCompleteLog(int idWorkByElement);
         WorkLog GetAcceptLog(int idWorkByElement);
         int GetCountRejectWorkLogs(int idWorkByElement);
+        WorkLog GetLastRejectLog(int idWorkByElement);
     }
 }

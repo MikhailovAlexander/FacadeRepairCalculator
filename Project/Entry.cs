@@ -56,7 +56,6 @@ namespace Project
                 checkUser = driver.ReadUser(login);
                 if (checkUser.CheckPassword(inputPassword, hashPasswordCreator))
                 {
-                    MessageBox.Show(checkUser.Name, "Проверка пройдена", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     actualUser = checkUser;
                     this.Close(); 
                 }

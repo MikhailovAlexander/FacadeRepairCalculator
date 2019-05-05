@@ -53,29 +53,14 @@ namespace Project
             return elements;
         }
 
-        private decimal GetSquareOfSectionOfBuilding(SectionOfBuilding sectionOfBuilding)
-        {
-            decimal square = -1;
-            try
-            {
-                square = sectionOfBuilding.GetSquare(driver);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-            }
-            return square;
-        }
-
-       
-        private decimal GetAmountByWorksFromSectionOfBuilding(SectionOfBuilding sectionOfBuilding)
+        private decimal GetSomeAmountFromSectionOfBuilding(SectionOfBuilding sectionOfBuilding,
+            Func<IDriverDB, decimal> GetAmount)
         {
             decimal amount = -1;
             if (sectionOfBuilding.Id == -1) return amount;
             try
             {
-                amount = sectionOfBuilding.GetAmountByWorks(driver);
+                amount = GetAmount(driver);
             }
             catch (Exception ex)
             {
@@ -85,14 +70,45 @@ namespace Project
             return amount;
         }
 
-        private decimal GetValueByWorkFromSectionOfBuilding(WorkInProject workInProject, 
-            SectionOfBuilding sectionOfBuilding)
+        private decimal GetSquareOfSectionOfBuilding(SectionOfBuilding sectionOfBuilding)
+        {
+            return GetSomeAmountFromSectionOfBuilding(
+                sectionOfBuilding, sectionOfBuilding.GetSquare);
+        }
+
+        private decimal GetAmountByWorksFromSectionOfBuilding(SectionOfBuilding sectionOfBuilding)
+        {
+            return GetSomeAmountFromSectionOfBuilding(
+                sectionOfBuilding, sectionOfBuilding.GetAmountByWorks);
+        }
+
+        private decimal GetAmountCompletedWorksFromSectionOfBuilding(SectionOfBuilding sectionOfBuilding)
+        {
+            return GetSomeAmountFromSectionOfBuilding(
+                sectionOfBuilding, sectionOfBuilding.GetAmountByCompletedWork);
+        }
+
+        private decimal GetAmountAcceptedWorksFromSectionOfBuilding(SectionOfBuilding sectionOfBuilding)
+        {
+            return GetSomeAmountFromSectionOfBuilding(
+                sectionOfBuilding, sectionOfBuilding.GetAmountByAcceptedWork);
+        }
+
+        private decimal GetAmountRejectedWorksFromSectionOfBuilding(SectionOfBuilding sectionOfBuilding)
+        {
+            return GetSomeAmountFromSectionOfBuilding(
+                sectionOfBuilding, sectionOfBuilding.GetAmountByRejectedWork);
+        }
+
+        private decimal GetSomeValueWorkBySectionOfBuilding(
+            WorkInProject workInProject, SectionOfBuilding sectionOfBuilding, 
+            Func<WorkInProject, IDriverDB, decimal>GetValue)
         {
             decimal valueByWork = -1;
             if (sectionOfBuilding.Id == -1) return valueByWork;
             try
             {
-                valueByWork = sectionOfBuilding.GetValueByWork(workInProject, driver);
+                valueByWork = GetValue(workInProject, driver);
             }
             catch (Exception ex)
             {
@@ -100,6 +116,34 @@ namespace Project
                     MessageBoxIcon.Error);
             }
             return valueByWork;
+        }
+
+        private decimal GetValueWorkBySectionOfBuilding(WorkInProject workInProject, 
+            SectionOfBuilding sectionOfBuilding)
+        {
+            return GetSomeValueWorkBySectionOfBuilding(workInProject, sectionOfBuilding,
+                sectionOfBuilding.GetValueByWork);
+        }
+
+        private decimal GetValueCompletedWorkBySectionOfBuilding(WorkInProject workInProject,
+            SectionOfBuilding sectionOfBuilding)
+        {
+            return GetSomeValueWorkBySectionOfBuilding(workInProject, sectionOfBuilding,
+                sectionOfBuilding.GetValueByCompletedWork);
+        }
+
+        private decimal GetValueAcceptedWorkBySectionOfBuilding(WorkInProject workInProject,
+            SectionOfBuilding sectionOfBuilding)
+        {
+            return GetSomeValueWorkBySectionOfBuilding(workInProject, sectionOfBuilding,
+                sectionOfBuilding.GetValueByAcceptedWork);
+        }
+
+        private decimal GetValueRejectedWorkBySectionOfBuilding(WorkInProject workInProject,
+            SectionOfBuilding sectionOfBuilding)
+        {
+            return GetSomeValueWorkBySectionOfBuilding(workInProject, sectionOfBuilding,
+                sectionOfBuilding.GetValueByRejectedWork);
         }
 
         private Element ReadElement(int idForSearch)
@@ -214,22 +258,9 @@ namespace Project
                 dgvSectionOfBuildingWorkInProject.Rows.Clear();
                 return;
             }
-            var worksInProject = ReadAllWorksInProject(actualProject.Id);
-            ClearAndSetHeightDgv(dgvSectionOfBuildingWorkInProject, 
-                gbTypeOfElementInProjectBySectionOfBuilding, worksInProject.Length);
-            foreach (WorkInProject work in worksInProject)
-            {
-                var typeOfWork = ReadTypeOfWork(work.IdTypeOfWork);
-                decimal valueByWork = GetValueByWorkFromSectionOfBuilding(work, sectionOfBuilding);
-                if(valueByWork == -1)
-                    dgvSectionOfBuildingWorkInProject.Rows.Add(
-                        work.Id, typeOfWork.Name, typeOfWork.MeasureUnit, work.Price, 
-                        work.Multiplicity, "не определено", "не определено");
-                else dgvSectionOfBuildingWorkInProject.Rows.Add(
-                        work.Id, typeOfWork.Name, typeOfWork.MeasureUnit, work.Price,
-                        work.Multiplicity, valueByWork, 
-                        valueByWork*(decimal)work.Price);
-            }
+            ShowWorksInProject(
+                actualProject.Id, sectionOfBuilding, dgvSectionOfBuildingWorkInProject, 
+                gbTypeOfElementInProjectBySectionOfBuilding.Size.Height);
             ShowAmountBySectionOfBuilding(sectionOfBuilding);
         }
 
@@ -637,15 +668,36 @@ namespace Project
 
         private void BtnSectionOfBuildingChangeMultiplicity_Click(object sender, EventArgs e)
         {
-            if (dgvManagerModel.SelectedCells.Count != 1) return;
+            if (dgvManagerModel.SelectedCells.Count != 1 ||
+                dgvSectionOfBuildingWorkInProject.SelectedRows.Count == 0) return;
             int idElement = (int)dgvManagerModel.SelectedCells[0].Tag;
             int idWorkInProject = SelectedWorkInProjectInSectionOfBuilding().Id;
             if (!ElementHasWork(idElement, idWorkInProject)) return;
-            //TODO
-           //
-           //
+            var inputBox = new InputBox("Коэффициент работ для элемента",
+                "Введите размер коэффициента", "Введите число с двумя знаками после запятой", 
+                Color.DimGray, BaseWithName.DecimalIsMatch);
+            inputBox.ShowDialog();
+            if (inputBox.DialogResult == DialogResult.Cancel) return;
+            var workByElement = GetWorkByElement(idElement, idWorkInProject);
+            if(workByElement.Id == -1)
+            {
+                MessageBox.Show($"Элемент не найден",
+                    "Изменение коэффициента", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            try
+            {
+                decimal multiplicity = Convert.ToDecimal(inputBox.Input);
+                workByElement.Multiplicity = multiplicity;
+                workByElement.Update(driver);
+                ShowActualProject();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
-
 
         private void DgvSectionOfBuildingWorkInProject_SelectionChanged(object sender, EventArgs e)
         {
@@ -739,6 +791,94 @@ namespace Project
                     MessageBoxIcon.Error);
             }
         }
+
+        private void BtnSectionOfBuildingRejectWork_Click(object sender, EventArgs e)
+        {
+            DateTime dateOfReject = dtpManagerModelLogDate.Value;
+            int idWorkInProject = SelectedWorkInProjectInSectionOfBuilding().Id;
+            var selectedCells = dgvManagerModel.SelectedCells;
+            List<WorkByElement> workByElements = new List<WorkByElement>();
+            foreach (DataGridViewCell cell in selectedCells)
+            {
+                int idElement = (int)cell.Tag;
+                if (ElementHasWork(idElement, idWorkInProject))
+                {
+                    var workByElement = GetWorkByElement(idElement, idWorkInProject);
+                    if (workByElement.RejectCheck(dateOfReject, driver))
+                        workByElements.Add(workByElement);
+                }
+            }
+            if (workByElements.Count == 0)
+            {
+                MessageBox.Show($"Нет элементов для отклонения работ",
+                    "Отклонение работ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            var inputBox = new InputBox("Комментарий к отклонению работ", 
+                "Введите текст комментария", "от 3 до 100 символов кириллицей", Color.Red, 
+                BaseWithName.NameIsMatch);
+            inputBox.ShowDialog();
+            if (inputBox.DialogResult == DialogResult.Cancel) return;
+            string comment = "";
+            try
+            {
+                comment = inputBox.Input;
+                WorkByElement.CreateWorkLogsReject(workByElements, actualUser.Id, dateOfReject,
+                    comment, driver);
+                managerModel.ShowWorkInModel(SelectedWorkInProjectInSectionOfBuilding());
+                ShowWorksInProjectInSectionOfBuilding();
+                ShowTotalAmountCompletedWorkByActualProject();
+                ShowTotalAmountRejectedWorkByActualProject();
+                MessageBox.Show($"Работа отклонена для {workByElements.Count} элементов",
+                        "Отклонение работ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnSectionOfBuildingRejectWorkCancel_Click(object sender, EventArgs e)
+        {
+            int idWorkInProject = SelectedWorkInProjectInSectionOfBuilding().Id;
+            var selectedCells = dgvManagerModel.SelectedCells;
+            List<WorkLog> rejectWorkLogs = new List<WorkLog>();
+            try
+            {
+                foreach (DataGridViewCell cell in selectedCells)
+                {
+                    int idElement = (int)cell.Tag;
+                    if (ElementHasWork(idElement, idWorkInProject))
+                    {
+                        var workByElement = GetWorkByElement(idElement, idWorkInProject);
+                        WorkLog workLog =
+                            workByElement.GetRejectLog2Delete(actualUser.Id, driver);
+                        if (workLog.Id != -1)
+                            rejectWorkLogs.Add(workLog);
+                    }
+                }
+                if (rejectWorkLogs.Count == 0)
+                {
+                    MessageBox.Show($"Нет элементов для отмены отклонения",
+                       "Отмена отклонения", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                WorkByElement.DeleteWorkLogsReject(rejectWorkLogs, driver);
+                managerModel.ShowWorkInModel(SelectedWorkInProjectInSectionOfBuilding());
+                ShowWorksInProjectInSectionOfBuilding();
+                ShowTotalAmountCompletedWorkByActualProject();
+                ShowTotalAmountRejectedWorkByActualProject();
+                MessageBox.Show($"Отменa отклонения работы для {rejectWorkLogs.Count} элементов",
+                        "Отмена отклонения", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+        
     }
 
 }
