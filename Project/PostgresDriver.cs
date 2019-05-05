@@ -593,12 +593,7 @@ namespace Project
 
         private decimal GetProjectAmountWorkByState(WorkInProject workInProject, WorkState state)
         {
-            string valueParam = "";
-            var typeOfWork = ReadTypeOfWork(workInProject.IdTypeOfWork);
-            if (typeOfWork.Dim == Dimension.Piece) valueParam = "1";
-            else if (typeOfWork.Dim == Dimension.Length) valueParam = "length";
-            else if (typeOfWork.Dim == Dimension.Square) valueParam = "square";
-            else if (typeOfWork.Dim == Dimension.Height) valueParam = "height";
+            string valueParam = GetDimensionStringByWorkInProject(workInProject.IdTypeOfWork);
             string query =
                 $"SELECT SUM({valueParam} * {WorkInProject.nameTableInDB}.multiplicity * " +
                 $"{WorkByElement.nameTableInDB}.multiplicity * " +
@@ -622,6 +617,50 @@ namespace Project
             cmd.Prepare();
             cmd.Parameters[0].Value = workInProject.Id;
             cmd.Parameters[1].Value = (int)state;
+            object result = cmd.ExecuteScalar();
+            if (result != null && !DBNull.Value.Equals(result))
+                return Convert.ToDecimal(result);
+            else return 0;
+        }
+
+        private decimal GetProjectAmountWorkByStateAndUser(WorkInProject workInProject, 
+            WorkState state, int idUser)
+        {
+            string valueParam = GetDimensionStringByWorkInProject(workInProject.IdTypeOfWork);
+            string query =
+                $"SELECT SUM({valueParam} * {WorkInProject.nameTableInDB}.multiplicity * " +
+                $"{WorkByElement.nameTableInDB}.multiplicity * " +
+                $"{WorkInProject.nameTableInDB}.price) FROM " +
+
+                $"{TypeOfElement.nameTableInDB}, {Element.nameTableInDB}, " +
+                $"{WorkByElement.nameTableInDB}, {WorkInProject.nameTableInDB}, " +
+                $"{WorkLog.nameTableInDB} WHERE " +
+
+                $"{WorkByElement.nameTableInDB}.id_work_in_project = " +
+                $"{WorkInProject.nameTableInDB}.id AND " +
+                $"{WorkInProject.nameTableInDB}.id = @id_work_in_project AND " +
+                $"{WorkByElement.nameTableInDB}.id_work_state = @id_work_state AND " +
+                $"{WorkByElement.nameTableInDB}.id_element = {Element.nameTableInDB}.id AND " +
+                $"{TypeOfElement.nameTableInDB}.id = " +
+                $"{Element.nameTableInDB}.id_type_of_element AND " +
+
+                $"{WorkLog.nameTableInDB}.id_work_by_element = {WorkByElement.nameTableInDB}.id AND " +
+                $"{WorkLog.nameTableInDB}.id_type_of_log = 0 AND " +
+                $"{WorkLog.nameTableInDB}.id_user = @id_user AND " +
+                $"{WorkLog.nameTableInDB}.log_date = (SELECT MAX(log_date) FROM " +
+                $"{WorkLog.nameTableInDB} WHERE id_type_of_log = 0 AND " +
+                $"{WorkLog.nameTableInDB}.id_work_by_element = {WorkByElement.nameTableInDB}.id);";
+            var cmd = new NpgsqlCommand(query, Conn);
+            cmd.Parameters.Add(
+               new NpgsqlParameter("@id_work_in_project", NpgsqlTypes.NpgsqlDbType.Integer));
+            cmd.Parameters.Add(
+                new NpgsqlParameter("@id_work_state", NpgsqlTypes.NpgsqlDbType.Integer));
+            cmd.Parameters.Add(
+                new NpgsqlParameter("@id_user", NpgsqlTypes.NpgsqlDbType.Integer));
+            cmd.Prepare();
+            cmd.Parameters[0].Value = workInProject.Id;
+            cmd.Parameters[1].Value = (int)state;
+            cmd.Parameters[2].Value = idUser;
             object result = cmd.ExecuteScalar();
             if (result != null && !DBNull.Value.Equals(result))
                 return Convert.ToDecimal(result);
@@ -683,10 +722,36 @@ namespace Project
                 {
                     amount += GetAmount(work, state);
                 }
-                catch(Exception ex)
+                catch
                 {
                     return -1;
                 }
+            }
+            return amount;
+        }
+
+        private decimal GetSomeAmountByProjectAndUser(int idProject, WorkState state, int idUser,
+            Func<WorkInProject, WorkState, int, decimal> GetAmount)
+        {
+            var worksInProject = new WorkInProject[0];
+            try
+            {
+                worksInProject = ReadWorksByProject(idProject);
+            }
+            catch { return -1; }
+            if (worksInProject.Length == 0) return 0;
+            decimal amount = 0;
+            foreach (WorkInProject work in worksInProject)
+            {
+                amount += GetAmount(work, state, idUser);
+                //try
+                //{
+                //    amount += GetAmount(work, state, idUser);
+                //}
+                //catch
+                //{
+                //    return -1;
+                //}
             }
             return amount;
         }
@@ -709,6 +774,21 @@ namespace Project
         public decimal GetAmountRejectedWorkByProject(int idProject)
         {
             return GetSomeAmountByProject(idProject, WorkState.Rejected, GetProjectAmountWorkByState);
+        }
+
+        public decimal GetAmountCompletedWorkByProjectAndUser(int idProject, int idUser)
+        {
+            return GetSomeAmountByProjectAndUser(idProject, WorkState.Completed, idUser, GetProjectAmountWorkByStateAndUser);
+        }
+
+        public decimal GetAmountAcceptedWorkByProjectAndUser(int idProject, int idUser)
+        {
+            return GetSomeAmountByProjectAndUser(idProject, WorkState.Accepted, idUser, GetProjectAmountWorkByStateAndUser);
+        }
+
+        public decimal GetAmountRejectedWorkByProjectAndUser(int idProject, int idUser)
+        {
+            return GetSomeAmountByProjectAndUser(idProject, WorkState.Rejected, idUser, GetProjectAmountWorkByStateAndUser);
         }
 
         public void CreateTypeOfWork(TypeOfWork typeOfWork)

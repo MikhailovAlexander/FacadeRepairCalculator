@@ -227,8 +227,6 @@ namespace Project
                 workerModel.ShowModel(SelectedWorkerSectionOfBuilding());
                 workerModel.ShowWorkInModel(SelectedWorkerWorkInProject());
                 ShowWorkerWorksInProject();
-                ShowTotalAmountCompletedWorkByActualProject();
-                ShowTotalAmountRejectedWorkByActualProject();
                 MessageBox.Show($"Выполнение работы для {workByElements.Count} элементов",
                         "Выполнение работы", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -268,8 +266,6 @@ namespace Project
                 workerModel.ShowModel(SelectedWorkerSectionOfBuilding());
                 workerModel.ShowWorkInModel(SelectedWorkerWorkInProject());
                 ShowWorkerWorksInProject();
-                ShowTotalAmountCompletedWorkByActualProject();
-                ShowTotalAmountRejectedWorkByActualProject();
                 MessageBox.Show($"Отменв выполнения работы для {completeWorkLogs.Count} элементов",
                         "Отмена выполнения", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

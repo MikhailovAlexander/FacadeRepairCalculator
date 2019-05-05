@@ -42,6 +42,9 @@ namespace Project
         decimal GetAmountCompletedWorkByProject(int idProject);
         decimal GetAmountAcceptedWorkByProject(int idProject);
         decimal GetAmountRejectedWorkByProject(int idProject);
+        decimal GetAmountCompletedWorkByProjectAndUser(int idProject, int idUser);
+        decimal GetAmountAcceptedWorkByProjectAndUser(int idProject, int idUser);
+        decimal GetAmountRejectedWorkByProjectAndUser(int idProject, int idUser);
 
         void CreateTypeOfWork(TypeOfWork typeOfWork);
         TypeOfWork ReadTypeOfWork(int idForSearch);

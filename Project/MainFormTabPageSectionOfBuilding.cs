@@ -203,12 +203,16 @@ namespace Project
         //Rb_CheckedChanged
 
         //ShowEntities
+        private void ShowActualProjectInSectionOfBuilding()
+        {
+            Project[] projects = { actualProject};
+            ShowProjectsInDgv(projects, dgvSectionOfBuildingActualProject, 50);
+        }
+
         private void ShowSectionsOfBuildingInActualPriject()
         {
             ShowSectionsOfBuilding(actualProject, lblSectionOfBuldingActualProjectNotSaved1,
             dgvSectionsOfBuildingByActualProject, gbAllSectionsOfBuilding);
-            ShowTotalSquareByActualProject();
-            ShowTotalAmountByActualProject();
         }
 
         private void DgvSectionsOfBuildingByActualProject_SelectionChanged(object sender, EventArgs e)
@@ -454,6 +458,7 @@ namespace Project
                 try
                 {
                     sectionOfBuilding.CreateWithElements(driver);
+                    ShowActualProject();
                     ShowSectionsOfBuildingInActualPriject();
                     ShowVoidSectionOfBuilding();
                     managerModel.ShowModel(SelectedSectionOfBuilding());
@@ -502,6 +507,7 @@ namespace Project
                 try
                 {
                     sectionOfBuilding.Update(driver);
+                    ShowActualProject();
                     ShowSectionsOfBuildingInActualPriject();
                     ShowSelectedSectionOfBuilding();
                     managerModel.ShowModel(SelectedSectionOfBuilding());
@@ -541,6 +547,7 @@ namespace Project
                     MessageBox.Show($"Модель фасада {selectedSectionOfBuilding.Name} удалена", 
                         "Удаление оплаты", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ShowSectionsOfBuildingInActualPriject();
+                    ShowActualProject();
                 }
                 catch (Exception ex)
                 {
@@ -572,7 +579,7 @@ namespace Project
                 ShowSelectedSectionOfBuilding();
                 gbAllSectionsOfBuilding.Enabled = true;
                 btnSectionOfBuildingSwitchSetWork.Visible = true;
-                ShowTotalSquareByActualProject();
+                ShowActualProject();
             }
             catch (Exception ex)
             {
@@ -627,7 +634,7 @@ namespace Project
                 WorkByElement.CreateWorkByElements(workByElements, driver);
                 managerModel.ShowWorkInModel(SelectedWorkInProjectInSectionOfBuilding());
                 ShowWorksInProjectInSectionOfBuilding();
-                ShowTotalAmountByActualProject();
+                ShowActualProject();
                 MessageBox.Show($"Работа назначена для {workByElements.Count} элементов",
                         "Назначение работы", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -654,7 +661,7 @@ namespace Project
                 WorkByElement.DeleteWorkByElements(workByElements2Delete, driver);
                 managerModel.ShowWorkInModel(SelectedWorkInProjectInSectionOfBuilding());
                 ShowWorksInProjectInSectionOfBuilding();
-                ShowTotalAmountByActualProject();
+                ShowActualProject();
                 MessageBox.Show(
                     $"Назначение работы отменено для {workByElements2Delete.Count} элементов",
                     "Назначение работы", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -740,8 +747,7 @@ namespace Project
                     driver);
                 managerModel.ShowWorkInModel(SelectedWorkInProjectInSectionOfBuilding());
                 ShowWorksInProjectInSectionOfBuilding();
-                ShowTotalAmountCompletedWorkByActualProject();
-                ShowTotalAmountAcceptedWorkByActualProject();
+                ShowActualProject();
                 MessageBox.Show($"Работа принята для {workByElements.Count} элементов",
                         "Приемка работ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -779,9 +785,8 @@ namespace Project
                 }
                 WorkByElement.DeleteWorkLogsAccept(acceptWorkLogs, driver);
                 managerModel.ShowWorkInModel(SelectedWorkInProjectInSectionOfBuilding());
+                ShowActualProject();
                 ShowWorksInProjectInSectionOfBuilding();
-                ShowTotalAmountCompletedWorkByActualProject();
-                ShowTotalAmountAcceptedWorkByActualProject();
                 MessageBox.Show($"Отменa приемки работы для {acceptWorkLogs.Count} элементов",
                         "Отмена приемки", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -826,9 +831,8 @@ namespace Project
                 WorkByElement.CreateWorkLogsReject(workByElements, actualUser.Id, dateOfReject,
                     comment, driver);
                 managerModel.ShowWorkInModel(SelectedWorkInProjectInSectionOfBuilding());
+                ShowActualProject();
                 ShowWorksInProjectInSectionOfBuilding();
-                ShowTotalAmountCompletedWorkByActualProject();
-                ShowTotalAmountRejectedWorkByActualProject();
                 MessageBox.Show($"Работа отклонена для {workByElements.Count} элементов",
                         "Отклонение работ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -866,9 +870,8 @@ namespace Project
                 }
                 WorkByElement.DeleteWorkLogsReject(rejectWorkLogs, driver);
                 managerModel.ShowWorkInModel(SelectedWorkInProjectInSectionOfBuilding());
+                ShowActualProject();
                 ShowWorksInProjectInSectionOfBuilding();
-                ShowTotalAmountCompletedWorkByActualProject();
-                ShowTotalAmountRejectedWorkByActualProject();
                 MessageBox.Show($"Отменa отклонения работы для {rejectWorkLogs.Count} элементов",
                         "Отмена отклонения", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

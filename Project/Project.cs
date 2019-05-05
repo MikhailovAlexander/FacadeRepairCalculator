@@ -154,6 +154,21 @@ namespace Project
             driver.DeleteProject(this.Id);
         }
 
+        public void Start (IDriverDB driver)
+        {
+
+        }
+
+        public void Complete(IDriverDB driver)
+        {
+
+        }
+
+        public void Cancel(IDriverDB driver)
+        {
+
+        }
+
         public void AddUser(IDriverDB driver, int idUser)
         {
             driver.AddUserToProject(idUser, this.Id);
@@ -217,6 +232,21 @@ namespace Project
         public decimal GetTotalAmountRejectedWork(IDriverDB driver)
         {
             return driver.GetAmountRejectedWorkByProject(id);
+        }
+
+        public decimal GetAmountCompletedWorkByUser(int idUser, IDriverDB driver)
+        {
+            return driver.GetAmountCompletedWorkByProjectAndUser(id, idUser);
+        }
+
+        public decimal GetAmountAcceptedWorkByUser(int idUser, IDriverDB driver)
+        {
+            return driver.GetAmountAcceptedWorkByProjectAndUser(id, idUser);
+        }
+
+        public decimal GetAmountRejectedWorkByUser(int idUser, IDriverDB driver)
+        {
+            return driver.GetAmountRejectedWorkByProjectAndUser(id, idUser);
         }
     }
 }

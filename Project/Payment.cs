@@ -9,8 +9,6 @@ namespace Project
 {
     public class Payment:Base
     {
-        public static readonly Regex amountRegex = new Regex(@"^\d{1,6}(,\d{2})?$");
-
         public const string nameTableInDB = "payment";
 
         private double amount;

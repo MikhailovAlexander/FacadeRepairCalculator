@@ -82,8 +82,9 @@ namespace Project
         void ShowClientList()
         {
             var allClients = ReadAllClients();
-            ClearAndSetHeightDgv(dgvProjectClients, 250, allClients.Length);
+            ClearAndSetHeightDgv(dgvProjectClients, 159, allClients.Length);
             dgvProjectClients.Visible = true;
+            dgvProjectClients.Location = new Point(142, 12);
             foreach (Client client in allClients)
             {
                 dgvProjectClients.Rows.Add(client.ToString());
@@ -108,87 +109,9 @@ namespace Project
         void ShowProjects()
         {
             var allProjects = ReadAllProjects();
-            ClearAndSetHeightDgv(dgvAllProjects, gbAllProjects, allProjects.Length);
-            foreach (Project project in allProjects)
-            {
-                dgvAllProjects.Rows.Add
-                    (project.Id, project.Name, project.Address,
-                    ReadObject<Client>(project.IdClient, driver.ReadClient).ToString(),
-                    Project.ProjectStateDictionary[project.State],
-                    //Замена минимального значения даты на "Не установлена" 
-                    //для отображения пользователю
-                    (project.DateOfStart == new DateTime(1970, 01, 01)) ?
-                    "Не установлена" : project.DateOfStart.Date.ToString(),
-                    (project.DateOfComplete == new DateTime(1970, 01, 01)) ?
-                    "Не установлена" : project.DateOfComplete.Date.ToString(),
-                    (project.PlannedDateOfComplete == new DateTime(1970, 01, 01)) ?
-                   "Не установлена" : project.PlannedDateOfComplete.Date.ToString());
-            }
+            ShowProjectsInDgv(allProjects, dgvAllProjects, 715);
         }
-
-        private void ShowTotalSquareByActualProject()
-        {
-            decimal totalSquare = GetTotalSquare(actualProject);
-            string text = "";
-            if (totalSquare == -1) text = "Общая площадь проекта не определена";
-            else text = $"Общая площадь проекта {totalSquare.ToString()} кв.м.";
-            lblSectionOfBuildingActualProjectTotalSquare.Text = text;
-            lblProjectTotalSquare.Text = text;
-        }
-
-        private void ShowTotalAmountByActualProject()
-        {
-            decimal totalAmount = GetTotalAmount(actualProject);
-            string text = "";
-            if (totalAmount == -1)
-                text = "Общая стоимость работ проекта не определена";
-            else
-                text = $"Общая стоимость работ проекта {totalAmount.ToString()} руб.";
-            lblSectionOfBuildingActualProjectWorksAmount.Text = text;
-            lblProjectWorksAmount.Text = text;
-        }
-
-        private void ShowAmountPaymentsByActualProject()
-        {
-            decimal amount = GetAmountPayments(actualProject);
-            string text = "";
-            if (amount == -1)
-                text = "Сумма выплат по проекту не определена";
-            else
-                text = $"Сумма выплат по проекту {amount.ToString()} руб.";
-            lbllProjectAmountPayments.Text = text;
-        }
-
-        private void ShowTotalAmountCompletedWorkByActualProject()
-        {
-            decimal totalAmount = GetTotalAmountCompletedWork(actualProject);
-            string text = "";
-            text = totalAmount == -1? "Общая стоимость выполненных работ не определена":
-                $"Общая стоимость выполненных работ {totalAmount.ToString()} руб.";
-            lblProjectCompletedWork.Text = text;
-            //lblProjectWorksAmount.Text = text;
-        }
-
-        private void ShowTotalAmountAcceptedWorkByActualProject()
-        {
-            decimal totalAmount = GetTotalAmountAcceptedWork(actualProject);
-            string text = "";
-            text = totalAmount == -1 ? "Общая стоимость принятых работ не определена" :
-                $"Общая стоимость принятых работ {totalAmount.ToString()} руб.";
-            lblProjectAcceptedWork.Text = text;
-            //lblProjectWorksAmount.Text = text;
-        }
-
-        private void ShowTotalAmountRejectedWorkByActualProject()
-        {
-            decimal totalAmount = GetTotalAmountRejectedWork(actualProject);
-            string text = "";
-            text = totalAmount == -1 ? "Общая стоимость отклоненных работ не определена" :
-                $"Общая стоимость отклоненных работ {totalAmount.ToString()} руб.";
-            lblProjectRejectedWork.Text = text;
-            //lblProjectWorksAmount.Text = text;
-        }
-
+        
         //ShowVoidEntity 
         void ShowVoidProject()
         {
@@ -196,7 +119,6 @@ namespace Project
             tbProjectName.Clear();
             tbProjectAddress.Clear();
             tbProjectClient.Clear();
-            //
             dtpProjectDateOfStart.Value = new DateTime(1970, 1, 1);
             dtpProjectPlannedDateOfComplete.Value = new DateTime(1970, 1, 1);
             pbCheckMarkProjectName.Visible = false;
@@ -307,9 +229,9 @@ namespace Project
             gbAllProjects.Enabled = true;
             gbProjectDataStart.Enabled = false;
             ShowVoidProject();
-            btnProjectUpdate.Visible = false;
-            btnProjectSwitchCancel.Visible = false;
-            btnProjectCreate.Visible = false;
+            btnProjectUpdate.Enabled = false;
+            btnProjectSwitchCancel.Enabled = false;
+            btnProjectCreate.Enabled = false;
             BtnProjectClientSelectCancel_Click(sender, e);
         }
 
@@ -319,9 +241,9 @@ namespace Project
             gbProjectData.Enabled = true;
             gbProjectDataName.Enabled = true;
             gbAllProjects.Enabled = false;
-            btnProjectCreate.Visible = true;
-            btnProjectUpdate.Visible = false;
-            btnProjectSwitchCancel.Visible = true;
+            btnProjectCreate.Enabled = true;
+            btnProjectUpdate.Enabled = false;
+            btnProjectSwitchCancel.Enabled = true;
             ShowVoidProject();
             dtpProjectDateOfStart.Value = DateTime.Now;
             dtpProjectPlannedDateOfComplete.Value = DateTime.Now;
@@ -334,7 +256,6 @@ namespace Project
             btnProjectClientSelect.Visible = true;
             btnProjectClientSelectCancel.Visible = true;
             ShowClientList();
-            gbProjectDataName.Height = 381;
         }
         //TODO Refact
         private void BtnProjectClientSelect_Click(object sender, EventArgs e)
@@ -378,8 +299,8 @@ namespace Project
                     ShowActualProject();
                     gbProjectData.Enabled = false;
                     gbAllProjects.Enabled = true;
-                    btnProjectCreate.Visible = false;
-                    btnProjectSwitchCancel.Visible = false;
+                    btnProjectCreate.Enabled = false;
+                    btnProjectSwitchCancel.Enabled = false;
                     pbCheckMarkProjectName.Visible = false;
                     pbCheckMarkProjectAddress.Visible = false;
                     pbCheckMarkProjectClient.Visible = false;
@@ -402,8 +323,8 @@ namespace Project
             ShowSelectedProject();
             actualProject = SelectedProject();
             ShowActualProject();
-            btnProjectUpdate.Visible = true;
-            btnProjectSwitchCancel.Visible = true;
+            btnProjectUpdate.Enabled = true;
+            btnProjectSwitchCancel.Enabled = true;
             if (actualProject.State != ProjectState.Planned)
             {
                 gbProjectDataStart.Enabled = true;
@@ -452,8 +373,8 @@ namespace Project
                     gbProjectData.Enabled = false;
                     gbAllProjects.Enabled = true;
                     gbProjectDataStart.Enabled = false;
-                    btnProjectUpdate.Visible = false;
-                    btnProjectSwitchCancel.Visible = false;
+                    btnProjectUpdate.Enabled = false;
+                    btnProjectSwitchCancel.Enabled = false;
                     pbCheckMarkProjectName.Visible = false;
                     pbCheckMarkProjectAddress.Visible = false;
                     pbCheckMarkProjectClient.Visible = false;
@@ -510,6 +431,7 @@ namespace Project
 
         private void BtnProjectSwitchStart_Click(object sender, EventArgs e)
         {
+            //TODO refact
             if (SelectedProject().State != ProjectState.Planned)
             {
                 MessageBox.Show("Начать можно только планируемый проект",
@@ -524,8 +446,8 @@ namespace Project
             gbProjectData.Enabled = true;
             gbProjectDataName.Enabled = false;
             gbProjectDataStart.Enabled = true;
-            btnProjectSwitchCancel.Visible = true;
-            btnProjectUpdate.Visible = true;
+            btnProjectSwitchCancel.Enabled = true;
+            btnProjectUpdate.Enabled = true;
         }
     }
 }

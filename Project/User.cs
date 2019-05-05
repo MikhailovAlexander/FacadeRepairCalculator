@@ -123,5 +123,20 @@ namespace Project
         {
             return driver.ReadPaymentsByUserAndProject(id, idProject);
         }
+
+        public decimal GetAmountCompletedWorkByProject(int idProject, IDriverDB driver)
+        {
+            return driver.GetAmountCompletedWorkByProjectAndUser(idProject, id);
+        }
+
+        public decimal GetAmountAcceptedWorkByProject(int idProject, IDriverDB driver)
+        {
+            return driver.GetAmountAcceptedWorkByProjectAndUser(idProject, id);
+        }
+
+        public decimal GetAmountRejectedWorkByProject(int idProject, IDriverDB driver)
+        {
+            return driver.GetAmountRejectedWorkByProjectAndUser(idProject, id);
+        }
     }
 }
