@@ -45,6 +45,7 @@ namespace Project
         decimal GetAmountCompletedWorkByProjectAndUser(int idProject, int idUser);
         decimal GetAmountAcceptedWorkByProjectAndUser(int idProject, int idUser);
         decimal GetAmountRejectedWorkByProjectAndUser(int idProject, int idUser);
+        bool AllWorksByProjectAccepted(int idProject);
 
         void CreateTypeOfWork(TypeOfWork typeOfWork);
         TypeOfWork ReadTypeOfWork(int idForSearch);
@@ -65,8 +66,9 @@ namespace Project
         Payment[] ReadAllPayments();
         Payment[] ReadPaymentsByProject(int idProject);
         Payment[] ReadPaymentsByUser(int idProject);
-        Payment[] ReadPaymentsByUserAndProject(int idUser, int idProject);
-        decimal GetPaymentsAmountByUserAndProject(int idUser, int idProject);
+        Payment[] ReadPaymentsByUserAndProject(int idProject, int idUser);
+        decimal GetAmountPaymentsByUserAndProject(int idProject, int idUser);
+        DateTime GetPaymenstByProjectMaxDate(int idProject);
 
         void CreateTypeOfElement(TypeOfElement typeOfElement);
         TypeOfElement ReadTypeOfElement(int idForSearch);
@@ -130,8 +132,8 @@ namespace Project
         void CreateWorkLogsReject(List<WorkByElement> workByElements, int idUser,
             DateTime dateOfReject, string comment);
         WorkLog ReadWorkLog(int idForSearch);
-        void UpdateWorkLog(WorkLog workLog);
-        void DeleteWorkLog(int idWorkLog);
+        void UpdateWorkLogTypeIsImmutable(WorkLog workLog);
+        void DeleteWorkLog(WorkLog workLog);
         void DeleteWorkLogsComplete(List<WorkLog> completeWorkLogs);
         void DeleteWorkLogsAccept(List<WorkLog> acceptWorkLogs);
         void DeleteWorkLogsReject(List<WorkLog> rejectWorkLogs);
@@ -144,5 +146,6 @@ namespace Project
         WorkLog GetAcceptLog(int idWorkByElement);
         int GetCountRejectWorkLogs(int idWorkByElement);
         WorkLog GetLastRejectLog(int idWorkByElement);
+        DateTime GetWorkLogByProjectMaxDate(int idProject);
     }
 }

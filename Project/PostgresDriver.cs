@@ -143,7 +143,6 @@ namespace Project
         private T[] ReadObjectsByEntity<T>(string nameTable, string paramOut, string ParamIn, 
             int ParamInValue, Func<int, T> ReadObject)
         {
-            //string query = "SELECT id_user FROM user_in_project WHERE id_project=@id_project;";
             string query = $"SELECT {paramOut} FROM {nameTable} WHERE {ParamIn} = @{ParamIn};";
             var cmd = new NpgsqlCommand(query, Conn);
             cmd.Parameters.Add(new NpgsqlParameter($"@{ParamIn}", NpgsqlTypes.NpgsqlDbType.Integer));
@@ -508,7 +507,6 @@ namespace Project
                 $"WHERE {Project.nameTableInDB}.id = " +
                 $"{Project.nameTableInDBUserInProject}.id_project AND " +
                 $"{Project.nameTableInDBUserInProject}.id_user = @id_user;";
-            // select project.id from project, user_in_project where user_in_project.id_project = project.id and user_in_project.id_user = @id.user;
             var cmd = new NpgsqlCommand(query, Conn);
             cmd.Parameters.Add(new NpgsqlParameter($"@id_user", NpgsqlTypes.NpgsqlDbType.Integer));
             cmd.Prepare();
@@ -683,7 +681,7 @@ namespace Project
                 try
                 {
                     value = GetValueByWork(idProject, work);
-                    totalAmount += value * (decimal)work.Price;
+                    totalAmount += value * work.Price;
                 }
                 catch { return -1; }
             }
@@ -703,6 +701,21 @@ namespace Project
             decimal amount = -1;
             if (result != null && !DBNull.Value.Equals(result)) amount = Convert.ToDecimal(result);
             return amount;
+        }
+
+        public DateTime GetPaymenstByProjectMaxDate(int idProject)
+        {
+            string query = $"SELECT MAX(date_of_payment) FROM {Payment.nameTableInDB} WHERE " +
+                $"id_project = @id_project;";
+            var cmd = new NpgsqlCommand(query, Conn);
+            cmd.Parameters.Add(new NpgsqlParameter(
+                    "@id_project", NpgsqlTypes.NpgsqlDbType.Integer));
+            cmd.Prepare();
+            cmd.Parameters[0].Value = idProject;
+            object result = cmd.ExecuteScalar();
+            DateTime maxDate = new DateTime(1970,1,1);
+            if (result != null && !DBNull.Value.Equals(result)) maxDate = Convert.ToDateTime(result);
+            return maxDate;
         }
 
         private decimal GetSomeAmountByProject(int idProject, WorkState state, 
@@ -743,15 +756,14 @@ namespace Project
             decimal amount = 0;
             foreach (WorkInProject work in worksInProject)
             {
-                amount += GetAmount(work, state, idUser);
-                //try
-                //{
-                //    amount += GetAmount(work, state, idUser);
-                //}
-                //catch
-                //{
-                //    return -1;
-                //}
+                try
+                {
+                    amount += GetAmount(work, state, idUser);
+                }
+                catch
+                {
+                    return -1;
+                }
             }
             return amount;
         }
@@ -789,6 +801,29 @@ namespace Project
         public decimal GetAmountRejectedWorkByProjectAndUser(int idProject, int idUser)
         {
             return GetSomeAmountByProjectAndUser(idProject, WorkState.Rejected, idUser, GetProjectAmountWorkByStateAndUser);
+        }
+
+        public bool AllWorksByProjectAccepted(int idProject)
+        {
+            string query = $"SELECT COUNT({WorkByElement.nameTableInDB}.id) FROM " +
+                $"{WorkByElement.nameTableInDB}, " +
+                $"{Element.nameTableInDB}, {SectionOfBuilding.nameTableInDB} WHERE " +
+
+                $"{WorkByElement.nameTableInDB}.id_work_state != @id_work_state AND " +
+                $"{WorkByElement.nameTableInDB}.id_element = {Element.nameTableInDB}.Id AND " +
+                $"{Element.nameTableInDB}.id_section_of_building = {SectionOfBuilding.nameTableInDB}.id AND " +
+                $"{SectionOfBuilding.nameTableInDB}.id_project = @id_project;";
+            var cmd = new NpgsqlCommand(query, Conn);
+            cmd.Parameters.Add(
+                new NpgsqlParameter($"@id_project", NpgsqlTypes.NpgsqlDbType.Integer));
+            cmd.Parameters.Add(
+                new NpgsqlParameter($"@id_work_state", NpgsqlTypes.NpgsqlDbType.Integer));
+            cmd.Prepare();
+            cmd.Parameters[0].Value = idProject;
+            cmd.Parameters[1].Value = (int)WorkState.Accepted;
+            int result = Convert.ToInt32(cmd.ExecuteScalar());
+            if (result == 0) return true;
+            return false;
         }
 
         public void CreateTypeOfWork(TypeOfWork typeOfWork)
@@ -870,9 +905,9 @@ namespace Project
             cmd.Parameters.Add(
                 new NpgsqlParameter("@id_type_of_work", NpgsqlTypes.NpgsqlDbType.Integer));
             cmd.Parameters.Add(
-                new NpgsqlParameter("@price", NpgsqlTypes.NpgsqlDbType.Double));
+                new NpgsqlParameter("@price", NpgsqlTypes.NpgsqlDbType.Numeric));
             cmd.Parameters.Add(
-                new NpgsqlParameter("@multiplicity", NpgsqlTypes.NpgsqlDbType.Double));
+                new NpgsqlParameter("@multiplicity", NpgsqlTypes.NpgsqlDbType.Numeric));
             cmd.Prepare();
             cmd.Parameters[0].Value = workInProject.IdProject;
             cmd.Parameters[1].Value = workInProject.IdTypeOfWork;
@@ -890,8 +925,8 @@ namespace Project
                 int id = reader.GetInt32(0);
                 int idProject = reader.GetInt32(1);
                 int idTypeOfWork = reader.GetInt32(2);
-                double price = reader.GetDouble(3);
-                double multiplicity = reader.GetDouble(4);
+                decimal price = reader.GetDecimal(3);
+                decimal multiplicity = reader.GetDecimal(4);
                 reader.Close();
                 return new WorkInProject(id, idProject, idTypeOfWork, price, multiplicity);
             }
@@ -913,9 +948,9 @@ namespace Project
             cmd.Parameters.Add(
                 new NpgsqlParameter("@id_type_of_work", NpgsqlTypes.NpgsqlDbType.Integer));
             cmd.Parameters.Add(
-                new NpgsqlParameter("@price", NpgsqlTypes.NpgsqlDbType.Double));
+                new NpgsqlParameter("@price", NpgsqlTypes.NpgsqlDbType.Numeric));
             cmd.Parameters.Add(
-                new NpgsqlParameter("@multiplicity", NpgsqlTypes.NpgsqlDbType.Double));
+                new NpgsqlParameter("@multiplicity", NpgsqlTypes.NpgsqlDbType.Numeric));
             cmd.Parameters.Add(
                 new NpgsqlParameter("@id", NpgsqlTypes.NpgsqlDbType.Integer));
             cmd.Prepare();
@@ -1029,7 +1064,7 @@ namespace Project
             return ReadAllTObjects<Payment>(Payment.nameTableInDB, "id_user", idUser, ReadPayment);
         }
 
-        public Payment[] ReadPaymentsByUserAndProject(int idUser, int idProject)
+        public Payment[] ReadPaymentsByUserAndProject(int idProject, int idUser)
         {
             string query = $"SELECT {Payment.nameTableInDB}.id " +
                 $"FROM {Payment.nameTableInDB} WHERE id_user = @id_user AND " +
@@ -1055,7 +1090,7 @@ namespace Project
             return payments;
         }
 
-        public decimal GetPaymentsAmountByUserAndProject(int idUser, int idProject)
+        public decimal GetAmountPaymentsByUserAndProject(int idProject, int idUser)
         {
             string query = $"SELECT SUM(amount) FROM {Payment.nameTableInDB} WHERE " +
                 $"id_user = @id_user AND id_project = @id_project;";
@@ -1452,8 +1487,6 @@ namespace Project
             return ReadElementPicture(idPictureElement);
         }
 
-
-
         public int CreateSectionOfBuilding(SectionOfBuilding sectionOfBuilding)
         {
             string query =
@@ -1794,7 +1827,7 @@ namespace Project
                 {
                     value = GetValueByWorkFromSectionOfBuilding(work, sectionOfBuilding.Id);
                     if (value == -1) continue;
-                    amount += value * (decimal)work.Price;
+                    amount += value * work.Price;
                 }
                 catch { return -1; }
             }
@@ -2055,13 +2088,26 @@ namespace Project
             return false;
         }
 
+        private WorkState GetState2CreateWorkLog(TypeOfLog typeOfLog)
+        {
+            Dictionary<TypeOfLog, WorkState> stateDictionary = new Dictionary<TypeOfLog, WorkState>
+            {
+                { TypeOfLog.Complete, WorkState.Completed },
+                { TypeOfLog.Accept, WorkState.Accepted },
+                { TypeOfLog.Reject, WorkState.Rejected }
+            };
+        return stateDictionary[typeOfLog];
+        }
+
         public void CreateWorkLog(WorkLog workLog)
         {
+            NpgsqlTransaction transaction = Conn.BeginTransaction();
             string query =
                 $"INSERT INTO {WorkLog.nameTableInDB} " +
                 $"(id, id_work_by_element, id_user, id_type_of_log, log_date, log_comment) VALUES " +
                 $"(DEFAULT, @id_work_by_element, @id_user, @id_type_of_log, @log_date, @log_comment);";
             var cmd = new NpgsqlCommand(query, Conn);
+            cmd.Transaction = transaction;
             cmd.Parameters.Add(
                new NpgsqlParameter("@id_work_by_element", NpgsqlTypes.NpgsqlDbType.Integer));
             cmd.Parameters.Add(
@@ -2078,7 +2124,18 @@ namespace Project
             cmd.Parameters[2].Value = (int)workLog.TypeOfLog;
             cmd.Parameters[3].Value = workLog.Date.Date;
             cmd.Parameters[4].Value = workLog.Comment;
-            cmd.ExecuteNonQuery();
+            try
+            {
+                ChangeStateWorkByElementWithTransaction(workLog.IdWorkByElement, 
+                    GetState2CreateWorkLog(workLog.TypeOfLog), transaction);
+                cmd.ExecuteNonQuery();
+                transaction.Commit();
+            }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                throw new Exception($"Ошибка при проведении транзакции {ex.Message}");
+            }
         }
 
         private void CreateWorkLogWithTransaction(WorkLog workLog, NpgsqlTransaction transaction)
@@ -2198,19 +2255,17 @@ namespace Project
             }
         }
 
-        public void UpdateWorkLog(WorkLog workLog)
+        public void UpdateWorkLogTypeIsImmutable(WorkLog workLog)
         {
             string query =
                 $"UPDATE {WorkLog.nameTableInDB} SET " +
                 $"id_work_by_element = @id_work_by_element, id_user = @id_user, " +
-                $"id_type_of_log = @id_type_of_log, log_date = @log_date, log_comment = @log_comment WHERE id = @id;";
+                $"log_date = @log_date, log_comment = @log_comment WHERE id = @id;";
             var cmd = new NpgsqlCommand(query, Conn);
             cmd.Parameters.Add(
                new NpgsqlParameter("@id_work_by_element", NpgsqlTypes.NpgsqlDbType.Integer));
             cmd.Parameters.Add(
                 new NpgsqlParameter("@id_user", NpgsqlTypes.NpgsqlDbType.Integer));
-            cmd.Parameters.Add(
-               new NpgsqlParameter("@id_type_of_log", NpgsqlTypes.NpgsqlDbType.Integer));
             cmd.Parameters.Add(
                new NpgsqlParameter("@log_date", NpgsqlTypes.NpgsqlDbType.Date));
             cmd.Parameters.Add(
@@ -2220,16 +2275,35 @@ namespace Project
             cmd.Prepare();
             cmd.Parameters[0].Value = workLog.IdWorkByElement;
             cmd.Parameters[1].Value = workLog.IdUser;
-            cmd.Parameters[2].Value = (int)workLog.TypeOfLog;
-            cmd.Parameters[3].Value = workLog.Date.Date;
-            cmd.Parameters[4].Value = workLog.Comment;
-            cmd.Parameters[5].Value = workLog.Id;
+            cmd.Parameters[2].Value = workLog.Date.Date;
+            cmd.Parameters[3].Value = workLog.Comment;
+            cmd.Parameters[4].Value = workLog.Id;
             cmd.ExecuteNonQuery();
         }
-        
-        public void DeleteWorkLog(int idWorkLog)
+
+        private WorkState GetState2DeleteWorkLog(WorkLog workLog)
         {
-            DeleteFromTable(WorkLog.nameTableInDB, idWorkLog);
+            if (workLog.TypeOfLog == TypeOfLog.Complete)
+                return WorkByElement.GetRejectOrPlannedState (workLog.IdWorkByElement, this);
+            return WorkState.Completed;
+        }
+
+        public void DeleteWorkLog(WorkLog workLog)
+        {
+            NpgsqlTransaction transaction = Conn.BeginTransaction();
+
+            try
+            {
+                DeleteWorkLogWithTransaction(workLog.Id, transaction);
+                ChangeStateWorkByElementWithTransaction(workLog.IdWorkByElement,
+                    GetState2DeleteWorkLog(workLog), transaction);
+                transaction.Commit();
+            }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                throw new Exception($"Ошибка при проведении транзакции {ex.Message}");
+            }
         }
 
         public void DeleteWorkLogWithTransaction(int idWorkLog, NpgsqlTransaction transaction)
@@ -2251,7 +2325,7 @@ namespace Project
             {
                 foreach (WorkLog workLog in completeWorkLogs)
                 {
-                    WorkState state = WorkByElement.GetPalannedOrCompleteState
+                    WorkState state = WorkByElement.GetRejectOrPlannedState
                         (workLog.IdWorkByElement, this);
                     DeleteWorkLogWithTransaction(workLog.Id, transaction);
                     ChangeStateWorkByElementWithTransaction(workLog.IdWorkByElement, state, 
@@ -2454,6 +2528,31 @@ namespace Project
             var idWorkLog = Convert.ToInt32(cmd.ExecuteScalar());
             return ReadWorkLog(idWorkLog);
         }
+
+        public DateTime GetWorkLogByProjectMaxDate(int idProject)
+        {
+            string query = $"SELECT MAX(log_date) FROM " +
+                $"{WorkLog.nameTableInDB}, {WorkByElement.nameTableInDB}, " +
+                $"{Element.nameTableInDB}, {SectionOfBuilding.nameTableInDB} WHERE " +
+
+
+                $"{WorkLog.nameTableInDB}.id_work_by_element = " +
+                $"{WorkByElement.nameTableInDB}.id AND " +
+                $"{WorkByElement.nameTableInDB}.id_element = {Element.nameTableInDB}.Id AND " +
+                $"{Element.nameTableInDB}.id_section_of_building = {SectionOfBuilding.nameTableInDB}.id AND " +
+                $"{SectionOfBuilding.nameTableInDB}.id_project = @id_project;";
+            var cmd = new NpgsqlCommand(query, Conn);
+            cmd.Parameters.Add(
+                new NpgsqlParameter($"@id_project", NpgsqlTypes.NpgsqlDbType.Integer));
+            cmd.Prepare();
+            cmd.Parameters[0].Value = idProject;
+            object result = cmd.ExecuteScalar();
+            DateTime maxDate = new DateTime(1970, 1, 1);
+            if (result != null && !DBNull.Value.Equals(result)) maxDate = Convert.ToDateTime(result);
+            return maxDate;
+        }
+
+        
     }
 
 }

@@ -13,6 +13,9 @@ namespace Project
     public partial class InputBox : Form
     {
         private Func<string, bool> StringCheck;
+        private bool setTimeInput;
+        private DateTime dateTimeInput;
+        public DateTime DateTimeInput { get { return dateTimeInput; } }
         private string input;
         public string Input
         {
@@ -28,6 +31,24 @@ namespace Project
             lblCheck.Text = checkLable;
             BackColor = color;
             this.StringCheck = StringCheck;
+            setTimeInput = false;
+        }
+
+        public InputBox(string title, string infLable)
+        {
+            InitializeComponent();
+            Text = title;
+            lblInfo.Text = infLable;
+            lblCheck.Text = "";
+            SetTimeInput();
+        }
+
+        private void SetTimeInput()
+        {
+            setTimeInput = true;
+            tbInput.Visible = false;
+            dtpInput.Visible = true;
+            btnOK.Enabled = true;
         }
 
         public void InputClear()
@@ -47,7 +68,15 @@ namespace Project
 
         private void BtnOK_Click(object sender, EventArgs e)
         {
-            if(StringCheck(tbInput.Text))
+            if (setTimeInput)
+            {
+                dateTimeInput = dtpInput.Value;
+                this.DialogResult = DialogResult.OK;
+                Close();
+                return;
+            }
+
+            if (StringCheck(tbInput.Text))
             {
                 input = tbInput.Text;
                 this.DialogResult = DialogResult.OK;

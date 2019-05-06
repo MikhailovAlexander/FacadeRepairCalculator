@@ -9,7 +9,7 @@ namespace Project
 {
     public class Project:BaseWithName
     {
-        public static Dictionary<ProjectState, string> ProjectStateDictionary =
+        private static Dictionary<ProjectState, string> projectStateDictionary =
             new Dictionary<ProjectState, string>
             {
                 { ProjectState.Planned, "Планируемый" },
@@ -23,13 +23,14 @@ namespace Project
         public const string nameTableInDB = "project";
         public const string nameTableInDBUserInProject = "user_in_project";
         public const string nameTableInDBTypeOfElementInProject = "type_of_element_in_project";
-
+        
         public string Address { get; set; }
         public int IdClient { get; set; }
-        public ProjectState State { get; set; }
+        private ProjectState state;
+        public ProjectState State { get { return state; } }
         public string StateString
         {
-            get { return ProjectStateDictionary[State]; }
+            get { return projectStateDictionary[State]; }
         }
         public DateTime DateOfStart { get; set; }
         DateTime dateOfComplete;
@@ -59,7 +60,7 @@ namespace Project
         {
             Address = "Не определено";
             IdClient = -1;
-            State = ProjectState.Planned;
+            state = ProjectState.Planned;
             DateOfStart = new DateTime(1970, 1, 1);
             DateOfComplete = new DateTime(1970, 1, 1);
             PlannedDateOfComplete = new DateTime(1970, 1, 1);
@@ -69,7 +70,7 @@ namespace Project
         {
             Address = address;
             this.IdClient = idClient;
-            State = ProjectState.Planned;
+            state = ProjectState.Planned;
             DateOfStart = new DateTime(1970, 1, 1);
             DateOfComplete = new DateTime(1970, 1, 1);
             PlannedDateOfComplete = new DateTime(1970, 1, 1);
@@ -79,7 +80,7 @@ namespace Project
         {
             Address = address;
             this.IdClient = idClient;
-            State = ProjectState.Planned;
+            state = ProjectState.Planned;
             DateOfStart = new DateTime(1970, 1, 1);
             DateOfComplete = new DateTime(1970, 1, 1);
             PlannedDateOfComplete = new DateTime(1970, 1, 1);
@@ -91,7 +92,7 @@ namespace Project
         {
             Address = address;
             this.IdClient = idClient;
-            State = state;
+            this.state = state;
             DateOfStart = dateOfStart;
             DateOfComplete = dateOfComplete;
             PlannedDateOfComplete = plannedDateOfComplete;
@@ -103,7 +104,7 @@ namespace Project
         {
             Address = address;
             this.IdClient = idClient;
-            State = state;
+            this.state = state;
             DateOfStart = dateOfStart;
             DateOfComplete = dateOfComplete;
             PlannedDateOfComplete = plannedDateOfComplete;
@@ -114,19 +115,54 @@ namespace Project
             return $"Id{Id} {Name}";
         }
 
-        public override bool Equals(object obj)
-        {
-            Project project = (Project)obj;
-            return Id == project.Id && Name == project.Name && Address == project.Address &&
-                DateOfStart == project.DateOfStart && DateOfComplete == project.DateOfComplete &&
-                PlannedDateOfComplete == project.PlannedDateOfComplete;
-        }
-
         public bool DateOfPaymentIsChecked(DateTime date)
         {
-            if (State != ProjectState.Actual || Id == -1)
-                return false;
             return date >= DateOfStart;
+        }
+
+        public bool DateOfCompleteWorkIsChecked(DateTime date)
+        {
+            return date >= DateOfStart;
+        }
+
+        public bool DatesOfStartAndPlanIsChecked(DateTime dateOfStart, 
+            DateTime plannedDateOfComplete)
+        {
+            if (state != ProjectState.Planned || Id == -1)
+                return false;
+            return plannedDateOfComplete.Date > dateOfStart.Date;
+        }
+
+        public bool DateOfCompleteCheck(DateTime dateOfComplete, IDriverDB driver)
+        {
+            return dateOfComplete.Date >= driver.GetPaymenstByProjectMaxDate(id) &&
+                dateOfComplete.Date >= driver.GetWorkLogByProjectMaxDate(id);
+        }
+
+        public bool AllWorksAccepted(IDriverDB driver)
+        {
+            return driver.AllWorksByProjectAccepted(id);
+        }
+
+        public bool UserWorksIsPaid(int idUser, IDriverDB driver)
+        {
+            decimal acceptedWorksByUser = driver.GetAmountAcceptedWorkByProjectAndUser(id, idUser);
+            if (acceptedWorksByUser == 0) return true;
+            decimal paymentsByUser = driver.GetAmountPaymentsByUserAndProject(id, idUser);
+            return paymentsByUser >= acceptedWorksByUser;
+        }
+
+        public bool CompleteCheck(DateTime dateOfComplete, IDriverDB driver)
+        {
+            if (state != ProjectState.Actual || !DateOfCompleteCheck(dateOfComplete, driver) ||
+                !AllWorksAccepted(driver))
+                return false;
+            var usersInProject = ReadUsersByProject(driver);
+            foreach(User user in usersInProject)
+            {
+                if (!UserWorksIsPaid(user.Id, driver)) return false;
+            }
+            return true;
         }
 
         public static bool AddressIsMatch(string string2Check)
@@ -154,19 +190,34 @@ namespace Project
             driver.DeleteProject(this.Id);
         }
 
-        public void Start (IDriverDB driver)
+        public void Start (DateTime dateOfStart, DateTime plannedDateOfComplete, 
+            IDriverDB driver)
         {
-
+            if(!DatesOfStartAndPlanIsChecked(dateOfStart, plannedDateOfComplete))
+                throw new Exception("Дата окончания должна быть позднее даты начала");
+            if (state != ProjectState.Planned)
+                throw new Exception("Старт возможен только для планируемого проекта");
+            state = ProjectState.Actual;
+            PlannedDateOfComplete = plannedDateOfComplete;
+            DateOfStart = dateOfStart;
+            Update(driver);
         }
 
-        public void Complete(IDriverDB driver)
+        public void Complete(DateTime dateOfComplete, IDriverDB driver)
         {
-
+            if (CompleteCheck(dateOfComplete, driver))
+            {
+                state = ProjectState.Completed;
+                DateOfComplete = dateOfComplete;
+                Update(driver);
+            }
+            else throw new Exception("Завершение проекта невозможно");
         }
 
         public void Cancel(IDriverDB driver)
         {
-
+            state = ProjectState.Canceled;
+            Update(driver);
         }
 
         public void AddUser(IDriverDB driver, int idUser)

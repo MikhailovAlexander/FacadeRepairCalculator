@@ -280,7 +280,6 @@ namespace Project
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            ///Don't forget
             gbAllProjects.Enabled = false;
             gbAllUsers.Enabled = false;
             gbPaymentData.Enabled = true;
@@ -346,6 +345,13 @@ namespace Project
         //BtnSwitchUpdate_Click
         private void BtnPaymentSwitchUpdate_Click(object sender, EventArgs e)
         {
+            if (actualProject.State == ProjectState.Canceled ||
+                actualProject.State == ProjectState.Completed)
+            {
+                MessageBox.Show("Изменение отмененого или завершенного проекта не возможно",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (SelectedPayment().Id == -1) return;
             gbAllPayments.Enabled = false;
             gbPaymentData.Enabled = true;
@@ -389,6 +395,13 @@ namespace Project
         //BtnDelete_Click
         private void BtnPaymentDelete_Click(object sender, EventArgs e)
         {
+            if (actualProject.State == ProjectState.Canceled ||
+                actualProject.State == ProjectState.Completed)
+            {
+                MessageBox.Show("Изменение отмененого или завершенного проекта не возможно",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             var payment = SelectedPayment();
             if (payment.Id == -1) return;
             string projectName = GetProjectFromPayment(payment).ToString();

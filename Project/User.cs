@@ -130,7 +130,7 @@ namespace Project
 
         public decimal GetPaymentsAmountByProject(int idProject, IDriverDB driver)
         {
-            return driver.GetPaymentsAmountByUserAndProject(id, idProject);
+            return driver.GetAmountPaymentsByUserAndProject(id, idProject);
         }
 
         public decimal GetAmountCompletedWorkByProject(int idProject, IDriverDB driver)

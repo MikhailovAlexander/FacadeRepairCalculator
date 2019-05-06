@@ -18,6 +18,21 @@ namespace Project
             return ReadAllObjectT<Project>(driver.ReadAllProject);
         }
 
+        private Project[] ReadAllProjectsByState(ProjectState state)
+        {
+            var projects = new Project[0];
+            try
+            {
+                projects = driver.ReadAllProjectByState(state);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            return projects;
+        }
+
         private Project ReadProject(int idProject)
         {
             return ReadObject<Project>(idProject, driver.ReadProject);
@@ -90,7 +105,7 @@ namespace Project
                 dgvProjectClients.Rows.Add(client.ToString());
             }
         }
-        //TODO Refact
+
         private int GetIdClientFromTbProjectClient()
         {
             int idClient = -1;
@@ -108,7 +123,12 @@ namespace Project
 
         void ShowProjects()
         {
-            var allProjects = ReadAllProjects();
+            var allProjects = new Project[0];
+            if (rbAllProjects.Checked) allProjects = ReadAllProjects();
+            else if (rbPlannedProjects.Checked) allProjects = ReadAllProjectsByState(ProjectState.Planned);
+            else if (rbActualProjects.Checked) allProjects = ReadAllProjectsByState(ProjectState.Actual);
+            else if (rbCompletedProjects.Checked) allProjects = ReadAllProjectsByState(ProjectState.Completed);
+            else if (rbCanceledProjects.Checked) allProjects = ReadAllProjectsByState(ProjectState.Canceled);
             ShowProjectsInDgv(allProjects, dgvAllProjects, 715);
         }
         
@@ -121,6 +141,7 @@ namespace Project
             tbProjectClient.Clear();
             dtpProjectDateOfStart.Value = new DateTime(1970, 1, 1);
             dtpProjectPlannedDateOfComplete.Value = new DateTime(1970, 1, 1);
+            dtpProjectDateOfComplete.Value = new DateTime(1970, 1, 1);
             pbCheckMarkProjectName.Visible = false;
             pbCheckMarkProjectAddress.Visible = false;
             pbCheckMarkProjectClient.Visible = false;
@@ -145,6 +166,9 @@ namespace Project
                 dtpProjectDateOfStart.Value = selectedProject.DateOfStart;
                 dtpProjectPlannedDateOfComplete.Value = selectedProject.PlannedDateOfComplete;
             }
+            if (selectedProject.State == ProjectState.Completed)
+                dtpProjectDateOfComplete.Value = selectedProject.DateOfComplete;
+            else dtpProjectDateOfComplete.Value = new DateTime(1970, 1, 1);
             pbCheckMarkProjectName.Visible = false;
             pbCheckMarkProjectAddress.Visible = false;
             pbCheckMarkProjectClient.Visible = false;
@@ -169,6 +193,7 @@ namespace Project
             tbProjectPlannedDateOfComplete.Visible = false;
             dtpProjectPlannedDateOfComplete.Visible = true;
         }
+
 
         //DtpDate_valueChanged
         private void DtpProjectDateOfStart_ValueChanged(object sender, EventArgs e)
@@ -196,7 +221,11 @@ namespace Project
                 dtpProjectDateOfStart.Value < dtpProjectPlannedDateOfComplete.Value;
             ShowDateInTb(tbProjectPlannedDateOfComplete, dtpProjectPlannedDateOfComplete);
         }
-        
+
+        private void DtpProjectDateOfComplete_ValueChanged(object sender, EventArgs e)
+        {
+            ShowDateInTb(tbProjectDateOfComplete, dtpProjectDateOfComplete);
+        }
         //Tb_TextChanged
         private void TbProjectName_TextChanged(object sender, EventArgs e)
         {
@@ -257,7 +286,7 @@ namespace Project
             btnProjectClientSelectCancel.Visible = true;
             ShowClientList();
         }
-        //TODO Refact
+        
         private void BtnProjectClientSelect_Click(object sender, EventArgs e)
         {
             tbProjectClient.Text = dgvProjectClients.SelectedCells[0].Value.ToString();
@@ -317,6 +346,13 @@ namespace Project
         //BtnSwitchUpdate_Click
         private void BtnSwitchUpdateProject_Click(object sender, EventArgs e)
         {
+            if (SelectedProject().State == ProjectState.Canceled ||
+                SelectedProject().State == ProjectState.Canceled)
+            {
+                MessageBox.Show("Редактировать можно только планируемый или текущий проект",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             gbProjectData.Enabled = true;
             gbProjectDataName.Enabled = true;
             gbAllProjects.Enabled = false;
@@ -394,6 +430,7 @@ namespace Project
         //BtnDelete_Click
         private void BtnDeleteProject_Click(object sender, EventArgs e)
         {
+
             var selectedProject = SelectedProject();
             DialogResult result = MessageBox.Show
                           ($"Вы действительно хотите безвозвратно удалить проект " +
@@ -431,7 +468,6 @@ namespace Project
 
         private void BtnProjectSwitchStart_Click(object sender, EventArgs e)
         {
-            //TODO refact
             if (SelectedProject().State != ProjectState.Planned)
             {
                 MessageBox.Show("Начать можно только планируемый проект",
@@ -440,14 +476,113 @@ namespace Project
             }
             actualProject = SelectedProject();
             ShowActualProject();
-            actualProject.State = ProjectState.Actual;
-            ShowSelectedProject();
-            gbAllProjects.Enabled = false;
-            gbProjectData.Enabled = true;
-            gbProjectDataName.Enabled = false;
-            gbProjectDataStart.Enabled = true;
-            btnProjectSwitchCancel.Enabled = true;
-            btnProjectUpdate.Enabled = true;
+            var inputBox = new InputBox("Старт проекта", "Введите дату начала проекта");
+            inputBox.ShowDialog();
+            if (inputBox.DialogResult == DialogResult.Cancel) return;
+            DateTime dateOfStart = inputBox.DateTimeInput;
+            inputBox = new InputBox("Старт проекта", "Введите плановую дату окончания проекта");
+            inputBox.ShowDialog();
+            if (inputBox.DialogResult == DialogResult.Cancel)return;
+            DateTime plannedDateOfComplete = inputBox.DateTimeInput;
+            if(actualProject.DatesOfStartAndPlanIsChecked(dateOfStart, plannedDateOfComplete))
+            {
+                try
+                {
+                    actualProject.Start(dateOfStart, plannedDateOfComplete, driver);
+                    ShowActualProject();
+                    ShowProjects();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Дата окончания должна быть позднее даты начала",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+        private void BtnProjectCancel_Click(object sender, EventArgs e)
+        {
+            var selectedProject = SelectedProject();
+            DialogResult result = MessageBox.Show
+                          ($"Вы действительно хотите отменить проект " +
+                          $"{selectedProject.ToString()}?", "Отмена проекта",
+                          MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                try
+                {
+                    selectedProject.Cancel(driver);
+                    MessageBox.Show($"Проект {selectedProject.Name} отменен",
+                        "Отмена проекта", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ShowProjects();
+                    ShowVoidProject();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void BtnProjectComplete_Click(object sender, EventArgs e)
+        {
+            if (SelectedProject().State != ProjectState.Actual)
+            {
+                MessageBox.Show("Завершить можно только текущий проект",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            actualProject = SelectedProject();
+            ShowActualProject();
+            var inputBox = new InputBox("Завершение проекта", "Введите дату завершения проекта");
+            inputBox.ShowDialog();
+            if (inputBox.DialogResult == DialogResult.Cancel) return;
+            DateTime dateOfComplete = inputBox.DateTimeInput;
+            if (!actualProject.DateOfCompleteCheck(dateOfComplete, driver))
+            {
+                MessageBox.Show(
+                    "Дата завершения проекта не может быть ранее даты оплаты или учета работы",
+               "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if(!actualProject.AllWorksAccepted(driver))
+            {
+                MessageBox.Show(
+                    "Приняты не все работы",
+               "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (actualProject.CompleteCheck(dateOfComplete, driver))
+            {
+                try
+                {
+                    actualProject.Complete(dateOfComplete, driver);
+                    ShowActualProject();
+                    ShowProjects();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не всем исполнителям произведена оплата",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnViewProjectsByState_Click(object sender, EventArgs e)
+        {
+            ShowProjects();
+        }
+
     }
 }

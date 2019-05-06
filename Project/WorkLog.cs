@@ -80,12 +80,12 @@ namespace Project
 
         public override void Update(IDriverDB driver)
         {
-            driver.UpdateWorkLog(this);
+            driver.UpdateWorkLogTypeIsImmutable(this);
         }
 
         public override void Delete(IDriverDB driver)
         {
-            driver.DeleteWorkLog(id);
+            driver.DeleteWorkLog(this);
         }
 
         public string GetTypeString()

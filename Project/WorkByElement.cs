@@ -161,7 +161,7 @@ namespace Project
             return WorkState.Planned;
         }
 
-        public static WorkState GetPalannedOrCompleteState(int idWorkByElement, IDriverDB driver)
+        public static WorkState GetRejectOrPlannedState(int idWorkByElement, IDriverDB driver)
         {
             if (driver.GetCountRejectWorkLogs(idWorkByElement) > 0) return WorkState.Rejected;
             return WorkState.Planned;

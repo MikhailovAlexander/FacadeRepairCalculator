@@ -400,6 +400,13 @@ namespace Project
 
         private void BtnTypeOfElementAddToProject_Click(object sender, EventArgs e)
         {
+            if (actualProject.State == ProjectState.Canceled ||
+                actualProject.State == ProjectState.Completed)
+            {
+                MessageBox.Show("Изменение отмененого или завершенного проекта не возможно",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (actualProject.Id == -1)
             {
                 MessageBox.Show("Необходимо сохранить текущий проект", "Сообщение об ошибке",
@@ -416,7 +423,6 @@ namespace Project
                    "Добавление элемента в проект", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 ShowTypesOfElementInProject();
-                //ShowTypesOfElementInSectionOfBuilding
             }
             catch (Exception ex)
             {
@@ -428,6 +434,13 @@ namespace Project
 
         private void BtnTypeOfElementDeleteFromProject_Click(object sender, EventArgs e)
         {
+            if (actualProject.State == ProjectState.Canceled ||
+                actualProject.State == ProjectState.Completed)
+            {
+                MessageBox.Show("Изменение отмененого или завершенного проекта не возможно",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             var selectedTypeOfElement = SelectedTypeOfElementInProject();
             if (selectedTypeOfElement.Id == -1) return;
             DialogResult result = MessageBox.Show(
@@ -444,7 +457,6 @@ namespace Project
                         $"удален из текущего проекта", "Удаление пользователя из проекта", 
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ShowTypesOfElementInProject();
-                    //ShowTypesOfElementInSectionOfBuilding
                 }
                 catch (Exception ex)
                 {

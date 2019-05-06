@@ -109,6 +109,7 @@ namespace Project
                 ShowWorksAmountBySectionOfBuilding(sectionOfBuilding, 
                     lblWorkerSectionOfBuildingWorkAmount);
                 workerModel.ShowModel(sectionOfBuilding);
+                workerModel.ShowWorkInModel(SelectedWorkerWorkInProject());
             }
         }
 
@@ -201,6 +202,13 @@ namespace Project
         //BtnSwitchCancel_Click
         private void BtnWorkerSwitchCompleteWorkCancel_Click(object sender, EventArgs e)
         {
+            var project = SelectedWorkerProject();
+            if (project.Id == -1 || project.State != ProjectState.Actual)
+            {
+                MessageBox.Show($"Выполнение работ возможно только по текущему проекту",
+                        "Выполнение работы", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             gbWorkerCompletePanel.Visible = false;
             dgvWorkerWorksInProject.Width = 944;
         }
@@ -208,7 +216,21 @@ namespace Project
         //BtnCreate_Click
         private void BtnWorkerCompleteWork_Click(object sender, EventArgs e)
         {
+            if (SelectedWorkerProject().State == ProjectState.Canceled ||
+                SelectedWorkerProject().State == ProjectState.Completed)
+            {
+                MessageBox.Show("Изменение отмененого или завершенного проекта не возможно",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             DateTime date = dtpWorkerDateOfComplete.Value;
+            var project = SelectedWorkerProject();
+            if(!project.DateOfCompleteWorkIsChecked(date))
+            {
+                MessageBox.Show($"Выполнение работ не возможно в указанную дату",
+                        "Выполнение работы", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             int idWorkInProject = SelectedWorkerWorkInProject().Id;
             var selectedCells = dgvWorkerModel.SelectedCells;
             List<WorkByElement> workByElements = new List<WorkByElement>();
@@ -249,6 +271,13 @@ namespace Project
 
         private void BtnWorkerCompleteWorkCancel_Click(object sender, EventArgs e)
         {
+            if (SelectedWorkerProject().State == ProjectState.Canceled ||
+                SelectedWorkerProject().State == ProjectState.Completed)
+            {
+                MessageBox.Show("Изменение отмененого или завершенного проекта не возможно",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             int idWorkInProject = SelectedWorkerWorkInProject().Id;
             var selectedCells = dgvWorkerModel.SelectedCells;
             List<WorkLog> completeWorkLogs = new List<WorkLog>();

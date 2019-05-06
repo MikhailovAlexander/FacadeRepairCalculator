@@ -420,6 +420,13 @@ namespace Project
                     "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if (actualProject.State == ProjectState.Canceled ||
+                actualProject.State == ProjectState.Canceled)
+            {
+                MessageBox.Show("Изменение отмененого или завершенного проекта не возможно",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             ShowVoidSectionOfBuilding();
             gbSectionOfBuildingData.Visible = true;
             SectionOfBuildingModel.Visible = false;
@@ -481,6 +488,13 @@ namespace Project
         //BtnSwitchUpdate_Click
         private void BtnSectionOfBuildingSwitchUpdate_Click(object sender, EventArgs e)
         {
+            if (actualProject.State == ProjectState.Canceled ||
+                actualProject.State == ProjectState.Canceled)
+            {
+                MessageBox.Show("Изменение отмененого или завершенного проекта не возможно",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (SelectedSectionOfBuilding().Id == -1) return;
             gbAllSectionsOfBuilding.Enabled = false;
             gbSectionOfBuildingData.Enabled = true;
@@ -559,6 +573,13 @@ namespace Project
 
         private void BtnSectionOfBuildingSwitchModelUpdate_Click(object sender, EventArgs e)
         {
+            if (actualProject.State == ProjectState.Canceled ||
+                actualProject.State == ProjectState.Canceled)
+            {
+                MessageBox.Show("Изменение отмененого или завершенного проекта не возможно",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             btnSectionOfBuildingModelUpdate.Visible = true;
             btnSectionOfBuildingSwitchModelCancel.Visible = true;
             lvSectionOfBuildingTypesOfElementInProject.Enabled = true;
@@ -620,6 +641,13 @@ namespace Project
 
         private void BtnSectionOfBuildingSetWork_Click(object sender, EventArgs e)
         {
+            if (actualProject.State == ProjectState.Canceled ||
+                actualProject.State == ProjectState.Canceled)
+            {
+                MessageBox.Show("Изменение отмененого или завершенного проекта не возможно",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             int idWorkInProject = SelectedWorkInProjectInSectionOfBuilding().Id;
             var selectedCells = dgvManagerModel.SelectedCells;
             List<WorkByElement> workByElements = new List<WorkByElement>();
@@ -635,6 +663,7 @@ namespace Project
                 managerModel.ShowWorkInModel(SelectedWorkInProjectInSectionOfBuilding());
                 ShowWorksInProjectInSectionOfBuilding();
                 ShowActualProject();
+                ShowProjects();
                 MessageBox.Show($"Работа назначена для {workByElements.Count} элементов",
                         "Назначение работы", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -647,6 +676,13 @@ namespace Project
 
         private void BtnSectionOfBuildingCancelWork_Click(object sender, EventArgs e)
         {
+            if (actualProject.State == ProjectState.Canceled ||
+                actualProject.State == ProjectState.Canceled)
+            {
+                MessageBox.Show("Изменение отмененого или завершенного проекта не возможно",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             int idWorkInProject = SelectedWorkInProjectInSectionOfBuilding().Id;
             var selectedCells = dgvManagerModel.SelectedCells;
             List<WorkByElement> workByElements2Delete = new List<WorkByElement>();
@@ -662,6 +698,7 @@ namespace Project
                 managerModel.ShowWorkInModel(SelectedWorkInProjectInSectionOfBuilding());
                 ShowWorksInProjectInSectionOfBuilding();
                 ShowActualProject();
+                ShowProjects();
                 MessageBox.Show(
                     $"Назначение работы отменено для {workByElements2Delete.Count} элементов",
                     "Назначение работы", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -675,6 +712,13 @@ namespace Project
 
         private void BtnSectionOfBuildingChangeMultiplicity_Click(object sender, EventArgs e)
         {
+            if (actualProject.State == ProjectState.Canceled ||
+                actualProject.State == ProjectState.Canceled)
+            {
+                MessageBox.Show("Изменение отмененого или завершенного проекта не возможно",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (dgvManagerModel.SelectedCells.Count != 1 ||
                 dgvSectionOfBuildingWorkInProject.SelectedRows.Count == 0) return;
             int idElement = (int)dgvManagerModel.SelectedCells[0].Tag;
@@ -698,6 +742,7 @@ namespace Project
                 workByElement.Multiplicity = multiplicity;
                 workByElement.Update(driver);
                 ShowActualProject();
+                ShowProjects();
             }
             catch (Exception ex)
             {
@@ -721,6 +766,12 @@ namespace Project
 
         private void BtnSectionOfBuildingAcceptWork_Click(object sender, EventArgs e)
         {
+            if (actualProject.State != ProjectState.Actual)
+            {
+                MessageBox.Show("Учет работ возможен только для текущего проекта",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             DateTime dateOfAccept = dtpManagerModelLogDate.Value;
             int idWorkInProject = SelectedWorkInProjectInSectionOfBuilding().Id;
             var selectedCells = dgvManagerModel.SelectedCells;
@@ -748,6 +799,7 @@ namespace Project
                 managerModel.ShowWorkInModel(SelectedWorkInProjectInSectionOfBuilding());
                 ShowWorksInProjectInSectionOfBuilding();
                 ShowActualProject();
+                ShowProjects();
                 MessageBox.Show($"Работа принята для {workByElements.Count} элементов",
                         "Приемка работ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -760,6 +812,12 @@ namespace Project
 
         private void BtnSectionOfBuildingAcceptWorkCancel_Click(object sender, EventArgs e)
         {
+            if (actualProject.State != ProjectState.Actual)
+            {
+                MessageBox.Show("Учет работ возможен только для текущего проекта",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             int idWorkInProject = SelectedWorkInProjectInSectionOfBuilding().Id;
             var selectedCells = dgvManagerModel.SelectedCells;
             List<WorkLog> acceptWorkLogs = new List<WorkLog>();
@@ -786,6 +844,7 @@ namespace Project
                 WorkByElement.DeleteWorkLogsAccept(acceptWorkLogs, driver);
                 managerModel.ShowWorkInModel(SelectedWorkInProjectInSectionOfBuilding());
                 ShowActualProject();
+                ShowProjects();
                 ShowWorksInProjectInSectionOfBuilding();
                 MessageBox.Show($"Отменa приемки работы для {acceptWorkLogs.Count} элементов",
                         "Отмена приемки", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -799,6 +858,12 @@ namespace Project
 
         private void BtnSectionOfBuildingRejectWork_Click(object sender, EventArgs e)
         {
+            if (actualProject.State != ProjectState.Actual)
+            {
+                MessageBox.Show("Учет работ возможен только для текущего проекта",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             DateTime dateOfReject = dtpManagerModelLogDate.Value;
             int idWorkInProject = SelectedWorkInProjectInSectionOfBuilding().Id;
             var selectedCells = dgvManagerModel.SelectedCells;
@@ -832,6 +897,7 @@ namespace Project
                     comment, driver);
                 managerModel.ShowWorkInModel(SelectedWorkInProjectInSectionOfBuilding());
                 ShowActualProject();
+                ShowProjects();
                 ShowWorksInProjectInSectionOfBuilding();
                 MessageBox.Show($"Работа отклонена для {workByElements.Count} элементов",
                         "Отклонение работ", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -845,6 +911,12 @@ namespace Project
 
         private void BtnSectionOfBuildingRejectWorkCancel_Click(object sender, EventArgs e)
         {
+            if (actualProject.State != ProjectState.Actual)
+            {
+                MessageBox.Show("Учет работ возможен только для текущего проекта",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             int idWorkInProject = SelectedWorkInProjectInSectionOfBuilding().Id;
             var selectedCells = dgvManagerModel.SelectedCells;
             List<WorkLog> rejectWorkLogs = new List<WorkLog>();
@@ -871,6 +943,7 @@ namespace Project
                 WorkByElement.DeleteWorkLogsReject(rejectWorkLogs, driver);
                 managerModel.ShowWorkInModel(SelectedWorkInProjectInSectionOfBuilding());
                 ShowActualProject();
+                ShowProjects();
                 ShowWorksInProjectInSectionOfBuilding();
                 MessageBox.Show($"Отменa отклонения работы для {rejectWorkLogs.Count} элементов",
                         "Отмена отклонения", MessageBoxButtons.OK, MessageBoxIcon.Information);

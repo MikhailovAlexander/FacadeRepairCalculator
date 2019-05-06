@@ -221,7 +221,14 @@ namespace Project
 
         private void BtnAddClientToProject_Click(object sender, EventArgs e)
         {
-            if (actualProject.Id >= 0)
+            if (actualProject.State == ProjectState.Canceled ||
+                actualProject.State == ProjectState.Completed)
+            {
+                MessageBox.Show("Изменение отмененого или завершенного проекта не возможно",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!(actualProject.Id == -1))
             {
                 var selectedClient = SelectedClient();
                 DialogResult result = MessageBox.Show

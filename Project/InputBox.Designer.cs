@@ -33,6 +33,7 @@
             this.btnOK = new System.Windows.Forms.Button();
             this.lblCheck = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.dtpInput = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // lblInfo
@@ -92,6 +93,15 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
+            // dtpInput
+            // 
+            this.dtpInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.dtpInput.Location = new System.Drawing.Point(12, 37);
+            this.dtpInput.Name = "dtpInput";
+            this.dtpInput.Size = new System.Drawing.Size(200, 23);
+            this.dtpInput.TabIndex = 5;
+            this.dtpInput.Visible = false;
+            // 
             // InputBox
             // 
             this.AcceptButton = this.btnOK;
@@ -99,6 +109,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(366, 138);
+            this.Controls.Add(this.dtpInput);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblCheck);
             this.Controls.Add(this.btnOK);
@@ -119,5 +130,6 @@
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Label lblCheck;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.DateTimePicker dtpInput;
     }
 }

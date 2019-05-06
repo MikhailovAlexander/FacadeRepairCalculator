@@ -103,6 +103,9 @@
     <Compile Include="MainFormTabPageUser.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MainFormTabPageWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainFormTabPageWorker.cs">
       <SubType>Form</SubType>
     </Compile>

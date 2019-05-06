@@ -12,11 +12,11 @@ namespace Project
 
         public const string nameTableInDB = "work_in_project";
 
-        private  double price;
-        private double multiplicity;
+        private decimal price;
+        private decimal multiplicity;
         public int IdProject { get; set; }
         public int IdTypeOfWork { get; set; }
-        public double Price
+        public decimal Price
         {
             get { return price; }
             set
@@ -25,7 +25,7 @@ namespace Project
                 else price = value;
             }
         }
-        public double Multiplicity
+        public decimal Multiplicity
         {
             get { return multiplicity; }
             set
@@ -44,7 +44,7 @@ namespace Project
             Multiplicity = 1;
         }
 
-        public WorkInProject(int idProject, int idTypeOfWork, double price) : base()
+        public WorkInProject(int idProject, int idTypeOfWork, decimal price) : base()
         {
             IdProject = idProject;
             IdTypeOfWork = idTypeOfWork;
@@ -52,7 +52,7 @@ namespace Project
             Multiplicity = 1;
         }
 
-        public WorkInProject(int id, int idProject, int idTypeOfWork, double price) : base(id)
+        public WorkInProject(int id, int idProject, int idTypeOfWork, decimal price) : base(id)
         {
             IdProject = idProject;
             IdTypeOfWork = idTypeOfWork;
@@ -60,7 +60,7 @@ namespace Project
             Multiplicity = 1;
         }
 
-        public WorkInProject(int idProject, int idTypeOfWork, double price, double multiplicity) : base()
+        public WorkInProject(int idProject, int idTypeOfWork, decimal price, decimal multiplicity) : base()
         {
             IdProject = idProject;
             IdTypeOfWork = idTypeOfWork;
@@ -68,7 +68,7 @@ namespace Project
             Multiplicity = multiplicity;
         }
 
-        public WorkInProject(int id, int idProject, int idTypeOfWork, double price, double multiplicity) : base(id)
+        public WorkInProject(int id, int idProject, int idTypeOfWork, decimal price, decimal multiplicity) : base(id)
         {
             IdProject = idProject;
             IdTypeOfWork = idTypeOfWork;
