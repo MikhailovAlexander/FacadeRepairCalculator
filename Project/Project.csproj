@@ -84,6 +84,9 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainFormTabPageClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainFormTabPageElementPicture.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +98,9 @@
     </Compile>
     <Compile Include="IHashPasswordCreator.cs" />
     <Compile Include="MainFormTabPageSectionOfBuilding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormTabPageUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainFormTabPageWorker.cs">

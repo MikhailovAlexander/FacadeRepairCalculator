@@ -147,7 +147,6 @@ namespace Project
                 return;
             }
             var paymentsInProject = ReadPaymentsByProject(selectedProject.Id);
-                //ReadAllObjectsByParam<Payment>(selectedProject.Id, ReadPaymentsByProject);
             ClearAndSetHeightDgv(dgvPaymentsByProject, gbAllPayments, paymentsInProject.Length);
             foreach (Payment payment in paymentsInProject)
             {
@@ -317,13 +316,14 @@ namespace Project
                     return;
                 }
                 var payment = new Payment(SelectedUserByPayments().Id, actualProject.Id,
-                    dtpPaymentDate.Value, Convert.ToDouble(tbPaymentAmout.Text));
+                    dtpPaymentDate.Value, Convert.ToDecimal(tbPaymentAmout.Text));
                 try
                 {
                     if (payment.CheckUserInProject(driver))
                     {
                         payment.Create(driver);
                         ShowActualProject();
+                        ShowProjects();
                         ShowPayments();
                         ShowVoidPayment();
                         gbAllProjects.Enabled = true;
@@ -363,7 +363,7 @@ namespace Project
                 Payment.DecimalIsMatch(tbPaymentAmout.Text))
             {
                 payment.DateOfPayment = dtpPaymentDate.Value;
-                payment.Amount = Convert.ToDouble(tbPaymentAmout.Text);
+                payment.Amount = Convert.ToDecimal(tbPaymentAmout.Text);
                 try
                 {
                     payment.Update(driver);
@@ -372,6 +372,7 @@ namespace Project
                     btnPaymentUpdate.Visible = false;
                     btnPaymentSwitchCancel.Visible = false;
                     ShowActualProject();
+                    ShowProjects();
                     ShowPayments();
                     ShowVoidPayment();
                 }
@@ -406,6 +407,7 @@ namespace Project
                         MessageBoxIcon.Information);
                     ShowPayments();
                     ShowActualProject();
+                    ShowProjects();
                 }
                 catch (Exception ex)
                 {

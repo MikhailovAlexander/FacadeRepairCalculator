@@ -66,6 +66,7 @@ namespace Project
         Payment[] ReadPaymentsByProject(int idProject);
         Payment[] ReadPaymentsByUser(int idProject);
         Payment[] ReadPaymentsByUserAndProject(int idUser, int idProject);
+        decimal GetPaymentsAmountByUserAndProject(int idUser, int idProject);
 
         void CreateTypeOfElement(TypeOfElement typeOfElement);
         TypeOfElement ReadTypeOfElement(int idForSearch);

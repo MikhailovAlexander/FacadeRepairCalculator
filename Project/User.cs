@@ -23,6 +23,10 @@ namespace Project
         public string Passport { get; set; }
         public string Login { get; set; }
         public bool ManagerAccess { get; set; }
+        public string ManagerAccessString
+        {
+            get { return ManagerAccess ? "Да" : "Нет"; }
+        }
         public string SaltString { get; set; }
         public string HashPassword { get { return hashPassword; } }
 
@@ -122,6 +126,11 @@ namespace Project
         public Payment[] GetPaymentsByProject(int idProject, IDriverDB driver)
         {
             return driver.ReadPaymentsByUserAndProject(id, idProject);
+        }
+
+        public decimal GetPaymentsAmountByProject(int idProject, IDriverDB driver)
+        {
+            return driver.GetPaymentsAmountByUserAndProject(id, idProject);
         }
 
         public decimal GetAmountCompletedWorkByProject(int idProject, IDriverDB driver)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -83,6 +84,7 @@ namespace Project
                 var selectedProject = SelectedWorkerProject();
                 ShowWorkerSectionsOfBuilding(selectedProject);
                 ShowWorkerPayments();
+                ShowUserData();
             }
         }
 
@@ -137,6 +139,12 @@ namespace Project
                 workerModel.ShowWorkInModel(workInProject);
             }
             workerWorkLog.ShowWorkByElementInfo();
+        }
+
+        private void ShowUserData()
+        {
+            User[] users = { actualUser};
+            ShowUsersWithAmountInProject(users, SelectedWorkerProject().Id, dgvWorkerUserData, 50);
         }
 
         private void ShowWorkerPayments()
@@ -224,6 +232,8 @@ namespace Project
                 }
                 WorkByElement.CreateWorkLogsComplete(
                     workByElements, actualUser.Id, date, driver);
+                ShowWorkerProjects();
+                ShowUserData();
                 workerModel.ShowModel(SelectedWorkerSectionOfBuilding());
                 workerModel.ShowWorkInModel(SelectedWorkerWorkInProject());
                 ShowWorkerWorksInProject();
@@ -263,10 +273,12 @@ namespace Project
                     return;
                 }
                 WorkByElement.DeleteWorkLogsComplete(completeWorkLogs, driver);
+                ShowWorkerProjects();
+                ShowUserData();
                 workerModel.ShowModel(SelectedWorkerSectionOfBuilding());
                 workerModel.ShowWorkInModel(SelectedWorkerWorkInProject());
                 ShowWorkerWorksInProject();
-                MessageBox.Show($"Отменв выполнения работы для {completeWorkLogs.Count} элементов",
+                MessageBox.Show($"Отмена выполнения работы для {completeWorkLogs.Count} элементов",
                         "Отмена выполнения", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -276,10 +288,40 @@ namespace Project
             }
         }
 
-        //BtnSwitchUpdate_Click
+        private void BtnWorkerSwitchChangePassword_Click(object sender, EventArgs e)
+        {
 
-        //BtnUpdate_Click
-
-        //BtnDelete_Click
+            if (actualUser.Id == -1) return;
+            
+            var inputBox = new InputBox("Смена пароля", "Введите новый пароль", 
+                "от 8 до 16 символов в т.ч. цифра, заглавная и строчная латинские буквы",
+                Color.White, User.PasswordIsMatch);
+            inputBox.SetPasswordChar();
+            inputBox.ShowDialog();
+            if (inputBox.DialogResult == DialogResult.Cancel) return;
+            var password = inputBox.Input;
+            inputBox.InputClear();
+            inputBox.LabelSet("Введите новый пароль еще раз");
+            inputBox.ShowDialog();
+            if (inputBox.DialogResult == DialogResult.Cancel) return;
+            if (!password.Equals(inputBox.Input))
+            {
+                MessageBox.Show($"Введенные пароли не совпадают",
+                    "Смена пароля", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            try
+            {
+                actualUser.ChangePassword(password, hashPasswordCreator);
+                actualUser.Update(driver);
+                MessageBox.Show($"Произведена смена пароля",
+                    "Смена пароля", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
     }
 }

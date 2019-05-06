@@ -11,11 +11,11 @@ namespace Project
     {
         public const string nameTableInDB = "payment";
 
-        private double amount;
+        private decimal amount;
         public int IdUser { get; set; }
         public int IdProject { get; set; }
         public DateTime DateOfPayment { get; set; }
-        public double Amount
+        public decimal Amount
         {
             get { return amount; }
             set
@@ -33,7 +33,7 @@ namespace Project
             Amount = 0;
         }
 
-        public Payment(int idUser, int idProject, DateTime dateOfPayment, double amount) : base()
+        public Payment(int idUser, int idProject, DateTime dateOfPayment, decimal amount) : base()
         {
             IdUser = idUser;
             IdProject = idProject;
@@ -41,7 +41,7 @@ namespace Project
             Amount = amount;
         }
 
-        public Payment(int id, int idUser, int idProject, DateTime dateOfPayment, double amount) : 
+        public Payment(int id, int idUser, int idProject, DateTime dateOfPayment, decimal amount) : 
             base(id)
         {
             IdUser = idUser;

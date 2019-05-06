@@ -952,7 +952,7 @@ namespace Project
             cmd.Parameters.Add(
                 new NpgsqlParameter("@date_of_payment", NpgsqlTypes.NpgsqlDbType.Date));
             cmd.Parameters.Add(
-                new NpgsqlParameter("@amount", NpgsqlTypes.NpgsqlDbType.Double));
+                new NpgsqlParameter("@amount", NpgsqlTypes.NpgsqlDbType.Numeric));
             cmd.Prepare();
             cmd.Parameters[0].Value = payment.IdUser;
             cmd.Parameters[1].Value = payment.IdProject;
@@ -971,7 +971,7 @@ namespace Project
                 int idUser = reader.GetInt32(1);
                 int idProject = reader.GetInt32(2);
                 DateTime dateOfPayment = (DateTime)reader.GetDate(3);
-                double amount = reader.GetDouble(4);
+                decimal amount = reader.GetDecimal(4);
                 reader.Close();
                 return new Payment(id, idUser, idProject, dateOfPayment, amount);
             }
@@ -996,7 +996,7 @@ namespace Project
             cmd.Parameters.Add(
                 new NpgsqlParameter("@date_of_payment", NpgsqlTypes.NpgsqlDbType.Date));
             cmd.Parameters.Add(
-                new NpgsqlParameter("@amount", NpgsqlTypes.NpgsqlDbType.Double));
+                new NpgsqlParameter("@amount", NpgsqlTypes.NpgsqlDbType.Numeric));
             cmd.Parameters.Add(
                 new NpgsqlParameter("@id", NpgsqlTypes.NpgsqlDbType.Integer));
             cmd.Prepare();
@@ -1053,6 +1053,21 @@ namespace Project
             for (int i = 0; i < idList.Count; i++)
                 payments[i] = ReadPayment(idList[i]);
             return payments;
+        }
+
+        public decimal GetPaymentsAmountByUserAndProject(int idUser, int idProject)
+        {
+            string query = $"SELECT SUM(amount) FROM {Payment.nameTableInDB} WHERE " +
+                $"id_user = @id_user AND id_project = @id_project;";
+            var cmd = new NpgsqlCommand(query, Conn);
+            cmd.Parameters.Add(new NpgsqlParameter($"@id_user", NpgsqlTypes.NpgsqlDbType.Integer));
+            cmd.Parameters.Add(new NpgsqlParameter($"@id_project", NpgsqlTypes.NpgsqlDbType.Integer));
+            cmd.Prepare();
+            cmd.Parameters[0].Value = idUser;
+            cmd.Parameters[1].Value = idProject;
+            object result = cmd.ExecuteScalar();
+            if (DBNull.Value.Equals(result)) return -1;
+            return Convert.ToDecimal(result);
         }
 
         public void CreateTypeOfElement(TypeOfElement typeOfElement)

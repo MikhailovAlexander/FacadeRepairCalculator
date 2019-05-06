@@ -30,6 +30,21 @@ namespace Project
             this.StringCheck = StringCheck;
         }
 
+        public void InputClear()
+        {
+            tbInput.Clear();
+        }
+
+        public void SetPasswordChar()
+        {
+            tbInput.PasswordChar = '*';
+        }
+
+        public void LabelSet(string labelText)
+        {
+            lblInfo.Text = labelText;
+        }
+
         private void BtnOK_Click(object sender, EventArgs e)
         {
             if(StringCheck(tbInput.Text))

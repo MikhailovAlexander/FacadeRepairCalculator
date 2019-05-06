@@ -28,45 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle226 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle227 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle228 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle229 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle230 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle231 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle232 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle233 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle234 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle235 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle236 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle237 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle238 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle239 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle240 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle241 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle242 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle243 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle244 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle245 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle246 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle247 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle248 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle249 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle250 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle251 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle252 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle253 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle254 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle255 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle256 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle257 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle258 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle259 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle260 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle261 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle262 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle263 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle264 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle265 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle266 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle267 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle268 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle269 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle270 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageProject = new System.Windows.Forms.TabPage();
             this.gblProjectPanel = new System.Windows.Forms.GroupBox();
@@ -259,6 +265,12 @@
             this.lblPaymentsBySelectedUser = new System.Windows.Forms.Label();
             this.lblPaymentsActualProjectNotSaved = new System.Windows.Forms.Label();
             this.dgvPaymentsInActualProjectByUsers = new System.Windows.Forms.DataGridView();
+            this.dgvTbColumnUserId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColumnUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTbColumnPayments = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTbColumnComp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTbColumnAcc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTbColumnRej = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbAllPayments = new System.Windows.Forms.GroupBox();
             this.lblPaymentsByProjects = new System.Windows.Forms.Label();
             this.dgvPaymentsByProject = new System.Windows.Forms.DataGridView();
@@ -334,6 +346,58 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageUser = new System.Windows.Forms.TabPage();
+            this.groupBoxUserPanel = new System.Windows.Forms.GroupBox();
+            this.buttonUserSwitchCancel = new System.Windows.Forms.Button();
+            this.btnCreateUser = new System.Windows.Forms.Button();
+            this.gbUserData = new System.Windows.Forms.GroupBox();
+            this.labelNameUser = new System.Windows.Forms.Label();
+            this.labelUserLogin = new System.Windows.Forms.Label();
+            this.lblCheckUserLogin = new System.Windows.Forms.Label();
+            this.tbUserLogin = new System.Windows.Forms.TextBox();
+            this.lblCheckUserPassport = new System.Windows.Forms.Label();
+            this.tbUserPassport = new System.Windows.Forms.TextBox();
+            this.lblCheckUserName = new System.Windows.Forms.Label();
+            this.labelUserPassport = new System.Windows.Forms.Label();
+            this.pbCheckMarkUserLogin = new System.Windows.Forms.PictureBox();
+            this.tbUserName = new System.Windows.Forms.TextBox();
+            this.pbCheckMarkUserPassport = new System.Windows.Forms.PictureBox();
+            this.labelManagerAccess = new System.Windows.Forms.Label();
+            this.pbCheckMarkUserName = new System.Windows.Forms.PictureBox();
+            this.checkBoxManagerAccess = new System.Windows.Forms.CheckBox();
+            this.gbPasswordPanel = new System.Windows.Forms.GroupBox();
+            this.labelUserPassword = new System.Windows.Forms.Label();
+            this.btnChangePassword = new System.Windows.Forms.Button();
+            this.tbUserPassword = new System.Windows.Forms.TextBox();
+            this.labelЗPasswordRepeat = new System.Windows.Forms.Label();
+            this.tbUserPasswordRepeat = new System.Windows.Forms.TextBox();
+            this.lblUserCheckPasswordsIsNotEuals = new System.Windows.Forms.Label();
+            this.pbCheckMarkUserRepeatPassword = new System.Windows.Forms.PictureBox();
+            this.lblCheckUserPassword = new System.Windows.Forms.Label();
+            this.pbCheckMarkUserPassword = new System.Windows.Forms.PictureBox();
+            this.btnUpdateUser = new System.Windows.Forms.Button();
+            this.gbUsersInProject = new System.Windows.Forms.GroupBox();
+            this.dgvUserInProject = new System.Windows.Forms.DataGridView();
+            this.ColumnNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnManagerAccess = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsersInProjectColumnPayments = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsersInProjectColumnComp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsersInProjectColumnAcc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsersInProjectColumnRej = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonRemoveUser = new System.Windows.Forms.Button();
+            this.gbAllUsers = new System.Windows.Forms.GroupBox();
+            this.buttonAddUserInProject = new System.Windows.Forms.Button();
+            this.buttonSwitchChangePassword = new System.Windows.Forms.Button();
+            this.buttonDeleteUser = new System.Windows.Forms.Button();
+            this.buttonSwitchUpdateUser = new System.Windows.Forms.Button();
+            this.buttonSwitchCreateUser = new System.Windows.Forms.Button();
+            this.dgvAllUsers = new System.Windows.Forms.DataGridView();
+            this.UserIndexColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userPassportColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userLoginColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userManagerAccessColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageTypeOfElement = new System.Windows.Forms.TabPage();
             this.gbTypeOfElementPanel = new System.Windows.Forms.GroupBox();
             this.btnTypeOfElementSwitchCancel = new System.Windows.Forms.Button();
@@ -390,54 +454,28 @@
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnIdElementPicture = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageUser = new System.Windows.Forms.TabPage();
-            this.groupBoxUserPanel = new System.Windows.Forms.GroupBox();
-            this.buttonUserSwitchCancel = new System.Windows.Forms.Button();
-            this.btnCreateUser = new System.Windows.Forms.Button();
-            this.gbUserData = new System.Windows.Forms.GroupBox();
-            this.labelNameUser = new System.Windows.Forms.Label();
-            this.labelUserLogin = new System.Windows.Forms.Label();
-            this.lblCheckUserLogin = new System.Windows.Forms.Label();
-            this.tbUserLogin = new System.Windows.Forms.TextBox();
-            this.lblCheckUserPassport = new System.Windows.Forms.Label();
-            this.tbUserPassport = new System.Windows.Forms.TextBox();
-            this.lblCheckUserName = new System.Windows.Forms.Label();
-            this.labelUserPassport = new System.Windows.Forms.Label();
-            this.pbCheckMarkUserLogin = new System.Windows.Forms.PictureBox();
-            this.tbUserName = new System.Windows.Forms.TextBox();
-            this.pbCheckMarkUserPassport = new System.Windows.Forms.PictureBox();
-            this.labelManagerAccess = new System.Windows.Forms.Label();
-            this.pbCheckMarkUserName = new System.Windows.Forms.PictureBox();
-            this.checkBoxManagerAccess = new System.Windows.Forms.CheckBox();
-            this.gbPasswordPanel = new System.Windows.Forms.GroupBox();
-            this.labelUserPassword = new System.Windows.Forms.Label();
-            this.btnChangePassword = new System.Windows.Forms.Button();
-            this.tbUserPassword = new System.Windows.Forms.TextBox();
-            this.labelЗPasswordRepeat = new System.Windows.Forms.Label();
-            this.tbUserPasswordRepeat = new System.Windows.Forms.TextBox();
-            this.lblUserCheckPasswordsIsNotEuals = new System.Windows.Forms.Label();
-            this.pbCheckMarkUserRepeatPassword = new System.Windows.Forms.PictureBox();
-            this.lblCheckUserPassword = new System.Windows.Forms.Label();
-            this.pbCheckMarkUserPassword = new System.Windows.Forms.PictureBox();
-            this.btnUpdateUser = new System.Windows.Forms.Button();
-            this.gbUsersInProject = new System.Windows.Forms.GroupBox();
-            this.dgvUserInProject = new System.Windows.Forms.DataGridView();
-            this.ColumnNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnManagerAccess = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonRemoveUser = new System.Windows.Forms.Button();
-            this.gbAllUsers = new System.Windows.Forms.GroupBox();
-            this.buttonAddUserInProject = new System.Windows.Forms.Button();
-            this.buttonSwitchChangePassword = new System.Windows.Forms.Button();
-            this.buttonDeleteUser = new System.Windows.Forms.Button();
-            this.buttonSwitchUpdateUser = new System.Windows.Forms.Button();
-            this.buttonSwitchCreateUser = new System.Windows.Forms.Button();
-            this.dgvAllUsers = new System.Windows.Forms.DataGridView();
-            this.UserIndexColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userPassportColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userLoginColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userManagerAccessColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageElementPicture = new System.Windows.Forms.TabPage();
+            this.gbElementPictureData = new System.Windows.Forms.GroupBox();
+            this.btnElementPictureSwitchCancel = new System.Windows.Forms.Button();
+            this.btnElementPictureUpdate = new System.Windows.Forms.Button();
+            this.gbElementPictureNamePicture = new System.Windows.Forms.GroupBox();
+            this.btnElementPictureOpenFile = new System.Windows.Forms.Button();
+            this.pbElementPictureLoadContent = new System.Windows.Forms.PictureBox();
+            this.lblElementPictureName = new System.Windows.Forms.Label();
+            this.lblCheckElementPictureName = new System.Windows.Forms.Label();
+            this.tbElementPictureName = new System.Windows.Forms.TextBox();
+            this.pbCheckMarkElementPictureLoadContent = new System.Windows.Forms.PictureBox();
+            this.pbCheckMarkElementPictureName = new System.Windows.Forms.PictureBox();
+            this.btnElementPictureCreate = new System.Windows.Forms.Button();
+            this.gbAllElementPicture = new System.Windows.Forms.GroupBox();
+            this.pbElementPictureSelectedDgv = new System.Windows.Forms.PictureBox();
+            this.btnElementPictureDelete = new System.Windows.Forms.Button();
+            this.btnElementPictureSwitchUpdate = new System.Windows.Forms.Button();
+            this.btnElementPictureSwitchCreate = new System.Windows.Forms.Button();
+            this.dgvAllElementPicture = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTbColumnPictureName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnElementPicturePicture = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageClient = new System.Windows.Forms.TabPage();
             this.gbAllClients = new System.Windows.Forms.GroupBox();
             this.buttonAddClientToProject = new System.Windows.Forms.Button();
@@ -467,28 +505,6 @@
             this.pbCheckMarkClientAddress = new System.Windows.Forms.PictureBox();
             this.pbCheckMarkClientName = new System.Windows.Forms.PictureBox();
             this.btnUpdateClient = new System.Windows.Forms.Button();
-            this.tabPageElementPicture = new System.Windows.Forms.TabPage();
-            this.gbElementPictureData = new System.Windows.Forms.GroupBox();
-            this.btnElementPictureSwitchCancel = new System.Windows.Forms.Button();
-            this.btnElementPictureUpdate = new System.Windows.Forms.Button();
-            this.gbElementPictureNamePicture = new System.Windows.Forms.GroupBox();
-            this.btnElementPictureOpenFile = new System.Windows.Forms.Button();
-            this.pbElementPictureLoadContent = new System.Windows.Forms.PictureBox();
-            this.lblElementPictureName = new System.Windows.Forms.Label();
-            this.lblCheckElementPictureName = new System.Windows.Forms.Label();
-            this.tbElementPictureName = new System.Windows.Forms.TextBox();
-            this.pbCheckMarkElementPictureLoadContent = new System.Windows.Forms.PictureBox();
-            this.pbCheckMarkElementPictureName = new System.Windows.Forms.PictureBox();
-            this.btnElementPictureCreate = new System.Windows.Forms.Button();
-            this.gbAllElementPicture = new System.Windows.Forms.GroupBox();
-            this.pbElementPictureSelectedDgv = new System.Windows.Forms.PictureBox();
-            this.btnElementPictureDelete = new System.Windows.Forms.Button();
-            this.btnElementPictureSwitchUpdate = new System.Windows.Forms.Button();
-            this.btnElementPictureSwitchCreate = new System.Windows.Forms.Button();
-            this.dgvAllElementPicture = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTbColumnPictureName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnElementPicturePicture = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageWorker = new System.Windows.Forms.TabPage();
             this.gbWorkerSectionsOfBuilding = new System.Windows.Forms.GroupBox();
             this.lblWorkerProjectNotFound = new System.Windows.Forms.Label();
@@ -526,29 +542,13 @@
             this.WorkerWorksInProjectColumnAccCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WorkerWorksInProjectColumnRejValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WorkerWorksInProjectColumnRejCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageWorkerCompletedWorks = new System.Windows.Forms.TabPage();
             this.tabPageWorkerPayments = new System.Windows.Forms.TabPage();
             this.lblWorkerPaymentAmount = new System.Windows.Forms.Label();
             this.dgvWorkerPayments = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn53 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn54 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageWorkerUserData = new System.Windows.Forms.TabPage();
             this.btnWorkerSwitchChangePassword = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.gbWorkerChangePassword = new System.Windows.Forms.GroupBox();
-            this.btnWorkerSwitchChangePasswordCancel = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btnWorkerChangePassword = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.gbWorkerProjects = new System.Windows.Forms.GroupBox();
             this.dgvWorkerProjects = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -581,12 +581,25 @@
             this.labelActualProjectName = new System.Windows.Forms.Label();
             this.labelActualUserName = new System.Windows.Forms.Label();
             this.ofdElementOpenImage = new System.Windows.Forms.OpenFileDialog();
-            this.dgvTbColumnUserId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColumnUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTbColumnPayments = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTbColumnComp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTbColumnAcc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTbColumnRej = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvWorkerUserData = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn79 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn80 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvWorkerUserDataColumnPassport = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn81 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn82 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn83 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn84 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn85 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnWorkerChangePassword = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnWorkerSwitchChangePasswordCancel = new System.Windows.Forms.Button();
             this.tabControlMain.SuspendLayout();
             this.tabPageProject.SuspendLayout();
             this.gblProjectPanel.SuspendLayout();
@@ -647,6 +660,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorksInActualProject)).BeginInit();
             this.gbAllTypesOfWork.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllTypesOfWork)).BeginInit();
+            this.tabPageUser.SuspendLayout();
+            this.groupBoxUserPanel.SuspendLayout();
+            this.gbUserData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkUserLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkUserPassport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkUserName)).BeginInit();
+            this.gbPasswordPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkUserRepeatPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkUserPassword)).BeginInit();
+            this.gbUsersInProject.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUserInProject)).BeginInit();
+            this.gbAllUsers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllUsers)).BeginInit();
             this.tabPageTypeOfElement.SuspendLayout();
             this.gbTypeOfElementPanel.SuspendLayout();
             this.gbTypeOfElementData.SuspendLayout();
@@ -663,27 +689,6 @@
             this.gbAllTypesOfElement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTypeOfElementSelectedDgvAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllTypesOfElement)).BeginInit();
-            this.tabPageUser.SuspendLayout();
-            this.groupBoxUserPanel.SuspendLayout();
-            this.gbUserData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkUserLogin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkUserPassport)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkUserName)).BeginInit();
-            this.gbPasswordPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkUserRepeatPassword)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkUserPassword)).BeginInit();
-            this.gbUsersInProject.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUserInProject)).BeginInit();
-            this.gbAllUsers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAllUsers)).BeginInit();
-            this.tabPageClient.SuspendLayout();
-            this.gbAllClients.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAllClients)).BeginInit();
-            this.groupBoxClent.SuspendLayout();
-            this.gbClientData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkClientInn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkClientAddress)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkClientName)).BeginInit();
             this.tabPageElementPicture.SuspendLayout();
             this.gbElementPictureData.SuspendLayout();
             this.gbElementPictureNamePicture.SuspendLayout();
@@ -693,6 +698,14 @@
             this.gbAllElementPicture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbElementPictureSelectedDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllElementPicture)).BeginInit();
+            this.tabPageClient.SuspendLayout();
+            this.gbAllClients.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllClients)).BeginInit();
+            this.groupBoxClent.SuspendLayout();
+            this.gbClientData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkClientInn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkClientAddress)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkClientName)).BeginInit();
             this.tabPageWorker.SuspendLayout();
             this.gbWorkerSectionsOfBuilding.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerSectionsOfBuilding)).BeginInit();
@@ -702,15 +715,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerWorksInProject)).BeginInit();
             this.tabPageWorkerPayments.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerPayments)).BeginInit();
-            this.tabPageWorkerUserData.SuspendLayout();
-            this.gbWorkerChangePassword.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.gbWorkerProjects.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerProjects)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerWorkLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerModel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerUserData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlMain
@@ -719,10 +731,10 @@
             this.tabControlMain.Controls.Add(this.tabPageSectionOfBuilding);
             this.tabControlMain.Controls.Add(this.tabPagePayment);
             this.tabControlMain.Controls.Add(this.tabPageWork);
-            this.tabControlMain.Controls.Add(this.tabPageTypeOfElement);
             this.tabControlMain.Controls.Add(this.tabPageUser);
-            this.tabControlMain.Controls.Add(this.tabPageClient);
+            this.tabControlMain.Controls.Add(this.tabPageTypeOfElement);
             this.tabControlMain.Controls.Add(this.tabPageElementPicture);
+            this.tabControlMain.Controls.Add(this.tabPageClient);
             this.tabControlMain.Controls.Add(this.tabPageWorker);
             this.tabControlMain.Location = new System.Drawing.Point(3, 19);
             this.tabControlMain.Name = "tabControlMain";
@@ -1463,32 +1475,32 @@
             // 
             // ColumnWork
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
-            this.ColumnWork.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle226.BackColor = System.Drawing.Color.DimGray;
+            this.ColumnWork.DefaultCellStyle = dataGridViewCellStyle226;
             this.ColumnWork.HeaderText = "Стоимость";
             this.ColumnWork.Name = "ColumnWork";
             this.ColumnWork.ReadOnly = true;
             // 
             // ColumnComp
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Yellow;
-            this.ColumnComp.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle227.BackColor = System.Drawing.Color.Yellow;
+            this.ColumnComp.DefaultCellStyle = dataGridViewCellStyle227;
             this.ColumnComp.HeaderText = "Стоимость";
             this.ColumnComp.Name = "ColumnComp";
             this.ColumnComp.ReadOnly = true;
             // 
             // ColumnAcc
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Green;
-            this.ColumnAcc.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle228.BackColor = System.Drawing.Color.Green;
+            this.ColumnAcc.DefaultCellStyle = dataGridViewCellStyle228;
             this.ColumnAcc.HeaderText = "Стоимость";
             this.ColumnAcc.Name = "ColumnAcc";
             this.ColumnAcc.ReadOnly = true;
             // 
             // ColumnRej
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Red;
-            this.ColumnRej.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle229.BackColor = System.Drawing.Color.Red;
+            this.ColumnRej.DefaultCellStyle = dataGridViewCellStyle229;
             this.ColumnRej.HeaderText = "Стоимость";
             this.ColumnRej.Name = "ColumnRej";
             this.ColumnRej.ReadOnly = true;
@@ -1529,7 +1541,7 @@
             this.dataGridViewTextBoxColumn76,
             this.dataGridViewTextBoxColumn77,
             this.dataGridViewTextBoxColumn78});
-            this.dgvSectionOfBuildingActualProject.Location = new System.Drawing.Point(3, 7);
+            this.dgvSectionOfBuildingActualProject.Location = new System.Drawing.Point(3, 18);
             this.dgvSectionOfBuildingActualProject.MultiSelect = false;
             this.dgvSectionOfBuildingActualProject.Name = "dgvSectionOfBuildingActualProject";
             this.dgvSectionOfBuildingActualProject.ReadOnly = true;
@@ -1611,8 +1623,8 @@
             // 
             // dataGridViewTextBoxColumn75
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DimGray;
-            this.dataGridViewTextBoxColumn75.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle230.BackColor = System.Drawing.Color.DimGray;
+            this.dataGridViewTextBoxColumn75.DefaultCellStyle = dataGridViewCellStyle230;
             this.dataGridViewTextBoxColumn75.HeaderText = "Стоимость";
             this.dataGridViewTextBoxColumn75.Name = "dataGridViewTextBoxColumn75";
             this.dataGridViewTextBoxColumn75.ReadOnly = true;
@@ -1620,8 +1632,8 @@
             // 
             // dataGridViewTextBoxColumn76
             // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Yellow;
-            this.dataGridViewTextBoxColumn76.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle231.BackColor = System.Drawing.Color.Yellow;
+            this.dataGridViewTextBoxColumn76.DefaultCellStyle = dataGridViewCellStyle231;
             this.dataGridViewTextBoxColumn76.HeaderText = "Стоимость";
             this.dataGridViewTextBoxColumn76.Name = "dataGridViewTextBoxColumn76";
             this.dataGridViewTextBoxColumn76.ReadOnly = true;
@@ -1629,8 +1641,8 @@
             // 
             // dataGridViewTextBoxColumn77
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Green;
-            this.dataGridViewTextBoxColumn77.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle232.BackColor = System.Drawing.Color.Green;
+            this.dataGridViewTextBoxColumn77.DefaultCellStyle = dataGridViewCellStyle232;
             this.dataGridViewTextBoxColumn77.HeaderText = "Стоимость";
             this.dataGridViewTextBoxColumn77.Name = "dataGridViewTextBoxColumn77";
             this.dataGridViewTextBoxColumn77.ReadOnly = true;
@@ -1638,8 +1650,8 @@
             // 
             // dataGridViewTextBoxColumn78
             // 
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Red;
-            this.dataGridViewTextBoxColumn78.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle233.BackColor = System.Drawing.Color.Red;
+            this.dataGridViewTextBoxColumn78.DefaultCellStyle = dataGridViewCellStyle233;
             this.dataGridViewTextBoxColumn78.HeaderText = "Стоимость";
             this.dataGridViewTextBoxColumn78.Name = "dataGridViewTextBoxColumn78";
             this.dataGridViewTextBoxColumn78.ReadOnly = true;
@@ -1654,7 +1666,7 @@
             this.gbManagerModelSetWork.Controls.Add(this.btnSectionOfBuildingCancelWork);
             this.gbManagerModelSetWork.Controls.Add(this.btnSectionOfBuildingAcceptWorkCancel);
             this.gbManagerModelSetWork.Controls.Add(this.btnSectionOfBuildingAcceptWork);
-            this.gbManagerModelSetWork.Location = new System.Drawing.Point(765, 192);
+            this.gbManagerModelSetWork.Location = new System.Drawing.Point(765, 210);
             this.gbManagerModelSetWork.Name = "gbManagerModelSetWork";
             this.gbManagerModelSetWork.Size = new System.Drawing.Size(184, 255);
             this.gbManagerModelSetWork.TabIndex = 10;
@@ -1748,7 +1760,7 @@
             this.gbManagerModelButtons.Controls.Add(this.btnSectionOfBuildingModelUpdate);
             this.gbManagerModelButtons.Controls.Add(this.btnSectionOfBuildingSwitchModelCancel);
             this.gbManagerModelButtons.Controls.Add(this.btnSectionOfBuildingSwitchSetWork);
-            this.gbManagerModelButtons.Location = new System.Drawing.Point(765, 54);
+            this.gbManagerModelButtons.Location = new System.Drawing.Point(765, 72);
             this.gbManagerModelButtons.Name = "gbManagerModelButtons";
             this.gbManagerModelButtons.Size = new System.Drawing.Size(184, 143);
             this.gbManagerModelButtons.TabIndex = 9;
@@ -2167,9 +2179,9 @@
             this.gbTypeOfElementInProjectBySectionOfBuilding.Controls.Add(this.dgvSectionOfBuildingWorkInProject);
             this.gbTypeOfElementInProjectBySectionOfBuilding.Controls.Add(this.lvSectionOfBuildingTypesOfElementInProject);
             this.gbTypeOfElementInProjectBySectionOfBuilding.Controls.Add(this.lblSectionOfBuldingActualProjectNotSaved2);
-            this.gbTypeOfElementInProjectBySectionOfBuilding.Location = new System.Drawing.Point(3, 453);
+            this.gbTypeOfElementInProjectBySectionOfBuilding.Location = new System.Drawing.Point(3, 468);
             this.gbTypeOfElementInProjectBySectionOfBuilding.Name = "gbTypeOfElementInProjectBySectionOfBuilding";
-            this.gbTypeOfElementInProjectBySectionOfBuilding.Size = new System.Drawing.Size(946, 490);
+            this.gbTypeOfElementInProjectBySectionOfBuilding.Size = new System.Drawing.Size(946, 475);
             this.gbTypeOfElementInProjectBySectionOfBuilding.TabIndex = 7;
             this.gbTypeOfElementInProjectBySectionOfBuilding.TabStop = false;
             this.gbTypeOfElementInProjectBySectionOfBuilding.Text = "Элементы фасада текущего проекта";
@@ -2257,8 +2269,8 @@
             // 
             // ColumnSectionValue
             // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.DimGray;
-            this.ColumnSectionValue.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle234.BackColor = System.Drawing.Color.DimGray;
+            this.ColumnSectionValue.DefaultCellStyle = dataGridViewCellStyle234;
             this.ColumnSectionValue.Frozen = true;
             this.ColumnSectionValue.HeaderText = "Объем";
             this.ColumnSectionValue.Name = "ColumnSectionValue";
@@ -2267,8 +2279,8 @@
             // 
             // ColumnSectionCost
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.DimGray;
-            this.ColumnSectionCost.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle235.BackColor = System.Drawing.Color.DimGray;
+            this.ColumnSectionCost.DefaultCellStyle = dataGridViewCellStyle235;
             this.ColumnSectionCost.Frozen = true;
             this.ColumnSectionCost.HeaderText = "Стоимость";
             this.ColumnSectionCost.Name = "ColumnSectionCost";
@@ -2277,8 +2289,8 @@
             // 
             // ColumnSectionCompleteValue
             // 
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Yellow;
-            this.ColumnSectionCompleteValue.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle236.BackColor = System.Drawing.Color.Yellow;
+            this.ColumnSectionCompleteValue.DefaultCellStyle = dataGridViewCellStyle236;
             this.ColumnSectionCompleteValue.Frozen = true;
             this.ColumnSectionCompleteValue.HeaderText = "Объем";
             this.ColumnSectionCompleteValue.Name = "ColumnSectionCompleteValue";
@@ -2287,8 +2299,8 @@
             // 
             // ColumnSectionCompleteCost
             // 
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Yellow;
-            this.ColumnSectionCompleteCost.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle237.BackColor = System.Drawing.Color.Yellow;
+            this.ColumnSectionCompleteCost.DefaultCellStyle = dataGridViewCellStyle237;
             this.ColumnSectionCompleteCost.HeaderText = "Стоимость";
             this.ColumnSectionCompleteCost.Name = "ColumnSectionCompleteCost";
             this.ColumnSectionCompleteCost.ReadOnly = true;
@@ -2296,8 +2308,8 @@
             // 
             // ColumnSectionAcceptValue
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Green;
-            this.ColumnSectionAcceptValue.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle238.BackColor = System.Drawing.Color.Green;
+            this.ColumnSectionAcceptValue.DefaultCellStyle = dataGridViewCellStyle238;
             this.ColumnSectionAcceptValue.HeaderText = "Объем";
             this.ColumnSectionAcceptValue.Name = "ColumnSectionAcceptValue";
             this.ColumnSectionAcceptValue.ReadOnly = true;
@@ -2305,8 +2317,8 @@
             // 
             // ColumnSectionAcceptCost
             // 
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Green;
-            this.ColumnSectionAcceptCost.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle239.BackColor = System.Drawing.Color.Green;
+            this.ColumnSectionAcceptCost.DefaultCellStyle = dataGridViewCellStyle239;
             this.ColumnSectionAcceptCost.HeaderText = "Стоимость";
             this.ColumnSectionAcceptCost.Name = "ColumnSectionAcceptCost";
             this.ColumnSectionAcceptCost.ReadOnly = true;
@@ -2314,8 +2326,8 @@
             // 
             // ColumnSectionRejectValue
             // 
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Red;
-            this.ColumnSectionRejectValue.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle240.BackColor = System.Drawing.Color.Red;
+            this.ColumnSectionRejectValue.DefaultCellStyle = dataGridViewCellStyle240;
             this.ColumnSectionRejectValue.HeaderText = "Объем";
             this.ColumnSectionRejectValue.Name = "ColumnSectionRejectValue";
             this.ColumnSectionRejectValue.ReadOnly = true;
@@ -2323,8 +2335,8 @@
             // 
             // ColumnSectionRejectCost
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Red;
-            this.ColumnSectionRejectCost.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle241.BackColor = System.Drawing.Color.Red;
+            this.ColumnSectionRejectCost.DefaultCellStyle = dataGridViewCellStyle241;
             this.ColumnSectionRejectCost.HeaderText = "Стоимость";
             this.ColumnSectionRejectCost.Name = "ColumnSectionRejectCost";
             this.ColumnSectionRejectCost.ReadOnly = true;
@@ -2363,7 +2375,7 @@
             this.gbAllSectionsOfBuilding.Controls.Add(this.btnSectionOfBuildingSwitchUpdate);
             this.gbAllSectionsOfBuilding.Controls.Add(this.btnSectionOfBuildingSwitchCreate);
             this.gbAllSectionsOfBuilding.Controls.Add(this.dgvSectionsOfBuildingByActualProject);
-            this.gbAllSectionsOfBuilding.Location = new System.Drawing.Point(3, 54);
+            this.gbAllSectionsOfBuilding.Location = new System.Drawing.Point(3, 72);
             this.gbAllSectionsOfBuilding.Name = "gbAllSectionsOfBuilding";
             this.gbAllSectionsOfBuilding.Size = new System.Drawing.Size(761, 393);
             this.gbAllSectionsOfBuilding.TabIndex = 6;
@@ -2486,8 +2498,8 @@
             // 
             // SectionsOfBuildingColumnWorkCost
             // 
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.DimGray;
-            this.SectionsOfBuildingColumnWorkCost.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle242.BackColor = System.Drawing.Color.DimGray;
+            this.SectionsOfBuildingColumnWorkCost.DefaultCellStyle = dataGridViewCellStyle242;
             this.SectionsOfBuildingColumnWorkCost.Frozen = true;
             this.SectionsOfBuildingColumnWorkCost.HeaderText = "Стоимость";
             this.SectionsOfBuildingColumnWorkCost.Name = "SectionsOfBuildingColumnWorkCost";
@@ -2496,8 +2508,8 @@
             // 
             // SectionsOfBuildingColumnCompCost
             // 
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Yellow;
-            this.SectionsOfBuildingColumnCompCost.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle243.BackColor = System.Drawing.Color.Yellow;
+            this.SectionsOfBuildingColumnCompCost.DefaultCellStyle = dataGridViewCellStyle243;
             this.SectionsOfBuildingColumnCompCost.Frozen = true;
             this.SectionsOfBuildingColumnCompCost.HeaderText = "Стоимость";
             this.SectionsOfBuildingColumnCompCost.Name = "SectionsOfBuildingColumnCompCost";
@@ -2506,8 +2518,8 @@
             // 
             // SectionsOfBuildingColumnAccCost
             // 
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.Green;
-            this.SectionsOfBuildingColumnAccCost.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle244.BackColor = System.Drawing.Color.Green;
+            this.SectionsOfBuildingColumnAccCost.DefaultCellStyle = dataGridViewCellStyle244;
             this.SectionsOfBuildingColumnAccCost.Frozen = true;
             this.SectionsOfBuildingColumnAccCost.HeaderText = "Стоимость";
             this.SectionsOfBuildingColumnAccCost.Name = "SectionsOfBuildingColumnAccCost";
@@ -2516,8 +2528,8 @@
             // 
             // SectionsOfBuildingColumnRejCost
             // 
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.Red;
-            this.SectionsOfBuildingColumnRejCost.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle245.BackColor = System.Drawing.Color.Red;
+            this.SectionsOfBuildingColumnRejCost.DefaultCellStyle = dataGridViewCellStyle245;
             this.SectionsOfBuildingColumnRejCost.Frozen = true;
             this.SectionsOfBuildingColumnRejCost.HeaderText = "Стоимость";
             this.SectionsOfBuildingColumnRejCost.Name = "SectionsOfBuildingColumnRejCost";
@@ -2826,6 +2838,56 @@
             this.dgvPaymentsInActualProjectByUsers.Size = new System.Drawing.Size(658, 57);
             this.dgvPaymentsInActualProjectByUsers.TabIndex = 60;
             this.dgvPaymentsInActualProjectByUsers.SelectionChanged += new System.EventHandler(this.DgvPaymentsInActualProjectByUsers_SelectionChanged);
+            // 
+            // dgvTbColumnUserId
+            // 
+            this.dgvTbColumnUserId.Frozen = true;
+            this.dgvTbColumnUserId.HeaderText = "Id";
+            this.dgvTbColumnUserId.Name = "dgvTbColumnUserId";
+            this.dgvTbColumnUserId.ReadOnly = true;
+            this.dgvTbColumnUserId.Width = 50;
+            // 
+            // dgvColumnUserName
+            // 
+            this.dgvColumnUserName.Frozen = true;
+            this.dgvColumnUserName.HeaderText = "ФИО исполнителя";
+            this.dgvColumnUserName.Name = "dgvColumnUserName";
+            this.dgvColumnUserName.ReadOnly = true;
+            this.dgvColumnUserName.Width = 273;
+            // 
+            // dgvTbColumnPayments
+            // 
+            this.dgvTbColumnPayments.HeaderText = "Сумма выплат";
+            this.dgvTbColumnPayments.Name = "dgvTbColumnPayments";
+            this.dgvTbColumnPayments.ReadOnly = true;
+            this.dgvTbColumnPayments.Width = 120;
+            // 
+            // dgvTbColumnComp
+            // 
+            dataGridViewCellStyle246.BackColor = System.Drawing.Color.Yellow;
+            this.dgvTbColumnComp.DefaultCellStyle = dataGridViewCellStyle246;
+            this.dgvTbColumnComp.HeaderText = "Стоимость";
+            this.dgvTbColumnComp.Name = "dgvTbColumnComp";
+            this.dgvTbColumnComp.ReadOnly = true;
+            this.dgvTbColumnComp.Width = 70;
+            // 
+            // dgvTbColumnAcc
+            // 
+            dataGridViewCellStyle247.BackColor = System.Drawing.Color.Green;
+            this.dgvTbColumnAcc.DefaultCellStyle = dataGridViewCellStyle247;
+            this.dgvTbColumnAcc.HeaderText = "Стоимость";
+            this.dgvTbColumnAcc.Name = "dgvTbColumnAcc";
+            this.dgvTbColumnAcc.ReadOnly = true;
+            this.dgvTbColumnAcc.Width = 70;
+            // 
+            // dgvTbColumnRej
+            // 
+            dataGridViewCellStyle248.BackColor = System.Drawing.Color.Red;
+            this.dgvTbColumnRej.DefaultCellStyle = dataGridViewCellStyle248;
+            this.dgvTbColumnRej.HeaderText = "Стоимость";
+            this.dgvTbColumnRej.Name = "dgvTbColumnRej";
+            this.dgvTbColumnRej.ReadOnly = true;
+            this.dgvTbColumnRej.Width = 70;
             // 
             // gbAllPayments
             // 
@@ -3633,6 +3695,580 @@
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
             this.dataGridViewTextBoxColumn9.Width = 195;
             // 
+            // tabPageUser
+            // 
+            this.tabPageUser.Controls.Add(this.groupBoxUserPanel);
+            this.tabPageUser.Controls.Add(this.gbUsersInProject);
+            this.tabPageUser.Controls.Add(this.gbAllUsers);
+            this.tabPageUser.Location = new System.Drawing.Point(4, 22);
+            this.tabPageUser.Name = "tabPageUser";
+            this.tabPageUser.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageUser.Size = new System.Drawing.Size(1951, 946);
+            this.tabPageUser.TabIndex = 0;
+            this.tabPageUser.Text = "Пользователи";
+            this.tabPageUser.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxUserPanel
+            // 
+            this.groupBoxUserPanel.Controls.Add(this.buttonUserSwitchCancel);
+            this.groupBoxUserPanel.Controls.Add(this.btnCreateUser);
+            this.groupBoxUserPanel.Controls.Add(this.gbUserData);
+            this.groupBoxUserPanel.Controls.Add(this.gbPasswordPanel);
+            this.groupBoxUserPanel.Controls.Add(this.btnUpdateUser);
+            this.groupBoxUserPanel.Location = new System.Drawing.Point(1122, 6);
+            this.groupBoxUserPanel.Name = "groupBoxUserPanel";
+            this.groupBoxUserPanel.Size = new System.Drawing.Size(818, 934);
+            this.groupBoxUserPanel.TabIndex = 2;
+            this.groupBoxUserPanel.TabStop = false;
+            this.groupBoxUserPanel.Text = "Данные пользователя";
+            // 
+            // buttonUserSwitchCancel
+            // 
+            this.buttonUserSwitchCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buttonUserSwitchCancel.Location = new System.Drawing.Point(649, 120);
+            this.buttonUserSwitchCancel.Name = "buttonUserSwitchCancel";
+            this.buttonUserSwitchCancel.Size = new System.Drawing.Size(152, 42);
+            this.buttonUserSwitchCancel.TabIndex = 50;
+            this.buttonUserSwitchCancel.Text = "Отменить";
+            this.buttonUserSwitchCancel.UseVisualStyleBackColor = true;
+            this.buttonUserSwitchCancel.Click += new System.EventHandler(this.BtnUserSwitchCancel_Click);
+            // 
+            // btnCreateUser
+            // 
+            this.btnCreateUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnCreateUser.Location = new System.Drawing.Point(649, 26);
+            this.btnCreateUser.Name = "btnCreateUser";
+            this.btnCreateUser.Size = new System.Drawing.Size(152, 42);
+            this.btnCreateUser.TabIndex = 48;
+            this.btnCreateUser.Text = "Сохранить нового пользователя";
+            this.btnCreateUser.UseVisualStyleBackColor = true;
+            this.btnCreateUser.Visible = false;
+            this.btnCreateUser.Click += new System.EventHandler(this.BtnCreateUser_Click);
+            // 
+            // gbUserData
+            // 
+            this.gbUserData.Controls.Add(this.labelNameUser);
+            this.gbUserData.Controls.Add(this.labelUserLogin);
+            this.gbUserData.Controls.Add(this.lblCheckUserLogin);
+            this.gbUserData.Controls.Add(this.tbUserLogin);
+            this.gbUserData.Controls.Add(this.lblCheckUserPassport);
+            this.gbUserData.Controls.Add(this.tbUserPassport);
+            this.gbUserData.Controls.Add(this.lblCheckUserName);
+            this.gbUserData.Controls.Add(this.labelUserPassport);
+            this.gbUserData.Controls.Add(this.pbCheckMarkUserLogin);
+            this.gbUserData.Controls.Add(this.tbUserName);
+            this.gbUserData.Controls.Add(this.pbCheckMarkUserPassport);
+            this.gbUserData.Controls.Add(this.labelManagerAccess);
+            this.gbUserData.Controls.Add(this.pbCheckMarkUserName);
+            this.gbUserData.Controls.Add(this.checkBoxManagerAccess);
+            this.gbUserData.Enabled = false;
+            this.gbUserData.Location = new System.Drawing.Point(6, 19);
+            this.gbUserData.Name = "gbUserData";
+            this.gbUserData.Size = new System.Drawing.Size(637, 190);
+            this.gbUserData.TabIndex = 49;
+            this.gbUserData.TabStop = false;
+            // 
+            // labelNameUser
+            // 
+            this.labelNameUser.AutoSize = true;
+            this.labelNameUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelNameUser.Location = new System.Drawing.Point(6, 26);
+            this.labelNameUser.Name = "labelNameUser";
+            this.labelNameUser.Size = new System.Drawing.Size(168, 17);
+            this.labelNameUser.TabIndex = 24;
+            this.labelNameUser.Text = "Фамилия Имя Отчество";
+            // 
+            // labelUserLogin
+            // 
+            this.labelUserLogin.AutoSize = true;
+            this.labelUserLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelUserLogin.Location = new System.Drawing.Point(6, 119);
+            this.labelUserLogin.Name = "labelUserLogin";
+            this.labelUserLogin.Size = new System.Drawing.Size(47, 17);
+            this.labelUserLogin.TabIndex = 28;
+            this.labelUserLogin.Text = "Логин";
+            // 
+            // lblCheckUserLogin
+            // 
+            this.lblCheckUserLogin.AutoSize = true;
+            this.lblCheckUserLogin.ForeColor = System.Drawing.Color.Red;
+            this.lblCheckUserLogin.Location = new System.Drawing.Point(6, 145);
+            this.lblCheckUserLogin.Name = "lblCheckUserLogin";
+            this.lblCheckUserLogin.Size = new System.Drawing.Size(315, 13);
+            this.lblCheckUserLogin.TabIndex = 46;
+            this.lblCheckUserLogin.Text = "Введите в качестве логина адрес Вашей электронной почты";
+            this.lblCheckUserLogin.Visible = false;
+            // 
+            // tbUserLogin
+            // 
+            this.tbUserLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbUserLogin.Location = new System.Drawing.Point(225, 119);
+            this.tbUserLogin.Name = "tbUserLogin";
+            this.tbUserLogin.Size = new System.Drawing.Size(369, 23);
+            this.tbUserLogin.TabIndex = 29;
+            this.tbUserLogin.TextChanged += new System.EventHandler(this.TbUserLogin_TextChanged);
+            // 
+            // lblCheckUserPassport
+            // 
+            this.lblCheckUserPassport.AutoSize = true;
+            this.lblCheckUserPassport.ForeColor = System.Drawing.Color.Red;
+            this.lblCheckUserPassport.Location = new System.Drawing.Point(6, 100);
+            this.lblCheckUserPassport.Name = "lblCheckUserPassport";
+            this.lblCheckUserPassport.Size = new System.Drawing.Size(517, 13);
+            this.lblCheckUserPassport.TabIndex = 45;
+            this.lblCheckUserPassport.Text = "Введите данные в формате: 0000 000000 01.01.2000 г название подразделения выдавше" +
+    "го паспорт";
+            this.lblCheckUserPassport.Visible = false;
+            // 
+            // tbUserPassport
+            // 
+            this.tbUserPassport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbUserPassport.Location = new System.Drawing.Point(225, 74);
+            this.tbUserPassport.Name = "tbUserPassport";
+            this.tbUserPassport.Size = new System.Drawing.Size(369, 23);
+            this.tbUserPassport.TabIndex = 27;
+            this.tbUserPassport.TextChanged += new System.EventHandler(this.TbUserPassport_TextChanged);
+            // 
+            // lblCheckUserName
+            // 
+            this.lblCheckUserName.AutoSize = true;
+            this.lblCheckUserName.ForeColor = System.Drawing.Color.Red;
+            this.lblCheckUserName.Location = new System.Drawing.Point(6, 53);
+            this.lblCheckUserName.Name = "lblCheckUserName";
+            this.lblCheckUserName.Size = new System.Drawing.Size(299, 13);
+            this.lblCheckUserName.TabIndex = 44;
+            this.lblCheckUserName.Text = "Введите ФИО кирилицей с заглавных букв через пробел";
+            this.lblCheckUserName.Visible = false;
+            // 
+            // labelUserPassport
+            // 
+            this.labelUserPassport.AutoSize = true;
+            this.labelUserPassport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelUserPassport.Location = new System.Drawing.Point(6, 74);
+            this.labelUserPassport.Name = "labelUserPassport";
+            this.labelUserPassport.Size = new System.Drawing.Size(144, 17);
+            this.labelUserPassport.TabIndex = 26;
+            this.labelUserPassport.Text = "Паспортные данные";
+            // 
+            // pbCheckMarkUserLogin
+            // 
+            this.pbCheckMarkUserLogin.Location = new System.Drawing.Point(601, 119);
+            this.pbCheckMarkUserLogin.Name = "pbCheckMarkUserLogin";
+            this.pbCheckMarkUserLogin.Size = new System.Drawing.Size(27, 25);
+            this.pbCheckMarkUserLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCheckMarkUserLogin.TabIndex = 41;
+            this.pbCheckMarkUserLogin.TabStop = false;
+            this.pbCheckMarkUserLogin.Visible = false;
+            // 
+            // tbUserName
+            // 
+            this.tbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbUserName.Location = new System.Drawing.Point(225, 26);
+            this.tbUserName.Name = "tbUserName";
+            this.tbUserName.Size = new System.Drawing.Size(369, 23);
+            this.tbUserName.TabIndex = 25;
+            this.tbUserName.TextChanged += new System.EventHandler(this.TbUserName_TextChanged);
+            // 
+            // pbCheckMarkUserPassport
+            // 
+            this.pbCheckMarkUserPassport.Location = new System.Drawing.Point(601, 74);
+            this.pbCheckMarkUserPassport.Name = "pbCheckMarkUserPassport";
+            this.pbCheckMarkUserPassport.Size = new System.Drawing.Size(27, 25);
+            this.pbCheckMarkUserPassport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCheckMarkUserPassport.TabIndex = 40;
+            this.pbCheckMarkUserPassport.TabStop = false;
+            this.pbCheckMarkUserPassport.Visible = false;
+            // 
+            // labelManagerAccess
+            // 
+            this.labelManagerAccess.AutoSize = true;
+            this.labelManagerAccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelManagerAccess.Location = new System.Drawing.Point(6, 163);
+            this.labelManagerAccess.Name = "labelManagerAccess";
+            this.labelManagerAccess.Size = new System.Drawing.Size(184, 17);
+            this.labelManagerAccess.TabIndex = 34;
+            this.labelManagerAccess.Text = "Права доступа менеджера";
+            // 
+            // pbCheckMarkUserName
+            // 
+            this.pbCheckMarkUserName.Location = new System.Drawing.Point(601, 24);
+            this.pbCheckMarkUserName.Name = "pbCheckMarkUserName";
+            this.pbCheckMarkUserName.Size = new System.Drawing.Size(27, 25);
+            this.pbCheckMarkUserName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCheckMarkUserName.TabIndex = 39;
+            this.pbCheckMarkUserName.TabStop = false;
+            this.pbCheckMarkUserName.Visible = false;
+            // 
+            // checkBoxManagerAccess
+            // 
+            this.checkBoxManagerAccess.AutoSize = true;
+            this.checkBoxManagerAccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.checkBoxManagerAccess.Location = new System.Drawing.Point(225, 163);
+            this.checkBoxManagerAccess.Name = "checkBoxManagerAccess";
+            this.checkBoxManagerAccess.Size = new System.Drawing.Size(169, 21);
+            this.checkBoxManagerAccess.TabIndex = 35;
+            this.checkBoxManagerAccess.Text = "Предоставить доступ";
+            this.checkBoxManagerAccess.UseVisualStyleBackColor = true;
+            // 
+            // gbPasswordPanel
+            // 
+            this.gbPasswordPanel.Controls.Add(this.labelUserPassword);
+            this.gbPasswordPanel.Controls.Add(this.btnChangePassword);
+            this.gbPasswordPanel.Controls.Add(this.tbUserPassword);
+            this.gbPasswordPanel.Controls.Add(this.labelЗPasswordRepeat);
+            this.gbPasswordPanel.Controls.Add(this.tbUserPasswordRepeat);
+            this.gbPasswordPanel.Controls.Add(this.lblUserCheckPasswordsIsNotEuals);
+            this.gbPasswordPanel.Controls.Add(this.pbCheckMarkUserRepeatPassword);
+            this.gbPasswordPanel.Controls.Add(this.lblCheckUserPassword);
+            this.gbPasswordPanel.Controls.Add(this.pbCheckMarkUserPassword);
+            this.gbPasswordPanel.Location = new System.Drawing.Point(6, 209);
+            this.gbPasswordPanel.Name = "gbPasswordPanel";
+            this.gbPasswordPanel.Size = new System.Drawing.Size(795, 130);
+            this.gbPasswordPanel.TabIndex = 48;
+            this.gbPasswordPanel.TabStop = false;
+            this.gbPasswordPanel.Visible = false;
+            this.gbPasswordPanel.VisibleChanged += new System.EventHandler(this.GbPasswordPanel_VisibleChanged);
+            // 
+            // labelUserPassword
+            // 
+            this.labelUserPassword.AutoSize = true;
+            this.labelUserPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelUserPassword.Location = new System.Drawing.Point(6, 25);
+            this.labelUserPassword.Name = "labelUserPassword";
+            this.labelUserPassword.Size = new System.Drawing.Size(194, 17);
+            this.labelUserPassword.TabIndex = 30;
+            this.labelUserPassword.Text = "Пароль для входа в систему";
+            // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnChangePassword.Location = new System.Drawing.Point(637, 19);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(152, 42);
+            this.btnChangePassword.TabIndex = 47;
+            this.btnChangePassword.Text = "Сохранить новый пароль";
+            this.btnChangePassword.UseVisualStyleBackColor = true;
+            this.btnChangePassword.Click += new System.EventHandler(this.BtnChangePassword_Click);
+            // 
+            // tbUserPassword
+            // 
+            this.tbUserPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbUserPassword.Location = new System.Drawing.Point(225, 25);
+            this.tbUserPassword.Name = "tbUserPassword";
+            this.tbUserPassword.PasswordChar = '*';
+            this.tbUserPassword.Size = new System.Drawing.Size(369, 23);
+            this.tbUserPassword.TabIndex = 31;
+            this.tbUserPassword.UseSystemPasswordChar = true;
+            this.tbUserPassword.TextChanged += new System.EventHandler(this.TbUserPasswordInput_TextChanged);
+            // 
+            // labelЗPasswordRepeat
+            // 
+            this.labelЗPasswordRepeat.AutoSize = true;
+            this.labelЗPasswordRepeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelЗPasswordRepeat.Location = new System.Drawing.Point(6, 80);
+            this.labelЗPasswordRepeat.Name = "labelЗPasswordRepeat";
+            this.labelЗPasswordRepeat.Size = new System.Drawing.Size(130, 17);
+            this.labelЗPasswordRepeat.TabIndex = 32;
+            this.labelЗPasswordRepeat.Text = "Повторите пароль";
+            // 
+            // tbUserPasswordRepeat
+            // 
+            this.tbUserPasswordRepeat.BackColor = System.Drawing.SystemColors.Window;
+            this.tbUserPasswordRepeat.Enabled = false;
+            this.tbUserPasswordRepeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbUserPasswordRepeat.Location = new System.Drawing.Point(225, 80);
+            this.tbUserPasswordRepeat.Name = "tbUserPasswordRepeat";
+            this.tbUserPasswordRepeat.PasswordChar = '*';
+            this.tbUserPasswordRepeat.Size = new System.Drawing.Size(369, 23);
+            this.tbUserPasswordRepeat.TabIndex = 33;
+            this.tbUserPasswordRepeat.UseSystemPasswordChar = true;
+            this.tbUserPasswordRepeat.TextChanged += new System.EventHandler(this.TbPasswordRepeatInput_TextChanged);
+            // 
+            // lblUserCheckPasswordsIsNotEuals
+            // 
+            this.lblUserCheckPasswordsIsNotEuals.AutoSize = true;
+            this.lblUserCheckPasswordsIsNotEuals.ForeColor = System.Drawing.Color.Red;
+            this.lblUserCheckPasswordsIsNotEuals.Location = new System.Drawing.Point(222, 111);
+            this.lblUserCheckPasswordsIsNotEuals.Name = "lblUserCheckPasswordsIsNotEuals";
+            this.lblUserCheckPasswordsIsNotEuals.Size = new System.Drawing.Size(176, 13);
+            this.lblUserCheckPasswordsIsNotEuals.TabIndex = 37;
+            this.lblUserCheckPasswordsIsNotEuals.Text = "Введенные пароли не совпадают";
+            this.lblUserCheckPasswordsIsNotEuals.Visible = false;
+            // 
+            // pbCheckMarkUserRepeatPassword
+            // 
+            this.pbCheckMarkUserRepeatPassword.Location = new System.Drawing.Point(601, 80);
+            this.pbCheckMarkUserRepeatPassword.Name = "pbCheckMarkUserRepeatPassword";
+            this.pbCheckMarkUserRepeatPassword.Size = new System.Drawing.Size(27, 25);
+            this.pbCheckMarkUserRepeatPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCheckMarkUserRepeatPassword.TabIndex = 43;
+            this.pbCheckMarkUserRepeatPassword.TabStop = false;
+            this.pbCheckMarkUserRepeatPassword.Visible = false;
+            // 
+            // lblCheckUserPassword
+            // 
+            this.lblCheckUserPassword.AutoSize = true;
+            this.lblCheckUserPassword.ForeColor = System.Drawing.Color.Red;
+            this.lblCheckUserPassword.Location = new System.Drawing.Point(6, 53);
+            this.lblCheckUserPassword.Name = "lblCheckUserPassword";
+            this.lblCheckUserPassword.Size = new System.Drawing.Size(631, 13);
+            this.lblCheckUserPassword.TabIndex = 38;
+            this.lblCheckUserPassword.Text = "Введите пароль от 8 до 16 символов, содержащий не меннее 1 цифры, одной заглавной" +
+    " и одной строчной латинских букв";
+            this.lblCheckUserPassword.Visible = false;
+            // 
+            // pbCheckMarkUserPassword
+            // 
+            this.pbCheckMarkUserPassword.Location = new System.Drawing.Point(601, 25);
+            this.pbCheckMarkUserPassword.Name = "pbCheckMarkUserPassword";
+            this.pbCheckMarkUserPassword.Size = new System.Drawing.Size(27, 25);
+            this.pbCheckMarkUserPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCheckMarkUserPassword.TabIndex = 42;
+            this.pbCheckMarkUserPassword.TabStop = false;
+            this.pbCheckMarkUserPassword.Visible = false;
+            // 
+            // btnUpdateUser
+            // 
+            this.btnUpdateUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnUpdateUser.Location = new System.Drawing.Point(649, 72);
+            this.btnUpdateUser.Name = "btnUpdateUser";
+            this.btnUpdateUser.Size = new System.Drawing.Size(152, 42);
+            this.btnUpdateUser.TabIndex = 36;
+            this.btnUpdateUser.Text = "Сохранить данные пользователя";
+            this.btnUpdateUser.UseVisualStyleBackColor = true;
+            this.btnUpdateUser.Visible = false;
+            this.btnUpdateUser.Click += new System.EventHandler(this.BtnUpdateUser_Click);
+            // 
+            // gbUsersInProject
+            // 
+            this.gbUsersInProject.Controls.Add(this.dgvUserInProject);
+            this.gbUsersInProject.Controls.Add(this.buttonRemoveUser);
+            this.gbUsersInProject.Location = new System.Drawing.Point(6, 404);
+            this.gbUsersInProject.Name = "gbUsersInProject";
+            this.gbUsersInProject.Size = new System.Drawing.Size(1110, 536);
+            this.gbUsersInProject.TabIndex = 1;
+            this.gbUsersInProject.TabStop = false;
+            this.gbUsersInProject.Text = "Участники текущего проекта";
+            // 
+            // dgvUserInProject
+            // 
+            this.dgvUserInProject.AllowUserToAddRows = false;
+            this.dgvUserInProject.AllowUserToDeleteRows = false;
+            this.dgvUserInProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUserInProject.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnNumber,
+            this.ColumnUserName,
+            this.ColumnManagerAccess,
+            this.UsersInProjectColumnPayments,
+            this.UsersInProjectColumnComp,
+            this.UsersInProjectColumnAcc,
+            this.UsersInProjectColumnRej});
+            this.dgvUserInProject.Location = new System.Drawing.Point(6, 19);
+            this.dgvUserInProject.MultiSelect = false;
+            this.dgvUserInProject.Name = "dgvUserInProject";
+            this.dgvUserInProject.ReadOnly = true;
+            this.dgvUserInProject.RowHeadersVisible = false;
+            this.dgvUserInProject.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUserInProject.Size = new System.Drawing.Size(856, 53);
+            this.dgvUserInProject.TabIndex = 57;
+            // 
+            // ColumnNumber
+            // 
+            this.ColumnNumber.HeaderText = "Id";
+            this.ColumnNumber.Name = "ColumnNumber";
+            this.ColumnNumber.ReadOnly = true;
+            this.ColumnNumber.Width = 50;
+            // 
+            // ColumnUserName
+            // 
+            this.ColumnUserName.HeaderText = "ФИО участника";
+            this.ColumnUserName.Name = "ColumnUserName";
+            this.ColumnUserName.ReadOnly = true;
+            this.ColumnUserName.Width = 400;
+            // 
+            // ColumnManagerAccess
+            // 
+            this.ColumnManagerAccess.HeaderText = "Менеджер";
+            this.ColumnManagerAccess.Name = "ColumnManagerAccess";
+            this.ColumnManagerAccess.ReadOnly = true;
+            this.ColumnManagerAccess.Width = 80;
+            // 
+            // UsersInProjectColumnPayments
+            // 
+            this.UsersInProjectColumnPayments.HeaderText = "Выплаты";
+            this.UsersInProjectColumnPayments.Name = "UsersInProjectColumnPayments";
+            this.UsersInProjectColumnPayments.ReadOnly = true;
+            this.UsersInProjectColumnPayments.Width = 80;
+            // 
+            // UsersInProjectColumnComp
+            // 
+            dataGridViewCellStyle249.BackColor = System.Drawing.Color.Yellow;
+            this.UsersInProjectColumnComp.DefaultCellStyle = dataGridViewCellStyle249;
+            this.UsersInProjectColumnComp.HeaderText = "Стоимость";
+            this.UsersInProjectColumnComp.Name = "UsersInProjectColumnComp";
+            this.UsersInProjectColumnComp.ReadOnly = true;
+            this.UsersInProjectColumnComp.Width = 80;
+            // 
+            // UsersInProjectColumnAcc
+            // 
+            dataGridViewCellStyle250.BackColor = System.Drawing.Color.Green;
+            this.UsersInProjectColumnAcc.DefaultCellStyle = dataGridViewCellStyle250;
+            this.UsersInProjectColumnAcc.HeaderText = "Стоимость";
+            this.UsersInProjectColumnAcc.Name = "UsersInProjectColumnAcc";
+            this.UsersInProjectColumnAcc.ReadOnly = true;
+            this.UsersInProjectColumnAcc.Width = 80;
+            // 
+            // UsersInProjectColumnRej
+            // 
+            dataGridViewCellStyle251.BackColor = System.Drawing.Color.Red;
+            this.UsersInProjectColumnRej.DefaultCellStyle = dataGridViewCellStyle251;
+            this.UsersInProjectColumnRej.HeaderText = "Стоимость";
+            this.UsersInProjectColumnRej.Name = "UsersInProjectColumnRej";
+            this.UsersInProjectColumnRej.ReadOnly = true;
+            this.UsersInProjectColumnRej.Width = 80;
+            // 
+            // buttonRemoveUser
+            // 
+            this.buttonRemoveUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buttonRemoveUser.Location = new System.Drawing.Point(868, 19);
+            this.buttonRemoveUser.Name = "buttonRemoveUser";
+            this.buttonRemoveUser.Size = new System.Drawing.Size(236, 40);
+            this.buttonRemoveUser.TabIndex = 59;
+            this.buttonRemoveUser.Text = "Удалить участника";
+            this.buttonRemoveUser.UseVisualStyleBackColor = true;
+            this.buttonRemoveUser.Click += new System.EventHandler(this.BtnRemoveUser_Click);
+            // 
+            // gbAllUsers
+            // 
+            this.gbAllUsers.Controls.Add(this.buttonAddUserInProject);
+            this.gbAllUsers.Controls.Add(this.buttonSwitchChangePassword);
+            this.gbAllUsers.Controls.Add(this.buttonDeleteUser);
+            this.gbAllUsers.Controls.Add(this.buttonSwitchUpdateUser);
+            this.gbAllUsers.Controls.Add(this.buttonSwitchCreateUser);
+            this.gbAllUsers.Controls.Add(this.dgvAllUsers);
+            this.gbAllUsers.Location = new System.Drawing.Point(6, 6);
+            this.gbAllUsers.Name = "gbAllUsers";
+            this.gbAllUsers.Size = new System.Drawing.Size(1110, 392);
+            this.gbAllUsers.TabIndex = 0;
+            this.gbAllUsers.TabStop = false;
+            this.gbAllUsers.Text = "Все пользователи";
+            // 
+            // buttonAddUserInProject
+            // 
+            this.buttonAddUserInProject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonAddUserInProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buttonAddUserInProject.Location = new System.Drawing.Point(836, 203);
+            this.buttonAddUserInProject.Name = "buttonAddUserInProject";
+            this.buttonAddUserInProject.Size = new System.Drawing.Size(261, 40);
+            this.buttonAddUserInProject.TabIndex = 12;
+            this.buttonAddUserInProject.Text = "Добавить пользователя в проект";
+            this.buttonAddUserInProject.UseVisualStyleBackColor = true;
+            this.buttonAddUserInProject.Click += new System.EventHandler(this.BtnAddUserInProject_Click);
+            // 
+            // buttonSwitchChangePassword
+            // 
+            this.buttonSwitchChangePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonSwitchChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buttonSwitchChangePassword.Location = new System.Drawing.Point(836, 111);
+            this.buttonSwitchChangePassword.Name = "buttonSwitchChangePassword";
+            this.buttonSwitchChangePassword.Size = new System.Drawing.Size(261, 40);
+            this.buttonSwitchChangePassword.TabIndex = 11;
+            this.buttonSwitchChangePassword.Text = "Сменить пароль пользователя";
+            this.buttonSwitchChangePassword.UseVisualStyleBackColor = true;
+            this.buttonSwitchChangePassword.Click += new System.EventHandler(this.BtnSwitchChangePassword_Click);
+            // 
+            // buttonDeleteUser
+            // 
+            this.buttonDeleteUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonDeleteUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buttonDeleteUser.Location = new System.Drawing.Point(836, 157);
+            this.buttonDeleteUser.Name = "buttonDeleteUser";
+            this.buttonDeleteUser.Size = new System.Drawing.Size(261, 40);
+            this.buttonDeleteUser.TabIndex = 10;
+            this.buttonDeleteUser.Text = "Удалить пользователя";
+            this.buttonDeleteUser.UseVisualStyleBackColor = true;
+            this.buttonDeleteUser.Click += new System.EventHandler(this.BtnDeleteUser_Click);
+            // 
+            // buttonSwitchUpdateUser
+            // 
+            this.buttonSwitchUpdateUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonSwitchUpdateUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buttonSwitchUpdateUser.Location = new System.Drawing.Point(836, 65);
+            this.buttonSwitchUpdateUser.Name = "buttonSwitchUpdateUser";
+            this.buttonSwitchUpdateUser.Size = new System.Drawing.Size(261, 40);
+            this.buttonSwitchUpdateUser.TabIndex = 9;
+            this.buttonSwitchUpdateUser.Text = "Редактировать данные пользователя";
+            this.buttonSwitchUpdateUser.UseVisualStyleBackColor = true;
+            this.buttonSwitchUpdateUser.Click += new System.EventHandler(this.BtnSwitchUpdateUser_Click);
+            // 
+            // buttonSwitchCreateUser
+            // 
+            this.buttonSwitchCreateUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonSwitchCreateUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buttonSwitchCreateUser.Location = new System.Drawing.Point(836, 19);
+            this.buttonSwitchCreateUser.Name = "buttonSwitchCreateUser";
+            this.buttonSwitchCreateUser.Size = new System.Drawing.Size(261, 40);
+            this.buttonSwitchCreateUser.TabIndex = 8;
+            this.buttonSwitchCreateUser.Text = "Добавить нового пользователя";
+            this.buttonSwitchCreateUser.UseVisualStyleBackColor = true;
+            this.buttonSwitchCreateUser.Click += new System.EventHandler(this.BtnSwitchCreateUser_Click);
+            // 
+            // dgvAllUsers
+            // 
+            this.dgvAllUsers.AllowUserToAddRows = false;
+            this.dgvAllUsers.AllowUserToDeleteRows = false;
+            this.dgvAllUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAllUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.UserIndexColumn,
+            this.userNameColumn,
+            this.userPassportColumn,
+            this.userLoginColumn,
+            this.userManagerAccessColumn});
+            this.dgvAllUsers.Location = new System.Drawing.Point(5, 19);
+            this.dgvAllUsers.Name = "dgvAllUsers";
+            this.dgvAllUsers.ReadOnly = true;
+            this.dgvAllUsers.RowHeadersVisible = false;
+            this.dgvAllUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAllUsers.Size = new System.Drawing.Size(825, 27);
+            this.dgvAllUsers.TabIndex = 7;
+            // 
+            // UserIndexColumn
+            // 
+            this.UserIndexColumn.Frozen = true;
+            this.UserIndexColumn.HeaderText = "№";
+            this.UserIndexColumn.Name = "UserIndexColumn";
+            this.UserIndexColumn.ReadOnly = true;
+            this.UserIndexColumn.Width = 30;
+            // 
+            // userNameColumn
+            // 
+            this.userNameColumn.Frozen = true;
+            this.userNameColumn.HeaderText = "ФИО пользователя";
+            this.userNameColumn.Name = "userNameColumn";
+            this.userNameColumn.ReadOnly = true;
+            this.userNameColumn.Width = 300;
+            // 
+            // userPassportColumn
+            // 
+            this.userPassportColumn.HeaderText = "Паспортные данные";
+            this.userPassportColumn.Name = "userPassportColumn";
+            this.userPassportColumn.ReadOnly = true;
+            this.userPassportColumn.Width = 200;
+            // 
+            // userLoginColumn
+            // 
+            this.userLoginColumn.HeaderText = "Логин";
+            this.userLoginColumn.Name = "userLoginColumn";
+            this.userLoginColumn.ReadOnly = true;
+            this.userLoginColumn.Width = 200;
+            // 
+            // userManagerAccessColumn
+            // 
+            this.userManagerAccessColumn.HeaderText = "Менеджер";
+            this.userManagerAccessColumn.Name = "userManagerAccessColumn";
+            this.userManagerAccessColumn.ReadOnly = true;
+            this.userManagerAccessColumn.Width = 90;
+            // 
             // tabPageTypeOfElement
             // 
             this.tabPageTypeOfElement.Controls.Add(this.gbTypeOfElementPanel);
@@ -4235,541 +4871,250 @@
             this.ColumnIdElementPicture.ReadOnly = true;
             this.ColumnIdElementPicture.Visible = false;
             // 
-            // tabPageUser
-            // 
-            this.tabPageUser.Controls.Add(this.groupBoxUserPanel);
-            this.tabPageUser.Controls.Add(this.gbUsersInProject);
-            this.tabPageUser.Controls.Add(this.gbAllUsers);
-            this.tabPageUser.Location = new System.Drawing.Point(4, 22);
-            this.tabPageUser.Name = "tabPageUser";
-            this.tabPageUser.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageUser.Size = new System.Drawing.Size(1951, 946);
-            this.tabPageUser.TabIndex = 0;
-            this.tabPageUser.Text = "Пользователи";
-            this.tabPageUser.UseVisualStyleBackColor = true;
-            // 
-            // groupBoxUserPanel
-            // 
-            this.groupBoxUserPanel.Controls.Add(this.buttonUserSwitchCancel);
-            this.groupBoxUserPanel.Controls.Add(this.btnCreateUser);
-            this.groupBoxUserPanel.Controls.Add(this.gbUserData);
-            this.groupBoxUserPanel.Controls.Add(this.gbPasswordPanel);
-            this.groupBoxUserPanel.Controls.Add(this.btnUpdateUser);
-            this.groupBoxUserPanel.Location = new System.Drawing.Point(1122, 6);
-            this.groupBoxUserPanel.Name = "groupBoxUserPanel";
-            this.groupBoxUserPanel.Size = new System.Drawing.Size(818, 934);
-            this.groupBoxUserPanel.TabIndex = 2;
-            this.groupBoxUserPanel.TabStop = false;
-            this.groupBoxUserPanel.Text = "Данные пользователя";
-            // 
-            // buttonUserSwitchCancel
-            // 
-            this.buttonUserSwitchCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonUserSwitchCancel.Location = new System.Drawing.Point(649, 120);
-            this.buttonUserSwitchCancel.Name = "buttonUserSwitchCancel";
-            this.buttonUserSwitchCancel.Size = new System.Drawing.Size(152, 42);
-            this.buttonUserSwitchCancel.TabIndex = 50;
-            this.buttonUserSwitchCancel.Text = "Отменить";
-            this.buttonUserSwitchCancel.UseVisualStyleBackColor = true;
-            this.buttonUserSwitchCancel.Click += new System.EventHandler(this.BtnUserSwitchCancel_Click);
-            // 
-            // btnCreateUser
-            // 
-            this.btnCreateUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnCreateUser.Location = new System.Drawing.Point(649, 26);
-            this.btnCreateUser.Name = "btnCreateUser";
-            this.btnCreateUser.Size = new System.Drawing.Size(152, 42);
-            this.btnCreateUser.TabIndex = 48;
-            this.btnCreateUser.Text = "Сохранить нового пользователя";
-            this.btnCreateUser.UseVisualStyleBackColor = true;
-            this.btnCreateUser.Visible = false;
-            this.btnCreateUser.Click += new System.EventHandler(this.BtnCreateUser_Click);
-            // 
-            // gbUserData
-            // 
-            this.gbUserData.Controls.Add(this.labelNameUser);
-            this.gbUserData.Controls.Add(this.labelUserLogin);
-            this.gbUserData.Controls.Add(this.lblCheckUserLogin);
-            this.gbUserData.Controls.Add(this.tbUserLogin);
-            this.gbUserData.Controls.Add(this.lblCheckUserPassport);
-            this.gbUserData.Controls.Add(this.tbUserPassport);
-            this.gbUserData.Controls.Add(this.lblCheckUserName);
-            this.gbUserData.Controls.Add(this.labelUserPassport);
-            this.gbUserData.Controls.Add(this.pbCheckMarkUserLogin);
-            this.gbUserData.Controls.Add(this.tbUserName);
-            this.gbUserData.Controls.Add(this.pbCheckMarkUserPassport);
-            this.gbUserData.Controls.Add(this.labelManagerAccess);
-            this.gbUserData.Controls.Add(this.pbCheckMarkUserName);
-            this.gbUserData.Controls.Add(this.checkBoxManagerAccess);
-            this.gbUserData.Enabled = false;
-            this.gbUserData.Location = new System.Drawing.Point(6, 19);
-            this.gbUserData.Name = "gbUserData";
-            this.gbUserData.Size = new System.Drawing.Size(637, 190);
-            this.gbUserData.TabIndex = 49;
-            this.gbUserData.TabStop = false;
-            // 
-            // labelNameUser
-            // 
-            this.labelNameUser.AutoSize = true;
-            this.labelNameUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelNameUser.Location = new System.Drawing.Point(6, 26);
-            this.labelNameUser.Name = "labelNameUser";
-            this.labelNameUser.Size = new System.Drawing.Size(168, 17);
-            this.labelNameUser.TabIndex = 24;
-            this.labelNameUser.Text = "Фамилия Имя Отчество";
-            // 
-            // labelUserLogin
-            // 
-            this.labelUserLogin.AutoSize = true;
-            this.labelUserLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelUserLogin.Location = new System.Drawing.Point(6, 119);
-            this.labelUserLogin.Name = "labelUserLogin";
-            this.labelUserLogin.Size = new System.Drawing.Size(47, 17);
-            this.labelUserLogin.TabIndex = 28;
-            this.labelUserLogin.Text = "Логин";
-            // 
-            // lblCheckUserLogin
-            // 
-            this.lblCheckUserLogin.AutoSize = true;
-            this.lblCheckUserLogin.ForeColor = System.Drawing.Color.Red;
-            this.lblCheckUserLogin.Location = new System.Drawing.Point(6, 145);
-            this.lblCheckUserLogin.Name = "lblCheckUserLogin";
-            this.lblCheckUserLogin.Size = new System.Drawing.Size(315, 13);
-            this.lblCheckUserLogin.TabIndex = 46;
-            this.lblCheckUserLogin.Text = "Введите в качестве логина адрес Вашей электронной почты";
-            this.lblCheckUserLogin.Visible = false;
-            // 
-            // tbUserLogin
-            // 
-            this.tbUserLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbUserLogin.Location = new System.Drawing.Point(225, 119);
-            this.tbUserLogin.Name = "tbUserLogin";
-            this.tbUserLogin.Size = new System.Drawing.Size(369, 23);
-            this.tbUserLogin.TabIndex = 29;
-            this.tbUserLogin.TextChanged += new System.EventHandler(this.TbUserLogin_TextChanged);
-            // 
-            // lblCheckUserPassport
-            // 
-            this.lblCheckUserPassport.AutoSize = true;
-            this.lblCheckUserPassport.ForeColor = System.Drawing.Color.Red;
-            this.lblCheckUserPassport.Location = new System.Drawing.Point(6, 100);
-            this.lblCheckUserPassport.Name = "lblCheckUserPassport";
-            this.lblCheckUserPassport.Size = new System.Drawing.Size(517, 13);
-            this.lblCheckUserPassport.TabIndex = 45;
-            this.lblCheckUserPassport.Text = "Введите данные в формате: 0000 000000 01.01.2000 г название подразделения выдавше" +
-    "го паспорт";
-            this.lblCheckUserPassport.Visible = false;
-            // 
-            // tbUserPassport
-            // 
-            this.tbUserPassport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbUserPassport.Location = new System.Drawing.Point(225, 74);
-            this.tbUserPassport.Name = "tbUserPassport";
-            this.tbUserPassport.Size = new System.Drawing.Size(369, 23);
-            this.tbUserPassport.TabIndex = 27;
-            this.tbUserPassport.TextChanged += new System.EventHandler(this.TbUserPassport_TextChanged);
-            // 
-            // lblCheckUserName
-            // 
-            this.lblCheckUserName.AutoSize = true;
-            this.lblCheckUserName.ForeColor = System.Drawing.Color.Red;
-            this.lblCheckUserName.Location = new System.Drawing.Point(6, 53);
-            this.lblCheckUserName.Name = "lblCheckUserName";
-            this.lblCheckUserName.Size = new System.Drawing.Size(299, 13);
-            this.lblCheckUserName.TabIndex = 44;
-            this.lblCheckUserName.Text = "Введите ФИО кирилицей с заглавных букв через пробел";
-            this.lblCheckUserName.Visible = false;
-            // 
-            // labelUserPassport
-            // 
-            this.labelUserPassport.AutoSize = true;
-            this.labelUserPassport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelUserPassport.Location = new System.Drawing.Point(6, 74);
-            this.labelUserPassport.Name = "labelUserPassport";
-            this.labelUserPassport.Size = new System.Drawing.Size(144, 17);
-            this.labelUserPassport.TabIndex = 26;
-            this.labelUserPassport.Text = "Паспортные данные";
-            // 
-            // pbCheckMarkUserLogin
-            // 
-            this.pbCheckMarkUserLogin.Location = new System.Drawing.Point(601, 119);
-            this.pbCheckMarkUserLogin.Name = "pbCheckMarkUserLogin";
-            this.pbCheckMarkUserLogin.Size = new System.Drawing.Size(27, 25);
-            this.pbCheckMarkUserLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbCheckMarkUserLogin.TabIndex = 41;
-            this.pbCheckMarkUserLogin.TabStop = false;
-            this.pbCheckMarkUserLogin.Visible = false;
-            // 
-            // tbUserName
-            // 
-            this.tbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbUserName.Location = new System.Drawing.Point(225, 26);
-            this.tbUserName.Name = "tbUserName";
-            this.tbUserName.Size = new System.Drawing.Size(369, 23);
-            this.tbUserName.TabIndex = 25;
-            this.tbUserName.TextChanged += new System.EventHandler(this.TbUserName_TextChanged);
-            // 
-            // pbCheckMarkUserPassport
-            // 
-            this.pbCheckMarkUserPassport.Location = new System.Drawing.Point(601, 74);
-            this.pbCheckMarkUserPassport.Name = "pbCheckMarkUserPassport";
-            this.pbCheckMarkUserPassport.Size = new System.Drawing.Size(27, 25);
-            this.pbCheckMarkUserPassport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbCheckMarkUserPassport.TabIndex = 40;
-            this.pbCheckMarkUserPassport.TabStop = false;
-            this.pbCheckMarkUserPassport.Visible = false;
-            // 
-            // labelManagerAccess
-            // 
-            this.labelManagerAccess.AutoSize = true;
-            this.labelManagerAccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelManagerAccess.Location = new System.Drawing.Point(6, 163);
-            this.labelManagerAccess.Name = "labelManagerAccess";
-            this.labelManagerAccess.Size = new System.Drawing.Size(184, 17);
-            this.labelManagerAccess.TabIndex = 34;
-            this.labelManagerAccess.Text = "Права доступа менеджера";
-            // 
-            // pbCheckMarkUserName
-            // 
-            this.pbCheckMarkUserName.Location = new System.Drawing.Point(601, 24);
-            this.pbCheckMarkUserName.Name = "pbCheckMarkUserName";
-            this.pbCheckMarkUserName.Size = new System.Drawing.Size(27, 25);
-            this.pbCheckMarkUserName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbCheckMarkUserName.TabIndex = 39;
-            this.pbCheckMarkUserName.TabStop = false;
-            this.pbCheckMarkUserName.Visible = false;
-            // 
-            // checkBoxManagerAccess
-            // 
-            this.checkBoxManagerAccess.AutoSize = true;
-            this.checkBoxManagerAccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.checkBoxManagerAccess.Location = new System.Drawing.Point(225, 163);
-            this.checkBoxManagerAccess.Name = "checkBoxManagerAccess";
-            this.checkBoxManagerAccess.Size = new System.Drawing.Size(169, 21);
-            this.checkBoxManagerAccess.TabIndex = 35;
-            this.checkBoxManagerAccess.Text = "Предоставить доступ";
-            this.checkBoxManagerAccess.UseVisualStyleBackColor = true;
-            // 
-            // gbPasswordPanel
-            // 
-            this.gbPasswordPanel.Controls.Add(this.labelUserPassword);
-            this.gbPasswordPanel.Controls.Add(this.btnChangePassword);
-            this.gbPasswordPanel.Controls.Add(this.tbUserPassword);
-            this.gbPasswordPanel.Controls.Add(this.labelЗPasswordRepeat);
-            this.gbPasswordPanel.Controls.Add(this.tbUserPasswordRepeat);
-            this.gbPasswordPanel.Controls.Add(this.lblUserCheckPasswordsIsNotEuals);
-            this.gbPasswordPanel.Controls.Add(this.pbCheckMarkUserRepeatPassword);
-            this.gbPasswordPanel.Controls.Add(this.lblCheckUserPassword);
-            this.gbPasswordPanel.Controls.Add(this.pbCheckMarkUserPassword);
-            this.gbPasswordPanel.Location = new System.Drawing.Point(6, 209);
-            this.gbPasswordPanel.Name = "gbPasswordPanel";
-            this.gbPasswordPanel.Size = new System.Drawing.Size(795, 130);
-            this.gbPasswordPanel.TabIndex = 48;
-            this.gbPasswordPanel.TabStop = false;
-            this.gbPasswordPanel.Visible = false;
-            this.gbPasswordPanel.VisibleChanged += new System.EventHandler(this.GbPasswordPanel_VisibleChanged);
-            // 
-            // labelUserPassword
-            // 
-            this.labelUserPassword.AutoSize = true;
-            this.labelUserPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelUserPassword.Location = new System.Drawing.Point(6, 25);
-            this.labelUserPassword.Name = "labelUserPassword";
-            this.labelUserPassword.Size = new System.Drawing.Size(194, 17);
-            this.labelUserPassword.TabIndex = 30;
-            this.labelUserPassword.Text = "Пароль для входа в систему";
-            // 
-            // btnChangePassword
-            // 
-            this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnChangePassword.Location = new System.Drawing.Point(637, 19);
-            this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(152, 42);
-            this.btnChangePassword.TabIndex = 47;
-            this.btnChangePassword.Text = "Сохранить новый пароль";
-            this.btnChangePassword.UseVisualStyleBackColor = true;
-            this.btnChangePassword.Click += new System.EventHandler(this.BtnChangePassword_Click);
-            // 
-            // tbUserPassword
-            // 
-            this.tbUserPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbUserPassword.Location = new System.Drawing.Point(225, 25);
-            this.tbUserPassword.Name = "tbUserPassword";
-            this.tbUserPassword.PasswordChar = '*';
-            this.tbUserPassword.Size = new System.Drawing.Size(369, 23);
-            this.tbUserPassword.TabIndex = 31;
-            this.tbUserPassword.UseSystemPasswordChar = true;
-            this.tbUserPassword.TextChanged += new System.EventHandler(this.TbUserPasswordInput_TextChanged);
-            // 
-            // labelЗPasswordRepeat
-            // 
-            this.labelЗPasswordRepeat.AutoSize = true;
-            this.labelЗPasswordRepeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelЗPasswordRepeat.Location = new System.Drawing.Point(6, 80);
-            this.labelЗPasswordRepeat.Name = "labelЗPasswordRepeat";
-            this.labelЗPasswordRepeat.Size = new System.Drawing.Size(130, 17);
-            this.labelЗPasswordRepeat.TabIndex = 32;
-            this.labelЗPasswordRepeat.Text = "Повторите пароль";
-            // 
-            // tbUserPasswordRepeat
-            // 
-            this.tbUserPasswordRepeat.BackColor = System.Drawing.SystemColors.Window;
-            this.tbUserPasswordRepeat.Enabled = false;
-            this.tbUserPasswordRepeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbUserPasswordRepeat.Location = new System.Drawing.Point(225, 80);
-            this.tbUserPasswordRepeat.Name = "tbUserPasswordRepeat";
-            this.tbUserPasswordRepeat.PasswordChar = '*';
-            this.tbUserPasswordRepeat.Size = new System.Drawing.Size(369, 23);
-            this.tbUserPasswordRepeat.TabIndex = 33;
-            this.tbUserPasswordRepeat.UseSystemPasswordChar = true;
-            this.tbUserPasswordRepeat.TextChanged += new System.EventHandler(this.TbPasswordRepeatInput_TextChanged);
-            // 
-            // lblUserCheckPasswordsIsNotEuals
-            // 
-            this.lblUserCheckPasswordsIsNotEuals.AutoSize = true;
-            this.lblUserCheckPasswordsIsNotEuals.ForeColor = System.Drawing.Color.Red;
-            this.lblUserCheckPasswordsIsNotEuals.Location = new System.Drawing.Point(222, 111);
-            this.lblUserCheckPasswordsIsNotEuals.Name = "lblUserCheckPasswordsIsNotEuals";
-            this.lblUserCheckPasswordsIsNotEuals.Size = new System.Drawing.Size(176, 13);
-            this.lblUserCheckPasswordsIsNotEuals.TabIndex = 37;
-            this.lblUserCheckPasswordsIsNotEuals.Text = "Введенные пароли не совпадают";
-            this.lblUserCheckPasswordsIsNotEuals.Visible = false;
-            // 
-            // pbCheckMarkUserRepeatPassword
-            // 
-            this.pbCheckMarkUserRepeatPassword.Location = new System.Drawing.Point(601, 80);
-            this.pbCheckMarkUserRepeatPassword.Name = "pbCheckMarkUserRepeatPassword";
-            this.pbCheckMarkUserRepeatPassword.Size = new System.Drawing.Size(27, 25);
-            this.pbCheckMarkUserRepeatPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbCheckMarkUserRepeatPassword.TabIndex = 43;
-            this.pbCheckMarkUserRepeatPassword.TabStop = false;
-            this.pbCheckMarkUserRepeatPassword.Visible = false;
-            // 
-            // lblCheckUserPassword
-            // 
-            this.lblCheckUserPassword.AutoSize = true;
-            this.lblCheckUserPassword.ForeColor = System.Drawing.Color.Red;
-            this.lblCheckUserPassword.Location = new System.Drawing.Point(6, 53);
-            this.lblCheckUserPassword.Name = "lblCheckUserPassword";
-            this.lblCheckUserPassword.Size = new System.Drawing.Size(631, 13);
-            this.lblCheckUserPassword.TabIndex = 38;
-            this.lblCheckUserPassword.Text = "Введите пароль от 8 до 16 символов, содержащий не меннее 1 цифры, одной заглавной" +
-    " и одной строчной латинских букв";
-            this.lblCheckUserPassword.Visible = false;
-            // 
-            // pbCheckMarkUserPassword
-            // 
-            this.pbCheckMarkUserPassword.Location = new System.Drawing.Point(601, 25);
-            this.pbCheckMarkUserPassword.Name = "pbCheckMarkUserPassword";
-            this.pbCheckMarkUserPassword.Size = new System.Drawing.Size(27, 25);
-            this.pbCheckMarkUserPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbCheckMarkUserPassword.TabIndex = 42;
-            this.pbCheckMarkUserPassword.TabStop = false;
-            this.pbCheckMarkUserPassword.Visible = false;
-            // 
-            // btnUpdateUser
-            // 
-            this.btnUpdateUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnUpdateUser.Location = new System.Drawing.Point(649, 72);
-            this.btnUpdateUser.Name = "btnUpdateUser";
-            this.btnUpdateUser.Size = new System.Drawing.Size(152, 42);
-            this.btnUpdateUser.TabIndex = 36;
-            this.btnUpdateUser.Text = "Сохранить данные пользователя";
-            this.btnUpdateUser.UseVisualStyleBackColor = true;
-            this.btnUpdateUser.Visible = false;
-            this.btnUpdateUser.Click += new System.EventHandler(this.BtnUpdateUser_Click);
-            // 
-            // gbUsersInProject
-            // 
-            this.gbUsersInProject.Controls.Add(this.dgvUserInProject);
-            this.gbUsersInProject.Controls.Add(this.buttonRemoveUser);
-            this.gbUsersInProject.Location = new System.Drawing.Point(6, 404);
-            this.gbUsersInProject.Name = "gbUsersInProject";
-            this.gbUsersInProject.Size = new System.Drawing.Size(1110, 536);
-            this.gbUsersInProject.TabIndex = 1;
-            this.gbUsersInProject.TabStop = false;
-            this.gbUsersInProject.Text = "Участники текущего проекта";
-            // 
-            // dgvUserInProject
-            // 
-            this.dgvUserInProject.AllowUserToAddRows = false;
-            this.dgvUserInProject.AllowUserToDeleteRows = false;
-            this.dgvUserInProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUserInProject.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnNumber,
-            this.ColumnUserName,
-            this.ColumnManagerAccess});
-            this.dgvUserInProject.Location = new System.Drawing.Point(6, 19);
-            this.dgvUserInProject.MultiSelect = false;
-            this.dgvUserInProject.Name = "dgvUserInProject";
-            this.dgvUserInProject.ReadOnly = true;
-            this.dgvUserInProject.RowHeadersVisible = false;
-            this.dgvUserInProject.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUserInProject.Size = new System.Drawing.Size(533, 53);
-            this.dgvUserInProject.TabIndex = 57;
-            // 
-            // ColumnNumber
-            // 
-            this.ColumnNumber.HeaderText = "Id";
-            this.ColumnNumber.Name = "ColumnNumber";
-            this.ColumnNumber.ReadOnly = true;
-            this.ColumnNumber.Width = 50;
-            // 
-            // ColumnUserName
-            // 
-            this.ColumnUserName.HeaderText = "ФИО участника";
-            this.ColumnUserName.Name = "ColumnUserName";
-            this.ColumnUserName.ReadOnly = true;
-            this.ColumnUserName.Width = 400;
-            // 
-            // ColumnManagerAccess
-            // 
-            this.ColumnManagerAccess.HeaderText = "Менеджер";
-            this.ColumnManagerAccess.Name = "ColumnManagerAccess";
-            this.ColumnManagerAccess.ReadOnly = true;
-            this.ColumnManagerAccess.Width = 80;
-            // 
-            // buttonRemoveUser
-            // 
-            this.buttonRemoveUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonRemoveUser.Location = new System.Drawing.Point(572, 19);
-            this.buttonRemoveUser.Name = "buttonRemoveUser";
-            this.buttonRemoveUser.Size = new System.Drawing.Size(203, 40);
-            this.buttonRemoveUser.TabIndex = 59;
-            this.buttonRemoveUser.Text = "Удалить участника";
-            this.buttonRemoveUser.UseVisualStyleBackColor = true;
-            this.buttonRemoveUser.Click += new System.EventHandler(this.BtnRemoveUser_Click);
-            // 
-            // gbAllUsers
-            // 
-            this.gbAllUsers.Controls.Add(this.buttonAddUserInProject);
-            this.gbAllUsers.Controls.Add(this.buttonSwitchChangePassword);
-            this.gbAllUsers.Controls.Add(this.buttonDeleteUser);
-            this.gbAllUsers.Controls.Add(this.buttonSwitchUpdateUser);
-            this.gbAllUsers.Controls.Add(this.buttonSwitchCreateUser);
-            this.gbAllUsers.Controls.Add(this.dgvAllUsers);
-            this.gbAllUsers.Location = new System.Drawing.Point(6, 6);
-            this.gbAllUsers.Name = "gbAllUsers";
-            this.gbAllUsers.Size = new System.Drawing.Size(1110, 392);
-            this.gbAllUsers.TabIndex = 0;
-            this.gbAllUsers.TabStop = false;
-            this.gbAllUsers.Text = "Все пользователи";
-            // 
-            // buttonAddUserInProject
-            // 
-            this.buttonAddUserInProject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonAddUserInProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonAddUserInProject.Location = new System.Drawing.Point(836, 203);
-            this.buttonAddUserInProject.Name = "buttonAddUserInProject";
-            this.buttonAddUserInProject.Size = new System.Drawing.Size(261, 40);
-            this.buttonAddUserInProject.TabIndex = 12;
-            this.buttonAddUserInProject.Text = "Добавить пользователя в проект";
-            this.buttonAddUserInProject.UseVisualStyleBackColor = true;
-            this.buttonAddUserInProject.Click += new System.EventHandler(this.BtnAddUserInProject_Click);
-            // 
-            // buttonSwitchChangePassword
-            // 
-            this.buttonSwitchChangePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonSwitchChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonSwitchChangePassword.Location = new System.Drawing.Point(836, 111);
-            this.buttonSwitchChangePassword.Name = "buttonSwitchChangePassword";
-            this.buttonSwitchChangePassword.Size = new System.Drawing.Size(261, 40);
-            this.buttonSwitchChangePassword.TabIndex = 11;
-            this.buttonSwitchChangePassword.Text = "Сменить пароль пользователя";
-            this.buttonSwitchChangePassword.UseVisualStyleBackColor = true;
-            this.buttonSwitchChangePassword.Click += new System.EventHandler(this.BtnSwitchChangePassword_Click);
-            // 
-            // buttonDeleteUser
-            // 
-            this.buttonDeleteUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonDeleteUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonDeleteUser.Location = new System.Drawing.Point(836, 157);
-            this.buttonDeleteUser.Name = "buttonDeleteUser";
-            this.buttonDeleteUser.Size = new System.Drawing.Size(261, 40);
-            this.buttonDeleteUser.TabIndex = 10;
-            this.buttonDeleteUser.Text = "Удалить пользователя";
-            this.buttonDeleteUser.UseVisualStyleBackColor = true;
-            this.buttonDeleteUser.Click += new System.EventHandler(this.BtnDeleteUser_Click);
-            // 
-            // buttonSwitchUpdateUser
-            // 
-            this.buttonSwitchUpdateUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonSwitchUpdateUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonSwitchUpdateUser.Location = new System.Drawing.Point(836, 65);
-            this.buttonSwitchUpdateUser.Name = "buttonSwitchUpdateUser";
-            this.buttonSwitchUpdateUser.Size = new System.Drawing.Size(261, 40);
-            this.buttonSwitchUpdateUser.TabIndex = 9;
-            this.buttonSwitchUpdateUser.Text = "Редактировать данные пользователя";
-            this.buttonSwitchUpdateUser.UseVisualStyleBackColor = true;
-            this.buttonSwitchUpdateUser.Click += new System.EventHandler(this.BtnSwitchUpdateUser_Click);
-            // 
-            // buttonSwitchCreateUser
-            // 
-            this.buttonSwitchCreateUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonSwitchCreateUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonSwitchCreateUser.Location = new System.Drawing.Point(836, 19);
-            this.buttonSwitchCreateUser.Name = "buttonSwitchCreateUser";
-            this.buttonSwitchCreateUser.Size = new System.Drawing.Size(261, 40);
-            this.buttonSwitchCreateUser.TabIndex = 8;
-            this.buttonSwitchCreateUser.Text = "Добавить нового пользователя";
-            this.buttonSwitchCreateUser.UseVisualStyleBackColor = true;
-            this.buttonSwitchCreateUser.Click += new System.EventHandler(this.BtnSwitchCreateUser_Click);
-            // 
-            // dgvAllUsers
-            // 
-            this.dgvAllUsers.AllowUserToAddRows = false;
-            this.dgvAllUsers.AllowUserToDeleteRows = false;
-            this.dgvAllUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAllUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.UserIndexColumn,
-            this.userNameColumn,
-            this.userPassportColumn,
-            this.userLoginColumn,
-            this.userManagerAccessColumn});
-            this.dgvAllUsers.Location = new System.Drawing.Point(5, 19);
-            this.dgvAllUsers.Name = "dgvAllUsers";
-            this.dgvAllUsers.ReadOnly = true;
-            this.dgvAllUsers.RowHeadersVisible = false;
-            this.dgvAllUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAllUsers.Size = new System.Drawing.Size(825, 27);
-            this.dgvAllUsers.TabIndex = 7;
-            // 
-            // UserIndexColumn
-            // 
-            this.UserIndexColumn.Frozen = true;
-            this.UserIndexColumn.HeaderText = "№";
-            this.UserIndexColumn.Name = "UserIndexColumn";
-            this.UserIndexColumn.ReadOnly = true;
-            this.UserIndexColumn.Width = 30;
-            // 
-            // userNameColumn
-            // 
-            this.userNameColumn.Frozen = true;
-            this.userNameColumn.HeaderText = "ФИО пользователя";
-            this.userNameColumn.Name = "userNameColumn";
-            this.userNameColumn.ReadOnly = true;
-            this.userNameColumn.Width = 300;
-            // 
-            // userPassportColumn
-            // 
-            this.userPassportColumn.HeaderText = "Паспортные данные";
-            this.userPassportColumn.Name = "userPassportColumn";
-            this.userPassportColumn.ReadOnly = true;
-            this.userPassportColumn.Width = 200;
-            // 
-            // userLoginColumn
-            // 
-            this.userLoginColumn.HeaderText = "Логин";
-            this.userLoginColumn.Name = "userLoginColumn";
-            this.userLoginColumn.ReadOnly = true;
-            this.userLoginColumn.Width = 200;
-            // 
-            // userManagerAccessColumn
-            // 
-            this.userManagerAccessColumn.HeaderText = "Менеджер";
-            this.userManagerAccessColumn.Name = "userManagerAccessColumn";
-            this.userManagerAccessColumn.ReadOnly = true;
-            this.userManagerAccessColumn.Width = 90;
+            // tabPageElementPicture
+            // 
+            this.tabPageElementPicture.Controls.Add(this.gbElementPictureData);
+            this.tabPageElementPicture.Controls.Add(this.gbAllElementPicture);
+            this.tabPageElementPicture.Location = new System.Drawing.Point(4, 22);
+            this.tabPageElementPicture.Name = "tabPageElementPicture";
+            this.tabPageElementPicture.Size = new System.Drawing.Size(1951, 946);
+            this.tabPageElementPicture.TabIndex = 6;
+            this.tabPageElementPicture.Text = "Изображения элементов";
+            this.tabPageElementPicture.UseVisualStyleBackColor = true;
+            // 
+            // gbElementPictureData
+            // 
+            this.gbElementPictureData.Controls.Add(this.btnElementPictureSwitchCancel);
+            this.gbElementPictureData.Controls.Add(this.btnElementPictureUpdate);
+            this.gbElementPictureData.Controls.Add(this.gbElementPictureNamePicture);
+            this.gbElementPictureData.Controls.Add(this.btnElementPictureCreate);
+            this.gbElementPictureData.Location = new System.Drawing.Point(979, 3);
+            this.gbElementPictureData.Name = "gbElementPictureData";
+            this.gbElementPictureData.Size = new System.Drawing.Size(752, 899);
+            this.gbElementPictureData.TabIndex = 7;
+            this.gbElementPictureData.TabStop = false;
+            this.gbElementPictureData.Text = "Изображение";
+            // 
+            // btnElementPictureSwitchCancel
+            // 
+            this.btnElementPictureSwitchCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnElementPictureSwitchCancel.Location = new System.Drawing.Point(18, 228);
+            this.btnElementPictureSwitchCancel.Name = "btnElementPictureSwitchCancel";
+            this.btnElementPictureSwitchCancel.Size = new System.Drawing.Size(152, 42);
+            this.btnElementPictureSwitchCancel.TabIndex = 50;
+            this.btnElementPictureSwitchCancel.Text = "Отменить";
+            this.btnElementPictureSwitchCancel.UseVisualStyleBackColor = true;
+            this.btnElementPictureSwitchCancel.Click += new System.EventHandler(this.BtnElementPictureSwitchCancel_Click);
+            // 
+            // btnElementPictureUpdate
+            // 
+            this.btnElementPictureUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnElementPictureUpdate.Location = new System.Drawing.Point(427, 228);
+            this.btnElementPictureUpdate.Name = "btnElementPictureUpdate";
+            this.btnElementPictureUpdate.Size = new System.Drawing.Size(152, 42);
+            this.btnElementPictureUpdate.TabIndex = 48;
+            this.btnElementPictureUpdate.Text = "Сохранить изменения";
+            this.btnElementPictureUpdate.UseVisualStyleBackColor = true;
+            this.btnElementPictureUpdate.Visible = false;
+            this.btnElementPictureUpdate.Click += new System.EventHandler(this.BtnElementPictureUpdate_Click);
+            // 
+            // gbElementPictureNamePicture
+            // 
+            this.gbElementPictureNamePicture.Controls.Add(this.btnElementPictureOpenFile);
+            this.gbElementPictureNamePicture.Controls.Add(this.pbElementPictureLoadContent);
+            this.gbElementPictureNamePicture.Controls.Add(this.lblElementPictureName);
+            this.gbElementPictureNamePicture.Controls.Add(this.lblCheckElementPictureName);
+            this.gbElementPictureNamePicture.Controls.Add(this.tbElementPictureName);
+            this.gbElementPictureNamePicture.Controls.Add(this.pbCheckMarkElementPictureLoadContent);
+            this.gbElementPictureNamePicture.Controls.Add(this.pbCheckMarkElementPictureName);
+            this.gbElementPictureNamePicture.Enabled = false;
+            this.gbElementPictureNamePicture.Location = new System.Drawing.Point(9, 19);
+            this.gbElementPictureNamePicture.Name = "gbElementPictureNamePicture";
+            this.gbElementPictureNamePicture.Size = new System.Drawing.Size(728, 190);
+            this.gbElementPictureNamePicture.TabIndex = 49;
+            this.gbElementPictureNamePicture.TabStop = false;
+            // 
+            // btnElementPictureOpenFile
+            // 
+            this.btnElementPictureOpenFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnElementPictureOpenFile.Location = new System.Drawing.Point(9, 74);
+            this.btnElementPictureOpenFile.Name = "btnElementPictureOpenFile";
+            this.btnElementPictureOpenFile.Size = new System.Drawing.Size(152, 42);
+            this.btnElementPictureOpenFile.TabIndex = 51;
+            this.btnElementPictureOpenFile.Text = "Открыть файл";
+            this.btnElementPictureOpenFile.UseVisualStyleBackColor = true;
+            this.btnElementPictureOpenFile.Click += new System.EventHandler(this.BtnElementPictureOpenFile_Click);
+            // 
+            // pbElementPictureLoadContent
+            // 
+            this.pbElementPictureLoadContent.Location = new System.Drawing.Point(225, 74);
+            this.pbElementPictureLoadContent.Name = "pbElementPictureLoadContent";
+            this.pbElementPictureLoadContent.Size = new System.Drawing.Size(131, 109);
+            this.pbElementPictureLoadContent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbElementPictureLoadContent.TabIndex = 52;
+            this.pbElementPictureLoadContent.TabStop = false;
+            this.pbElementPictureLoadContent.LoadCompleted += new System.ComponentModel.AsyncCompletedEventHandler(this.PbElementPictureLoadContent_LoadCompleted);
+            // 
+            // lblElementPictureName
+            // 
+            this.lblElementPictureName.AutoSize = true;
+            this.lblElementPictureName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblElementPictureName.Location = new System.Drawing.Point(6, 26);
+            this.lblElementPictureName.Name = "lblElementPictureName";
+            this.lblElementPictureName.Size = new System.Drawing.Size(72, 17);
+            this.lblElementPictureName.TabIndex = 24;
+            this.lblElementPictureName.Text = "Название";
+            // 
+            // lblCheckElementPictureName
+            // 
+            this.lblCheckElementPictureName.AutoSize = true;
+            this.lblCheckElementPictureName.ForeColor = System.Drawing.Color.Red;
+            this.lblCheckElementPictureName.Location = new System.Drawing.Point(6, 53);
+            this.lblCheckElementPictureName.Name = "lblCheckElementPictureName";
+            this.lblCheckElementPictureName.Size = new System.Drawing.Size(505, 13);
+            this.lblCheckElementPictureName.TabIndex = 44;
+            this.lblCheckElementPictureName.Text = "Введите название длиной от 3 до 100 символов, используя кирилицу цифры и знаки пр" +
+    "епинания ";
+            this.lblCheckElementPictureName.Visible = false;
+            // 
+            // tbElementPictureName
+            // 
+            this.tbElementPictureName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbElementPictureName.Location = new System.Drawing.Point(225, 26);
+            this.tbElementPictureName.Name = "tbElementPictureName";
+            this.tbElementPictureName.Size = new System.Drawing.Size(369, 23);
+            this.tbElementPictureName.TabIndex = 25;
+            this.tbElementPictureName.TextChanged += new System.EventHandler(this.TbElementPictureName_TextChanged);
+            // 
+            // pbCheckMarkElementPictureLoadContent
+            // 
+            this.pbCheckMarkElementPictureLoadContent.Location = new System.Drawing.Point(601, 74);
+            this.pbCheckMarkElementPictureLoadContent.Name = "pbCheckMarkElementPictureLoadContent";
+            this.pbCheckMarkElementPictureLoadContent.Size = new System.Drawing.Size(27, 25);
+            this.pbCheckMarkElementPictureLoadContent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCheckMarkElementPictureLoadContent.TabIndex = 40;
+            this.pbCheckMarkElementPictureLoadContent.TabStop = false;
+            this.pbCheckMarkElementPictureLoadContent.Visible = false;
+            // 
+            // pbCheckMarkElementPictureName
+            // 
+            this.pbCheckMarkElementPictureName.Location = new System.Drawing.Point(601, 24);
+            this.pbCheckMarkElementPictureName.Name = "pbCheckMarkElementPictureName";
+            this.pbCheckMarkElementPictureName.Size = new System.Drawing.Size(27, 25);
+            this.pbCheckMarkElementPictureName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCheckMarkElementPictureName.TabIndex = 39;
+            this.pbCheckMarkElementPictureName.TabStop = false;
+            this.pbCheckMarkElementPictureName.Visible = false;
+            // 
+            // btnElementPictureCreate
+            // 
+            this.btnElementPictureCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnElementPictureCreate.Location = new System.Drawing.Point(585, 228);
+            this.btnElementPictureCreate.Name = "btnElementPictureCreate";
+            this.btnElementPictureCreate.Size = new System.Drawing.Size(152, 42);
+            this.btnElementPictureCreate.TabIndex = 36;
+            this.btnElementPictureCreate.Text = "Сохранить изображение";
+            this.btnElementPictureCreate.UseVisualStyleBackColor = true;
+            this.btnElementPictureCreate.Visible = false;
+            this.btnElementPictureCreate.Click += new System.EventHandler(this.BtnElementPictureCreate_Click);
+            // 
+            // gbAllElementPicture
+            // 
+            this.gbAllElementPicture.Controls.Add(this.pbElementPictureSelectedDgv);
+            this.gbAllElementPicture.Controls.Add(this.btnElementPictureDelete);
+            this.gbAllElementPicture.Controls.Add(this.btnElementPictureSwitchUpdate);
+            this.gbAllElementPicture.Controls.Add(this.btnElementPictureSwitchCreate);
+            this.gbAllElementPicture.Controls.Add(this.dgvAllElementPicture);
+            this.gbAllElementPicture.Location = new System.Drawing.Point(3, 3);
+            this.gbAllElementPicture.Name = "gbAllElementPicture";
+            this.gbAllElementPicture.Size = new System.Drawing.Size(968, 899);
+            this.gbAllElementPicture.TabIndex = 6;
+            this.gbAllElementPicture.TabStop = false;
+            this.gbAllElementPicture.Text = "Все изображения";
+            // 
+            // pbElementPictureSelectedDgv
+            // 
+            this.pbElementPictureSelectedDgv.Location = new System.Drawing.Point(596, 19);
+            this.pbElementPictureSelectedDgv.Name = "pbElementPictureSelectedDgv";
+            this.pbElementPictureSelectedDgv.Size = new System.Drawing.Size(250, 201);
+            this.pbElementPictureSelectedDgv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbElementPictureSelectedDgv.TabIndex = 53;
+            this.pbElementPictureSelectedDgv.TabStop = false;
+            // 
+            // btnElementPictureDelete
+            // 
+            this.btnElementPictureDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnElementPictureDelete.Location = new System.Drawing.Point(852, 130);
+            this.btnElementPictureDelete.Name = "btnElementPictureDelete";
+            this.btnElementPictureDelete.Size = new System.Drawing.Size(110, 35);
+            this.btnElementPictureDelete.TabIndex = 10;
+            this.btnElementPictureDelete.Text = "Удалить изображение";
+            this.btnElementPictureDelete.UseVisualStyleBackColor = true;
+            this.btnElementPictureDelete.Click += new System.EventHandler(this.BtnElementPictureDelete_Click);
+            // 
+            // btnElementPictureSwitchUpdate
+            // 
+            this.btnElementPictureSwitchUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnElementPictureSwitchUpdate.Location = new System.Drawing.Point(852, 74);
+            this.btnElementPictureSwitchUpdate.Name = "btnElementPictureSwitchUpdate";
+            this.btnElementPictureSwitchUpdate.Size = new System.Drawing.Size(110, 49);
+            this.btnElementPictureSwitchUpdate.TabIndex = 9;
+            this.btnElementPictureSwitchUpdate.Text = "Редактировать изображение";
+            this.btnElementPictureSwitchUpdate.UseVisualStyleBackColor = true;
+            this.btnElementPictureSwitchUpdate.Click += new System.EventHandler(this.BtnElementPictureSwitchUpdate_Click);
+            // 
+            // btnElementPictureSwitchCreate
+            // 
+            this.btnElementPictureSwitchCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnElementPictureSwitchCreate.Location = new System.Drawing.Point(852, 19);
+            this.btnElementPictureSwitchCreate.Name = "btnElementPictureSwitchCreate";
+            this.btnElementPictureSwitchCreate.Size = new System.Drawing.Size(110, 49);
+            this.btnElementPictureSwitchCreate.TabIndex = 8;
+            this.btnElementPictureSwitchCreate.Text = "Добавить изображение";
+            this.btnElementPictureSwitchCreate.UseVisualStyleBackColor = true;
+            this.btnElementPictureSwitchCreate.Click += new System.EventHandler(this.BtnElementPictureSwitchCreate_Click);
+            // 
+            // dgvAllElementPicture
+            // 
+            this.dgvAllElementPicture.AllowUserToAddRows = false;
+            this.dgvAllElementPicture.AllowUserToDeleteRows = false;
+            this.dgvAllElementPicture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAllElementPicture.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn23,
+            this.dgvTbColumnPictureName,
+            this.ColumnElementPicturePicture});
+            this.dgvAllElementPicture.Location = new System.Drawing.Point(5, 19);
+            this.dgvAllElementPicture.Name = "dgvAllElementPicture";
+            this.dgvAllElementPicture.ReadOnly = true;
+            this.dgvAllElementPicture.RowHeadersVisible = false;
+            this.dgvAllElementPicture.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAllElementPicture.Size = new System.Drawing.Size(536, 27);
+            this.dgvAllElementPicture.TabIndex = 7;
+            this.dgvAllElementPicture.SelectionChanged += new System.EventHandler(this.DgvAllElementPicture_SelectionChanged);
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.Frozen = true;
+            this.dataGridViewTextBoxColumn23.HeaderText = "№";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            this.dataGridViewTextBoxColumn23.Width = 30;
+            // 
+            // dgvTbColumnPictureName
+            // 
+            this.dgvTbColumnPictureName.Frozen = true;
+            this.dgvTbColumnPictureName.HeaderText = "Название";
+            this.dgvTbColumnPictureName.Name = "dgvTbColumnPictureName";
+            this.dgvTbColumnPictureName.ReadOnly = true;
+            this.dgvTbColumnPictureName.Width = 500;
+            // 
+            // ColumnElementPicturePicture
+            // 
+            this.ColumnElementPicturePicture.Frozen = true;
+            this.ColumnElementPicturePicture.HeaderText = "Picture";
+            this.ColumnElementPicturePicture.Name = "ColumnElementPicturePicture";
+            this.ColumnElementPicturePicture.ReadOnly = true;
+            this.ColumnElementPicturePicture.Visible = false;
             // 
             // tabPageClient
             // 
@@ -5094,253 +5439,10 @@
             this.btnUpdateClient.Visible = false;
             this.btnUpdateClient.Click += new System.EventHandler(this.BtnUpdateClient_Click);
             // 
-            // tabPageElementPicture
-            // 
-            this.tabPageElementPicture.Controls.Add(this.gbElementPictureData);
-            this.tabPageElementPicture.Controls.Add(this.gbAllElementPicture);
-            this.tabPageElementPicture.Location = new System.Drawing.Point(4, 22);
-            this.tabPageElementPicture.Name = "tabPageElementPicture";
-            this.tabPageElementPicture.Size = new System.Drawing.Size(1951, 946);
-            this.tabPageElementPicture.TabIndex = 6;
-            this.tabPageElementPicture.Text = "Изображения элементов";
-            this.tabPageElementPicture.UseVisualStyleBackColor = true;
-            // 
-            // gbElementPictureData
-            // 
-            this.gbElementPictureData.Controls.Add(this.btnElementPictureSwitchCancel);
-            this.gbElementPictureData.Controls.Add(this.btnElementPictureUpdate);
-            this.gbElementPictureData.Controls.Add(this.gbElementPictureNamePicture);
-            this.gbElementPictureData.Controls.Add(this.btnElementPictureCreate);
-            this.gbElementPictureData.Location = new System.Drawing.Point(979, 3);
-            this.gbElementPictureData.Name = "gbElementPictureData";
-            this.gbElementPictureData.Size = new System.Drawing.Size(752, 899);
-            this.gbElementPictureData.TabIndex = 7;
-            this.gbElementPictureData.TabStop = false;
-            this.gbElementPictureData.Text = "Изображение";
-            // 
-            // btnElementPictureSwitchCancel
-            // 
-            this.btnElementPictureSwitchCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnElementPictureSwitchCancel.Location = new System.Drawing.Point(18, 228);
-            this.btnElementPictureSwitchCancel.Name = "btnElementPictureSwitchCancel";
-            this.btnElementPictureSwitchCancel.Size = new System.Drawing.Size(152, 42);
-            this.btnElementPictureSwitchCancel.TabIndex = 50;
-            this.btnElementPictureSwitchCancel.Text = "Отменить";
-            this.btnElementPictureSwitchCancel.UseVisualStyleBackColor = true;
-            this.btnElementPictureSwitchCancel.Click += new System.EventHandler(this.BtnElementPictureSwitchCancel_Click);
-            // 
-            // btnElementPictureUpdate
-            // 
-            this.btnElementPictureUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnElementPictureUpdate.Location = new System.Drawing.Point(427, 228);
-            this.btnElementPictureUpdate.Name = "btnElementPictureUpdate";
-            this.btnElementPictureUpdate.Size = new System.Drawing.Size(152, 42);
-            this.btnElementPictureUpdate.TabIndex = 48;
-            this.btnElementPictureUpdate.Text = "Сохранить изменения";
-            this.btnElementPictureUpdate.UseVisualStyleBackColor = true;
-            this.btnElementPictureUpdate.Visible = false;
-            this.btnElementPictureUpdate.Click += new System.EventHandler(this.BtnElementPictureUpdate_Click);
-            // 
-            // gbElementPictureNamePicture
-            // 
-            this.gbElementPictureNamePicture.Controls.Add(this.btnElementPictureOpenFile);
-            this.gbElementPictureNamePicture.Controls.Add(this.pbElementPictureLoadContent);
-            this.gbElementPictureNamePicture.Controls.Add(this.lblElementPictureName);
-            this.gbElementPictureNamePicture.Controls.Add(this.lblCheckElementPictureName);
-            this.gbElementPictureNamePicture.Controls.Add(this.tbElementPictureName);
-            this.gbElementPictureNamePicture.Controls.Add(this.pbCheckMarkElementPictureLoadContent);
-            this.gbElementPictureNamePicture.Controls.Add(this.pbCheckMarkElementPictureName);
-            this.gbElementPictureNamePicture.Enabled = false;
-            this.gbElementPictureNamePicture.Location = new System.Drawing.Point(9, 19);
-            this.gbElementPictureNamePicture.Name = "gbElementPictureNamePicture";
-            this.gbElementPictureNamePicture.Size = new System.Drawing.Size(728, 190);
-            this.gbElementPictureNamePicture.TabIndex = 49;
-            this.gbElementPictureNamePicture.TabStop = false;
-            // 
-            // btnElementPictureOpenFile
-            // 
-            this.btnElementPictureOpenFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnElementPictureOpenFile.Location = new System.Drawing.Point(9, 74);
-            this.btnElementPictureOpenFile.Name = "btnElementPictureOpenFile";
-            this.btnElementPictureOpenFile.Size = new System.Drawing.Size(152, 42);
-            this.btnElementPictureOpenFile.TabIndex = 51;
-            this.btnElementPictureOpenFile.Text = "Открыть файл";
-            this.btnElementPictureOpenFile.UseVisualStyleBackColor = true;
-            this.btnElementPictureOpenFile.Click += new System.EventHandler(this.BtnElementPictureOpenFile_Click);
-            // 
-            // pbElementPictureLoadContent
-            // 
-            this.pbElementPictureLoadContent.Location = new System.Drawing.Point(225, 74);
-            this.pbElementPictureLoadContent.Name = "pbElementPictureLoadContent";
-            this.pbElementPictureLoadContent.Size = new System.Drawing.Size(131, 109);
-            this.pbElementPictureLoadContent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbElementPictureLoadContent.TabIndex = 52;
-            this.pbElementPictureLoadContent.TabStop = false;
-            this.pbElementPictureLoadContent.LoadCompleted += new System.ComponentModel.AsyncCompletedEventHandler(this.PbElementPictureLoadContent_LoadCompleted);
-            // 
-            // lblElementPictureName
-            // 
-            this.lblElementPictureName.AutoSize = true;
-            this.lblElementPictureName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblElementPictureName.Location = new System.Drawing.Point(6, 26);
-            this.lblElementPictureName.Name = "lblElementPictureName";
-            this.lblElementPictureName.Size = new System.Drawing.Size(72, 17);
-            this.lblElementPictureName.TabIndex = 24;
-            this.lblElementPictureName.Text = "Название";
-            // 
-            // lblCheckElementPictureName
-            // 
-            this.lblCheckElementPictureName.AutoSize = true;
-            this.lblCheckElementPictureName.ForeColor = System.Drawing.Color.Red;
-            this.lblCheckElementPictureName.Location = new System.Drawing.Point(6, 53);
-            this.lblCheckElementPictureName.Name = "lblCheckElementPictureName";
-            this.lblCheckElementPictureName.Size = new System.Drawing.Size(505, 13);
-            this.lblCheckElementPictureName.TabIndex = 44;
-            this.lblCheckElementPictureName.Text = "Введите название длиной от 3 до 100 символов, используя кирилицу цифры и знаки пр" +
-    "епинания ";
-            this.lblCheckElementPictureName.Visible = false;
-            // 
-            // tbElementPictureName
-            // 
-            this.tbElementPictureName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbElementPictureName.Location = new System.Drawing.Point(225, 26);
-            this.tbElementPictureName.Name = "tbElementPictureName";
-            this.tbElementPictureName.Size = new System.Drawing.Size(369, 23);
-            this.tbElementPictureName.TabIndex = 25;
-            this.tbElementPictureName.TextChanged += new System.EventHandler(this.TbElementPictureName_TextChanged);
-            // 
-            // pbCheckMarkElementPictureLoadContent
-            // 
-            this.pbCheckMarkElementPictureLoadContent.Location = new System.Drawing.Point(601, 74);
-            this.pbCheckMarkElementPictureLoadContent.Name = "pbCheckMarkElementPictureLoadContent";
-            this.pbCheckMarkElementPictureLoadContent.Size = new System.Drawing.Size(27, 25);
-            this.pbCheckMarkElementPictureLoadContent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbCheckMarkElementPictureLoadContent.TabIndex = 40;
-            this.pbCheckMarkElementPictureLoadContent.TabStop = false;
-            this.pbCheckMarkElementPictureLoadContent.Visible = false;
-            // 
-            // pbCheckMarkElementPictureName
-            // 
-            this.pbCheckMarkElementPictureName.Location = new System.Drawing.Point(601, 24);
-            this.pbCheckMarkElementPictureName.Name = "pbCheckMarkElementPictureName";
-            this.pbCheckMarkElementPictureName.Size = new System.Drawing.Size(27, 25);
-            this.pbCheckMarkElementPictureName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbCheckMarkElementPictureName.TabIndex = 39;
-            this.pbCheckMarkElementPictureName.TabStop = false;
-            this.pbCheckMarkElementPictureName.Visible = false;
-            // 
-            // btnElementPictureCreate
-            // 
-            this.btnElementPictureCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnElementPictureCreate.Location = new System.Drawing.Point(585, 228);
-            this.btnElementPictureCreate.Name = "btnElementPictureCreate";
-            this.btnElementPictureCreate.Size = new System.Drawing.Size(152, 42);
-            this.btnElementPictureCreate.TabIndex = 36;
-            this.btnElementPictureCreate.Text = "Сохранить изображение";
-            this.btnElementPictureCreate.UseVisualStyleBackColor = true;
-            this.btnElementPictureCreate.Visible = false;
-            this.btnElementPictureCreate.Click += new System.EventHandler(this.BtnElementPictureCreate_Click);
-            // 
-            // gbAllElementPicture
-            // 
-            this.gbAllElementPicture.Controls.Add(this.pbElementPictureSelectedDgv);
-            this.gbAllElementPicture.Controls.Add(this.btnElementPictureDelete);
-            this.gbAllElementPicture.Controls.Add(this.btnElementPictureSwitchUpdate);
-            this.gbAllElementPicture.Controls.Add(this.btnElementPictureSwitchCreate);
-            this.gbAllElementPicture.Controls.Add(this.dgvAllElementPicture);
-            this.gbAllElementPicture.Location = new System.Drawing.Point(3, 3);
-            this.gbAllElementPicture.Name = "gbAllElementPicture";
-            this.gbAllElementPicture.Size = new System.Drawing.Size(968, 899);
-            this.gbAllElementPicture.TabIndex = 6;
-            this.gbAllElementPicture.TabStop = false;
-            this.gbAllElementPicture.Text = "Все изображения";
-            // 
-            // pbElementPictureSelectedDgv
-            // 
-            this.pbElementPictureSelectedDgv.Location = new System.Drawing.Point(596, 19);
-            this.pbElementPictureSelectedDgv.Name = "pbElementPictureSelectedDgv";
-            this.pbElementPictureSelectedDgv.Size = new System.Drawing.Size(250, 201);
-            this.pbElementPictureSelectedDgv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbElementPictureSelectedDgv.TabIndex = 53;
-            this.pbElementPictureSelectedDgv.TabStop = false;
-            // 
-            // btnElementPictureDelete
-            // 
-            this.btnElementPictureDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnElementPictureDelete.Location = new System.Drawing.Point(852, 130);
-            this.btnElementPictureDelete.Name = "btnElementPictureDelete";
-            this.btnElementPictureDelete.Size = new System.Drawing.Size(110, 35);
-            this.btnElementPictureDelete.TabIndex = 10;
-            this.btnElementPictureDelete.Text = "Удалить изображение";
-            this.btnElementPictureDelete.UseVisualStyleBackColor = true;
-            this.btnElementPictureDelete.Click += new System.EventHandler(this.BtnElementPictureDelete_Click);
-            // 
-            // btnElementPictureSwitchUpdate
-            // 
-            this.btnElementPictureSwitchUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnElementPictureSwitchUpdate.Location = new System.Drawing.Point(852, 74);
-            this.btnElementPictureSwitchUpdate.Name = "btnElementPictureSwitchUpdate";
-            this.btnElementPictureSwitchUpdate.Size = new System.Drawing.Size(110, 49);
-            this.btnElementPictureSwitchUpdate.TabIndex = 9;
-            this.btnElementPictureSwitchUpdate.Text = "Редактировать изображение";
-            this.btnElementPictureSwitchUpdate.UseVisualStyleBackColor = true;
-            this.btnElementPictureSwitchUpdate.Click += new System.EventHandler(this.BtnElementPictureSwitchUpdate_Click);
-            // 
-            // btnElementPictureSwitchCreate
-            // 
-            this.btnElementPictureSwitchCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnElementPictureSwitchCreate.Location = new System.Drawing.Point(852, 19);
-            this.btnElementPictureSwitchCreate.Name = "btnElementPictureSwitchCreate";
-            this.btnElementPictureSwitchCreate.Size = new System.Drawing.Size(110, 49);
-            this.btnElementPictureSwitchCreate.TabIndex = 8;
-            this.btnElementPictureSwitchCreate.Text = "Добавить изображение";
-            this.btnElementPictureSwitchCreate.UseVisualStyleBackColor = true;
-            this.btnElementPictureSwitchCreate.Click += new System.EventHandler(this.BtnElementPictureSwitchCreate_Click);
-            // 
-            // dgvAllElementPicture
-            // 
-            this.dgvAllElementPicture.AllowUserToAddRows = false;
-            this.dgvAllElementPicture.AllowUserToDeleteRows = false;
-            this.dgvAllElementPicture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAllElementPicture.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn23,
-            this.dgvTbColumnPictureName,
-            this.ColumnElementPicturePicture});
-            this.dgvAllElementPicture.Location = new System.Drawing.Point(5, 19);
-            this.dgvAllElementPicture.Name = "dgvAllElementPicture";
-            this.dgvAllElementPicture.ReadOnly = true;
-            this.dgvAllElementPicture.RowHeadersVisible = false;
-            this.dgvAllElementPicture.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAllElementPicture.Size = new System.Drawing.Size(536, 27);
-            this.dgvAllElementPicture.TabIndex = 7;
-            this.dgvAllElementPicture.SelectionChanged += new System.EventHandler(this.DgvAllElementPicture_SelectionChanged);
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.Frozen = true;
-            this.dataGridViewTextBoxColumn23.HeaderText = "№";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.ReadOnly = true;
-            this.dataGridViewTextBoxColumn23.Width = 30;
-            // 
-            // dgvTbColumnPictureName
-            // 
-            this.dgvTbColumnPictureName.Frozen = true;
-            this.dgvTbColumnPictureName.HeaderText = "Название";
-            this.dgvTbColumnPictureName.Name = "dgvTbColumnPictureName";
-            this.dgvTbColumnPictureName.ReadOnly = true;
-            this.dgvTbColumnPictureName.Width = 500;
-            // 
-            // ColumnElementPicturePicture
-            // 
-            this.ColumnElementPicturePicture.Frozen = true;
-            this.ColumnElementPicturePicture.HeaderText = "Picture";
-            this.ColumnElementPicturePicture.Name = "ColumnElementPicturePicture";
-            this.ColumnElementPicturePicture.ReadOnly = true;
-            this.ColumnElementPicturePicture.Visible = false;
-            // 
             // tabPageWorker
             // 
+            this.tabPageWorker.Controls.Add(this.btnWorkerSwitchChangePassword);
+            this.tabPageWorker.Controls.Add(this.dgvWorkerUserData);
             this.tabPageWorker.Controls.Add(this.gbWorkerSectionsOfBuilding);
             this.tabPageWorker.Controls.Add(this.tabControlWorker);
             this.tabPageWorker.Controls.Add(this.gbWorkerProjects);
@@ -5438,8 +5540,8 @@
             // 
             // WorkerSectionsOfBuildingColumnWork
             // 
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.DimGray;
-            this.WorkerSectionsOfBuildingColumnWork.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle252.BackColor = System.Drawing.Color.DimGray;
+            this.WorkerSectionsOfBuildingColumnWork.DefaultCellStyle = dataGridViewCellStyle252;
             this.WorkerSectionsOfBuildingColumnWork.HeaderText = "Стоимость";
             this.WorkerSectionsOfBuildingColumnWork.Name = "WorkerSectionsOfBuildingColumnWork";
             this.WorkerSectionsOfBuildingColumnWork.ReadOnly = true;
@@ -5447,8 +5549,8 @@
             // 
             // WorkerSectionsOfBuildingColumnComplete
             // 
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.Yellow;
-            this.WorkerSectionsOfBuildingColumnComplete.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle253.BackColor = System.Drawing.Color.Yellow;
+            this.WorkerSectionsOfBuildingColumnComplete.DefaultCellStyle = dataGridViewCellStyle253;
             this.WorkerSectionsOfBuildingColumnComplete.HeaderText = "Стоимость";
             this.WorkerSectionsOfBuildingColumnComplete.Name = "WorkerSectionsOfBuildingColumnComplete";
             this.WorkerSectionsOfBuildingColumnComplete.ReadOnly = true;
@@ -5456,8 +5558,8 @@
             // 
             // WorkerSectionsOfBuildingColumnAccept
             // 
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.Green;
-            this.WorkerSectionsOfBuildingColumnAccept.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle254.BackColor = System.Drawing.Color.Green;
+            this.WorkerSectionsOfBuildingColumnAccept.DefaultCellStyle = dataGridViewCellStyle254;
             this.WorkerSectionsOfBuildingColumnAccept.HeaderText = "Стоимость";
             this.WorkerSectionsOfBuildingColumnAccept.Name = "WorkerSectionsOfBuildingColumnAccept";
             this.WorkerSectionsOfBuildingColumnAccept.ReadOnly = true;
@@ -5465,8 +5567,8 @@
             // 
             // WorkerSectionsOfBuildingColumnReject
             // 
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.Red;
-            this.WorkerSectionsOfBuildingColumnReject.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle255.BackColor = System.Drawing.Color.Red;
+            this.WorkerSectionsOfBuildingColumnReject.DefaultCellStyle = dataGridViewCellStyle255;
             this.WorkerSectionsOfBuildingColumnReject.HeaderText = "Стоимость";
             this.WorkerSectionsOfBuildingColumnReject.Name = "WorkerSectionsOfBuildingColumnReject";
             this.WorkerSectionsOfBuildingColumnReject.ReadOnly = true;
@@ -5475,27 +5577,25 @@
             // tabControlWorker
             // 
             this.tabControlWorker.Controls.Add(this.tabPageWorkerWorks);
-            this.tabControlWorker.Controls.Add(this.tabPageWorkerCompletedWorks);
             this.tabControlWorker.Controls.Add(this.tabPageWorkerPayments);
-            this.tabControlWorker.Controls.Add(this.tabPageWorkerUserData);
-            this.tabControlWorker.Location = new System.Drawing.Point(3, 470);
+            this.tabControlWorker.Location = new System.Drawing.Point(3, 529);
             this.tabControlWorker.Name = "tabControlWorker";
             this.tabControlWorker.SelectedIndex = 0;
-            this.tabControlWorker.Size = new System.Drawing.Size(978, 470);
+            this.tabControlWorker.Size = new System.Drawing.Size(978, 411);
             this.tabControlWorker.TabIndex = 21;
             // 
             // tabPageWorkerWorks
             // 
             this.tabPageWorkerWorks.Controls.Add(this.gbWorkerCompletePanel);
             this.tabPageWorkerWorks.Controls.Add(this.lblWorkerSectionOfBuildingWorkAmount);
-            this.tabPageWorkerWorks.Controls.Add(this.btnWorkerSwitchCompleteWork);
             this.tabPageWorkerWorks.Controls.Add(this.dgvWorkerWorksInProject);
+            this.tabPageWorkerWorks.Controls.Add(this.btnWorkerSwitchCompleteWork);
             this.tabPageWorkerWorks.Location = new System.Drawing.Point(4, 22);
             this.tabPageWorkerWorks.Name = "tabPageWorkerWorks";
             this.tabPageWorkerWorks.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageWorkerWorks.Size = new System.Drawing.Size(970, 444);
+            this.tabPageWorkerWorks.Size = new System.Drawing.Size(970, 385);
             this.tabPageWorkerWorks.TabIndex = 1;
-            this.tabPageWorkerWorks.Text = "Работа назначенная";
+            this.tabPageWorkerWorks.Text = "Работа";
             this.tabPageWorkerWorks.UseVisualStyleBackColor = true;
             // 
             // gbWorkerCompletePanel
@@ -5505,7 +5605,7 @@
             this.gbWorkerCompletePanel.Controls.Add(this.btnWorkerSwitchCompleteWorkCancel);
             this.gbWorkerCompletePanel.Controls.Add(this.btnWorkerCompleteWork);
             this.gbWorkerCompletePanel.Controls.Add(this.btnWorkerCompleteWorkCancel);
-            this.gbWorkerCompletePanel.Location = new System.Drawing.Point(766, 45);
+            this.gbWorkerCompletePanel.Location = new System.Drawing.Point(770, 45);
             this.gbWorkerCompletePanel.Name = "gbWorkerCompletePanel";
             this.gbWorkerCompletePanel.Size = new System.Drawing.Size(200, 222);
             this.gbWorkerCompletePanel.TabIndex = 73;
@@ -5582,7 +5682,7 @@
             this.btnWorkerSwitchCompleteWork.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnWorkerSwitchCompleteWork.BackColor = System.Drawing.Color.Yellow;
             this.btnWorkerSwitchCompleteWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnWorkerSwitchCompleteWork.Location = new System.Drawing.Point(778, 6);
+            this.btnWorkerSwitchCompleteWork.Location = new System.Drawing.Point(784, 5);
             this.btnWorkerSwitchCompleteWork.Name = "btnWorkerSwitchCompleteWork";
             this.btnWorkerSwitchCompleteWork.Size = new System.Drawing.Size(171, 34);
             this.btnWorkerSwitchCompleteWork.TabIndex = 69;
@@ -5609,7 +5709,7 @@
             this.WorkerWorksInProjectColumnAccCost,
             this.WorkerWorksInProjectColumnRejValue,
             this.WorkerWorksInProjectColumnRejCost});
-            this.dgvWorkerWorksInProject.Location = new System.Drawing.Point(6, 45);
+            this.dgvWorkerWorksInProject.Location = new System.Drawing.Point(6, 46);
             this.dgvWorkerWorksInProject.Name = "dgvWorkerWorksInProject";
             this.dgvWorkerWorksInProject.ReadOnly = true;
             this.dgvWorkerWorksInProject.RowHeadersVisible = false;
@@ -5660,8 +5760,8 @@
             // 
             // dataGridViewTextBoxColumn58
             // 
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.DimGray;
-            this.dataGridViewTextBoxColumn58.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle256.BackColor = System.Drawing.Color.DimGray;
+            this.dataGridViewTextBoxColumn58.DefaultCellStyle = dataGridViewCellStyle256;
             this.dataGridViewTextBoxColumn58.Frozen = true;
             this.dataGridViewTextBoxColumn58.HeaderText = "Объем";
             this.dataGridViewTextBoxColumn58.Name = "dataGridViewTextBoxColumn58";
@@ -5670,8 +5770,8 @@
             // 
             // dataGridViewTextBoxColumn59
             // 
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.DimGray;
-            this.dataGridViewTextBoxColumn59.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle257.BackColor = System.Drawing.Color.DimGray;
+            this.dataGridViewTextBoxColumn59.DefaultCellStyle = dataGridViewCellStyle257;
             this.dataGridViewTextBoxColumn59.Frozen = true;
             this.dataGridViewTextBoxColumn59.HeaderText = "Стоимость";
             this.dataGridViewTextBoxColumn59.Name = "dataGridViewTextBoxColumn59";
@@ -5680,8 +5780,8 @@
             // 
             // WorkerWorksInProjectColumnCompValue
             // 
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.Yellow;
-            this.WorkerWorksInProjectColumnCompValue.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle258.BackColor = System.Drawing.Color.Yellow;
+            this.WorkerWorksInProjectColumnCompValue.DefaultCellStyle = dataGridViewCellStyle258;
             this.WorkerWorksInProjectColumnCompValue.HeaderText = "Объем";
             this.WorkerWorksInProjectColumnCompValue.Name = "WorkerWorksInProjectColumnCompValue";
             this.WorkerWorksInProjectColumnCompValue.ReadOnly = true;
@@ -5689,8 +5789,8 @@
             // 
             // WorkerWorksInProjectColumnCompCost
             // 
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.Yellow;
-            this.WorkerWorksInProjectColumnCompCost.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle259.BackColor = System.Drawing.Color.Yellow;
+            this.WorkerWorksInProjectColumnCompCost.DefaultCellStyle = dataGridViewCellStyle259;
             this.WorkerWorksInProjectColumnCompCost.HeaderText = "Стоимость";
             this.WorkerWorksInProjectColumnCompCost.Name = "WorkerWorksInProjectColumnCompCost";
             this.WorkerWorksInProjectColumnCompCost.ReadOnly = true;
@@ -5698,8 +5798,8 @@
             // 
             // WorkerWorksInProjectColumnAccValue
             // 
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.Green;
-            this.WorkerWorksInProjectColumnAccValue.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle260.BackColor = System.Drawing.Color.Green;
+            this.WorkerWorksInProjectColumnAccValue.DefaultCellStyle = dataGridViewCellStyle260;
             this.WorkerWorksInProjectColumnAccValue.HeaderText = "Объем";
             this.WorkerWorksInProjectColumnAccValue.Name = "WorkerWorksInProjectColumnAccValue";
             this.WorkerWorksInProjectColumnAccValue.ReadOnly = true;
@@ -5707,8 +5807,8 @@
             // 
             // WorkerWorksInProjectColumnAccCost
             // 
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.Green;
-            this.WorkerWorksInProjectColumnAccCost.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle261.BackColor = System.Drawing.Color.Green;
+            this.WorkerWorksInProjectColumnAccCost.DefaultCellStyle = dataGridViewCellStyle261;
             this.WorkerWorksInProjectColumnAccCost.HeaderText = "Стоимость";
             this.WorkerWorksInProjectColumnAccCost.Name = "WorkerWorksInProjectColumnAccCost";
             this.WorkerWorksInProjectColumnAccCost.ReadOnly = true;
@@ -5716,8 +5816,8 @@
             // 
             // WorkerWorksInProjectColumnRejValue
             // 
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.Red;
-            this.WorkerWorksInProjectColumnRejValue.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle262.BackColor = System.Drawing.Color.Red;
+            this.WorkerWorksInProjectColumnRejValue.DefaultCellStyle = dataGridViewCellStyle262;
             this.WorkerWorksInProjectColumnRejValue.HeaderText = "Объем";
             this.WorkerWorksInProjectColumnRejValue.Name = "WorkerWorksInProjectColumnRejValue";
             this.WorkerWorksInProjectColumnRejValue.ReadOnly = true;
@@ -5725,22 +5825,12 @@
             // 
             // WorkerWorksInProjectColumnRejCost
             // 
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.Red;
-            this.WorkerWorksInProjectColumnRejCost.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle263.BackColor = System.Drawing.Color.Red;
+            this.WorkerWorksInProjectColumnRejCost.DefaultCellStyle = dataGridViewCellStyle263;
             this.WorkerWorksInProjectColumnRejCost.HeaderText = "Стоимость";
             this.WorkerWorksInProjectColumnRejCost.Name = "WorkerWorksInProjectColumnRejCost";
             this.WorkerWorksInProjectColumnRejCost.ReadOnly = true;
             this.WorkerWorksInProjectColumnRejCost.Width = 70;
-            // 
-            // tabPageWorkerCompletedWorks
-            // 
-            this.tabPageWorkerCompletedWorks.Location = new System.Drawing.Point(4, 22);
-            this.tabPageWorkerCompletedWorks.Name = "tabPageWorkerCompletedWorks";
-            this.tabPageWorkerCompletedWorks.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageWorkerCompletedWorks.Size = new System.Drawing.Size(970, 444);
-            this.tabPageWorkerCompletedWorks.TabIndex = 3;
-            this.tabPageWorkerCompletedWorks.Text = "Работа выполненная";
-            this.tabPageWorkerCompletedWorks.UseVisualStyleBackColor = true;
             // 
             // tabPageWorkerPayments
             // 
@@ -5749,7 +5839,7 @@
             this.tabPageWorkerPayments.Location = new System.Drawing.Point(4, 22);
             this.tabPageWorkerPayments.Name = "tabPageWorkerPayments";
             this.tabPageWorkerPayments.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageWorkerPayments.Size = new System.Drawing.Size(970, 444);
+            this.tabPageWorkerPayments.Size = new System.Drawing.Size(970, 385);
             this.tabPageWorkerPayments.TabIndex = 0;
             this.tabPageWorkerPayments.Text = "Оплата";
             this.tabPageWorkerPayments.UseVisualStyleBackColor = true;
@@ -5758,7 +5848,7 @@
             // 
             this.lblWorkerPaymentAmount.AutoSize = true;
             this.lblWorkerPaymentAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblWorkerPaymentAmount.Location = new System.Drawing.Point(388, 15);
+            this.lblWorkerPaymentAmount.Location = new System.Drawing.Point(345, 6);
             this.lblWorkerPaymentAmount.Name = "lblWorkerPaymentAmount";
             this.lblWorkerPaymentAmount.Size = new System.Drawing.Size(179, 17);
             this.lblWorkerPaymentAmount.TabIndex = 20;
@@ -5773,7 +5863,7 @@
             this.dataGridViewTextBoxColumn50,
             this.dataGridViewTextBoxColumn53,
             this.dataGridViewTextBoxColumn54});
-            this.dgvWorkerPayments.Location = new System.Drawing.Point(10, 15);
+            this.dgvWorkerPayments.Location = new System.Drawing.Point(3, 6);
             this.dgvWorkerPayments.Name = "dgvWorkerPayments";
             this.dgvWorkerPayments.ReadOnly = true;
             this.dgvWorkerPayments.RowHeadersVisible = false;
@@ -5803,184 +5893,17 @@
             this.dataGridViewTextBoxColumn54.ReadOnly = true;
             this.dataGridViewTextBoxColumn54.Width = 150;
             // 
-            // tabPageWorkerUserData
-            // 
-            this.tabPageWorkerUserData.Controls.Add(this.btnWorkerSwitchChangePassword);
-            this.tabPageWorkerUserData.Controls.Add(this.label8);
-            this.tabPageWorkerUserData.Controls.Add(this.label9);
-            this.tabPageWorkerUserData.Controls.Add(this.gbWorkerChangePassword);
-            this.tabPageWorkerUserData.Controls.Add(this.label10);
-            this.tabPageWorkerUserData.Location = new System.Drawing.Point(4, 22);
-            this.tabPageWorkerUserData.Name = "tabPageWorkerUserData";
-            this.tabPageWorkerUserData.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageWorkerUserData.Size = new System.Drawing.Size(970, 444);
-            this.tabPageWorkerUserData.TabIndex = 2;
-            this.tabPageWorkerUserData.Text = "Данные исполнителя";
-            this.tabPageWorkerUserData.UseVisualStyleBackColor = true;
-            // 
             // btnWorkerSwitchChangePassword
             // 
             this.btnWorkerSwitchChangePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnWorkerSwitchChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnWorkerSwitchChangePassword.Location = new System.Drawing.Point(9, 95);
+            this.btnWorkerSwitchChangePassword.Location = new System.Drawing.Point(8, 470);
             this.btnWorkerSwitchChangePassword.Name = "btnWorkerSwitchChangePassword";
             this.btnWorkerSwitchChangePassword.Size = new System.Drawing.Size(137, 40);
             this.btnWorkerSwitchChangePassword.TabIndex = 32;
             this.btnWorkerSwitchChangePassword.Text = "Сменить пароль";
             this.btnWorkerSwitchChangePassword.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label8.Location = new System.Drawing.Point(6, 12);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(168, 17);
-            this.label8.TabIndex = 29;
-            this.label8.Text = "Фамилия Имя Отчество";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label9.Location = new System.Drawing.Point(6, 64);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 17);
-            this.label9.TabIndex = 31;
-            this.label9.Text = "Логин";
-            // 
-            // gbWorkerChangePassword
-            // 
-            this.gbWorkerChangePassword.Controls.Add(this.btnWorkerSwitchChangePasswordCancel);
-            this.gbWorkerChangePassword.Controls.Add(this.label11);
-            this.gbWorkerChangePassword.Controls.Add(this.btnWorkerChangePassword);
-            this.gbWorkerChangePassword.Controls.Add(this.textBox1);
-            this.gbWorkerChangePassword.Controls.Add(this.label12);
-            this.gbWorkerChangePassword.Controls.Add(this.textBox2);
-            this.gbWorkerChangePassword.Controls.Add(this.label13);
-            this.gbWorkerChangePassword.Controls.Add(this.pictureBox1);
-            this.gbWorkerChangePassword.Controls.Add(this.label14);
-            this.gbWorkerChangePassword.Controls.Add(this.pictureBox2);
-            this.gbWorkerChangePassword.Location = new System.Drawing.Point(9, 141);
-            this.gbWorkerChangePassword.Name = "gbWorkerChangePassword";
-            this.gbWorkerChangePassword.Size = new System.Drawing.Size(651, 96);
-            this.gbWorkerChangePassword.TabIndex = 49;
-            this.gbWorkerChangePassword.TabStop = false;
-            this.gbWorkerChangePassword.Visible = false;
-            // 
-            // btnWorkerSwitchChangePasswordCancel
-            // 
-            this.btnWorkerSwitchChangePasswordCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnWorkerSwitchChangePasswordCancel.Location = new System.Drawing.Point(495, 7);
-            this.btnWorkerSwitchChangePasswordCancel.Name = "btnWorkerSwitchChangePasswordCancel";
-            this.btnWorkerSwitchChangePasswordCancel.Size = new System.Drawing.Size(152, 42);
-            this.btnWorkerSwitchChangePasswordCancel.TabIndex = 48;
-            this.btnWorkerSwitchChangePasswordCancel.Text = "Отменить";
-            this.btnWorkerSwitchChangePasswordCancel.UseVisualStyleBackColor = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label11.Location = new System.Drawing.Point(6, 10);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(194, 17);
-            this.label11.TabIndex = 30;
-            this.label11.Text = "Пароль для входа в систему";
-            // 
-            // btnWorkerChangePassword
-            // 
-            this.btnWorkerChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnWorkerChangePassword.Location = new System.Drawing.Point(495, 52);
-            this.btnWorkerChangePassword.Name = "btnWorkerChangePassword";
-            this.btnWorkerChangePassword.Size = new System.Drawing.Size(152, 42);
-            this.btnWorkerChangePassword.TabIndex = 47;
-            this.btnWorkerChangePassword.Text = "Сохранить новый пароль";
-            this.btnWorkerChangePassword.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox1.Location = new System.Drawing.Point(225, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(215, 23);
-            this.textBox1.TabIndex = 31;
-            this.textBox1.UseSystemPasswordChar = true;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label12.Location = new System.Drawing.Point(6, 52);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(130, 17);
-            this.label12.TabIndex = 32;
-            this.label12.Text = "Повторите пароль";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox2.Location = new System.Drawing.Point(225, 52);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(215, 23);
-            this.textBox2.TabIndex = 33;
-            this.textBox2.UseSystemPasswordChar = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(222, 79);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(176, 13);
-            this.label13.TabIndex = 37;
-            this.label13.Text = "Введенные пароли не совпадают";
-            this.label13.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(452, 52);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(27, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 43;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(6, 36);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(430, 13);
-            this.label14.TabIndex = 38;
-            this.label14.Text = "Пароль от 8 до 16 символов, в т.ч.  цифра,  заглавная и строчная латинские буквы";
-            this.label14.Visible = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(452, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 42;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label10.Location = new System.Drawing.Point(6, 38);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(144, 17);
-            this.label10.TabIndex = 30;
-            this.label10.Text = "Паспортные данные";
+            this.btnWorkerSwitchChangePassword.Click += new System.EventHandler(this.BtnWorkerSwitchChangePassword_Click);
             // 
             // gbWorkerProjects
             // 
@@ -6095,8 +6018,8 @@
             // 
             // WorkerProjectsColumnWorkCost
             // 
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.DimGray;
-            this.WorkerProjectsColumnWorkCost.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle264.BackColor = System.Drawing.Color.DimGray;
+            this.WorkerProjectsColumnWorkCost.DefaultCellStyle = dataGridViewCellStyle264;
             this.WorkerProjectsColumnWorkCost.HeaderText = "Стоимость";
             this.WorkerProjectsColumnWorkCost.Name = "WorkerProjectsColumnWorkCost";
             this.WorkerProjectsColumnWorkCost.ReadOnly = true;
@@ -6104,8 +6027,8 @@
             // 
             // WorkerProjectsColumnCompCost
             // 
-            dataGridViewCellStyle37.BackColor = System.Drawing.Color.Yellow;
-            this.WorkerProjectsColumnCompCost.DefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle265.BackColor = System.Drawing.Color.Yellow;
+            this.WorkerProjectsColumnCompCost.DefaultCellStyle = dataGridViewCellStyle265;
             this.WorkerProjectsColumnCompCost.HeaderText = "Стоимость";
             this.WorkerProjectsColumnCompCost.Name = "WorkerProjectsColumnCompCost";
             this.WorkerProjectsColumnCompCost.ReadOnly = true;
@@ -6113,8 +6036,8 @@
             // 
             // WorkerProjectsColumnAccCost
             // 
-            dataGridViewCellStyle38.BackColor = System.Drawing.Color.Green;
-            this.WorkerProjectsColumnAccCost.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle266.BackColor = System.Drawing.Color.Green;
+            this.WorkerProjectsColumnAccCost.DefaultCellStyle = dataGridViewCellStyle266;
             this.WorkerProjectsColumnAccCost.HeaderText = "Стоимость";
             this.WorkerProjectsColumnAccCost.Name = "WorkerProjectsColumnAccCost";
             this.WorkerProjectsColumnAccCost.ReadOnly = true;
@@ -6122,8 +6045,8 @@
             // 
             // WorkerProjectsColumnRejCost
             // 
-            dataGridViewCellStyle39.BackColor = System.Drawing.Color.Red;
-            this.WorkerProjectsColumnRejCost.DefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle267.BackColor = System.Drawing.Color.Red;
+            this.WorkerProjectsColumnRejCost.DefaultCellStyle = dataGridViewCellStyle267;
             this.WorkerProjectsColumnRejCost.HeaderText = "Стоимость";
             this.WorkerProjectsColumnRejCost.Name = "WorkerProjectsColumnRejCost";
             this.WorkerProjectsColumnRejCost.ReadOnly = true;
@@ -6275,61 +6198,198 @@
             this.labelActualUserName.TabIndex = 4;
             this.labelActualUserName.Text = "Текущий пользователь: ";
             // 
-            // dgvTbColumnUserId
+            // dgvWorkerUserData
             // 
-            this.dgvTbColumnUserId.Frozen = true;
-            this.dgvTbColumnUserId.HeaderText = "Id";
-            this.dgvTbColumnUserId.Name = "dgvTbColumnUserId";
-            this.dgvTbColumnUserId.ReadOnly = true;
-            this.dgvTbColumnUserId.Width = 50;
+            this.dgvWorkerUserData.AllowUserToAddRows = false;
+            this.dgvWorkerUserData.AllowUserToDeleteRows = false;
+            this.dgvWorkerUserData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvWorkerUserData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn79,
+            this.dataGridViewTextBoxColumn80,
+            this.dgvWorkerUserDataColumnPassport,
+            this.dataGridViewTextBoxColumn81,
+            this.dataGridViewTextBoxColumn82,
+            this.dataGridViewTextBoxColumn83,
+            this.dataGridViewTextBoxColumn84,
+            this.dataGridViewTextBoxColumn85});
+            this.dgvWorkerUserData.Location = new System.Drawing.Point(156, 470);
+            this.dgvWorkerUserData.MultiSelect = false;
+            this.dgvWorkerUserData.Name = "dgvWorkerUserData";
+            this.dgvWorkerUserData.ReadOnly = true;
+            this.dgvWorkerUserData.RowHeadersVisible = false;
+            this.dgvWorkerUserData.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dgvWorkerUserData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvWorkerUserData.Size = new System.Drawing.Size(815, 53);
+            this.dgvWorkerUserData.TabIndex = 58;
             // 
-            // dgvColumnUserName
+            // dataGridViewTextBoxColumn79
             // 
-            this.dgvColumnUserName.Frozen = true;
-            this.dgvColumnUserName.HeaderText = "ФИО исполнителя";
-            this.dgvColumnUserName.Name = "dgvColumnUserName";
-            this.dgvColumnUserName.ReadOnly = true;
-            this.dgvColumnUserName.Width = 273;
+            this.dataGridViewTextBoxColumn79.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn79.Name = "dataGridViewTextBoxColumn79";
+            this.dataGridViewTextBoxColumn79.ReadOnly = true;
+            this.dataGridViewTextBoxColumn79.Width = 50;
             // 
-            // dgvTbColumnPayments
+            // dataGridViewTextBoxColumn80
             // 
-            this.dgvTbColumnPayments.HeaderText = "Сумма выплат";
-            this.dgvTbColumnPayments.Name = "dgvTbColumnPayments";
-            this.dgvTbColumnPayments.ReadOnly = true;
-            this.dgvTbColumnPayments.Width = 120;
+            this.dataGridViewTextBoxColumn80.HeaderText = "Фамилия имя отчество";
+            this.dataGridViewTextBoxColumn80.Name = "dataGridViewTextBoxColumn80";
+            this.dataGridViewTextBoxColumn80.ReadOnly = true;
+            this.dataGridViewTextBoxColumn80.Width = 240;
             // 
-            // dgvTbColumnComp
+            // dgvWorkerUserDataColumnPassport
             // 
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.Yellow;
-            this.dgvTbColumnComp.DefaultCellStyle = dataGridViewCellStyle21;
-            this.dgvTbColumnComp.HeaderText = "Стоимость";
-            this.dgvTbColumnComp.Name = "dgvTbColumnComp";
-            this.dgvTbColumnComp.ReadOnly = true;
-            this.dgvTbColumnComp.Width = 70;
+            this.dgvWorkerUserDataColumnPassport.HeaderText = "Паспорт";
+            this.dgvWorkerUserDataColumnPassport.Name = "dgvWorkerUserDataColumnPassport";
+            this.dgvWorkerUserDataColumnPassport.ReadOnly = true;
+            this.dgvWorkerUserDataColumnPassport.Width = 200;
             // 
-            // dgvTbColumnAcc
+            // dataGridViewTextBoxColumn81
             // 
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.Green;
-            this.dgvTbColumnAcc.DefaultCellStyle = dataGridViewCellStyle22;
-            this.dgvTbColumnAcc.HeaderText = "Стоимость";
-            this.dgvTbColumnAcc.Name = "dgvTbColumnAcc";
-            this.dgvTbColumnAcc.ReadOnly = true;
-            this.dgvTbColumnAcc.Width = 70;
+            this.dataGridViewTextBoxColumn81.HeaderText = "Менеджер";
+            this.dataGridViewTextBoxColumn81.Name = "dataGridViewTextBoxColumn81";
+            this.dataGridViewTextBoxColumn81.ReadOnly = true;
+            this.dataGridViewTextBoxColumn81.Visible = false;
+            this.dataGridViewTextBoxColumn81.Width = 80;
             // 
-            // dgvTbColumnRej
+            // dataGridViewTextBoxColumn82
             // 
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.Red;
-            this.dgvTbColumnRej.DefaultCellStyle = dataGridViewCellStyle23;
-            this.dgvTbColumnRej.HeaderText = "Стоимость";
-            this.dgvTbColumnRej.Name = "dgvTbColumnRej";
-            this.dgvTbColumnRej.ReadOnly = true;
-            this.dgvTbColumnRej.Width = 70;
+            this.dataGridViewTextBoxColumn82.HeaderText = "Выплаты";
+            this.dataGridViewTextBoxColumn82.Name = "dataGridViewTextBoxColumn82";
+            this.dataGridViewTextBoxColumn82.ReadOnly = true;
+            this.dataGridViewTextBoxColumn82.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn83
+            // 
+            dataGridViewCellStyle268.BackColor = System.Drawing.Color.Yellow;
+            this.dataGridViewTextBoxColumn83.DefaultCellStyle = dataGridViewCellStyle268;
+            this.dataGridViewTextBoxColumn83.HeaderText = "Стоимость";
+            this.dataGridViewTextBoxColumn83.Name = "dataGridViewTextBoxColumn83";
+            this.dataGridViewTextBoxColumn83.ReadOnly = true;
+            this.dataGridViewTextBoxColumn83.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn84
+            // 
+            dataGridViewCellStyle269.BackColor = System.Drawing.Color.Green;
+            this.dataGridViewTextBoxColumn84.DefaultCellStyle = dataGridViewCellStyle269;
+            this.dataGridViewTextBoxColumn84.HeaderText = "Стоимость";
+            this.dataGridViewTextBoxColumn84.Name = "dataGridViewTextBoxColumn84";
+            this.dataGridViewTextBoxColumn84.ReadOnly = true;
+            this.dataGridViewTextBoxColumn84.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn85
+            // 
+            dataGridViewCellStyle270.BackColor = System.Drawing.Color.Red;
+            this.dataGridViewTextBoxColumn85.DefaultCellStyle = dataGridViewCellStyle270;
+            this.dataGridViewTextBoxColumn85.HeaderText = "Стоимость";
+            this.dataGridViewTextBoxColumn85.Name = "dataGridViewTextBoxColumn85";
+            this.dataGridViewTextBoxColumn85.ReadOnly = true;
+            this.dataGridViewTextBoxColumn85.Width = 80;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(452, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(27, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 42;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(6, 36);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(430, 13);
+            this.label14.TabIndex = 38;
+            this.label14.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(452, 52);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(27, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 43;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(222, 79);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(176, 13);
+            this.label13.TabIndex = 37;
+            this.label13.Visible = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox2.Enabled = false;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox2.Location = new System.Drawing.Point(225, 52);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
+            this.textBox2.Size = new System.Drawing.Size(215, 23);
+            this.textBox2.TabIndex = 33;
+            this.textBox2.UseSystemPasswordChar = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label12.Location = new System.Drawing.Point(6, 52);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(130, 17);
+            this.label12.TabIndex = 32;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox1.Location = new System.Drawing.Point(225, 10);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '*';
+            this.textBox1.Size = new System.Drawing.Size(215, 23);
+            this.textBox1.TabIndex = 31;
+            this.textBox1.UseSystemPasswordChar = true;
+            // 
+            // btnWorkerChangePassword
+            // 
+            this.btnWorkerChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnWorkerChangePassword.Location = new System.Drawing.Point(495, 52);
+            this.btnWorkerChangePassword.Name = "btnWorkerChangePassword";
+            this.btnWorkerChangePassword.Size = new System.Drawing.Size(152, 42);
+            this.btnWorkerChangePassword.TabIndex = 47;
+            this.btnWorkerChangePassword.Text = "Сохранить новый пароль";
+            this.btnWorkerChangePassword.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label11.Location = new System.Drawing.Point(6, 10);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(194, 17);
+            this.label11.TabIndex = 30;
+            // 
+            // btnWorkerSwitchChangePasswordCancel
+            // 
+            this.btnWorkerSwitchChangePasswordCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnWorkerSwitchChangePasswordCancel.Location = new System.Drawing.Point(495, 7);
+            this.btnWorkerSwitchChangePasswordCancel.Name = "btnWorkerSwitchChangePasswordCancel";
+            this.btnWorkerSwitchChangePasswordCancel.Size = new System.Drawing.Size(152, 42);
+            this.btnWorkerSwitchChangePasswordCancel.TabIndex = 48;
+            this.btnWorkerSwitchChangePasswordCancel.Text = "Отменить";
+            this.btnWorkerSwitchChangePasswordCancel.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1959, 987);
+            this.ClientSize = new System.Drawing.Size(1924, 987);
             this.Controls.Add(this.labelActualUserName);
             this.Controls.Add(this.labelActualProjectName);
             this.Controls.Add(this.tabControlMain);
@@ -6412,6 +6472,21 @@
             this.gbAllTypesOfWork.ResumeLayout(false);
             this.gbAllTypesOfWork.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllTypesOfWork)).EndInit();
+            this.tabPageUser.ResumeLayout(false);
+            this.groupBoxUserPanel.ResumeLayout(false);
+            this.gbUserData.ResumeLayout(false);
+            this.gbUserData.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkUserLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkUserPassport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkUserName)).EndInit();
+            this.gbPasswordPanel.ResumeLayout(false);
+            this.gbPasswordPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkUserRepeatPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkUserPassword)).EndInit();
+            this.gbUsersInProject.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUserInProject)).EndInit();
+            this.gbAllUsers.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllUsers)).EndInit();
             this.tabPageTypeOfElement.ResumeLayout(false);
             this.gbTypeOfElementPanel.ResumeLayout(false);
             this.gbTypeOfElementData.ResumeLayout(false);
@@ -6431,31 +6506,6 @@
             this.gbAllTypesOfElement.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTypeOfElementSelectedDgvAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllTypesOfElement)).EndInit();
-            this.tabPageUser.ResumeLayout(false);
-            this.groupBoxUserPanel.ResumeLayout(false);
-            this.gbUserData.ResumeLayout(false);
-            this.gbUserData.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkUserLogin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkUserPassport)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkUserName)).EndInit();
-            this.gbPasswordPanel.ResumeLayout(false);
-            this.gbPasswordPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkUserRepeatPassword)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkUserPassword)).EndInit();
-            this.gbUsersInProject.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUserInProject)).EndInit();
-            this.gbAllUsers.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAllUsers)).EndInit();
-            this.tabPageClient.ResumeLayout(false);
-            this.gbAllClients.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAllClients)).EndInit();
-            this.groupBoxClent.ResumeLayout(false);
-            this.groupBoxClent.PerformLayout();
-            this.gbClientData.ResumeLayout(false);
-            this.gbClientData.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkClientInn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkClientAddress)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkClientName)).EndInit();
             this.tabPageElementPicture.ResumeLayout(false);
             this.gbElementPictureData.ResumeLayout(false);
             this.gbElementPictureNamePicture.ResumeLayout(false);
@@ -6466,6 +6516,16 @@
             this.gbAllElementPicture.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbElementPictureSelectedDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllElementPicture)).EndInit();
+            this.tabPageClient.ResumeLayout(false);
+            this.gbAllClients.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllClients)).EndInit();
+            this.groupBoxClent.ResumeLayout(false);
+            this.groupBoxClent.PerformLayout();
+            this.gbClientData.ResumeLayout(false);
+            this.gbClientData.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkClientInn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkClientAddress)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkClientName)).EndInit();
             this.tabPageWorker.ResumeLayout(false);
             this.gbWorkerSectionsOfBuilding.ResumeLayout(false);
             this.gbWorkerSectionsOfBuilding.PerformLayout();
@@ -6479,18 +6539,15 @@
             this.tabPageWorkerPayments.ResumeLayout(false);
             this.tabPageWorkerPayments.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerPayments)).EndInit();
-            this.tabPageWorkerUserData.ResumeLayout(false);
-            this.tabPageWorkerUserData.PerformLayout();
-            this.gbWorkerChangePassword.ResumeLayout(false);
-            this.gbWorkerChangePassword.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.gbWorkerProjects.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerProjects)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerWorkLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerModel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerUserData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -6602,9 +6659,6 @@
         private System.Windows.Forms.Button btnProjectUpdate;
         private System.Windows.Forms.Button btnProjectSwitchCancel;
         private System.Windows.Forms.PictureBox pbCheckMarkProjectClient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnUserName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnManagerAccess;
         private System.Windows.Forms.TabPage tabPageWork;
         private System.Windows.Forms.GroupBox gbWorkPanel;
         private System.Windows.Forms.Button btnWorkSwitchCancel;
@@ -6855,22 +6909,7 @@
         private System.Windows.Forms.GroupBox gbWorkerSectionsOfBuilding;
         private System.Windows.Forms.DataGridView dgvWorkerSectionsOfBuilding;
         private System.Windows.Forms.TabControl tabControlWorker;
-        private System.Windows.Forms.TabPage tabPageWorkerUserData;
         private System.Windows.Forms.Button btnWorkerSwitchChangePassword;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.GroupBox gbWorkerChangePassword;
-        private System.Windows.Forms.Button btnWorkerSwitchChangePasswordCancel;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button btnWorkerChangePassword;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TabPage tabPageWorkerPayments;
         private System.Windows.Forms.TabPage tabPageWorkerWorks;
         private System.Windows.Forms.GroupBox gbWorkerProjects;
@@ -6903,7 +6942,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn WorkerWorkLogColumnType;
         private System.Windows.Forms.DataGridViewTextBoxColumn WorkerWorkLogColumnUser;
         private System.Windows.Forms.DataGridViewTextBoxColumn WorkerWorkLogColumnComment;
-        private System.Windows.Forms.TabPage tabPageWorkerCompletedWorks;
         private System.Windows.Forms.Label lblManagerModelAmount;
         private System.Windows.Forms.Label lblManagerModelMultiplicity;
         private System.Windows.Forms.Label lblManagerModelSquare;
@@ -7017,5 +7055,31 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvTbColumnComp;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvTbColumnAcc;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvTbColumnRej;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnUserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnManagerAccess;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UsersInProjectColumnPayments;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UsersInProjectColumnComp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UsersInProjectColumnAcc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UsersInProjectColumnRej;
+        private System.Windows.Forms.DataGridView dgvWorkerUserData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn79;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn80;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvWorkerUserDataColumnPassport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn81;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn82;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn83;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn84;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn85;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnWorkerChangePassword;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnWorkerSwitchChangePasswordCancel;
     }
 }
