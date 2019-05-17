@@ -162,8 +162,7 @@ namespace Project
                 ShowPaymentsInProject();
             else ClearAndSetHeightDgv(dgvPaymentsByProject, gbAllPayments, 0);
         }
-
-
+        
         private void ShowSummPaymentsInActualProjectByUsers()
         {
             if (actualProject.Id == -1) return;
@@ -241,8 +240,7 @@ namespace Project
             pbCheckMarkPaymentDate.Visible = false;
             pbCheckMarkPaymentAmount.Visible = false;
         }
-
-
+        
         //TbDate_Click
         private void TbPaymentDate_Click(object sender, EventArgs e)
         {
@@ -373,6 +371,8 @@ namespace Project
                 try
                 {
                     payment.Update(driver);
+                    MessageBox.Show("Изменения сохранены", "Сохранение платежа", MessageBoxButtons.OK,
+                       MessageBoxIcon.Information);
                     gbAllPayments.Enabled = true;
                     gbPaymentData.Enabled = false;
                     btnPaymentUpdate.Visible = false;

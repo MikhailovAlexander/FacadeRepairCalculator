@@ -1,3 +1,7 @@
+create database facade_calculator;
+
+psql facade_calculator;
+
 CREATE TABLE application_user (
 	id serial NOT NULL,
 	name VARCHAR(255) NOT NULL UNIQUE,
@@ -15,7 +19,7 @@ CREATE TABLE client (
 	id serial NOT NULL,
 	name VARCHAR(255) NOT NULL UNIQUE,
 	address VARCHAR(255) NOT NULL,
-	inn VARCHAR(255) NOT NULL,
+	inn VARCHAR(255) NOT NULL UNIQUE,
 	CONSTRAINT client_pk PRIMARY KEY (id)
 ) WITH (
   OIDS=FALSE
@@ -35,6 +39,8 @@ CREATE TABLE project (
   OIDS=FALSE
 );
 
+ALTER TABLE project ADD CONSTRAINT project_fk0 FOREIGN KEY (id_client) REFERENCES client(id);
+
 CREATE TABLE user_in_project (
 	id serial NOT NULL,
 	id_user integer NOT NULL,
@@ -43,6 +49,14 @@ CREATE TABLE user_in_project (
 ) WITH (
   OIDS=FALSE
 );
+
+ALTER TABLE user_in_project ADD CONSTRAINT user_in_project_fk0 FOREIGN KEY (id_user) 
+REFERENCES application_user(id);
+ALTER TABLE user_in_project ADD CONSTRAINT user_in_project_fk1 FOREIGN KEY (id_project) 
+REFERENCES project(id);
+
+create unique index i_user_in_project_unique
+on user_in_project (id_user, id_project);
 
 create table type_of_work(
 	id serial not null,
@@ -61,6 +75,15 @@ create table work_in_project(
 	constraint work_i_p_pk primary key (id)
 ) with (oids=false);
 
+	
+alter table work_in_project add constraint work_in_project_fk0 foreign key (id_project)
+	references project(id);
+alter table work_in_project add constraint work_in_project_fk1 foreign key (id_type_of_work)
+	references type_of_work(id);
+	
+create unique index i_work_in_project_unique 
+on work_in_project (id_project, id_type_of_work);
+
 create table payment(
 	id serial not null,
 	id_user integer not null,
@@ -70,7 +93,10 @@ create table payment(
 	constraint payment_pk primary key (id)
 ) with (oids=false);
 
-
+ALTER TABLE payment ADD CONSTRAINT payment_fk0 FOREIGN KEY (id_user) 
+REFERENCES application_user(id);
+ALTER TABLE payment ADD CONSTRAINT payment_fk1 FOREIGN KEY (id_project) 
+REFERENCES project(id);
 
 create table element_picture(
 	id serial not null,
@@ -166,32 +192,3 @@ alter table work_log add constraint work_log_fk0 foreign key (id_work_by_element
 	references work_by_element(id);
 alter table work_log add constraint work_log_fk1 foreign key (id_user)
 	references application_user(id);
-
-	
-alter table work_in_project add constraint work_in_project_fk0 foreign key (id_project)
-	references project(id);
-alter table work_in_project add constraint work_in_project_fk1 foreign key (id_type_of_work)
-	references type_of_work(id);
-
-ALTER TABLE project ADD CONSTRAINT project_fk0 FOREIGN KEY (id_client) REFERENCES client(id);
-
-ALTER TABLE user_in_project ADD CONSTRAINT user_in_project_fk0 FOREIGN KEY (id_user) 
-REFERENCES user(id);
-ALTER TABLE user_in_project ADD CONSTRAINT user_in_project_fk1 FOREIGN KEY (id_project) 
-REFERENCES project(id);
-
-alter table work_in_project add constraint work_in_project_fk0 foreign key (id_project)
-	references project(id);
-alter table work_in_project add constraint work_in_project_fk1 foreign key (id_type_of_work)
-	references type_of_work(id);
-	
-ALTER TABLE payment ADD CONSTRAINT payment_fk0 FOREIGN KEY (id_user) 
-REFERENCES application_user(id);
-ALTER TABLE payment ADD CONSTRAINT payment_fk1 FOREIGN KEY (id_project) 
-REFERENCES project(id);
-
-create unique index i_user_in_project_unique
-on user_in_project (id_user, id_project);
-
-create unique index i_work_in_project_unique 
-on work_in_project (id_project, id_type_of_work);

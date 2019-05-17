@@ -125,12 +125,12 @@ namespace Project
 
         public Payment[] GetPaymentsByProject(int idProject, IDriverDB driver)
         {
-            return driver.ReadPaymentsByUserAndProject(id, idProject);
+            return driver.ReadPaymentsByUserAndProject(idProject, id);
         }
 
         public decimal GetPaymentsAmountByProject(int idProject, IDriverDB driver)
         {
-            return driver.GetAmountPaymentsByUserAndProject(id, idProject);
+            return driver.GetAmountPaymentsByUserAndProject(idProject, id);
         }
 
         public decimal GetAmountCompletedWorkByProject(int idProject, IDriverDB driver)

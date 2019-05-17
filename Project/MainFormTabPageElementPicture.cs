@@ -125,6 +125,8 @@ namespace Project
                     gbElementPictureNamePicture.Enabled = false;
                     btnElementPictureSwitchCancel.Visible = false;
                     btnElementPictureCreate.Visible = false;
+                    MessageBox.Show($"Изображение {picture.Name} сохранено",
+                    "Сохранение изображения", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 catch (Exception ex)
                 {
@@ -161,6 +163,9 @@ namespace Project
                     btnElementPictureSwitchCancel.Visible = false;
                     btnElementPictureUpdate.Visible = false;
                     ShowAllElementPictures();
+                    MessageBox.Show($"Изображение {elementPicture.Name} сохранено",
+                        "Сохранение изображения", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
                 catch (Exception ex)
                 {
@@ -177,7 +182,7 @@ namespace Project
             var elementPicture = SelectedElementPicture();
             if (elementPicture.Id == -1) return;
             DialogResult result = MessageBox.Show
-                         ($"Вы действительно хотите безвозвратно удалить изображение" +
+                         ($"Вы действительно хотите безвозвратно удалить изображение " +
                          $"{elementPicture.Name}?",
                          "Удаление изображения", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (result == DialogResult.OK)

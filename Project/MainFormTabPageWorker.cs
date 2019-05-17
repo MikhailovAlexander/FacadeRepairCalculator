@@ -344,7 +344,7 @@ namespace Project
                 actualUser.ChangePassword(password, hashPasswordCreator);
                 actualUser.Update(driver);
                 MessageBox.Show($"Произведена смена пароля",
-                    "Смена пароля", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    "Смена пароля", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

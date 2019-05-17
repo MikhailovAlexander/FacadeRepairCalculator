@@ -439,13 +439,13 @@ namespace Project
             foreach (User user in users)
             {
                 string payments = GetStringFromDecimalValue(
-                    GetAmountPaymentsByProjectAndUser(actualProject.Id, user));
+                    GetAmountPaymentsByProjectAndUser(idProject, user));
                 string complete = GetStringFromDecimalValue(
-                    GetAmountCompletedWorkByProjectAndUser(actualProject.Id, user));
+                    GetAmountCompletedWorkByProjectAndUser(idProject, user));
                 string accept = GetStringFromDecimalValue(
-                    GetAmountAcceptedWorkByProjectAndUser(actualProject.Id, user));
+                    GetAmountAcceptedWorkByProjectAndUser(idProject, user));
                 string reject = GetStringFromDecimalValue(
-                    GetAmountRejectedWorkByProjectAndUser(actualProject.Id, user));
+                    GetAmountRejectedWorkByProjectAndUser(idProject, user));
                 dgvUsers.Rows.Add(user.Id, user.Name, user.Passport, user.ManagerAccessString, payments,
                     complete, accept, reject);
             }

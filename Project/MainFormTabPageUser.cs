@@ -132,6 +132,7 @@ namespace Project
         {
             ShowVoidUser();
             btnCreateUser.Visible = true;
+            btnUserSwitchCancel.Visible = true;
             btnChangePassword.Visible = false;
             gbPasswordPanel.Visible = true;
             gbUserData.Enabled = true;
@@ -148,6 +149,7 @@ namespace Project
             btnChangePassword.Visible = false;
             btnCreateUser.Visible = false;
             btnUpdateUser.Visible = false;
+            btnUserSwitchCancel.Visible = false;
         }
 
         //BtnCreate_Click
@@ -175,6 +177,7 @@ namespace Project
                     ShowUsers();
                     ShowVoidUser();
                     btnCreateUser.Visible = false;
+                    btnUserSwitchCancel.Visible = false;
                     gbPasswordPanel.Visible = false;
                     gbUserData.Enabled = false;
                 }
@@ -194,6 +197,7 @@ namespace Project
             ShowSelectedUser();
             btnUpdateUser.Location = new Point(487, 213);
             btnUpdateUser.Visible = true;
+            btnUserSwitchCancel.Visible = true;
             btnCreateUser.Visible = false;
             gbPasswordPanel.Visible = false;
             gbUserData.Enabled = true;
@@ -221,6 +225,7 @@ namespace Project
                     ShowVoidUser();
                     gbUserData.Enabled = false;
                     btnUpdateUser.Visible = false;
+                    btnUserSwitchCancel.Visible = false;
                     dgvAllUsers.Enabled = true;
                 }
                 catch (Exception ex)
@@ -238,7 +243,7 @@ namespace Project
         private void BtnDeleteUser_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show
-                           ($"Вы действительно хотите безвозвратно удалить пользователя" +
+                           ($"Вы действительно хотите безвозвратно удалить пользователя " +
                            $"{SelectedUser().Name}?", "Удаление пользователя",
                            MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (result == DialogResult.OK)
@@ -265,6 +270,7 @@ namespace Project
             ShowSelectedUser();
             dgvAllUsers.Enabled = false;
             btnChangePassword.Visible = true;
+            btnUserSwitchCancel.Visible = true;
             btnUpdateUser.Visible = false;
             btnCreateUser.Visible = false;
             gbPasswordPanel.Visible = true;
@@ -284,6 +290,7 @@ namespace Project
                     MessageBox.Show($"Пароль пользователя {selectedUser.Name} изменен", "Сообщение",
                                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dgvAllUsers.Enabled = true;
+                    btnUserSwitchCancel.Visible = false;
                     gbPasswordPanel.Visible = false;
                 }
                 catch (Exception ex)

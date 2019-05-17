@@ -121,9 +121,9 @@ namespace Project
         }
 
      
-        public bool HasElements()
+        public bool HasElements(IDriverDB driver)
         {
-            //TODO
+            if (GetElements(driver).Length == 0) return false;
             return true;
         }
 

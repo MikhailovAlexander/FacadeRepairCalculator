@@ -229,6 +229,7 @@ namespace Project
             else
             {
                 ShowSelectedSectionOfBuilding();
+                ShowWorksInProjectInSectionOfBuilding();
                 managerModel.ShowModel(SelectedSectionOfBuilding());
                 btnSectionOfBuildingSwitchModelUpdate.Visible = true;
                 btnSectionOfBuildingSwitchSetWork.Visible = true;
@@ -421,7 +422,7 @@ namespace Project
                 return;
             }
             if (actualProject.State == ProjectState.Canceled ||
-                actualProject.State == ProjectState.Canceled)
+                actualProject.State == ProjectState.Completed)
             {
                 MessageBox.Show("Изменение отмененого или завершенного проекта не возможно",
                 "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -460,11 +461,19 @@ namespace Project
                 string name = tbSectionOfBuildingName.Text;
                 int quantityByHeight = Convert.ToInt32(tbSectionOfBuildingQuantityByHeight.Text);
                 int quantityByWidth = Convert.ToInt32(tbSectionOfBuildingQuantityByWidth.Text);
+                if(quantityByHeight == 0 || quantityByWidth == 0)
+                {
+                    MessageBox.Show("Невозможно создать модель с нулевым количеством элементов", 
+                        "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 var sectionOfBuilding = new SectionOfBuilding(name, actualProject.Id,
                     quantityByHeight, quantityByWidth);
                 try
                 {
                     sectionOfBuilding.CreateWithElements(driver);
+                    MessageBox.Show("Модель фасада сохранена", "Сохранение модели", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                     ShowActualProject();
                     ShowSectionsOfBuildingInActualPriject();
                     ShowVoidSectionOfBuilding();
@@ -489,7 +498,7 @@ namespace Project
         private void BtnSectionOfBuildingSwitchUpdate_Click(object sender, EventArgs e)
         {
             if (actualProject.State == ProjectState.Canceled ||
-                actualProject.State == ProjectState.Canceled)
+                actualProject.State == ProjectState.Completed)
             {
                 MessageBox.Show("Изменение отмененого или завершенного проекта не возможно",
                 "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -521,6 +530,8 @@ namespace Project
                 try
                 {
                     sectionOfBuilding.Update(driver);
+                    MessageBox.Show("Изменения сохранены", "Сохранение модели", MessageBoxButtons.OK, 
+                        MessageBoxIcon.Information);
                     ShowActualProject();
                     ShowSectionsOfBuildingInActualPriject();
                     ShowSelectedSectionOfBuilding();
@@ -547,6 +558,13 @@ namespace Project
         //BtnDelete_Click
         private void BtnSectionOfBuildingDelete_Click(object sender, EventArgs e)
         {
+            if (actualProject.State == ProjectState.Canceled ||
+                actualProject.State == ProjectState.Completed)
+            {
+                MessageBox.Show("Изменение отмененого или завершенного проекта не возможно",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             var selectedSectionOfBuilding = SelectedSectionOfBuilding();
             if (selectedSectionOfBuilding.Id == -1) return;
             DialogResult result = MessageBox.Show
@@ -574,7 +592,7 @@ namespace Project
         private void BtnSectionOfBuildingSwitchModelUpdate_Click(object sender, EventArgs e)
         {
             if (actualProject.State == ProjectState.Canceled ||
-                actualProject.State == ProjectState.Canceled)
+                actualProject.State == ProjectState.Completed)
             {
                 MessageBox.Show("Изменение отмененого или завершенного проекта не возможно",
                 "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -582,8 +600,8 @@ namespace Project
             }
             btnSectionOfBuildingModelUpdate.Visible = true;
             btnSectionOfBuildingSwitchModelCancel.Visible = true;
+            btnSectionOfBuildingSwitchModelUpdate.Enabled = false;
             lvSectionOfBuildingTypesOfElementInProject.Enabled = true;
-            gbAllSectionsOfBuilding.Enabled = false;
             btnSectionOfBuildingSwitchSetWork.Visible = false;
         }
 
@@ -593,14 +611,17 @@ namespace Project
             {
                 SelectedSectionOfBuilding().UpdateAllElementsSetTypeOfElement(
                     managerModel.elementsOfModel, driver);
+                MessageBox.Show("Изменения сохранены", "Сохранение модели", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                 btnSectionOfBuildingModelUpdate.Visible = false;
                 btnSectionOfBuildingSwitchModelCancel.Visible = false;
+                btnSectionOfBuildingSwitchModelUpdate.Enabled = true;
                 lvSectionOfBuildingTypesOfElementInProject.Enabled = false;
                 ShowSectionsOfBuildingInActualPriject();
                 ShowSelectedSectionOfBuilding();
-                gbAllSectionsOfBuilding.Enabled = true;
                 btnSectionOfBuildingSwitchSetWork.Visible = true;
                 ShowActualProject();
+                ShowProjects();
             }
             catch (Exception ex)
             {
@@ -617,6 +638,7 @@ namespace Project
             btnSectionOfBuildingSwitchSetWork.Enabled = true;
             btnSectionOfBuildingSwitchSetWork.Visible = true;
             gbManagerModelSetWork.Visible = false;
+            btnSectionOfBuildingSwitchModelUpdate.Enabled = true;
             btnSectionOfBuildingSwitchModelUpdate.Visible = true;
             lvSectionOfBuildingTypesOfElementInProject.Enabled = false;
             lvSectionOfBuildingTypesOfElementInProject.Visible = true;
@@ -628,7 +650,6 @@ namespace Project
         private void BtnSectionOfBuildingSwitchSetWork_Click(object sender, EventArgs e)
         {
             lblSectionOfBuildingWorksAmount.Visible = true;
-            gbAllSectionsOfBuilding.Enabled = false;
             btnSectionOfBuildingSwitchSetWork.Enabled = false;
             gbManagerModelSetWork.Visible = true;
             btnSectionOfBuildingSwitchModelCancel.Visible = true;
@@ -642,7 +663,7 @@ namespace Project
         private void BtnSectionOfBuildingSetWork_Click(object sender, EventArgs e)
         {
             if (actualProject.State == ProjectState.Canceled ||
-                actualProject.State == ProjectState.Canceled)
+                actualProject.State == ProjectState.Completed)
             {
                 MessageBox.Show("Изменение отмененого или завершенного проекта не возможно",
                 "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -677,7 +698,7 @@ namespace Project
         private void BtnSectionOfBuildingCancelWork_Click(object sender, EventArgs e)
         {
             if (actualProject.State == ProjectState.Canceled ||
-                actualProject.State == ProjectState.Canceled)
+                actualProject.State == ProjectState.Completed)
             {
                 MessageBox.Show("Изменение отмененого или завершенного проекта не возможно",
                 "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -713,7 +734,7 @@ namespace Project
         private void BtnSectionOfBuildingChangeMultiplicity_Click(object sender, EventArgs e)
         {
             if (actualProject.State == ProjectState.Canceled ||
-                actualProject.State == ProjectState.Canceled)
+                actualProject.State == ProjectState.Completed)
             {
                 MessageBox.Show("Изменение отмененого или завершенного проекта не возможно",
                 "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -741,6 +762,8 @@ namespace Project
                 decimal multiplicity = Convert.ToDecimal(inputBox.Input);
                 workByElement.Multiplicity = multiplicity;
                 workByElement.Update(driver);
+                MessageBox.Show("Изменения сохранены", "Изменение коэффициента", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                 ShowActualProject();
                 ShowProjects();
             }

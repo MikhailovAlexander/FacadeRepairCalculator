@@ -489,6 +489,8 @@ namespace Project
                 try
                 {
                     actualProject.Start(dateOfStart, plannedDateOfComplete, driver);
+                    MessageBox.Show("Статус проекта изменен", "Старт проекта", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                     ShowActualProject();
                     ShowProjects();
                 }
@@ -508,6 +510,12 @@ namespace Project
         private void BtnProjectCancel_Click(object sender, EventArgs e)
         {
             var selectedProject = SelectedProject();
+            if(selectedProject.State == ProjectState.Canceled)
+            {
+                MessageBox.Show($"Проект {selectedProject.Name} уже отменен",
+                        "Отмена проекта", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             DialogResult result = MessageBox.Show
                           ($"Вы действительно хотите отменить проект " +
                           $"{selectedProject.ToString()}?", "Отмена проекта",
@@ -563,6 +571,8 @@ namespace Project
                 try
                 {
                     actualProject.Complete(dateOfComplete, driver);
+                    MessageBox.Show($"Проект {actualProject.Name} завершен",
+                        "Завершение проекта", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ShowActualProject();
                     ShowProjects();
                 }

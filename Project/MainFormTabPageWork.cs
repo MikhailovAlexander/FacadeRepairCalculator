@@ -95,12 +95,15 @@ namespace Project
             tbTypeOfWorkName.Text = tow.Name;
             tbTypeOfWorkMeasureUnit.Text = tow.MeasureUnit;
             cbTypeOfWorkDimension.Text = tow.DimensionToString();
+            tbWorkInProjectMultiplicity.Enabled = false;
             pbCheckMarkTypeOfWorkName.Visible = false;
             pbCheckMarkTypeOfWorkDimension.Visible = false;
             pbCheckMarkTypeOfWorkMeasureUnit.Visible = false;
             lblCheckTypeOfWorkName.Visible = false;
             lblCheckTypeOfWorkDimension.Visible = false;
             lblCheckTypeOfWorkMeasureUnit.Visible = false;
+            lblWorkInProjectCheckPrice.Visible = false;
+            lblWorkInProjectCheckMultiplicity.Visible = false;
         }
 
         private void ShowSelectedWorkInProject()
@@ -110,6 +113,7 @@ namespace Project
             tbTypeOfWorkName.Text = typeOfWork.Name;
             cbTypeOfWorkDimension.Text = typeOfWork.DimensionToString();
             tbTypeOfWorkMeasureUnit.Text = typeOfWork.MeasureUnit;
+            tbWorkInProjectMultiplicity.Enabled = false;
             gbTypeOfWorkData.Height = 167;
             gbWorkInProjectData.Visible = true;
             tbWorkInProjectPrice.Text = Convert.ToString(workInProject.Price);
@@ -117,6 +121,8 @@ namespace Project
             pbCheckMarkTypeOfWorkName.Visible = false;
             pbCheckMarkTypeOfWorkDimension.Visible = false;
             pbCheckMarkTypeOfWorkMeasureUnit.Visible = false;
+            lblWorkInProjectCheckPrice.Visible = false;
+            lblWorkInProjectCheckMultiplicity.Visible = false;
         }
         //TbDate_Click
 
@@ -177,7 +183,12 @@ namespace Project
                 "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            ShowSelectedTypeOfWork();
+            if(actualProject.Id == -1)
+            {
+                MessageBox.Show("Текущий проект не сохранен",
+                "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             gbAllTypesOfWork.Enabled = false;
             gbTypeOfWorkData.Enabled = false;
             gbWorkInProjectData.Visible = true;
@@ -186,6 +197,7 @@ namespace Project
             btnWorkInProjectCreate.Visible = true;
             tbWorkInProjectPrice.Clear();
             tbWorkInProjectMultiplicity.Text = "1";
+            ShowSelectedTypeOfWork();
         }
 
         private void BtnWorkInProjectChangeMultiplicity_Click(object sender, EventArgs e)

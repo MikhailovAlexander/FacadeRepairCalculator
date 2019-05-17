@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Project.Base" Collapsed="true">
+    <Position X="14.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAAAABAAAAAAAAAAEAAMAAIAAAAAAAIgA=</HashCode>
+      <FileName>Base.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.BaseWithName" Collapsed="true">
+    <Position X="12.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAEAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>BaseWithName.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.Client" Collapsed="true">
+    <Position X="8.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAFAAAAAAAAAAECAMACAAAAgAAAACA=</HashCode>
+      <FileName>Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.Element" Collapsed="true">
+    <Position X="21.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAAAAACAAAACAACAAAAAEAAECAEEAAAAAAAAAEAI=</HashCode>
+      <FileName>Element.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.ElementPicture" Collapsed="true">
+    <Position X="17.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgAAAAAAAAAAAAAAAAAAAACECAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>ElementPicture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.Entry" Collapsed="true">
+    <Position X="28.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAAAAACBACAAABAAACCAgRSKAAAAABAAAQAAAAAAAIA=</HashCode>
+      <FileName>Entry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.HashPasswordCreator" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="30.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAoAAAACQAEAAAAAAAAAAAAAAAgAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>HashPasswordCreator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Project.InputBox" Collapsed="true">
+    <Position X="32.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAQAECAAABUAAACQAAACEACACFAAAAAgIFUAgAA=</HashCode>
+      <FileName>InputBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.MainForm" Collapsed="true">
+    <Position X="28.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>//f///9////f/7////3///+////vv+/////3///7f/0=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.Payment" Collapsed="true">
+    <Position X="1.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAAACAAAAAAAAAEAEACAAAECgEAAEgAAAAAAAAA=</HashCode>
+      <FileName>Payment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.PostgresDriver" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="30.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JDoxwC+IKakzhEJkwO7I9oHmi73mFA5hgNxZ6hKQOrY=</HashCode>
+      <FileName>PostgresDriver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Project.Program" Collapsed="true">
+    <Position X="32.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.Project">
+    <Position X="12.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIUAkAAAQCBUAAIsCAAIAg0AAwGCAmA2KAQQhAAlBKA=</HashCode>
+      <FileName>Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.SectionOfBuilding" Collapsed="true">
+    <Position X="19.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAKIAEAMAAAIgEJIAgBEDAMBEAgAACBAAAAA=</HashCode>
+      <FileName>SectionOfBuilding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.TypeOfElement" Collapsed="true">
+    <Position X="6" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAABAAAAAQAAEAAAABAAAECAEQAAAAgAAAAIgA=</HashCode>
+      <FileName>TypeOfElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.TypeOfWork" Collapsed="true">
+    <Position X="10.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YASAAAAAAAAAAAAgAAAAAAAAAAECAEAAAAAAAAAABAA=</HashCode>
+      <FileName>TypeOfWork.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.User" Collapsed="true">
+    <Position X="15" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQQgAABAIFgBAEhBABAgAAGBECAEAAABAQAIAAAAg=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.WorkByElement" Collapsed="true">
+    <Position X="24" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQAACIMIAAkAAAAAAwIABABDAECAEAIMAIEBAAAAKA=</HashCode>
+      <FileName>WorkByElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.WorkInProject" Collapsed="true">
+    <Position X="26.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQBAAAAAQAAAAAAAAAIEAAACAECAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>WorkInProject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.WorkLog" Collapsed="true">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAECBAAAAAAACAAAAAAAAECAEABAAAhAAAAAAA=</HashCode>
+      <FileName>WorkLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.Properties.Resources" Collapsed="true">
+    <Position X="28.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.Properties.Settings" Collapsed="true">
+    <Position X="30.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Project.IDriverDB" Collapsed="true">
+    <Position X="28.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JDoxwCoIKYgzhEJkwO4I8oGmC73mFA4BgNRZ6hIAOjY=</HashCode>
+      <FileName>IDriverDB.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Project.IHashPasswordCreator" Collapsed="true">
+    <Position X="30.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>IHashPasswordCreator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Project.Dimension" Collapsed="true">
+    <Position X="28.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAABAAAAAAAAAAAAgIAAAAAA=</HashCode>
+      <FileName>Dimension.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Project.ProjectState" Collapsed="true">
+    <Position X="30.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAgAAAQAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>ProjectState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Project.TypeOfLog" Collapsed="true">
+    <Position X="32.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>TypeOfLog.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Project.WorkState" Collapsed="true">
+    <Position X="28.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAQAAAIAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WorkState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

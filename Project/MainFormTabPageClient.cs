@@ -228,7 +228,7 @@ namespace Project
                 "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (!(actualProject.Id == -1))
+            if (actualProject.Id != -1)
             {
                 var selectedClient = SelectedClient();
                 DialogResult result = MessageBox.Show

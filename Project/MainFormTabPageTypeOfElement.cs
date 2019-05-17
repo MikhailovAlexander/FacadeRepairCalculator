@@ -256,7 +256,6 @@ namespace Project
 
         private void BtnTypeOfElementSetPicture_Click(object sender, EventArgs e)
         {
-            //Need test
             btnTypeOfElementSwitchSetPicture.Enabled = true;
             btnTypeOfElementSetPicture.Visible = false;
             btnTypeOfElementCancelPicture.Visible = false;
@@ -297,7 +296,7 @@ namespace Project
                 TypeOfElement.DecimalIsMatch(tbTypeOfElementSquare.Text) &&
                 TypeOfElement.DecimalIsMatch(tbTypeOfElementHeight.Text) &&
                 TypeOfElement.DecimalIsMatch(tbTypeOfElementLength.Text) &&
-                SelectedElementPictureInTypeOfElement().Id != 0)
+                SelectedElementPictureInTypeOfElement().Id != -1)
             {
                 string name = tbTypeOfElementName.Text;
                 decimal square = Convert.ToDecimal(tbTypeOfElementSquare.Text);
@@ -309,6 +308,8 @@ namespace Project
                 try
                 {
                     typeOfElement.Create(driver);
+                    MessageBox.Show("Элемент фасада сохранен","Сохранение данных", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ShowVoidTypeOfElement();
                     ShowAllTypesOfElement();
                     gbTypeOfElementData.Enabled = false;
@@ -354,6 +355,8 @@ namespace Project
                 try
                 {
                     typeOfElement.Update(driver);
+                    MessageBox.Show("Изменения сохранены", "Сохранение данных",
+                       MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ShowVoidTypeOfElement();
                     ShowAllTypesOfElement();
                     gbTypeOfElementData.Enabled = false;
@@ -377,7 +380,7 @@ namespace Project
             var typeOfElement = SelectedTypeOfElement();
             if (typeOfElement.Id == -1) return;
             DialogResult result = MessageBox.Show
-                         ($"Вы действительно хотите безвозвратно удалить элемент фасада" +
+                         ($"Вы действительно хотите безвозвратно удалить элемент фасада " +
                          $"{typeOfElement.Name}?",
                          "Удаление элемента фасада", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (result == DialogResult.OK)

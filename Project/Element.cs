@@ -78,7 +78,7 @@ namespace Project
 
         public bool IsChecked()
         {
-            //TODO
+            if (IdTypeOfElement == -1) return false;
             return true;
         }
 

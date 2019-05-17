@@ -68,7 +68,6 @@ namespace Project
 
         public bool VeryfyHash(string password2Check, string correctHash, string saltString)
         {
-            //TODO
             saltBytes = ConvertSalt(saltString);
             passwordBytes = Encoding.UTF8.GetBytes(password2Check);
             string passwordHash2Check = GetHashToString();
