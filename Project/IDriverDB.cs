@@ -79,6 +79,7 @@ namespace Project
         void AddTypeOfElementInProject(int idTypeOfElement, int idProject);
         void DeleteTypeOfElementFromProject(int TypeOfElement, int idProject);
         TypeOfElement[] ReadTypesOfElementInProject(int idProject);
+        bool IsTypeOfElementInElements(int idTypeOfElement);
 
         void CreateElement(Element element);
         Element ReadElement(int idForSearch);
@@ -113,6 +114,7 @@ namespace Project
         decimal GetAmountByWorksFromSectionOfBuilding(SectionOfBuilding sectionOfBuilding);
         decimal GetAmountWorksByStateFromSectionOfBuilding(SectionOfBuilding sectionOfBuilding,
             WorkState state);
+        bool HasWorkBySectionOfBuilding(int idSectionOfBuilding);
 
         void CreateWorkByElement(WorkByElement workByElement);
         void CreateWorkByElements(List<WorkByElement> workByElements);

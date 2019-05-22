@@ -225,9 +225,15 @@ namespace Project
             driver.AddUserToProject(idUser, this.Id);
         }
 
-        public void DeleteUser(IDriverDB driver, int idUser)
+        public void DeleteUser(IDriverDB driver, User user)
         {
-            driver.DeleteUserFromProject(idUser, this.Id);
+            if (user.GetPaymentsAmountByProject(id, driver) > 0) throw new Exception(
+                    "Удаление невозможно. Имеются платежи в отношении удалаяемого исполнителя.");
+            if(user.GetAmountCompletedWorkByProject(id, driver) > 0 || 
+                user.GetAmountAcceptedWorkByProject(id, driver) > 0 || 
+                user.GetAmountRejectedWorkByProject(id, driver) > 0) throw new Exception(
+                    "Удаление невозможно. Имеются учтенные работы удалаяемого исполнителя.");
+            driver.DeleteUserFromProject(user.Id, this.Id);
         }
 
         public User[] ReadUsersByProject(IDriverDB driver)

@@ -86,6 +86,8 @@ namespace Project
 
         public override void Update(IDriverDB driver)
         {
+            if (IsInElements(driver)) throw new Exception(
+                "Изменение невозможно. Элемент включен в проект.");
             driver.UpdateTypeOfElement(this);
         }
 
@@ -97,6 +99,11 @@ namespace Project
         public Image GetPicture(IDriverDB driver)
         {
             return driver.ReadElementPicture(this.IdElementPicture).Picture;
+        }
+
+        private bool IsInElements(IDriverDB driver)
+        {
+            return driver.IsTypeOfElementInElements(id);
         }
     }
 }

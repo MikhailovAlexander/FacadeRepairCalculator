@@ -1232,6 +1232,20 @@ namespace Project
                 "id_type_of_element", "id_project", idProject, ReadTypeOfElement);
         }
 
+        public bool IsTypeOfElementInElements(int idTypeOfElement)
+        {
+            string query =
+                $"SELECT COUNT(id) FROM {Element.nameTableInDB} " +
+                $"WHERE id_type_of_element = @id_type_of_element;";
+            var cmd = new NpgsqlCommand(query, Conn);
+            cmd.Parameters.Add(
+                new NpgsqlParameter("@id_type_of_element", NpgsqlTypes.NpgsqlDbType.Integer));
+            cmd.Prepare();
+            cmd.Parameters[0].Value = idTypeOfElement;
+            if (Convert.ToInt32(cmd.ExecuteScalar()) > 0) return true;
+            return false;
+        }
+
         public void CreateElement(Element element)
         {
             string query =
@@ -1858,6 +1872,22 @@ namespace Project
                 catch { return -1; }
             }
             return amount;
+        }
+
+        public bool HasWorkBySectionOfBuilding(int idSectionOfBuilding)
+        {
+            string query =
+                $"SELECT COUNT({Element.nameTableInDB}.id) FROM " +
+                $"{Element.nameTableInDB}, {WorkByElement.nameTableInDB} " +
+                $"WHERE {WorkByElement.nameTableInDB}.id_element = {Element.nameTableInDB}.id AND " +
+                $"{Element.nameTableInDB}.id_section_of_building = @id_section_of_building;";
+            var cmd = new NpgsqlCommand(query, Conn);
+            cmd.Parameters.Add(
+                new NpgsqlParameter("@id_section_of_building", NpgsqlTypes.NpgsqlDbType.Integer));
+            cmd.Prepare();
+            cmd.Parameters[0].Value = idSectionOfBuilding;
+            if (Convert.ToInt32(cmd.ExecuteScalar()) > 0) return true;
+            return false;
         }
 
         public void CreateWorkByElement(WorkByElement workByElement)

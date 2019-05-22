@@ -127,6 +127,11 @@ namespace Project
             return true;
         }
 
+        public bool HasWork(IDriverDB driver)
+        {
+            return driver.HasWorkBySectionOfBuilding(id);
+        }
+
         public bool IsChecked(Element[][] elements)
         {
             if (elements.GetLength(0) != quantityByHeight) return false;

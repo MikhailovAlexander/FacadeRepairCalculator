@@ -6029,7 +6029,7 @@
             this.dgvWorkerProjects.Name = "dgvWorkerProjects";
             this.dgvWorkerProjects.ReadOnly = true;
             this.dgvWorkerProjects.RowHeadersVisible = false;
-            this.dgvWorkerProjects.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvWorkerProjects.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvWorkerProjects.Size = new System.Drawing.Size(963, 208);
             this.dgvWorkerProjects.TabIndex = 16;
             this.dgvWorkerProjects.SelectionChanged += new System.EventHandler(this.DgvWorkerProjects_SelectionChanged);

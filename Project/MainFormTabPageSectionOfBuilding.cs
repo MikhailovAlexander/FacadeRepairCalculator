@@ -607,11 +607,33 @@ namespace Project
 
         private void BtnSectionOfBuildingModelUpdate_Click(object sender, EventArgs e)
         {
+            var sectionOfBuilding = SelectedSectionOfBuilding();
+            bool sectionOfBuildingHasWork = false;
             try
             {
-                SelectedSectionOfBuilding().UpdateAllElementsSetTypeOfElement(
+                sectionOfBuildingHasWork = sectionOfBuilding.HasWork(driver);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Сообщение об ошибке", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            if (sectionOfBuildingHasWork)
+            {
+                DialogResult result = MessageBox.Show(
+                    $"По элементам фасада назначены работы! Внесение изменений может привести " +
+                    $"к некорректному отображению объемов и стоимости работ. Вы хотите продолжить?",
+                    "Изменение модели", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
+            }
+            try
+            {
+                sectionOfBuilding.UpdateAllElementsSetTypeOfElement(
                     managerModel.elementsOfModel, driver);
-                MessageBox.Show("Изменения сохранены", "Сохранение модели", MessageBoxButtons.OK,
+                MessageBox.Show("Изменения сохранены", "Изменение модели", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                 btnSectionOfBuildingModelUpdate.Visible = false;
                 btnSectionOfBuildingSwitchModelCancel.Visible = false;

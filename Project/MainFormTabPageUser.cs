@@ -21,6 +21,11 @@ namespace Project
             return SelectedObject<User>(dgvAllUsers, driver.ReadUser);
         }
 
+        User SelectedUserInProject()
+        {
+            return SelectedObject<User>(dgvUserInProject, driver.ReadUser);
+        }
+
         //Rb_CheckedChanged
 
         //ShowEntities
@@ -326,11 +331,10 @@ namespace Project
                 var selectedUser = SelectedUser();
                 try
                 {
-                    driver.AddUserToProject(selectedUser.Id, actualProject.Id);
+                    actualProject.AddUser(driver, selectedUser.Id);
                     MessageBox.Show($"Пользователь {selectedUser.Name} добавлен в текущий проект",
                         "Добавление пользователя в проект", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
-                    ShowUsersInProject();
                     ShowActualProject();
                 }
                 catch (Exception ex)
@@ -353,26 +357,25 @@ namespace Project
                 "Сообщение об ошибке", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (dgvUserInProject.RowCount != 0)
+
+            if (dgvUserInProject.RowCount != 0 && SelectedUserInProject().Id != -1)
             {
-                string nameUserToRemove = Convert.ToString(
-                    dgvUserInProject.SelectedRows[0].Cells[1].Value);
+                var user = SelectedUserInProject();
                 DialogResult result = MessageBox.Show
-                    ($"Вы действительно хотите безвозвратно удалить пользователя" +
-                    $"{nameUserToRemove} из проекта {actualProject.ToString()}?",
+                    ($"Вы действительно хотите безвозвратно удалить пользователя " +
+                    $"{user.Name} из проекта {actualProject.ToString()}?",
                     "Удаление пользователя из проекта", MessageBoxButtons.OKCancel,
                     MessageBoxIcon.Question);
                 if (result == DialogResult.OK)
                 {
-                    int idUserToRemove = Convert.ToInt32(dgvUserInProject.SelectedRows[0].Cells[0].Value);
                     try
                     {
-                        driver.DeleteUserFromProject(idUserToRemove, actualProject.Id);
+                        actualProject.DeleteUser(driver, user);
                         MessageBox.Show(
-                            $"Пользователь {nameUserToRemove} удален из текущего проекта",
+                            $"Пользователь {user.Name} удален из текущего проекта",
                             "Удаление пользователя из проекта", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
-                        ShowUsersInProject();
+                        ShowActualProject();
                     }
                     catch (Exception ex)
                     {
