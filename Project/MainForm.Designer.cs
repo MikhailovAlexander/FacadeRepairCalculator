@@ -598,6 +598,14 @@
             this.btnWorkerChangePassword = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.btnWorkerSwitchChangePasswordCancel = new System.Windows.Forms.Button();
+            this.tabPageAboutProgram = new System.Windows.Forms.TabPage();
+            this.lblAboutProgramName = new System.Windows.Forms.Label();
+            this.lblAboutProgramVersion = new System.Windows.Forms.Label();
+            this.lblAboutProgramDescription = new System.Windows.Forms.Label();
+            this.lblAboutProgramWork = new System.Windows.Forms.Label();
+            this.lblAboutProgramUniversity = new System.Windows.Forms.Label();
+            this.lblAboutProgramAuthor = new System.Windows.Forms.Label();
+            this.lblAboutProgramAdviser = new System.Windows.Forms.Label();
             this.tabControlMain.SuspendLayout();
             this.tabPageProject.SuspendLayout();
             this.gblProjectPanel.SuspendLayout();
@@ -721,6 +729,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerModel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPageAboutProgram.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlMain
@@ -734,6 +743,7 @@
             this.tabControlMain.Controls.Add(this.tabPageElementPicture);
             this.tabControlMain.Controls.Add(this.tabPageClient);
             this.tabControlMain.Controls.Add(this.tabPageWorker);
+            this.tabControlMain.Controls.Add(this.tabPageAboutProgram);
             this.tabControlMain.Location = new System.Drawing.Point(3, 19);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
@@ -6391,6 +6401,96 @@
             this.btnWorkerSwitchChangePasswordCancel.Text = "Отменить";
             this.btnWorkerSwitchChangePasswordCancel.UseVisualStyleBackColor = true;
             // 
+            // tabPageAboutProgram
+            // 
+            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramAdviser);
+            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramAuthor);
+            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramUniversity);
+            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramWork);
+            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramDescription);
+            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramVersion);
+            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramName);
+            this.tabPageAboutProgram.Location = new System.Drawing.Point(4, 22);
+            this.tabPageAboutProgram.Name = "tabPageAboutProgram";
+            this.tabPageAboutProgram.Size = new System.Drawing.Size(1951, 946);
+            this.tabPageAboutProgram.TabIndex = 9;
+            this.tabPageAboutProgram.Text = "О программе";
+            this.tabPageAboutProgram.UseVisualStyleBackColor = true;
+            // 
+            // lblAboutProgramName
+            // 
+            this.lblAboutProgramName.AutoSize = true;
+            this.lblAboutProgramName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAboutProgramName.Location = new System.Drawing.Point(14, 13);
+            this.lblAboutProgramName.Name = "lblAboutProgramName";
+            this.lblAboutProgramName.Size = new System.Drawing.Size(337, 16);
+            this.lblAboutProgramName.TabIndex = 0;
+            this.lblAboutProgramName.Text = "Система учета ремонтных работ (Прототип)";
+            // 
+            // lblAboutProgramVersion
+            // 
+            this.lblAboutProgramVersion.AutoSize = true;
+            this.lblAboutProgramVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblAboutProgramVersion.Location = new System.Drawing.Point(14, 41);
+            this.lblAboutProgramVersion.Name = "lblAboutProgramVersion";
+            this.lblAboutProgramVersion.Size = new System.Drawing.Size(80, 17);
+            this.lblAboutProgramVersion.TabIndex = 1;
+            this.lblAboutProgramVersion.Text = "Версия 1.0";
+            // 
+            // lblAboutProgramDescription
+            // 
+            this.lblAboutProgramDescription.AutoSize = true;
+            this.lblAboutProgramDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblAboutProgramDescription.Location = new System.Drawing.Point(14, 73);
+            this.lblAboutProgramDescription.Name = "lblAboutProgramDescription";
+            this.lblAboutProgramDescription.Size = new System.Drawing.Size(922, 17);
+            this.lblAboutProgramDescription.TabIndex = 2;
+            this.lblAboutProgramDescription.Text = "Позволяет создать модель фасада панельного дома, расчитать площадь фасада и вести" +
+    " учет проведения ремонтных работ и их оплаты";
+            // 
+            // lblAboutProgramWork
+            // 
+            this.lblAboutProgramWork.AutoSize = true;
+            this.lblAboutProgramWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblAboutProgramWork.Location = new System.Drawing.Point(14, 108);
+            this.lblAboutProgramWork.Name = "lblAboutProgramWork";
+            this.lblAboutProgramWork.Size = new System.Drawing.Size(1177, 17);
+            this.lblAboutProgramWork.TabIndex = 3;
+            this.lblAboutProgramWork.Text = "Программа создана в рамках проектной работы по направлению подготовки \"Объектно-о" +
+    "риентированное программирование\" Факультета профессиональной переподготовки";
+            // 
+            // lblAboutProgramUniversity
+            // 
+            this.lblAboutProgramUniversity.AutoSize = true;
+            this.lblAboutProgramUniversity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblAboutProgramUniversity.Location = new System.Drawing.Point(14, 140);
+            this.lblAboutProgramUniversity.Name = "lblAboutProgramUniversity";
+            this.lblAboutProgramUniversity.Size = new System.Drawing.Size(734, 17);
+            this.lblAboutProgramUniversity.TabIndex = 4;
+            this.lblAboutProgramUniversity.Text = "Пермского филиала ФГАОУ ВО \"Национальный исследовательский университет \"Высшая шк" +
+    "ола экономики\"";
+            // 
+            // lblAboutProgramAuthor
+            // 
+            this.lblAboutProgramAuthor.AutoSize = true;
+            this.lblAboutProgramAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblAboutProgramAuthor.Location = new System.Drawing.Point(14, 176);
+            this.lblAboutProgramAuthor.Name = "lblAboutProgramAuthor";
+            this.lblAboutProgramAuthor.Size = new System.Drawing.Size(445, 17);
+            this.lblAboutProgramAuthor.TabIndex = 5;
+            this.lblAboutProgramAuthor.Text = "Автор Михайлов Александр Витальевич e-mail: vestroy@gmail.com";
+            // 
+            // lblAboutProgramAdviser
+            // 
+            this.lblAboutProgramAdviser.AutoSize = true;
+            this.lblAboutProgramAdviser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblAboutProgramAdviser.Location = new System.Drawing.Point(14, 209);
+            this.lblAboutProgramAdviser.Name = "lblAboutProgramAdviser";
+            this.lblAboutProgramAdviser.Size = new System.Drawing.Size(859, 17);
+            this.lblAboutProgramAdviser.TabIndex = 6;
+            this.lblAboutProgramAdviser.Text = "Руководитель к.т.н., доцент кафедры информационных технологий в бизнесе НИУ ВШЭ -" +
+    " Пермь Кычкин Алексей Владимирович";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -6552,6 +6652,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerModel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPageAboutProgram.ResumeLayout(false);
+            this.tabPageAboutProgram.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7083,5 +7185,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnClientName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnClientAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnClentInn;
+        private System.Windows.Forms.TabPage tabPageAboutProgram;
+        private System.Windows.Forms.Label lblAboutProgramAdviser;
+        private System.Windows.Forms.Label lblAboutProgramAuthor;
+        private System.Windows.Forms.Label lblAboutProgramUniversity;
+        private System.Windows.Forms.Label lblAboutProgramWork;
+        private System.Windows.Forms.Label lblAboutProgramDescription;
+        private System.Windows.Forms.Label lblAboutProgramVersion;
+        private System.Windows.Forms.Label lblAboutProgramName;
     }
 }
