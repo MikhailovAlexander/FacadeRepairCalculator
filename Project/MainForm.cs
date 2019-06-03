@@ -411,19 +411,19 @@ namespace Project
                 decimal valueWork = GetValueWorkBySectionOfBuilding(work, sectionOfBuilding);
                 string valueWorkStr = valueWork == -1 ? "нет" : valueWork.ToString();
                 string workCost = valueWork == -1 ?
-                    "нет" : (valueWork * (decimal)work.Price).ToString();
+                    "нет" : Decimal.Round((valueWork * work.Price), 2).ToString();
                 valueWork = GetValueCompletedWorkBySectionOfBuilding(work, sectionOfBuilding);
                 string completWork = valueWork == -1 ? "нет" : valueWork.ToString();
                 string completWorkCost = valueWork == -1 ?
-                    "нет" : (valueWork * (decimal)work.Price).ToString();
+                    "нет" : Decimal.Round((valueWork * work.Price), 2).ToString();
                 valueWork = GetValueAcceptedWorkBySectionOfBuilding(work, sectionOfBuilding);
                 string acceptWork = valueWork == -1 ? "нет" : valueWork.ToString();
                 string acceptWorkCost = valueWork == -1 ?
-                    "нет" : (valueWork * (decimal)work.Price).ToString();
+                    "нет" : Decimal.Round((valueWork * work.Price), 2).ToString();
                 valueWork = GetValueRejectedWorkBySectionOfBuilding(work, sectionOfBuilding);
                 string rejectWork = valueWork == -1 ? "нет" : valueWork.ToString();
                 string rejectWorkCost = valueWork == -1 ?
-                    "нет" : (valueWork * (decimal)work.Price).ToString();
+                    "нет" : Decimal.Round((valueWork * work.Price), 2).ToString();
 
                 dgvWorksInProject.Rows.Add(
                         work.Id, typeOfWork.Name, typeOfWork.MeasureUnit, work.Price,

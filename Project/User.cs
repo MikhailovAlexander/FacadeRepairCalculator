@@ -135,17 +135,17 @@ namespace Project
 
         public decimal GetAmountCompletedWorkByProject(int idProject, IDriverDB driver)
         {
-            return driver.GetAmountCompletedWorkByProjectAndUser(idProject, id);
+            return Decimal.Round(driver.GetAmountCompletedWorkByProjectAndUser(idProject, id), 2);
         }
 
         public decimal GetAmountAcceptedWorkByProject(int idProject, IDriverDB driver)
         {
-            return driver.GetAmountAcceptedWorkByProjectAndUser(idProject, id);
+            return Decimal.Round(driver.GetAmountAcceptedWorkByProjectAndUser(idProject, id), 2);
         }
 
         public decimal GetAmountRejectedWorkByProject(int idProject, IDriverDB driver)
         {
-            return driver.GetAmountRejectedWorkByProjectAndUser(idProject, id);
+            return Decimal.Round(driver.GetAmountRejectedWorkByProjectAndUser(idProject, id), 2);
         }
     }
 }

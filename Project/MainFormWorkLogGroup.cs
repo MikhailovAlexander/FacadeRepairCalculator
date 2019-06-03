@@ -77,6 +77,12 @@ namespace Project
                     return;
                 }
                 int idElement = (int)model.DgvModel.SelectedCells[0].Tag;
+                var element = mainForm.ReadElement(idElement);
+                if(element.Id == -1 || element.IdTypeOfElement == -1)
+                {
+                    Clear();
+                    return;
+                }
                 var typeOfElement = mainForm.GetTypeOfElement(idElement);
                 var workInProject = mainForm.SelectedObject<WorkInProject>(dgvWorksInProject,
                     mainForm.driver.ReadWorkInProject);

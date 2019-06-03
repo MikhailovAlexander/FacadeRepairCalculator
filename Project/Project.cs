@@ -263,7 +263,7 @@ namespace Project
 
         public decimal GetTotalAmount(IDriverDB driver)
         {
-            return driver.GetAmountByWorksFromProject(id);
+            return Decimal.Round(driver.GetAmountByWorksFromProject(id), 2);
         }
 
         public decimal GetAmountPayments(IDriverDB driver)
@@ -273,12 +273,12 @@ namespace Project
 
         public decimal GetTotalAmountPlannedWork(IDriverDB driver)
         {
-            return driver.GetAmountPlannedWorkByProject(id);
+            return Decimal.Round(driver.GetAmountPlannedWorkByProject(id), 2);
         }
 
         public decimal GetTotalAmountCompletedWork(IDriverDB driver)
         {
-            return driver.GetAmountCompletedWorkByProject(id);
+            return Decimal.Round(driver.GetAmountCompletedWorkByProject(id), 2);
         }
 
         public decimal GetTotalAmountAcceptedWork(IDriverDB driver)
@@ -288,22 +288,22 @@ namespace Project
 
         public decimal GetTotalAmountRejectedWork(IDriverDB driver)
         {
-            return driver.GetAmountRejectedWorkByProject(id);
+            return Decimal.Round(driver.GetAmountRejectedWorkByProject(id), 2);
         }
 
         public decimal GetAmountCompletedWorkByUser(int idUser, IDriverDB driver)
         {
-            return driver.GetAmountCompletedWorkByProjectAndUser(id, idUser);
+            return Decimal.Round(driver.GetAmountCompletedWorkByProjectAndUser(id, idUser), 2);
         }
 
         public decimal GetAmountAcceptedWorkByUser(int idUser, IDriverDB driver)
         {
-            return driver.GetAmountAcceptedWorkByProjectAndUser(id, idUser);
+            return Decimal.Round(driver.GetAmountAcceptedWorkByProjectAndUser(id, idUser), 2);
         }
 
         public decimal GetAmountRejectedWorkByUser(int idUser, IDriverDB driver)
         {
-            return driver.GetAmountRejectedWorkByProjectAndUser(id, idUser);
+            return Decimal.Round(driver.GetAmountRejectedWorkByProjectAndUser(id, idUser), 2);
         }
     }
 }

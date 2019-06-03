@@ -475,7 +475,6 @@ namespace Project
                     MessageBox.Show("Модель фасада сохранена", "Сохранение модели", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                     ShowActualProject();
-                    ShowSectionsOfBuildingInActualPriject();
                     ShowVoidSectionOfBuilding();
                     managerModel.ShowModel(SelectedSectionOfBuilding());
                     gbSectionOfBuildingData.Enabled = false;

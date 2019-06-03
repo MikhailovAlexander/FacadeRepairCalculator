@@ -18,12 +18,13 @@ namespace Project
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            //string connString = "Server=127.0.0.1;Port=5433;Username=Alexandr;Password=1828bd;Database=postgres";
             string connString = "Host=localhost;Username=Alexandr;Password=1828bd;Database=postgres";
             var conn = new NpgsqlConnection(connString);
-            var driver = new PostgresDriver(conn);
             var hashPasswordCreator = new HashPasswordCreator();
             try
             {
+                var driver = new PostgresDriver(conn);
                 Application.Run(new MainForm(driver, hashPasswordCreator));
             }
             catch (Exception ex)

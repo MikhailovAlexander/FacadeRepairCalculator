@@ -176,22 +176,22 @@ namespace Project
 
         public decimal GetAmountByWorks(IDriverDB driver)
         {
-            return driver.GetAmountByWorksFromSectionOfBuilding(this);
+            return Decimal.Round(driver.GetAmountByWorksFromSectionOfBuilding(this), 2);
         }
 
         public decimal GetAmountByCompletedWork(IDriverDB driver)
         {
-            return driver.GetAmountWorksByStateFromSectionOfBuilding(this, WorkState.Completed);
+            return Decimal.Round(driver.GetAmountWorksByStateFromSectionOfBuilding(this, WorkState.Completed), 2);
         }
 
         public decimal GetAmountByAcceptedWork(IDriverDB driver)
         {
-            return driver.GetAmountWorksByStateFromSectionOfBuilding(this, WorkState.Accepted);
+            return Decimal.Round(driver.GetAmountWorksByStateFromSectionOfBuilding(this, WorkState.Accepted), 2);
         }
 
         public decimal GetAmountByRejectedWork(IDriverDB driver)
         {
-            return driver.GetAmountWorksByStateFromSectionOfBuilding(this, WorkState.Rejected);
+            return Decimal.Round(driver.GetAmountWorksByStateFromSectionOfBuilding(this, WorkState.Rejected), 2);
         }
     }
 }

@@ -359,6 +359,7 @@ namespace Project
             ShowSelectedProject();
             actualProject = SelectedProject();
             ShowActualProject();
+            btnProjectCreate.Enabled = false;
             btnProjectUpdate.Enabled = true;
             btnProjectSwitchCancel.Enabled = true;
             if (actualProject.State != ProjectState.Planned)
