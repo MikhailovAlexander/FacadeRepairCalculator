@@ -458,6 +458,7 @@ namespace Project
             lblWorksAmount.Text = amount == -1 ?
                     "Общая стоимость работ по модели не определена":
                     $"Общая стоимость работ по модели {amount.ToString()} руб.";
-        }        
+        }
+
     }
 }

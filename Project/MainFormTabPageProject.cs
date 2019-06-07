@@ -93,6 +93,31 @@ namespace Project
 
         //Rb_CheckedChanged
 
+        private void RbAllProjects_CheckedChanged(object sender, EventArgs e)
+        {
+            ShowProjects();
+        }
+
+        private void RbPlannedProjects_CheckedChanged(object sender, EventArgs e)
+        {
+            ShowProjects();
+        }
+
+        private void RbActualProjects_CheckedChanged(object sender, EventArgs e)
+        {
+            ShowProjects();
+        }
+
+        private void RbCompletedProjects_CheckedChanged(object sender, EventArgs e)
+        {
+            ShowProjects();
+        }
+
+        private void RbCanceledProjects_CheckedChanged(object sender, EventArgs e)
+        {
+            ShowProjects();
+        }
+
         //ShowEntities
         void ShowClientList()
         {

@@ -15,7 +15,7 @@ namespace Project
             private MainForm mainForm;
             private DataGridView dgvModel;
             public Element[][] elementsOfModel;
-            private static int modelSizeMultiplier = 30;
+            private static int modelSizeMultiplier = 25;
             public int ModelSizeMultiplier
             {
                 get { return modelSizeMultiplier; }
@@ -130,7 +130,7 @@ namespace Project
                         dgvModel.Rows[rowNumber].Height = GetModelSize(typeOfElement.Height);
                     }
                     dgvModel.Rows[rowNumber].HeaderCell.ValueType = typeof(string);
-                    dgvModel.Rows[rowNumber].HeaderCell.Value = $"{i} этаж";
+                    dgvModel.Rows[rowNumber].HeaderCell.Value = $"{i + 1} этаж";
                     for (int j = 0; j < sectionOfBuilding.QuantityByWidth; j++)
                     {
                         if (elementsOfModel[i][j].IdTypeOfElement == -1)

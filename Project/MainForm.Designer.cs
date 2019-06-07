@@ -28,51 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle136 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle137 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle138 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle139 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle140 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle141 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle142 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle143 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle144 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle145 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle146 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle147 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle148 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle149 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle150 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle151 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle152 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle153 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle154 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle155 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle156 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle157 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle158 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle159 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle160 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle161 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle162 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle163 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle164 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle165 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle166 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle167 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle168 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle169 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle170 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle171 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle172 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle173 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle174 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle175 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle176 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle177 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle178 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle179 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle180 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageProject = new System.Windows.Forms.TabPage();
             this.gblProjectPanel = new System.Windows.Forms.GroupBox();
@@ -121,7 +121,6 @@
             this.buttonSwitchCreateProject = new System.Windows.Forms.Button();
             this.buttonSwitchUpdateProject = new System.Windows.Forms.Button();
             this.groupBoxProjectState = new System.Windows.Forms.GroupBox();
-            this.btnViewProjectsByState = new System.Windows.Forms.Button();
             this.rbCanceledProjects = new System.Windows.Forms.RadioButton();
             this.rbCompletedProjects = new System.Windows.Forms.RadioButton();
             this.rbActualProjects = new System.Windows.Forms.RadioButton();
@@ -1220,9 +1219,9 @@
             this.gbAllProjects.Controls.Add(this.btnProjectCancel);
             this.gbAllProjects.Controls.Add(this.btnProjectComplete);
             this.gbAllProjects.Controls.Add(this.btnProjectSwitchStart);
+            this.gbAllProjects.Controls.Add(this.groupBoxProjectState);
             this.gbAllProjects.Controls.Add(this.buttonSwitchCreateProject);
             this.gbAllProjects.Controls.Add(this.buttonSwitchUpdateProject);
-            this.gbAllProjects.Controls.Add(this.groupBoxProjectState);
             this.gbAllProjects.Controls.Add(this.buttonDeleteProject);
             this.gbAllProjects.Controls.Add(this.buttonOpenProject);
             this.gbAllProjects.Location = new System.Drawing.Point(6, 6);
@@ -1235,7 +1234,7 @@
             // btnProjectCancel
             // 
             this.btnProjectCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnProjectCancel.Location = new System.Drawing.Point(336, 110);
+            this.btnProjectCancel.Location = new System.Drawing.Point(187, 114);
             this.btnProjectCancel.Name = "btnProjectCancel";
             this.btnProjectCancel.Size = new System.Drawing.Size(119, 40);
             this.btnProjectCancel.TabIndex = 12;
@@ -1246,7 +1245,7 @@
             // btnProjectComplete
             // 
             this.btnProjectComplete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnProjectComplete.Location = new System.Drawing.Point(336, 64);
+            this.btnProjectComplete.Location = new System.Drawing.Point(187, 68);
             this.btnProjectComplete.Name = "btnProjectComplete";
             this.btnProjectComplete.Size = new System.Drawing.Size(119, 40);
             this.btnProjectComplete.TabIndex = 11;
@@ -1257,7 +1256,7 @@
             // btnProjectSwitchStart
             // 
             this.btnProjectSwitchStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnProjectSwitchStart.Location = new System.Drawing.Point(336, 17);
+            this.btnProjectSwitchStart.Location = new System.Drawing.Point(187, 21);
             this.btnProjectSwitchStart.Name = "btnProjectSwitchStart";
             this.btnProjectSwitchStart.Size = new System.Drawing.Size(119, 40);
             this.btnProjectSwitchStart.TabIndex = 10;
@@ -1268,7 +1267,7 @@
             // buttonSwitchCreateProject
             // 
             this.buttonSwitchCreateProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonSwitchCreateProject.Location = new System.Drawing.Point(157, 63);
+            this.buttonSwitchCreateProject.Location = new System.Drawing.Point(8, 67);
             this.buttonSwitchCreateProject.Name = "buttonSwitchCreateProject";
             this.buttonSwitchCreateProject.Size = new System.Drawing.Size(173, 40);
             this.buttonSwitchCreateProject.TabIndex = 9;
@@ -1279,7 +1278,7 @@
             // buttonSwitchUpdateProject
             // 
             this.buttonSwitchUpdateProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonSwitchUpdateProject.Location = new System.Drawing.Point(157, 109);
+            this.buttonSwitchUpdateProject.Location = new System.Drawing.Point(8, 113);
             this.buttonSwitchUpdateProject.Name = "buttonSwitchUpdateProject";
             this.buttonSwitchUpdateProject.Size = new System.Drawing.Size(173, 40);
             this.buttonSwitchUpdateProject.TabIndex = 8;
@@ -1289,78 +1288,69 @@
             // 
             // groupBoxProjectState
             // 
-            this.groupBoxProjectState.Controls.Add(this.btnViewProjectsByState);
             this.groupBoxProjectState.Controls.Add(this.rbCanceledProjects);
             this.groupBoxProjectState.Controls.Add(this.rbCompletedProjects);
             this.groupBoxProjectState.Controls.Add(this.rbActualProjects);
             this.groupBoxProjectState.Controls.Add(this.rbPlannedProjects);
             this.groupBoxProjectState.Controls.Add(this.rbAllProjects);
-            this.groupBoxProjectState.Location = new System.Drawing.Point(6, 17);
+            this.groupBoxProjectState.Location = new System.Drawing.Point(310, 15);
             this.groupBoxProjectState.Name = "groupBoxProjectState";
-            this.groupBoxProjectState.Size = new System.Drawing.Size(145, 189);
+            this.groupBoxProjectState.Size = new System.Drawing.Size(145, 154);
             this.groupBoxProjectState.TabIndex = 7;
             this.groupBoxProjectState.TabStop = false;
             this.groupBoxProjectState.Text = "Статус проекта";
-            // 
-            // btnViewProjectsByState
-            // 
-            this.btnViewProjectsByState.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnViewProjectsByState.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnViewProjectsByState.Location = new System.Drawing.Point(6, 138);
-            this.btnViewProjectsByState.Name = "btnViewProjectsByState";
-            this.btnViewProjectsByState.Size = new System.Drawing.Size(133, 40);
-            this.btnViewProjectsByState.TabIndex = 8;
-            this.btnViewProjectsByState.Text = "Показать";
-            this.btnViewProjectsByState.UseVisualStyleBackColor = true;
-            this.btnViewProjectsByState.Click += new System.EventHandler(this.BtnViewProjectsByState_Click);
             // 
             // rbCanceledProjects
             // 
             this.rbCanceledProjects.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.rbCanceledProjects.AutoSize = true;
             this.rbCanceledProjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbCanceledProjects.Location = new System.Drawing.Point(11, 112);
+            this.rbCanceledProjects.Location = new System.Drawing.Point(11, 121);
             this.rbCanceledProjects.Name = "rbCanceledProjects";
             this.rbCanceledProjects.Size = new System.Drawing.Size(111, 21);
             this.rbCanceledProjects.TabIndex = 4;
             this.rbCanceledProjects.Text = "Отмененный";
             this.rbCanceledProjects.UseVisualStyleBackColor = true;
+            this.rbCanceledProjects.CheckedChanged += new System.EventHandler(this.RbCanceledProjects_CheckedChanged);
             // 
             // rbCompletedProjects
             // 
             this.rbCompletedProjects.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.rbCompletedProjects.AutoSize = true;
             this.rbCompletedProjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbCompletedProjects.Location = new System.Drawing.Point(11, 89);
+            this.rbCompletedProjects.Location = new System.Drawing.Point(11, 95);
             this.rbCompletedProjects.Name = "rbCompletedProjects";
             this.rbCompletedProjects.Size = new System.Drawing.Size(119, 21);
             this.rbCompletedProjects.TabIndex = 3;
             this.rbCompletedProjects.Text = "Завершенный";
             this.rbCompletedProjects.UseVisualStyleBackColor = true;
+            this.rbCompletedProjects.CheckedChanged += new System.EventHandler(this.RbCompletedProjects_CheckedChanged);
             // 
             // rbActualProjects
             // 
             this.rbActualProjects.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.rbActualProjects.AutoSize = true;
             this.rbActualProjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbActualProjects.Location = new System.Drawing.Point(11, 66);
+            this.rbActualProjects.Location = new System.Drawing.Point(11, 68);
             this.rbActualProjects.Name = "rbActualProjects";
             this.rbActualProjects.Size = new System.Drawing.Size(84, 21);
             this.rbActualProjects.TabIndex = 2;
             this.rbActualProjects.Text = "Текущий";
             this.rbActualProjects.UseVisualStyleBackColor = true;
+            this.rbActualProjects.CheckedChanged += new System.EventHandler(this.RbActualProjects_CheckedChanged);
             // 
             // rbPlannedProjects
             // 
             this.rbPlannedProjects.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.rbPlannedProjects.AutoSize = true;
             this.rbPlannedProjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbPlannedProjects.Location = new System.Drawing.Point(11, 43);
+            this.rbPlannedProjects.Location = new System.Drawing.Point(11, 41);
             this.rbPlannedProjects.Name = "rbPlannedProjects";
             this.rbPlannedProjects.Size = new System.Drawing.Size(118, 21);
             this.rbPlannedProjects.TabIndex = 1;
             this.rbPlannedProjects.Text = "Планируемый";
             this.rbPlannedProjects.UseVisualStyleBackColor = true;
+            this.rbPlannedProjects.CheckedChanged += new System.EventHandler(this.RbPlannedProjects_CheckedChanged);
             // 
             // rbAllProjects
             // 
@@ -1368,18 +1358,19 @@
             this.rbAllProjects.AutoSize = true;
             this.rbAllProjects.Checked = true;
             this.rbAllProjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbAllProjects.Location = new System.Drawing.Point(11, 20);
+            this.rbAllProjects.Location = new System.Drawing.Point(11, 14);
             this.rbAllProjects.Name = "rbAllProjects";
             this.rbAllProjects.Size = new System.Drawing.Size(70, 21);
             this.rbAllProjects.TabIndex = 0;
             this.rbAllProjects.TabStop = true;
             this.rbAllProjects.Text = "Любой";
             this.rbAllProjects.UseVisualStyleBackColor = true;
+            this.rbAllProjects.CheckedChanged += new System.EventHandler(this.RbAllProjects_CheckedChanged);
             // 
             // buttonDeleteProject
             // 
             this.buttonDeleteProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonDeleteProject.Location = new System.Drawing.Point(157, 155);
+            this.buttonDeleteProject.Location = new System.Drawing.Point(8, 159);
             this.buttonDeleteProject.Name = "buttonDeleteProject";
             this.buttonDeleteProject.Size = new System.Drawing.Size(173, 40);
             this.buttonDeleteProject.TabIndex = 6;
@@ -1390,7 +1381,7 @@
             // buttonOpenProject
             // 
             this.buttonOpenProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonOpenProject.Location = new System.Drawing.Point(157, 17);
+            this.buttonOpenProject.Location = new System.Drawing.Point(8, 21);
             this.buttonOpenProject.Name = "buttonOpenProject";
             this.buttonOpenProject.Size = new System.Drawing.Size(173, 40);
             this.buttonOpenProject.TabIndex = 5;
@@ -1497,32 +1488,32 @@
             // 
             // ColumnWork
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
-            this.ColumnWork.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle136.BackColor = System.Drawing.Color.DimGray;
+            this.ColumnWork.DefaultCellStyle = dataGridViewCellStyle136;
             this.ColumnWork.HeaderText = "Стоимость";
             this.ColumnWork.Name = "ColumnWork";
             this.ColumnWork.ReadOnly = true;
             // 
             // ColumnComp
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Yellow;
-            this.ColumnComp.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle137.BackColor = System.Drawing.Color.Yellow;
+            this.ColumnComp.DefaultCellStyle = dataGridViewCellStyle137;
             this.ColumnComp.HeaderText = "Стоимость";
             this.ColumnComp.Name = "ColumnComp";
             this.ColumnComp.ReadOnly = true;
             // 
             // ColumnAcc
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Green;
-            this.ColumnAcc.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle138.BackColor = System.Drawing.Color.Green;
+            this.ColumnAcc.DefaultCellStyle = dataGridViewCellStyle138;
             this.ColumnAcc.HeaderText = "Стоимость";
             this.ColumnAcc.Name = "ColumnAcc";
             this.ColumnAcc.ReadOnly = true;
             // 
             // ColumnRej
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Red;
-            this.ColumnRej.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle139.BackColor = System.Drawing.Color.Red;
+            this.ColumnRej.DefaultCellStyle = dataGridViewCellStyle139;
             this.ColumnRej.HeaderText = "Стоимость";
             this.ColumnRej.Name = "ColumnRej";
             this.ColumnRej.ReadOnly = true;
@@ -1645,8 +1636,8 @@
             // 
             // dataGridViewTextBoxColumn75
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DimGray;
-            this.dataGridViewTextBoxColumn75.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle140.BackColor = System.Drawing.Color.DimGray;
+            this.dataGridViewTextBoxColumn75.DefaultCellStyle = dataGridViewCellStyle140;
             this.dataGridViewTextBoxColumn75.HeaderText = "Стоимость";
             this.dataGridViewTextBoxColumn75.Name = "dataGridViewTextBoxColumn75";
             this.dataGridViewTextBoxColumn75.ReadOnly = true;
@@ -1654,8 +1645,8 @@
             // 
             // dataGridViewTextBoxColumn76
             // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Yellow;
-            this.dataGridViewTextBoxColumn76.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle141.BackColor = System.Drawing.Color.Yellow;
+            this.dataGridViewTextBoxColumn76.DefaultCellStyle = dataGridViewCellStyle141;
             this.dataGridViewTextBoxColumn76.HeaderText = "Стоимость";
             this.dataGridViewTextBoxColumn76.Name = "dataGridViewTextBoxColumn76";
             this.dataGridViewTextBoxColumn76.ReadOnly = true;
@@ -1663,8 +1654,8 @@
             // 
             // dataGridViewTextBoxColumn77
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Green;
-            this.dataGridViewTextBoxColumn77.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle142.BackColor = System.Drawing.Color.Green;
+            this.dataGridViewTextBoxColumn77.DefaultCellStyle = dataGridViewCellStyle142;
             this.dataGridViewTextBoxColumn77.HeaderText = "Стоимость";
             this.dataGridViewTextBoxColumn77.Name = "dataGridViewTextBoxColumn77";
             this.dataGridViewTextBoxColumn77.ReadOnly = true;
@@ -1672,8 +1663,8 @@
             // 
             // dataGridViewTextBoxColumn78
             // 
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Red;
-            this.dataGridViewTextBoxColumn78.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle143.BackColor = System.Drawing.Color.Red;
+            this.dataGridViewTextBoxColumn78.DefaultCellStyle = dataGridViewCellStyle143;
             this.dataGridViewTextBoxColumn78.HeaderText = "Стоимость";
             this.dataGridViewTextBoxColumn78.Name = "dataGridViewTextBoxColumn78";
             this.dataGridViewTextBoxColumn78.ReadOnly = true;
@@ -1997,6 +1988,7 @@
             this.dgvManagerModel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvManagerModel.Location = new System.Drawing.Point(6, 19);
             this.dgvManagerModel.Name = "dgvManagerModel";
+            this.dgvManagerModel.RowHeadersWidth = 70;
             this.dgvManagerModel.Size = new System.Drawing.Size(943, 774);
             this.dgvManagerModel.TabIndex = 1;
             this.dgvManagerModel.SelectionChanged += new System.EventHandler(this.DgvManagerModel_SelectionChanged);
@@ -2292,8 +2284,8 @@
             // 
             // ColumnSectionValue
             // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.DimGray;
-            this.ColumnSectionValue.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle144.BackColor = System.Drawing.Color.DimGray;
+            this.ColumnSectionValue.DefaultCellStyle = dataGridViewCellStyle144;
             this.ColumnSectionValue.Frozen = true;
             this.ColumnSectionValue.HeaderText = "Объем";
             this.ColumnSectionValue.Name = "ColumnSectionValue";
@@ -2302,8 +2294,8 @@
             // 
             // ColumnSectionCost
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.DimGray;
-            this.ColumnSectionCost.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle145.BackColor = System.Drawing.Color.DimGray;
+            this.ColumnSectionCost.DefaultCellStyle = dataGridViewCellStyle145;
             this.ColumnSectionCost.Frozen = true;
             this.ColumnSectionCost.HeaderText = "Стоимость";
             this.ColumnSectionCost.Name = "ColumnSectionCost";
@@ -2312,8 +2304,8 @@
             // 
             // ColumnSectionCompleteValue
             // 
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Yellow;
-            this.ColumnSectionCompleteValue.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle146.BackColor = System.Drawing.Color.Yellow;
+            this.ColumnSectionCompleteValue.DefaultCellStyle = dataGridViewCellStyle146;
             this.ColumnSectionCompleteValue.Frozen = true;
             this.ColumnSectionCompleteValue.HeaderText = "Объем";
             this.ColumnSectionCompleteValue.Name = "ColumnSectionCompleteValue";
@@ -2322,8 +2314,8 @@
             // 
             // ColumnSectionCompleteCost
             // 
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Yellow;
-            this.ColumnSectionCompleteCost.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle147.BackColor = System.Drawing.Color.Yellow;
+            this.ColumnSectionCompleteCost.DefaultCellStyle = dataGridViewCellStyle147;
             this.ColumnSectionCompleteCost.HeaderText = "Стоимость";
             this.ColumnSectionCompleteCost.Name = "ColumnSectionCompleteCost";
             this.ColumnSectionCompleteCost.ReadOnly = true;
@@ -2331,8 +2323,8 @@
             // 
             // ColumnSectionAcceptValue
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Green;
-            this.ColumnSectionAcceptValue.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle148.BackColor = System.Drawing.Color.Green;
+            this.ColumnSectionAcceptValue.DefaultCellStyle = dataGridViewCellStyle148;
             this.ColumnSectionAcceptValue.HeaderText = "Объем";
             this.ColumnSectionAcceptValue.Name = "ColumnSectionAcceptValue";
             this.ColumnSectionAcceptValue.ReadOnly = true;
@@ -2340,8 +2332,8 @@
             // 
             // ColumnSectionAcceptCost
             // 
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Green;
-            this.ColumnSectionAcceptCost.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle149.BackColor = System.Drawing.Color.Green;
+            this.ColumnSectionAcceptCost.DefaultCellStyle = dataGridViewCellStyle149;
             this.ColumnSectionAcceptCost.HeaderText = "Стоимость";
             this.ColumnSectionAcceptCost.Name = "ColumnSectionAcceptCost";
             this.ColumnSectionAcceptCost.ReadOnly = true;
@@ -2349,8 +2341,8 @@
             // 
             // ColumnSectionRejectValue
             // 
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Red;
-            this.ColumnSectionRejectValue.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle150.BackColor = System.Drawing.Color.Red;
+            this.ColumnSectionRejectValue.DefaultCellStyle = dataGridViewCellStyle150;
             this.ColumnSectionRejectValue.HeaderText = "Объем";
             this.ColumnSectionRejectValue.Name = "ColumnSectionRejectValue";
             this.ColumnSectionRejectValue.ReadOnly = true;
@@ -2358,8 +2350,8 @@
             // 
             // ColumnSectionRejectCost
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Red;
-            this.ColumnSectionRejectCost.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle151.BackColor = System.Drawing.Color.Red;
+            this.ColumnSectionRejectCost.DefaultCellStyle = dataGridViewCellStyle151;
             this.ColumnSectionRejectCost.HeaderText = "Стоимость";
             this.ColumnSectionRejectCost.Name = "ColumnSectionRejectCost";
             this.ColumnSectionRejectCost.ReadOnly = true;
@@ -2521,8 +2513,8 @@
             // 
             // SectionsOfBuildingColumnWorkCost
             // 
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.DimGray;
-            this.SectionsOfBuildingColumnWorkCost.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle152.BackColor = System.Drawing.Color.DimGray;
+            this.SectionsOfBuildingColumnWorkCost.DefaultCellStyle = dataGridViewCellStyle152;
             this.SectionsOfBuildingColumnWorkCost.Frozen = true;
             this.SectionsOfBuildingColumnWorkCost.HeaderText = "Стоимость";
             this.SectionsOfBuildingColumnWorkCost.Name = "SectionsOfBuildingColumnWorkCost";
@@ -2531,8 +2523,8 @@
             // 
             // SectionsOfBuildingColumnCompCost
             // 
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Yellow;
-            this.SectionsOfBuildingColumnCompCost.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle153.BackColor = System.Drawing.Color.Yellow;
+            this.SectionsOfBuildingColumnCompCost.DefaultCellStyle = dataGridViewCellStyle153;
             this.SectionsOfBuildingColumnCompCost.Frozen = true;
             this.SectionsOfBuildingColumnCompCost.HeaderText = "Стоимость";
             this.SectionsOfBuildingColumnCompCost.Name = "SectionsOfBuildingColumnCompCost";
@@ -2541,8 +2533,8 @@
             // 
             // SectionsOfBuildingColumnAccCost
             // 
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.Green;
-            this.SectionsOfBuildingColumnAccCost.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle154.BackColor = System.Drawing.Color.Green;
+            this.SectionsOfBuildingColumnAccCost.DefaultCellStyle = dataGridViewCellStyle154;
             this.SectionsOfBuildingColumnAccCost.Frozen = true;
             this.SectionsOfBuildingColumnAccCost.HeaderText = "Стоимость";
             this.SectionsOfBuildingColumnAccCost.Name = "SectionsOfBuildingColumnAccCost";
@@ -2551,8 +2543,8 @@
             // 
             // SectionsOfBuildingColumnRejCost
             // 
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.Red;
-            this.SectionsOfBuildingColumnRejCost.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle155.BackColor = System.Drawing.Color.Red;
+            this.SectionsOfBuildingColumnRejCost.DefaultCellStyle = dataGridViewCellStyle155;
             this.SectionsOfBuildingColumnRejCost.Frozen = true;
             this.SectionsOfBuildingColumnRejCost.HeaderText = "Стоимость";
             this.SectionsOfBuildingColumnRejCost.Name = "SectionsOfBuildingColumnRejCost";
@@ -2576,7 +2568,7 @@
             this.gbPaymentPanel.Controls.Add(this.gbPaymentData);
             this.gbPaymentPanel.Location = new System.Drawing.Point(991, 3);
             this.gbPaymentPanel.Name = "gbPaymentPanel";
-            this.gbPaymentPanel.Size = new System.Drawing.Size(752, 899);
+            this.gbPaymentPanel.Size = new System.Drawing.Size(914, 899);
             this.gbPaymentPanel.TabIndex = 6;
             this.gbPaymentPanel.TabStop = false;
             this.gbPaymentPanel.Text = "Данные по виду работ";
@@ -2602,7 +2594,7 @@
             this.gbPaymentData.Enabled = false;
             this.gbPaymentData.Location = new System.Drawing.Point(9, 19);
             this.gbPaymentData.Name = "gbPaymentData";
-            this.gbPaymentData.Size = new System.Drawing.Size(728, 263);
+            this.gbPaymentData.Size = new System.Drawing.Size(899, 221);
             this.gbPaymentData.TabIndex = 49;
             this.gbPaymentData.TabStop = false;
             // 
@@ -2669,9 +2661,9 @@
             // btnPaymentSwitchCancel
             // 
             this.btnPaymentSwitchCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnPaymentSwitchCancel.Location = new System.Drawing.Point(9, 212);
+            this.btnPaymentSwitchCancel.Location = new System.Drawing.Point(659, 26);
             this.btnPaymentSwitchCancel.Name = "btnPaymentSwitchCancel";
-            this.btnPaymentSwitchCancel.Size = new System.Drawing.Size(152, 42);
+            this.btnPaymentSwitchCancel.Size = new System.Drawing.Size(189, 42);
             this.btnPaymentSwitchCancel.TabIndex = 50;
             this.btnPaymentSwitchCancel.Text = "Отменить";
             this.btnPaymentSwitchCancel.UseVisualStyleBackColor = true;
@@ -2681,9 +2673,9 @@
             // btnPaymentUpdate
             // 
             this.btnPaymentUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnPaymentUpdate.Location = new System.Drawing.Point(413, 212);
+            this.btnPaymentUpdate.Location = new System.Drawing.Point(659, 134);
             this.btnPaymentUpdate.Name = "btnPaymentUpdate";
-            this.btnPaymentUpdate.Size = new System.Drawing.Size(152, 42);
+            this.btnPaymentUpdate.Size = new System.Drawing.Size(189, 42);
             this.btnPaymentUpdate.TabIndex = 51;
             this.btnPaymentUpdate.Text = "Сохранить изменения";
             this.btnPaymentUpdate.UseVisualStyleBackColor = true;
@@ -2693,9 +2685,9 @@
             // btnPaymentCreate
             // 
             this.btnPaymentCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnPaymentCreate.Location = new System.Drawing.Point(571, 212);
+            this.btnPaymentCreate.Location = new System.Drawing.Point(659, 80);
             this.btnPaymentCreate.Name = "btnPaymentCreate";
-            this.btnPaymentCreate.Size = new System.Drawing.Size(152, 42);
+            this.btnPaymentCreate.Size = new System.Drawing.Size(189, 42);
             this.btnPaymentCreate.TabIndex = 48;
             this.btnPaymentCreate.Text = "Сохранить оплату";
             this.btnPaymentCreate.UseVisualStyleBackColor = true;
@@ -2887,8 +2879,8 @@
             // 
             // dgvTbColumnComp
             // 
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.Yellow;
-            this.dgvTbColumnComp.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle156.BackColor = System.Drawing.Color.Yellow;
+            this.dgvTbColumnComp.DefaultCellStyle = dataGridViewCellStyle156;
             this.dgvTbColumnComp.HeaderText = "Стоимость";
             this.dgvTbColumnComp.Name = "dgvTbColumnComp";
             this.dgvTbColumnComp.ReadOnly = true;
@@ -2896,8 +2888,8 @@
             // 
             // dgvTbColumnAcc
             // 
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.Green;
-            this.dgvTbColumnAcc.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle157.BackColor = System.Drawing.Color.Green;
+            this.dgvTbColumnAcc.DefaultCellStyle = dataGridViewCellStyle157;
             this.dgvTbColumnAcc.HeaderText = "Стоимость";
             this.dgvTbColumnAcc.Name = "dgvTbColumnAcc";
             this.dgvTbColumnAcc.ReadOnly = true;
@@ -2905,8 +2897,8 @@
             // 
             // dgvTbColumnRej
             // 
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.Red;
-            this.dgvTbColumnRej.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle158.BackColor = System.Drawing.Color.Red;
+            this.dgvTbColumnRej.DefaultCellStyle = dataGridViewCellStyle158;
             this.dgvTbColumnRej.HeaderText = "Стоимость";
             this.dgvTbColumnRej.Name = "dgvTbColumnRej";
             this.dgvTbColumnRej.ReadOnly = true;
@@ -3000,7 +2992,7 @@
             this.rbAllPayments.AutoSize = true;
             this.rbAllPayments.Checked = true;
             this.rbAllPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbAllPayments.Location = new System.Drawing.Point(0, 19);
+            this.rbAllPayments.Location = new System.Drawing.Point(3, 43);
             this.rbAllPayments.Name = "rbAllPayments";
             this.rbAllPayments.Size = new System.Drawing.Size(110, 21);
             this.rbAllPayments.TabIndex = 15;
@@ -3012,7 +3004,7 @@
             // 
             this.rbPaymentsByProjects.AutoSize = true;
             this.rbPaymentsByProjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbPaymentsByProjects.Location = new System.Drawing.Point(0, 40);
+            this.rbPaymentsByProjects.Location = new System.Drawing.Point(3, 21);
             this.rbPaymentsByProjects.Name = "rbPaymentsByProjects";
             this.rbPaymentsByProjects.Size = new System.Drawing.Size(111, 21);
             this.rbPaymentsByProjects.TabIndex = 16;
@@ -3745,9 +3737,9 @@
             // btnUserSwitchCancel
             // 
             this.btnUserSwitchCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnUserSwitchCancel.Location = new System.Drawing.Point(649, 120);
+            this.btnUserSwitchCancel.Location = new System.Drawing.Point(646, 17);
             this.btnUserSwitchCancel.Name = "btnUserSwitchCancel";
-            this.btnUserSwitchCancel.Size = new System.Drawing.Size(152, 42);
+            this.btnUserSwitchCancel.Size = new System.Drawing.Size(144, 42);
             this.btnUserSwitchCancel.TabIndex = 50;
             this.btnUserSwitchCancel.Text = "Отменить";
             this.btnUserSwitchCancel.UseVisualStyleBackColor = true;
@@ -3757,9 +3749,9 @@
             // btnCreateUser
             // 
             this.btnCreateUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnCreateUser.Location = new System.Drawing.Point(649, 26);
+            this.btnCreateUser.Location = new System.Drawing.Point(646, 66);
             this.btnCreateUser.Name = "btnCreateUser";
-            this.btnCreateUser.Size = new System.Drawing.Size(152, 42);
+            this.btnCreateUser.Size = new System.Drawing.Size(144, 42);
             this.btnCreateUser.TabIndex = 48;
             this.btnCreateUser.Text = "Сохранить нового пользователя";
             this.btnCreateUser.UseVisualStyleBackColor = true;
@@ -3965,7 +3957,7 @@
             this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnChangePassword.Location = new System.Drawing.Point(637, 19);
             this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(152, 42);
+            this.btnChangePassword.Size = new System.Drawing.Size(147, 42);
             this.btnChangePassword.TabIndex = 47;
             this.btnChangePassword.Text = "Сохранить новый пароль";
             this.btnChangePassword.UseVisualStyleBackColor = true;
@@ -4051,9 +4043,9 @@
             // btnUpdateUser
             // 
             this.btnUpdateUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnUpdateUser.Location = new System.Drawing.Point(649, 72);
+            this.btnUpdateUser.Location = new System.Drawing.Point(646, 116);
             this.btnUpdateUser.Name = "btnUpdateUser";
-            this.btnUpdateUser.Size = new System.Drawing.Size(152, 42);
+            this.btnUpdateUser.Size = new System.Drawing.Size(144, 42);
             this.btnUpdateUser.TabIndex = 36;
             this.btnUpdateUser.Text = "Сохранить данные пользователя";
             this.btnUpdateUser.UseVisualStyleBackColor = true;
@@ -4123,8 +4115,8 @@
             // 
             // UsersInProjectColumnComp
             // 
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.Yellow;
-            this.UsersInProjectColumnComp.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle159.BackColor = System.Drawing.Color.Yellow;
+            this.UsersInProjectColumnComp.DefaultCellStyle = dataGridViewCellStyle159;
             this.UsersInProjectColumnComp.HeaderText = "Стоимость";
             this.UsersInProjectColumnComp.Name = "UsersInProjectColumnComp";
             this.UsersInProjectColumnComp.ReadOnly = true;
@@ -4132,8 +4124,8 @@
             // 
             // UsersInProjectColumnAcc
             // 
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.Green;
-            this.UsersInProjectColumnAcc.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle160.BackColor = System.Drawing.Color.Green;
+            this.UsersInProjectColumnAcc.DefaultCellStyle = dataGridViewCellStyle160;
             this.UsersInProjectColumnAcc.HeaderText = "Стоимость";
             this.UsersInProjectColumnAcc.Name = "UsersInProjectColumnAcc";
             this.UsersInProjectColumnAcc.ReadOnly = true;
@@ -4141,8 +4133,8 @@
             // 
             // UsersInProjectColumnRej
             // 
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.Red;
-            this.UsersInProjectColumnRej.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle161.BackColor = System.Drawing.Color.Red;
+            this.UsersInProjectColumnRej.DefaultCellStyle = dataGridViewCellStyle161;
             this.UsersInProjectColumnRej.HeaderText = "Стоимость";
             this.UsersInProjectColumnRej.Name = "UsersInProjectColumnRej";
             this.UsersInProjectColumnRej.ReadOnly = true;
@@ -4218,7 +4210,7 @@
             this.buttonSwitchUpdateUser.Name = "buttonSwitchUpdateUser";
             this.buttonSwitchUpdateUser.Size = new System.Drawing.Size(261, 40);
             this.buttonSwitchUpdateUser.TabIndex = 9;
-            this.buttonSwitchUpdateUser.Text = "Редактировать данные пользователя";
+            this.buttonSwitchUpdateUser.Text = "Редактировать данные";
             this.buttonSwitchUpdateUser.UseVisualStyleBackColor = true;
             this.buttonSwitchUpdateUser.Click += new System.EventHandler(this.BtnSwitchUpdateUser_Click);
             // 
@@ -4310,7 +4302,7 @@
             this.gbTypeOfElementPanel.Controls.Add(this.btnTypeOfElementUpdate);
             this.gbTypeOfElementPanel.Location = new System.Drawing.Point(979, 3);
             this.gbTypeOfElementPanel.Name = "gbTypeOfElementPanel";
-            this.gbTypeOfElementPanel.Size = new System.Drawing.Size(752, 899);
+            this.gbTypeOfElementPanel.Size = new System.Drawing.Size(926, 899);
             this.gbTypeOfElementPanel.TabIndex = 5;
             this.gbTypeOfElementPanel.TabStop = false;
             this.gbTypeOfElementPanel.Text = "Данные элемента фасада";
@@ -4318,20 +4310,21 @@
             // btnTypeOfElementSwitchCancel
             // 
             this.btnTypeOfElementSwitchCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnTypeOfElementSwitchCancel.Location = new System.Drawing.Point(9, 340);
+            this.btnTypeOfElementSwitchCancel.Location = new System.Drawing.Point(732, 27);
             this.btnTypeOfElementSwitchCancel.Name = "btnTypeOfElementSwitchCancel";
-            this.btnTypeOfElementSwitchCancel.Size = new System.Drawing.Size(152, 35);
+            this.btnTypeOfElementSwitchCancel.Size = new System.Drawing.Size(163, 35);
             this.btnTypeOfElementSwitchCancel.TabIndex = 50;
             this.btnTypeOfElementSwitchCancel.Text = "Отменить";
             this.btnTypeOfElementSwitchCancel.UseVisualStyleBackColor = true;
+            this.btnTypeOfElementSwitchCancel.Visible = false;
             this.btnTypeOfElementSwitchCancel.Click += new System.EventHandler(this.BtnTypeOfElementSwitchCancel_Click);
             // 
             // btnTypeOfElementCreate
             // 
             this.btnTypeOfElementCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnTypeOfElementCreate.Location = new System.Drawing.Point(585, 340);
+            this.btnTypeOfElementCreate.Location = new System.Drawing.Point(732, 72);
             this.btnTypeOfElementCreate.Name = "btnTypeOfElementCreate";
-            this.btnTypeOfElementCreate.Size = new System.Drawing.Size(152, 35);
+            this.btnTypeOfElementCreate.Size = new System.Drawing.Size(163, 35);
             this.btnTypeOfElementCreate.TabIndex = 48;
             this.btnTypeOfElementCreate.Text = "Сохранить элемент";
             this.btnTypeOfElementCreate.UseVisualStyleBackColor = true;
@@ -4365,14 +4358,14 @@
             this.gbTypeOfElementData.Enabled = false;
             this.gbTypeOfElementData.Location = new System.Drawing.Point(9, 19);
             this.gbTypeOfElementData.Name = "gbTypeOfElementData";
-            this.gbTypeOfElementData.Size = new System.Drawing.Size(728, 315);
+            this.gbTypeOfElementData.Size = new System.Drawing.Size(691, 315);
             this.gbTypeOfElementData.TabIndex = 49;
             this.gbTypeOfElementData.TabStop = false;
             // 
             // btnTypeOfElementCancelPicture
             // 
             this.btnTypeOfElementCancelPicture.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnTypeOfElementCancelPicture.Location = new System.Drawing.Point(551, 243);
+            this.btnTypeOfElementCancelPicture.Location = new System.Drawing.Point(575, 243);
             this.btnTypeOfElementCancelPicture.Name = "btnTypeOfElementCancelPicture";
             this.btnTypeOfElementCancelPicture.Size = new System.Drawing.Size(98, 30);
             this.btnTypeOfElementCancelPicture.TabIndex = 59;
@@ -4384,7 +4377,7 @@
             // btnTypeOfElementSetPicture
             // 
             this.btnTypeOfElementSetPicture.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnTypeOfElementSetPicture.Location = new System.Drawing.Point(551, 280);
+            this.btnTypeOfElementSetPicture.Location = new System.Drawing.Point(575, 280);
             this.btnTypeOfElementSetPicture.Name = "btnTypeOfElementSetPicture";
             this.btnTypeOfElementSetPicture.Size = new System.Drawing.Size(98, 30);
             this.btnTypeOfElementSetPicture.TabIndex = 58;
@@ -4395,7 +4388,7 @@
             // 
             // pbCheckMarkTypeOfElementPicture
             // 
-            this.pbCheckMarkTypeOfElementPicture.Location = new System.Drawing.Point(601, 212);
+            this.pbCheckMarkTypeOfElementPicture.Location = new System.Drawing.Point(625, 212);
             this.pbCheckMarkTypeOfElementPicture.Name = "pbCheckMarkTypeOfElementPicture";
             this.pbCheckMarkTypeOfElementPicture.Size = new System.Drawing.Size(27, 25);
             this.pbCheckMarkTypeOfElementPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -4619,7 +4612,7 @@
             // 
             // pbCheckMarkTypeOfElementName
             // 
-            this.pbCheckMarkTypeOfElementName.Location = new System.Drawing.Point(601, 24);
+            this.pbCheckMarkTypeOfElementName.Location = new System.Drawing.Point(625, 24);
             this.pbCheckMarkTypeOfElementName.Name = "pbCheckMarkTypeOfElementName";
             this.pbCheckMarkTypeOfElementName.Size = new System.Drawing.Size(27, 25);
             this.pbCheckMarkTypeOfElementName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -4630,7 +4623,7 @@
             // btnTypeOfElementUpdate
             // 
             this.btnTypeOfElementUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnTypeOfElementUpdate.Location = new System.Drawing.Point(416, 340);
+            this.btnTypeOfElementUpdate.Location = new System.Drawing.Point(732, 115);
             this.btnTypeOfElementUpdate.Name = "btnTypeOfElementUpdate";
             this.btnTypeOfElementUpdate.Size = new System.Drawing.Size(163, 35);
             this.btnTypeOfElementUpdate.TabIndex = 36;
@@ -4907,7 +4900,7 @@
             this.gbElementPictureData.Controls.Add(this.btnElementPictureCreate);
             this.gbElementPictureData.Location = new System.Drawing.Point(979, 3);
             this.gbElementPictureData.Name = "gbElementPictureData";
-            this.gbElementPictureData.Size = new System.Drawing.Size(752, 899);
+            this.gbElementPictureData.Size = new System.Drawing.Size(926, 899);
             this.gbElementPictureData.TabIndex = 7;
             this.gbElementPictureData.TabStop = false;
             this.gbElementPictureData.Text = "Изображение";
@@ -4915,20 +4908,21 @@
             // btnElementPictureSwitchCancel
             // 
             this.btnElementPictureSwitchCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnElementPictureSwitchCancel.Location = new System.Drawing.Point(18, 382);
+            this.btnElementPictureSwitchCancel.Location = new System.Drawing.Point(714, 26);
             this.btnElementPictureSwitchCancel.Name = "btnElementPictureSwitchCancel";
-            this.btnElementPictureSwitchCancel.Size = new System.Drawing.Size(152, 42);
+            this.btnElementPictureSwitchCancel.Size = new System.Drawing.Size(185, 42);
             this.btnElementPictureSwitchCancel.TabIndex = 50;
             this.btnElementPictureSwitchCancel.Text = "Отменить";
             this.btnElementPictureSwitchCancel.UseVisualStyleBackColor = true;
+            this.btnElementPictureSwitchCancel.Visible = false;
             this.btnElementPictureSwitchCancel.Click += new System.EventHandler(this.BtnElementPictureSwitchCancel_Click);
             // 
             // btnElementPictureUpdate
             // 
             this.btnElementPictureUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnElementPictureUpdate.Location = new System.Drawing.Point(427, 382);
+            this.btnElementPictureUpdate.Location = new System.Drawing.Point(714, 122);
             this.btnElementPictureUpdate.Name = "btnElementPictureUpdate";
-            this.btnElementPictureUpdate.Size = new System.Drawing.Size(152, 42);
+            this.btnElementPictureUpdate.Size = new System.Drawing.Size(185, 42);
             this.btnElementPictureUpdate.TabIndex = 48;
             this.btnElementPictureUpdate.Text = "Сохранить изменения";
             this.btnElementPictureUpdate.UseVisualStyleBackColor = true;
@@ -4947,7 +4941,7 @@
             this.gbElementPictureNamePicture.Enabled = false;
             this.gbElementPictureNamePicture.Location = new System.Drawing.Point(9, 19);
             this.gbElementPictureNamePicture.Name = "gbElementPictureNamePicture";
-            this.gbElementPictureNamePicture.Size = new System.Drawing.Size(728, 347);
+            this.gbElementPictureNamePicture.Size = new System.Drawing.Size(682, 347);
             this.gbElementPictureNamePicture.TabIndex = 49;
             this.gbElementPictureNamePicture.TabStop = false;
             // 
@@ -5015,7 +5009,7 @@
             // 
             // pbCheckMarkElementPictureName
             // 
-            this.pbCheckMarkElementPictureName.Location = new System.Drawing.Point(601, 24);
+            this.pbCheckMarkElementPictureName.Location = new System.Drawing.Point(626, 24);
             this.pbCheckMarkElementPictureName.Name = "pbCheckMarkElementPictureName";
             this.pbCheckMarkElementPictureName.Size = new System.Drawing.Size(27, 25);
             this.pbCheckMarkElementPictureName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -5026,9 +5020,9 @@
             // btnElementPictureCreate
             // 
             this.btnElementPictureCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnElementPictureCreate.Location = new System.Drawing.Point(585, 382);
+            this.btnElementPictureCreate.Location = new System.Drawing.Point(714, 74);
             this.btnElementPictureCreate.Name = "btnElementPictureCreate";
-            this.btnElementPictureCreate.Size = new System.Drawing.Size(152, 42);
+            this.btnElementPictureCreate.Size = new System.Drawing.Size(185, 42);
             this.btnElementPictureCreate.TabIndex = 36;
             this.btnElementPictureCreate.Text = "Сохранить изображение";
             this.btnElementPictureCreate.UseVisualStyleBackColor = true;
@@ -5138,6 +5132,7 @@
             // 
             // tabPageClient
             // 
+            this.tabPageClient.Controls.Add(this.labelActualProjectClient);
             this.tabPageClient.Controls.Add(this.gbAllClients);
             this.tabPageClient.Controls.Add(this.groupBoxClent);
             this.tabPageClient.Location = new System.Drawing.Point(4, 22);
@@ -5155,9 +5150,9 @@
             this.gbAllClients.Controls.Add(this.buttonSwitchUpdateClient);
             this.gbAllClients.Controls.Add(this.buttonSwitchCreateClient);
             this.gbAllClients.Controls.Add(this.dgvAllClients);
-            this.gbAllClients.Location = new System.Drawing.Point(20, 6);
+            this.gbAllClients.Location = new System.Drawing.Point(6, 32);
             this.gbAllClients.Name = "gbAllClients";
-            this.gbAllClients.Size = new System.Drawing.Size(968, 392);
+            this.gbAllClients.Size = new System.Drawing.Size(982, 883);
             this.gbAllClients.TabIndex = 4;
             this.gbAllClients.TabStop = false;
             this.gbAllClients.Text = "Все заказчики";
@@ -5166,7 +5161,7 @@
             // 
             this.buttonAddClientToProject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonAddClientToProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonAddClientToProject.Location = new System.Drawing.Point(746, 172);
+            this.buttonAddClientToProject.Location = new System.Drawing.Point(751, 173);
             this.buttonAddClientToProject.Name = "buttonAddClientToProject";
             this.buttonAddClientToProject.Size = new System.Drawing.Size(216, 45);
             this.buttonAddClientToProject.TabIndex = 12;
@@ -5178,7 +5173,7 @@
             // 
             this.buttonDeleteClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonDeleteClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonDeleteClient.Location = new System.Drawing.Point(746, 121);
+            this.buttonDeleteClient.Location = new System.Drawing.Point(751, 122);
             this.buttonDeleteClient.Name = "buttonDeleteClient";
             this.buttonDeleteClient.Size = new System.Drawing.Size(216, 45);
             this.buttonDeleteClient.TabIndex = 10;
@@ -5190,7 +5185,7 @@
             // 
             this.buttonSwitchUpdateClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonSwitchUpdateClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonSwitchUpdateClient.Location = new System.Drawing.Point(746, 70);
+            this.buttonSwitchUpdateClient.Location = new System.Drawing.Point(751, 71);
             this.buttonSwitchUpdateClient.Name = "buttonSwitchUpdateClient";
             this.buttonSwitchUpdateClient.Size = new System.Drawing.Size(216, 45);
             this.buttonSwitchUpdateClient.TabIndex = 9;
@@ -5202,7 +5197,7 @@
             // 
             this.buttonSwitchCreateClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonSwitchCreateClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonSwitchCreateClient.Location = new System.Drawing.Point(746, 19);
+            this.buttonSwitchCreateClient.Location = new System.Drawing.Point(751, 20);
             this.buttonSwitchCreateClient.Name = "buttonSwitchCreateClient";
             this.buttonSwitchCreateClient.Size = new System.Drawing.Size(216, 45);
             this.buttonSwitchCreateClient.TabIndex = 8;
@@ -5262,14 +5257,13 @@
             // 
             // groupBoxClent
             // 
-            this.groupBoxClent.Controls.Add(this.labelActualProjectClient);
             this.groupBoxClent.Controls.Add(this.btnCancelClientSwitch);
             this.groupBoxClent.Controls.Add(this.btnCreateClient);
             this.groupBoxClent.Controls.Add(this.gbClientData);
             this.groupBoxClent.Controls.Add(this.btnUpdateClient);
             this.groupBoxClent.Location = new System.Drawing.Point(994, 6);
             this.groupBoxClent.Name = "groupBoxClent";
-            this.groupBoxClent.Size = new System.Drawing.Size(752, 899);
+            this.groupBoxClent.Size = new System.Drawing.Size(911, 909);
             this.groupBoxClent.TabIndex = 3;
             this.groupBoxClent.TabStop = false;
             this.groupBoxClent.Text = "Данные заказчика";
@@ -5277,19 +5271,20 @@
             // labelActualProjectClient
             // 
             this.labelActualProjectClient.AutoSize = true;
+            this.labelActualProjectClient.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelActualProjectClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelActualProjectClient.Location = new System.Drawing.Point(15, 200);
+            this.labelActualProjectClient.Location = new System.Drawing.Point(6, 8);
             this.labelActualProjectClient.Name = "labelActualProjectClient";
-            this.labelActualProjectClient.Size = new System.Drawing.Size(197, 17);
+            this.labelActualProjectClient.Size = new System.Drawing.Size(199, 19);
             this.labelActualProjectClient.TabIndex = 0;
             this.labelActualProjectClient.Text = "Заказчик текущего проекта:";
             // 
             // btnCancelClientSwitch
             // 
             this.btnCancelClientSwitch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnCancelClientSwitch.Location = new System.Drawing.Point(6, 229);
+            this.btnCancelClientSwitch.Location = new System.Drawing.Point(672, 26);
             this.btnCancelClientSwitch.Name = "btnCancelClientSwitch";
-            this.btnCancelClientSwitch.Size = new System.Drawing.Size(152, 42);
+            this.btnCancelClientSwitch.Size = new System.Drawing.Size(226, 42);
             this.btnCancelClientSwitch.TabIndex = 50;
             this.btnCancelClientSwitch.Text = "Отменить";
             this.btnCancelClientSwitch.UseVisualStyleBackColor = true;
@@ -5299,9 +5294,9 @@
             // btnCreateClient
             // 
             this.btnCreateClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnCreateClient.Location = new System.Drawing.Point(424, 229);
+            this.btnCreateClient.Location = new System.Drawing.Point(672, 80);
             this.btnCreateClient.Name = "btnCreateClient";
-            this.btnCreateClient.Size = new System.Drawing.Size(152, 42);
+            this.btnCreateClient.Size = new System.Drawing.Size(226, 42);
             this.btnCreateClient.TabIndex = 48;
             this.btnCreateClient.Text = "Сохранить нового заказчика";
             this.btnCreateClient.UseVisualStyleBackColor = true;
@@ -5325,7 +5320,7 @@
             this.gbClientData.Enabled = false;
             this.gbClientData.Location = new System.Drawing.Point(9, 19);
             this.gbClientData.Name = "gbClientData";
-            this.gbClientData.Size = new System.Drawing.Size(728, 172);
+            this.gbClientData.Size = new System.Drawing.Size(649, 172);
             this.gbClientData.TabIndex = 49;
             this.gbClientData.TabStop = false;
             // 
@@ -5454,9 +5449,9 @@
             // btnUpdateClient
             // 
             this.btnUpdateClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnUpdateClient.Location = new System.Drawing.Point(585, 229);
+            this.btnUpdateClient.Location = new System.Drawing.Point(672, 135);
             this.btnUpdateClient.Name = "btnUpdateClient";
-            this.btnUpdateClient.Size = new System.Drawing.Size(152, 42);
+            this.btnUpdateClient.Size = new System.Drawing.Size(226, 42);
             this.btnUpdateClient.TabIndex = 36;
             this.btnUpdateClient.Text = "Сохранить данные заказчика";
             this.btnUpdateClient.UseVisualStyleBackColor = true;
@@ -5553,8 +5548,8 @@
             // 
             // dataGridViewTextBoxColumn83
             // 
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.Yellow;
-            this.dataGridViewTextBoxColumn83.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle162.BackColor = System.Drawing.Color.Yellow;
+            this.dataGridViewTextBoxColumn83.DefaultCellStyle = dataGridViewCellStyle162;
             this.dataGridViewTextBoxColumn83.HeaderText = "Стоимость";
             this.dataGridViewTextBoxColumn83.Name = "dataGridViewTextBoxColumn83";
             this.dataGridViewTextBoxColumn83.ReadOnly = true;
@@ -5562,8 +5557,8 @@
             // 
             // dataGridViewTextBoxColumn84
             // 
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.Green;
-            this.dataGridViewTextBoxColumn84.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle163.BackColor = System.Drawing.Color.Green;
+            this.dataGridViewTextBoxColumn84.DefaultCellStyle = dataGridViewCellStyle163;
             this.dataGridViewTextBoxColumn84.HeaderText = "Стоимость";
             this.dataGridViewTextBoxColumn84.Name = "dataGridViewTextBoxColumn84";
             this.dataGridViewTextBoxColumn84.ReadOnly = true;
@@ -5571,8 +5566,8 @@
             // 
             // dataGridViewTextBoxColumn85
             // 
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.Red;
-            this.dataGridViewTextBoxColumn85.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle164.BackColor = System.Drawing.Color.Red;
+            this.dataGridViewTextBoxColumn85.DefaultCellStyle = dataGridViewCellStyle164;
             this.dataGridViewTextBoxColumn85.HeaderText = "Стоимость";
             this.dataGridViewTextBoxColumn85.Name = "dataGridViewTextBoxColumn85";
             this.dataGridViewTextBoxColumn85.ReadOnly = true;
@@ -5663,8 +5658,8 @@
             // 
             // WorkerSectionsOfBuildingColumnWork
             // 
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.DimGray;
-            this.WorkerSectionsOfBuildingColumnWork.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle165.BackColor = System.Drawing.Color.DimGray;
+            this.WorkerSectionsOfBuildingColumnWork.DefaultCellStyle = dataGridViewCellStyle165;
             this.WorkerSectionsOfBuildingColumnWork.HeaderText = "Стоимость";
             this.WorkerSectionsOfBuildingColumnWork.Name = "WorkerSectionsOfBuildingColumnWork";
             this.WorkerSectionsOfBuildingColumnWork.ReadOnly = true;
@@ -5672,8 +5667,8 @@
             // 
             // WorkerSectionsOfBuildingColumnComplete
             // 
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.Yellow;
-            this.WorkerSectionsOfBuildingColumnComplete.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle166.BackColor = System.Drawing.Color.Yellow;
+            this.WorkerSectionsOfBuildingColumnComplete.DefaultCellStyle = dataGridViewCellStyle166;
             this.WorkerSectionsOfBuildingColumnComplete.HeaderText = "Стоимость";
             this.WorkerSectionsOfBuildingColumnComplete.Name = "WorkerSectionsOfBuildingColumnComplete";
             this.WorkerSectionsOfBuildingColumnComplete.ReadOnly = true;
@@ -5681,8 +5676,8 @@
             // 
             // WorkerSectionsOfBuildingColumnAccept
             // 
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.Green;
-            this.WorkerSectionsOfBuildingColumnAccept.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle167.BackColor = System.Drawing.Color.Green;
+            this.WorkerSectionsOfBuildingColumnAccept.DefaultCellStyle = dataGridViewCellStyle167;
             this.WorkerSectionsOfBuildingColumnAccept.HeaderText = "Стоимость";
             this.WorkerSectionsOfBuildingColumnAccept.Name = "WorkerSectionsOfBuildingColumnAccept";
             this.WorkerSectionsOfBuildingColumnAccept.ReadOnly = true;
@@ -5690,8 +5685,8 @@
             // 
             // WorkerSectionsOfBuildingColumnReject
             // 
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.Red;
-            this.WorkerSectionsOfBuildingColumnReject.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle168.BackColor = System.Drawing.Color.Red;
+            this.WorkerSectionsOfBuildingColumnReject.DefaultCellStyle = dataGridViewCellStyle168;
             this.WorkerSectionsOfBuildingColumnReject.HeaderText = "Стоимость";
             this.WorkerSectionsOfBuildingColumnReject.Name = "WorkerSectionsOfBuildingColumnReject";
             this.WorkerSectionsOfBuildingColumnReject.ReadOnly = true;
@@ -5870,8 +5865,8 @@
             // 
             // dataGridViewTextBoxColumn58
             // 
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.DimGray;
-            this.dataGridViewTextBoxColumn58.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle169.BackColor = System.Drawing.Color.DimGray;
+            this.dataGridViewTextBoxColumn58.DefaultCellStyle = dataGridViewCellStyle169;
             this.dataGridViewTextBoxColumn58.Frozen = true;
             this.dataGridViewTextBoxColumn58.HeaderText = "Объем";
             this.dataGridViewTextBoxColumn58.Name = "dataGridViewTextBoxColumn58";
@@ -5880,8 +5875,8 @@
             // 
             // dataGridViewTextBoxColumn59
             // 
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.DimGray;
-            this.dataGridViewTextBoxColumn59.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle170.BackColor = System.Drawing.Color.DimGray;
+            this.dataGridViewTextBoxColumn59.DefaultCellStyle = dataGridViewCellStyle170;
             this.dataGridViewTextBoxColumn59.Frozen = true;
             this.dataGridViewTextBoxColumn59.HeaderText = "Стоимость";
             this.dataGridViewTextBoxColumn59.Name = "dataGridViewTextBoxColumn59";
@@ -5890,8 +5885,8 @@
             // 
             // WorkerWorksInProjectColumnCompValue
             // 
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.Yellow;
-            this.WorkerWorksInProjectColumnCompValue.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle171.BackColor = System.Drawing.Color.Yellow;
+            this.WorkerWorksInProjectColumnCompValue.DefaultCellStyle = dataGridViewCellStyle171;
             this.WorkerWorksInProjectColumnCompValue.HeaderText = "Объем";
             this.WorkerWorksInProjectColumnCompValue.Name = "WorkerWorksInProjectColumnCompValue";
             this.WorkerWorksInProjectColumnCompValue.ReadOnly = true;
@@ -5899,8 +5894,8 @@
             // 
             // WorkerWorksInProjectColumnCompCost
             // 
-            dataGridViewCellStyle37.BackColor = System.Drawing.Color.Yellow;
-            this.WorkerWorksInProjectColumnCompCost.DefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle172.BackColor = System.Drawing.Color.Yellow;
+            this.WorkerWorksInProjectColumnCompCost.DefaultCellStyle = dataGridViewCellStyle172;
             this.WorkerWorksInProjectColumnCompCost.HeaderText = "Стоимость";
             this.WorkerWorksInProjectColumnCompCost.Name = "WorkerWorksInProjectColumnCompCost";
             this.WorkerWorksInProjectColumnCompCost.ReadOnly = true;
@@ -5908,8 +5903,8 @@
             // 
             // WorkerWorksInProjectColumnAccValue
             // 
-            dataGridViewCellStyle38.BackColor = System.Drawing.Color.Green;
-            this.WorkerWorksInProjectColumnAccValue.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle173.BackColor = System.Drawing.Color.Green;
+            this.WorkerWorksInProjectColumnAccValue.DefaultCellStyle = dataGridViewCellStyle173;
             this.WorkerWorksInProjectColumnAccValue.HeaderText = "Объем";
             this.WorkerWorksInProjectColumnAccValue.Name = "WorkerWorksInProjectColumnAccValue";
             this.WorkerWorksInProjectColumnAccValue.ReadOnly = true;
@@ -5917,8 +5912,8 @@
             // 
             // WorkerWorksInProjectColumnAccCost
             // 
-            dataGridViewCellStyle39.BackColor = System.Drawing.Color.Green;
-            this.WorkerWorksInProjectColumnAccCost.DefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle174.BackColor = System.Drawing.Color.Green;
+            this.WorkerWorksInProjectColumnAccCost.DefaultCellStyle = dataGridViewCellStyle174;
             this.WorkerWorksInProjectColumnAccCost.HeaderText = "Стоимость";
             this.WorkerWorksInProjectColumnAccCost.Name = "WorkerWorksInProjectColumnAccCost";
             this.WorkerWorksInProjectColumnAccCost.ReadOnly = true;
@@ -5926,8 +5921,8 @@
             // 
             // WorkerWorksInProjectColumnRejValue
             // 
-            dataGridViewCellStyle40.BackColor = System.Drawing.Color.Red;
-            this.WorkerWorksInProjectColumnRejValue.DefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle175.BackColor = System.Drawing.Color.Red;
+            this.WorkerWorksInProjectColumnRejValue.DefaultCellStyle = dataGridViewCellStyle175;
             this.WorkerWorksInProjectColumnRejValue.HeaderText = "Объем";
             this.WorkerWorksInProjectColumnRejValue.Name = "WorkerWorksInProjectColumnRejValue";
             this.WorkerWorksInProjectColumnRejValue.ReadOnly = true;
@@ -5935,8 +5930,8 @@
             // 
             // WorkerWorksInProjectColumnRejCost
             // 
-            dataGridViewCellStyle41.BackColor = System.Drawing.Color.Red;
-            this.WorkerWorksInProjectColumnRejCost.DefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle176.BackColor = System.Drawing.Color.Red;
+            this.WorkerWorksInProjectColumnRejCost.DefaultCellStyle = dataGridViewCellStyle176;
             this.WorkerWorksInProjectColumnRejCost.HeaderText = "Стоимость";
             this.WorkerWorksInProjectColumnRejCost.Name = "WorkerWorksInProjectColumnRejCost";
             this.WorkerWorksInProjectColumnRejCost.ReadOnly = true;
@@ -6129,8 +6124,8 @@
             // 
             // WorkerProjectsColumnWorkCost
             // 
-            dataGridViewCellStyle42.BackColor = System.Drawing.Color.DimGray;
-            this.WorkerProjectsColumnWorkCost.DefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle177.BackColor = System.Drawing.Color.DimGray;
+            this.WorkerProjectsColumnWorkCost.DefaultCellStyle = dataGridViewCellStyle177;
             this.WorkerProjectsColumnWorkCost.HeaderText = "Стоимость";
             this.WorkerProjectsColumnWorkCost.Name = "WorkerProjectsColumnWorkCost";
             this.WorkerProjectsColumnWorkCost.ReadOnly = true;
@@ -6138,8 +6133,8 @@
             // 
             // WorkerProjectsColumnCompCost
             // 
-            dataGridViewCellStyle43.BackColor = System.Drawing.Color.Yellow;
-            this.WorkerProjectsColumnCompCost.DefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle178.BackColor = System.Drawing.Color.Yellow;
+            this.WorkerProjectsColumnCompCost.DefaultCellStyle = dataGridViewCellStyle178;
             this.WorkerProjectsColumnCompCost.HeaderText = "Стоимость";
             this.WorkerProjectsColumnCompCost.Name = "WorkerProjectsColumnCompCost";
             this.WorkerProjectsColumnCompCost.ReadOnly = true;
@@ -6147,8 +6142,8 @@
             // 
             // WorkerProjectsColumnAccCost
             // 
-            dataGridViewCellStyle44.BackColor = System.Drawing.Color.Green;
-            this.WorkerProjectsColumnAccCost.DefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle179.BackColor = System.Drawing.Color.Green;
+            this.WorkerProjectsColumnAccCost.DefaultCellStyle = dataGridViewCellStyle179;
             this.WorkerProjectsColumnAccCost.HeaderText = "Стоимость";
             this.WorkerProjectsColumnAccCost.Name = "WorkerProjectsColumnAccCost";
             this.WorkerProjectsColumnAccCost.ReadOnly = true;
@@ -6156,8 +6151,8 @@
             // 
             // WorkerProjectsColumnRejCost
             // 
-            dataGridViewCellStyle45.BackColor = System.Drawing.Color.Red;
-            this.WorkerProjectsColumnRejCost.DefaultCellStyle = dataGridViewCellStyle45;
+            dataGridViewCellStyle180.BackColor = System.Drawing.Color.Red;
+            this.WorkerProjectsColumnRejCost.DefaultCellStyle = dataGridViewCellStyle180;
             this.WorkerProjectsColumnRejCost.HeaderText = "Стоимость";
             this.WorkerProjectsColumnRejCost.Name = "WorkerProjectsColumnRejCost";
             this.WorkerProjectsColumnRejCost.ReadOnly = true;
@@ -6729,10 +6724,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbElementPictureSelectedDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllElementPicture)).EndInit();
             this.tabPageClient.ResumeLayout(false);
+            this.tabPageClient.PerformLayout();
             this.gbAllClients.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllClients)).EndInit();
             this.groupBoxClent.ResumeLayout(false);
-            this.groupBoxClent.PerformLayout();
             this.gbClientData.ResumeLayout(false);
             this.gbClientData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCheckMarkClientInn)).EndInit();
@@ -6843,7 +6838,6 @@
         private System.Windows.Forms.TextBox tbProjectName;
         private System.Windows.Forms.Label lblProjectAddress;
         private System.Windows.Forms.TextBox tbProjectAddress;
-        private System.Windows.Forms.Button btnViewProjectsByState;
         private System.Windows.Forms.Button buttonSwitchUpdateProject;
         private System.Windows.Forms.Button buttonSwitchCreateProject;
         private System.Windows.Forms.GroupBox groupBoxClent;

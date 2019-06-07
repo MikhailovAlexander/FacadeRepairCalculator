@@ -164,7 +164,7 @@ namespace Project
                     btnElementPictureUpdate.Visible = false;
                     ShowAllElementPictures();
                     MessageBox.Show($"Изображение {elementPicture.Name} сохранено",
-                        "Сохранение изображения", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        "Сохранение изображения", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch (Exception ex)
