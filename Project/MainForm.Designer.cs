@@ -585,6 +585,14 @@
             this.WorkerWorkLogColumnUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WorkerWorkLogColumnComment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvWorkerModel = new System.Windows.Forms.DataGridView();
+            this.tabPageAboutProgram = new System.Windows.Forms.TabPage();
+            this.lblAboutProgramAdviser = new System.Windows.Forms.Label();
+            this.lblAboutProgramAuthor = new System.Windows.Forms.Label();
+            this.lblAboutProgramUniversity = new System.Windows.Forms.Label();
+            this.lblAboutProgramWork = new System.Windows.Forms.Label();
+            this.lblAboutProgramDescription = new System.Windows.Forms.Label();
+            this.lblAboutProgramVersion = new System.Windows.Forms.Label();
+            this.lblAboutProgramName = new System.Windows.Forms.Label();
             this.labelActualProjectName = new System.Windows.Forms.Label();
             this.labelActualUserName = new System.Windows.Forms.Label();
             this.ofdElementOpenImage = new System.Windows.Forms.OpenFileDialog();
@@ -598,14 +606,15 @@
             this.btnWorkerChangePassword = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.btnWorkerSwitchChangePasswordCancel = new System.Windows.Forms.Button();
-            this.tabPageAboutProgram = new System.Windows.Forms.TabPage();
-            this.lblAboutProgramName = new System.Windows.Forms.Label();
-            this.lblAboutProgramVersion = new System.Windows.Forms.Label();
-            this.lblAboutProgramDescription = new System.Windows.Forms.Label();
-            this.lblAboutProgramWork = new System.Windows.Forms.Label();
-            this.lblAboutProgramUniversity = new System.Windows.Forms.Label();
-            this.lblAboutProgramAuthor = new System.Windows.Forms.Label();
-            this.lblAboutProgramAdviser = new System.Windows.Forms.Label();
+            this.pbLegendGray = new System.Windows.Forms.PictureBox();
+            this.lblLegendGray = new System.Windows.Forms.Label();
+            this.lblLegendYellow = new System.Windows.Forms.Label();
+            this.pbLegendYellow = new System.Windows.Forms.PictureBox();
+            this.lblLegendGreen = new System.Windows.Forms.Label();
+            this.pbLegendGreen = new System.Windows.Forms.PictureBox();
+            this.lblLegendRed = new System.Windows.Forms.Label();
+            this.pbLegendRed = new System.Windows.Forms.PictureBox();
+            this.lblLegendContext = new System.Windows.Forms.Label();
             this.tabControlMain.SuspendLayout();
             this.tabPageProject.SuspendLayout();
             this.gblProjectPanel.SuspendLayout();
@@ -727,9 +736,13 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerWorkLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerModel)).BeginInit();
+            this.tabPageAboutProgram.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabPageAboutProgram.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLegendGray)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLegendYellow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLegendGreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLegendRed)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlMain
@@ -744,7 +757,7 @@
             this.tabControlMain.Controls.Add(this.tabPageClient);
             this.tabControlMain.Controls.Add(this.tabPageWorker);
             this.tabControlMain.Controls.Add(this.tabPageAboutProgram);
-            this.tabControlMain.Location = new System.Drawing.Point(3, 19);
+            this.tabControlMain.Location = new System.Drawing.Point(3, 38);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
             this.tabControlMain.Size = new System.Drawing.Size(1959, 972);
@@ -6276,6 +6289,96 @@
             this.dgvWorkerModel.TabIndex = 1;
             this.dgvWorkerModel.SelectionChanged += new System.EventHandler(this.DgvWorkerModel_SelectionChanged);
             // 
+            // tabPageAboutProgram
+            // 
+            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramAdviser);
+            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramAuthor);
+            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramUniversity);
+            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramWork);
+            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramDescription);
+            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramVersion);
+            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramName);
+            this.tabPageAboutProgram.Location = new System.Drawing.Point(4, 22);
+            this.tabPageAboutProgram.Name = "tabPageAboutProgram";
+            this.tabPageAboutProgram.Size = new System.Drawing.Size(1951, 946);
+            this.tabPageAboutProgram.TabIndex = 9;
+            this.tabPageAboutProgram.Text = "О программе";
+            this.tabPageAboutProgram.UseVisualStyleBackColor = true;
+            // 
+            // lblAboutProgramAdviser
+            // 
+            this.lblAboutProgramAdviser.AutoSize = true;
+            this.lblAboutProgramAdviser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblAboutProgramAdviser.Location = new System.Drawing.Point(14, 209);
+            this.lblAboutProgramAdviser.Name = "lblAboutProgramAdviser";
+            this.lblAboutProgramAdviser.Size = new System.Drawing.Size(859, 17);
+            this.lblAboutProgramAdviser.TabIndex = 6;
+            this.lblAboutProgramAdviser.Text = "Руководитель к.т.н., доцент кафедры информационных технологий в бизнесе НИУ ВШЭ -" +
+    " Пермь Кычкин Алексей Владимирович";
+            // 
+            // lblAboutProgramAuthor
+            // 
+            this.lblAboutProgramAuthor.AutoSize = true;
+            this.lblAboutProgramAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblAboutProgramAuthor.Location = new System.Drawing.Point(14, 176);
+            this.lblAboutProgramAuthor.Name = "lblAboutProgramAuthor";
+            this.lblAboutProgramAuthor.Size = new System.Drawing.Size(445, 17);
+            this.lblAboutProgramAuthor.TabIndex = 5;
+            this.lblAboutProgramAuthor.Text = "Автор Михайлов Александр Витальевич e-mail: vestroy@gmail.com";
+            // 
+            // lblAboutProgramUniversity
+            // 
+            this.lblAboutProgramUniversity.AutoSize = true;
+            this.lblAboutProgramUniversity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblAboutProgramUniversity.Location = new System.Drawing.Point(14, 140);
+            this.lblAboutProgramUniversity.Name = "lblAboutProgramUniversity";
+            this.lblAboutProgramUniversity.Size = new System.Drawing.Size(734, 17);
+            this.lblAboutProgramUniversity.TabIndex = 4;
+            this.lblAboutProgramUniversity.Text = "Пермского филиала ФГАОУ ВО \"Национальный исследовательский университет \"Высшая шк" +
+    "ола экономики\"";
+            // 
+            // lblAboutProgramWork
+            // 
+            this.lblAboutProgramWork.AutoSize = true;
+            this.lblAboutProgramWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblAboutProgramWork.Location = new System.Drawing.Point(14, 108);
+            this.lblAboutProgramWork.Name = "lblAboutProgramWork";
+            this.lblAboutProgramWork.Size = new System.Drawing.Size(1177, 17);
+            this.lblAboutProgramWork.TabIndex = 3;
+            this.lblAboutProgramWork.Text = "Программа создана в рамках проектной работы по направлению подготовки \"Объектно-о" +
+    "риентированное программирование\" Факультета профессиональной переподготовки";
+            // 
+            // lblAboutProgramDescription
+            // 
+            this.lblAboutProgramDescription.AutoSize = true;
+            this.lblAboutProgramDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblAboutProgramDescription.Location = new System.Drawing.Point(14, 73);
+            this.lblAboutProgramDescription.Name = "lblAboutProgramDescription";
+            this.lblAboutProgramDescription.Size = new System.Drawing.Size(922, 17);
+            this.lblAboutProgramDescription.TabIndex = 2;
+            this.lblAboutProgramDescription.Text = "Позволяет создать модель фасада панельного дома, расчитать площадь фасада и вести" +
+    " учет проведения ремонтных работ и их оплаты";
+            // 
+            // lblAboutProgramVersion
+            // 
+            this.lblAboutProgramVersion.AutoSize = true;
+            this.lblAboutProgramVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblAboutProgramVersion.Location = new System.Drawing.Point(14, 41);
+            this.lblAboutProgramVersion.Name = "lblAboutProgramVersion";
+            this.lblAboutProgramVersion.Size = new System.Drawing.Size(80, 17);
+            this.lblAboutProgramVersion.TabIndex = 1;
+            this.lblAboutProgramVersion.Text = "Версия 1.0";
+            // 
+            // lblAboutProgramName
+            // 
+            this.lblAboutProgramName.AutoSize = true;
+            this.lblAboutProgramName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAboutProgramName.Location = new System.Drawing.Point(14, 13);
+            this.lblAboutProgramName.Name = "lblAboutProgramName";
+            this.lblAboutProgramName.Size = new System.Drawing.Size(337, 16);
+            this.lblAboutProgramName.TabIndex = 0;
+            this.lblAboutProgramName.Text = "Система учета ремонтных работ (Прототип)";
+            // 
             // labelActualProjectName
             // 
             this.labelActualProjectName.AutoSize = true;
@@ -6290,7 +6393,7 @@
             // 
             this.labelActualUserName.AutoSize = true;
             this.labelActualUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelActualUserName.Location = new System.Drawing.Point(941, -1);
+            this.labelActualUserName.Location = new System.Drawing.Point(0, 18);
             this.labelActualUserName.Name = "labelActualUserName";
             this.labelActualUserName.Size = new System.Drawing.Size(169, 17);
             this.labelActualUserName.TabIndex = 4;
@@ -6401,101 +6504,106 @@
             this.btnWorkerSwitchChangePasswordCancel.Text = "Отменить";
             this.btnWorkerSwitchChangePasswordCancel.UseVisualStyleBackColor = true;
             // 
-            // tabPageAboutProgram
+            // pbLegendGray
             // 
-            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramAdviser);
-            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramAuthor);
-            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramUniversity);
-            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramWork);
-            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramDescription);
-            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramVersion);
-            this.tabPageAboutProgram.Controls.Add(this.lblAboutProgramName);
-            this.tabPageAboutProgram.Location = new System.Drawing.Point(4, 22);
-            this.tabPageAboutProgram.Name = "tabPageAboutProgram";
-            this.tabPageAboutProgram.Size = new System.Drawing.Size(1951, 946);
-            this.tabPageAboutProgram.TabIndex = 9;
-            this.tabPageAboutProgram.Text = "О программе";
-            this.tabPageAboutProgram.UseVisualStyleBackColor = true;
+            this.pbLegendGray.BackColor = System.Drawing.Color.DimGray;
+            this.pbLegendGray.Location = new System.Drawing.Point(1032, 22);
+            this.pbLegendGray.Name = "pbLegendGray";
+            this.pbLegendGray.Size = new System.Drawing.Size(16, 16);
+            this.pbLegendGray.TabIndex = 5;
+            this.pbLegendGray.TabStop = false;
             // 
-            // lblAboutProgramName
+            // lblLegendGray
             // 
-            this.lblAboutProgramName.AutoSize = true;
-            this.lblAboutProgramName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAboutProgramName.Location = new System.Drawing.Point(14, 13);
-            this.lblAboutProgramName.Name = "lblAboutProgramName";
-            this.lblAboutProgramName.Size = new System.Drawing.Size(337, 16);
-            this.lblAboutProgramName.TabIndex = 0;
-            this.lblAboutProgramName.Text = "Система учета ремонтных работ (Прототип)";
+            this.lblLegendGray.AutoSize = true;
+            this.lblLegendGray.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblLegendGray.Location = new System.Drawing.Point(1051, 22);
+            this.lblLegendGray.Name = "lblLegendGray";
+            this.lblLegendGray.Size = new System.Drawing.Size(154, 17);
+            this.lblLegendGray.TabIndex = 6;
+            this.lblLegendGray.Text = "назначенные работы,";
             // 
-            // lblAboutProgramVersion
+            // lblLegendYellow
             // 
-            this.lblAboutProgramVersion.AutoSize = true;
-            this.lblAboutProgramVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblAboutProgramVersion.Location = new System.Drawing.Point(14, 41);
-            this.lblAboutProgramVersion.Name = "lblAboutProgramVersion";
-            this.lblAboutProgramVersion.Size = new System.Drawing.Size(80, 17);
-            this.lblAboutProgramVersion.TabIndex = 1;
-            this.lblAboutProgramVersion.Text = "Версия 1.0";
+            this.lblLegendYellow.AutoSize = true;
+            this.lblLegendYellow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblLegendYellow.Location = new System.Drawing.Point(1224, 22);
+            this.lblLegendYellow.Name = "lblLegendYellow";
+            this.lblLegendYellow.Size = new System.Drawing.Size(317, 17);
+            this.lblLegendYellow.TabIndex = 8;
+            this.lblLegendYellow.Text = "выполненные, но не подтвержденные работы,";
             // 
-            // lblAboutProgramDescription
+            // pbLegendYellow
             // 
-            this.lblAboutProgramDescription.AutoSize = true;
-            this.lblAboutProgramDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblAboutProgramDescription.Location = new System.Drawing.Point(14, 73);
-            this.lblAboutProgramDescription.Name = "lblAboutProgramDescription";
-            this.lblAboutProgramDescription.Size = new System.Drawing.Size(922, 17);
-            this.lblAboutProgramDescription.TabIndex = 2;
-            this.lblAboutProgramDescription.Text = "Позволяет создать модель фасада панельного дома, расчитать площадь фасада и вести" +
-    " учет проведения ремонтных работ и их оплаты";
+            this.pbLegendYellow.BackColor = System.Drawing.Color.Yellow;
+            this.pbLegendYellow.Location = new System.Drawing.Point(1205, 21);
+            this.pbLegendYellow.Name = "pbLegendYellow";
+            this.pbLegendYellow.Size = new System.Drawing.Size(16, 16);
+            this.pbLegendYellow.TabIndex = 7;
+            this.pbLegendYellow.TabStop = false;
             // 
-            // lblAboutProgramWork
+            // lblLegendGreen
             // 
-            this.lblAboutProgramWork.AutoSize = true;
-            this.lblAboutProgramWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblAboutProgramWork.Location = new System.Drawing.Point(14, 108);
-            this.lblAboutProgramWork.Name = "lblAboutProgramWork";
-            this.lblAboutProgramWork.Size = new System.Drawing.Size(1177, 17);
-            this.lblAboutProgramWork.TabIndex = 3;
-            this.lblAboutProgramWork.Text = "Программа создана в рамках проектной работы по направлению подготовки \"Объектно-о" +
-    "риентированное программирование\" Факультета профессиональной переподготовки";
+            this.lblLegendGreen.AutoSize = true;
+            this.lblLegendGreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblLegendGreen.Location = new System.Drawing.Point(1567, 22);
+            this.lblLegendGreen.Name = "lblLegendGreen";
+            this.lblLegendGreen.Size = new System.Drawing.Size(178, 17);
+            this.lblLegendGreen.TabIndex = 10;
+            this.lblLegendGreen.Text = "подтвержденные работы,";
             // 
-            // lblAboutProgramUniversity
+            // pbLegendGreen
             // 
-            this.lblAboutProgramUniversity.AutoSize = true;
-            this.lblAboutProgramUniversity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblAboutProgramUniversity.Location = new System.Drawing.Point(14, 140);
-            this.lblAboutProgramUniversity.Name = "lblAboutProgramUniversity";
-            this.lblAboutProgramUniversity.Size = new System.Drawing.Size(734, 17);
-            this.lblAboutProgramUniversity.TabIndex = 4;
-            this.lblAboutProgramUniversity.Text = "Пермского филиала ФГАОУ ВО \"Национальный исследовательский университет \"Высшая шк" +
-    "ола экономики\"";
+            this.pbLegendGreen.BackColor = System.Drawing.Color.Green;
+            this.pbLegendGreen.Location = new System.Drawing.Point(1548, 23);
+            this.pbLegendGreen.Name = "pbLegendGreen";
+            this.pbLegendGreen.Size = new System.Drawing.Size(16, 16);
+            this.pbLegendGreen.TabIndex = 9;
+            this.pbLegendGreen.TabStop = false;
             // 
-            // lblAboutProgramAuthor
+            // lblLegendRed
             // 
-            this.lblAboutProgramAuthor.AutoSize = true;
-            this.lblAboutProgramAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblAboutProgramAuthor.Location = new System.Drawing.Point(14, 176);
-            this.lblAboutProgramAuthor.Name = "lblAboutProgramAuthor";
-            this.lblAboutProgramAuthor.Size = new System.Drawing.Size(445, 17);
-            this.lblAboutProgramAuthor.TabIndex = 5;
-            this.lblAboutProgramAuthor.Text = "Автор Михайлов Александр Витальевич e-mail: vestroy@gmail.com";
+            this.lblLegendRed.AutoSize = true;
+            this.lblLegendRed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblLegendRed.Location = new System.Drawing.Point(1770, 22);
+            this.lblLegendRed.Name = "lblLegendRed";
+            this.lblLegendRed.Size = new System.Drawing.Size(149, 17);
+            this.lblLegendRed.TabIndex = 12;
+            this.lblLegendRed.Text = "отклоненные работы";
             // 
-            // lblAboutProgramAdviser
+            // pbLegendRed
             // 
-            this.lblAboutProgramAdviser.AutoSize = true;
-            this.lblAboutProgramAdviser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblAboutProgramAdviser.Location = new System.Drawing.Point(14, 209);
-            this.lblAboutProgramAdviser.Name = "lblAboutProgramAdviser";
-            this.lblAboutProgramAdviser.Size = new System.Drawing.Size(859, 17);
-            this.lblAboutProgramAdviser.TabIndex = 6;
-            this.lblAboutProgramAdviser.Text = "Руководитель к.т.н., доцент кафедры информационных технологий в бизнесе НИУ ВШЭ -" +
-    " Пермь Кычкин Алексей Владимирович";
+            this.pbLegendRed.BackColor = System.Drawing.Color.Red;
+            this.pbLegendRed.Location = new System.Drawing.Point(1751, 23);
+            this.pbLegendRed.Name = "pbLegendRed";
+            this.pbLegendRed.Size = new System.Drawing.Size(16, 16);
+            this.pbLegendRed.TabIndex = 11;
+            this.pbLegendRed.TabStop = false;
+            // 
+            // lblLegendContext
+            // 
+            this.lblLegendContext.AutoSize = true;
+            this.lblLegendContext.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblLegendContext.Location = new System.Drawing.Point(894, 22);
+            this.lblLegendContext.Name = "lblLegendContext";
+            this.lblLegendContext.Size = new System.Drawing.Size(139, 17);
+            this.lblLegendContext.TabIndex = 13;
+            this.lblLegendContext.Text = "Цветовой контекст:";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 987);
+            this.Controls.Add(this.lblLegendContext);
+            this.Controls.Add(this.lblLegendRed);
+            this.Controls.Add(this.pbLegendRed);
+            this.Controls.Add(this.lblLegendGreen);
+            this.Controls.Add(this.pbLegendGreen);
+            this.Controls.Add(this.lblLegendYellow);
+            this.Controls.Add(this.pbLegendYellow);
+            this.Controls.Add(this.lblLegendGray);
+            this.Controls.Add(this.pbLegendGray);
             this.Controls.Add(this.labelActualUserName);
             this.Controls.Add(this.labelActualProjectName);
             this.Controls.Add(this.tabControlMain);
@@ -6650,10 +6758,14 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerWorkLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkerModel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPageAboutProgram.ResumeLayout(false);
             this.tabPageAboutProgram.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLegendGray)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLegendYellow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLegendGreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLegendRed)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7193,5 +7305,14 @@
         private System.Windows.Forms.Label lblAboutProgramDescription;
         private System.Windows.Forms.Label lblAboutProgramVersion;
         private System.Windows.Forms.Label lblAboutProgramName;
+        private System.Windows.Forms.PictureBox pbLegendGray;
+        private System.Windows.Forms.Label lblLegendGray;
+        private System.Windows.Forms.Label lblLegendYellow;
+        private System.Windows.Forms.PictureBox pbLegendYellow;
+        private System.Windows.Forms.Label lblLegendGreen;
+        private System.Windows.Forms.PictureBox pbLegendGreen;
+        private System.Windows.Forms.Label lblLegendRed;
+        private System.Windows.Forms.PictureBox pbLegendRed;
+        private System.Windows.Forms.Label lblLegendContext;
     }
 }
