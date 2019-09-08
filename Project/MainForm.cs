@@ -59,8 +59,7 @@ namespace Project
                 Close();
                 return;
             }
-            Image checkMark = Image.FromFile(
-                @"C:\Users\vestr\source\repos\Project\Project\checkMark.png");
+            Image checkMark = Properties.Resources.checkMark;
             SetPictures(checkMark);
             ShowlabelActualUserName();
             ShowUsers();
@@ -459,6 +458,5 @@ namespace Project
                     "Общая стоимость работ по модели не определена":
                     $"Общая стоимость работ по модели {amount.ToString()} руб.";
         }
-
     }
 }

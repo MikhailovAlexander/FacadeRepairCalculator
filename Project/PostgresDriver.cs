@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Npgsql;
 using System.Drawing;
 using System.IO;
+using System.Diagnostics;
 
 namespace Project
 {
@@ -16,6 +17,7 @@ namespace Project
 
         public PostgresDriver(NpgsqlConnection conn)
         {
+            StartPostgresServer();
             Conn = conn;
             Conn.Open();
         }
@@ -23,6 +25,32 @@ namespace Project
         ~PostgresDriver()
         {
             Conn.Close();
+        }
+
+        public void StartPostgresServer()
+        {
+            string currentDir = Directory.GetCurrentDirectory();
+            var psi = new ProcessStartInfo();
+            psi.FileName = Path.Combine(currentDir,"PostgreSQLPortable//App//PgSQL//bin//pg_ctl.exe");
+            psi.Arguments = $"-D {currentDir}\\PostgreSQLPortable\\Data\\data -o \" -p 5433\" -l {currentDir}\\PostgreSQLPortable\\Data\\log.txt start";
+            psi.WindowStyle = ProcessWindowStyle.Hidden;
+            var process = new Process();
+            process.StartInfo = psi;
+            process.Start();
+            process.WaitForExit();
+        }
+
+        public void StopPostgresServer()
+        {
+            string currentDir = Directory.GetCurrentDirectory();
+            var psi = new ProcessStartInfo();
+            psi.FileName = Path.Combine(currentDir, "PostgreSQLPortable//App//PgSQL//bin//pg_ctl.exe");
+            psi.Arguments = $"-D {currentDir}\\PostgreSQLPortable\\Data\\data stop";
+            psi.WindowStyle = ProcessWindowStyle.Hidden;
+            var process = new Process();
+            process.StartInfo = psi;
+            process.Start();
+            process.WaitForExit();
         }
 
         private void DeleteFromTable(string nameTable, int idObjectToDelete)

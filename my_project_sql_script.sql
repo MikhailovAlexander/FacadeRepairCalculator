@@ -1,7 +1,3 @@
-create database facade_calculator;
-
-psql facade_calculator;
-
 CREATE TABLE application_user (
 	id serial NOT NULL,
 	name VARCHAR(255) NOT NULL UNIQUE,

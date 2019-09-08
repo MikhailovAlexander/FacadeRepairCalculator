@@ -9,6 +9,9 @@ namespace Project
 {
     public interface IDriverDB
     {
+        void StartPostgresServer();
+        void StopPostgresServer();
+
         void CreateUser(User user);
         void UpdateUser(User user);
         User ReadUser(string loginInput);
